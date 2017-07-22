@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fafafa;
+  color: #333;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-smoothing: auto;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  //opacity: 0;
+  transition: opacity 200ms;
+
+  html.wf-active &,
+  html.wf-inactive & {
+    opacity: 1;
+  }
+}
+
+svg {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: lighter;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.boundaries {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 100%;
+}
+
+section:not(.wallpaper) {
+  padding-top: 7vw;
+  padding-bottom: 7vw;
+}
