@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-navigation container">
+    <div class="header-navigation boundaries">
       <nuxt-link v-ripple class="logo" alt="Santihans Logo" :to="path('/')">
         <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 350">
           <title>logo</title>

@@ -14,7 +14,8 @@ module.exports = {
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
-      {rel: 'apple-touch-icon', href: '/apple-touch-icon.png'}
+      {rel: 'apple-touch-icon', href: '/apple-touch-icon.png'},
+      {rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'}
     ]
   },
   /*
