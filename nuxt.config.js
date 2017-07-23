@@ -39,12 +39,8 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    plugins: [
-      new webpack.ProvidePlugin({
-        '$': 'jquery',
-        '_': 'lodash'
-      })
-    ],
+    vendor: ['jquery', 'paper-ripple'],
+
     /*
      ** Run ESLINT on save
      */
