@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h1>{{ $t('pages.contact') }}</h1>
     <section-wallpaper></section-wallpaper>
   </div>

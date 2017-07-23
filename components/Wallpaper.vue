@@ -1,9 +1,19 @@
 <template>
   <section class="wallpaper">
-    <div class="wallpaper-inner boundaries">
+    <div class="wallpaper-inner container">
       <h1>Webdesign</h1>
       <h2 class="headline">Website for extraordinary demands</h2>
       <h2 class="headline">Stunning websites</h2>
+      <v-btn
+        icon
+        @click.native.stop="miniVariant = !miniVariant"
+      >
+        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
+      </v-btn>
+      <v-btn
+        icon
+        <v-icon>web</v-icon>
+      </v-btn>
     </div>
     <div class="more">
       <div class="more-preview">More</div>
@@ -18,7 +28,22 @@
 
 <script>
   export default {
-    name: 'Wallpaper'
+    name: 'Wallpaper',
+    data () {
+      return {
+        clipped: false,
+        drawer: true,
+        fixed: false,
+        items: [
+          { icon: 'apps', title: 'Welcome', to: '/' },
+          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+        ],
+        miniVariant: false,
+        right: true,
+        rightDrawer: false,
+        title: 'Vuetify.js'
+      }
+    }
   }
 </script>
 

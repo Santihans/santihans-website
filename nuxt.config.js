@@ -23,12 +23,13 @@ module.exports = {
   loading: {color: '#3B8070'},
 
   css: [
-    'paper-ripple/dist/paper-ripple.min.css',
+    {src: '~assets/styles/app.styl', lang: 'styl'},
     {src: '~assets/styles/variables.scss', lang: 'scss'},
 
   ],
 
   plugins: [
+    {src: '~plugins/vuetify.js'},
     {src: '~plugins/i18n.js'},
     {src: '~plugins/ga.js', ssr: false},
     {src: '~plugins/webFontLoader.js', ssr: false}
@@ -41,8 +42,9 @@ module.exports = {
   /*
    ** Build configuration
    */
+
   build: {
-    vendor: ['jquery'],
+    vendor: ['jquery', 'vuetify'],
 
     /*
      ** Run ESLINT on save

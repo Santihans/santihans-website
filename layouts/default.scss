@@ -1,5 +1,3 @@
-@import "~assets/styles/paperRipple.scss";
-
 *,
 *::before,
 *::after {
@@ -47,14 +45,6 @@ h1 {
 
 h2 {
   font-size: 2em;
-}
-
-.boundaries {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  width: 100%;
 }
 
 section:not(.wallpaper) {

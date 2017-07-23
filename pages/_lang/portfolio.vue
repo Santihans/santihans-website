@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h1>{{ $t('pages.portfolio') }}</h1>
   </div>
 </template>

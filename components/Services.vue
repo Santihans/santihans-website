@@ -1,5 +1,5 @@
 <template>
-  <section class="services boundaries">
+  <section class="services container">
     <h2>Angebot</h2>
     <p>Wir erstellen schlichte, funktionale Webseiten für jeden Kunden individuell. Unser Angebot richtet sich so wohl an Private, Vereine für kleine staische Webseiten, wie auch an Unternhemen mit gehobenen Ansprüchen.</p>
 

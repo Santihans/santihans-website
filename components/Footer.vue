@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <div class="footer-inner boundaries">
+    <div class="footer-inner container">
       <div class="emblem">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
           <title>emblem</title>
