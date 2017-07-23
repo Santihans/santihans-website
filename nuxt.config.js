@@ -23,7 +23,9 @@ module.exports = {
   loading: {color: '#3B8070'},
 
   css: [
-    {src: '~assets/styles/variables.scss', lang: 'scss'}
+    'paper-ripple/dist/paper-ripple.min.css',
+    {src: '~assets/styles/variables.scss', lang: 'scss'},
+
   ],
 
   plugins: [
@@ -39,7 +41,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['jquery', 'paper-ripple'],
+    vendor: ['jquery'],
 
     /*
      ** Run ESLINT on save
