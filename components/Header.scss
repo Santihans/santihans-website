@@ -1,14 +1,29 @@
 @import "~assets/styles/variables.scss";
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
-.header {
+#header {
   left: 0;
   height: $headerHeight;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
-  background: red;
+
+  .header-background {
+    background-color: black;
+    height: 100%;
+    position: absolute;
+    transform: translateY(0);
+    transition: 400ms;
+    width: 100%;
+  }
+
+  &.scrollTop {
+    .header-background {
+      transform: translateY(-100%);
+      background-color: transparent;
+    }
+  }
 
   .header-navigation {
     height: $headerHeight;
@@ -16,6 +31,7 @@
     align-items: center;
     padding-left: 10px;
     padding-right: 0;
+    position: relative;
 
     @media(min-width: $breakpointSmall) {
       padding-left: 5vw;

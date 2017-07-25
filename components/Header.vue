@@ -1,5 +1,6 @@
 <template>
-  <div class="header">
+  <div id="header" class="scrollTop">
+    <div class="header-background"></div>
     <div class="header-navigation boundaries">
       <nuxt-link v-ripple class="logo" alt="Santihans Logo" :to="path('/')">
         <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 350">
@@ -44,6 +45,8 @@
 </template>
 
 <script>
+  import _ from 'underscore'
+
   export default {
     name: 'Header',
     data () {
@@ -58,6 +61,12 @@
           }
         }
       }
+    },
+    mounted () {
+      var self = this
+      document.addEventListener('scroll', _.throttle(function () {
+        self.$el.classList.toggle('scrollTop', document.documentElement.scrollTop < 100)
+      }, 200))
     },
     methods: {
       path (url) {
