@@ -45,7 +45,7 @@ module.exports = {
    */
 
   build: {
-    vendor: ['jquery', 'vuetify'],
+    vendor: ['jquery', 'vuetify', 'underscore'],
 
     /*
      ** Run ESLINT on save
