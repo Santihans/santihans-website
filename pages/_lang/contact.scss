@@ -1,0 +1,52 @@
+@import '~assets/styles/variables.scss';
+
+.page-header {
+  position: relative;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-end;
+  background-color: rgb(77, 96, 89);
+
+  &::before,
+  &::after {
+    content: '';
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &::before {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+    top: 0;
+  }
+
+  &::after {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+    bottom: 0;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+  }
+
+  .boundaries {
+    position: relative;
+    z-index: 2;
+
+    h2 {
+      font-size: 6em;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: -0.15em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.page-content {
+
+}

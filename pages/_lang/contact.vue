@@ -1,7 +1,17 @@
 <template>
   <div class="page">
-    <h1>{{ $t('pages.contact') }}</h1>
-    <section-wallpaper></section-wallpaper>
+    <div class="page-header">
+      <iframe src="https://snazzymaps.com/embed/6150" width="100%" height="430px" style="border:none;"></iframe>
+      <div class="boundaries">
+        <h2 class="white--text">{{ $t('pages.contact') }}</h2>
+      </div>
+    </div>
+    <section class="page-content boundaries">
+      <div>Santihans GmbH</div>
+      <div>Mittlere Strasse 60</div>
+      <div>4056 Basel</div>
+
+    </section>
   </div>
 </template>
 
@@ -21,6 +31,6 @@
   }
 </script>
 
-<style>
-
+<style lang="scss">
+  @import "contact.scss";
 </style>

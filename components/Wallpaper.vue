@@ -1,15 +1,15 @@
 <template>
   <div class="wallpaper">
     <v-parallax src="/bg-2.jpg" v-bind:style="{'height': calcHeight}">
-      <v-layout column align-center justify-center>
+      <div class="parallax-inner">
         <h1 class="white--text">Webdesign</h1>
         <h2 class="white--text headline">Website for extraordinary demands</h2>
         <h2 class="white--text headline">Stunning websites</h2>
-      </v-layout>
-      <div>
-        <v-btn secondary outline dark large class="white--text">
-          Portfolio
-        </v-btn>
+        <div>
+          <v-btn secondary outline dark large class="white--text">
+            Portfolio
+          </v-btn>
+        </div>
       </div>
       <div class="more">
         <div class="more-preview">More</div>

@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 
   .header-background {
     background-color: black;
@@ -18,7 +18,7 @@
     width: 100%;
   }
 
-  &.scrollTop {
+  #layout.scrollTop & {
     .header-background {
       transform: translateY(-100%);
       background-color: transparent;

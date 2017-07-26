@@ -10,6 +10,7 @@ body {
   background: #fafafa;
   color: #333;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
   margin: 0;
@@ -44,8 +45,4 @@ section {
   max-width: 1024px;
   padding-left: 5vw;
   padding-right: 5vw;
-}
-
-.page {
-  padding-top: $headerHeight;
 }
