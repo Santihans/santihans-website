@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div>
     <div class="page-header">
       <iframe src="https://snazzymaps.com/embed/6150" width="100%" height="430px" style="border:none;"></iframe>
       <div class="boundaries">
@@ -7,17 +7,18 @@
       </div>
     </div>
     <section class="page-content boundaries">
-      <div>Santihans GmbH</div>
-      <div>Mittlere Strasse 60</div>
-      <div>4056 Basel</div>
-
+      <component-address />
     </section>
   </div>
 </template>
 
 <script>
+  import address from '~components/address.vue'
+
   export default {
-    name: 'ContactPage',
+    components: {
+      'component-address': address
+    },
     head () {
       return {
         title: this.$t('pages.contact')

@@ -1,7 +1,9 @@
 <template>
   <div id="layout" class="scrollTop">
     <app-header />
-    <nuxt />
+    <div id="page">
+      <nuxt />
+    </div>
     <app-footer />
   </div>
 </template>

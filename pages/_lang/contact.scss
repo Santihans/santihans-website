@@ -28,6 +28,7 @@
   }
 
   iframe {
+    pointer-events: none;
     position: absolute;
     top: 0;
   }
@@ -48,5 +49,7 @@
 }
 
 .page-content {
-
+  .company-emblem {
+    display: none;
+  }
 }

@@ -17,43 +17,63 @@
   }
 
   .footer-inner {
-    display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
 
-    .emblem svg {
-      width: 90px;
+    > div {
+      margin-bottom: 30px;
+    }
 
-      g {
-        fill: white;
+    @media (min-width: $breakpointSmall) {
+      display: flex;
+
+      > div {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .company {
+    @media (min-width: $breakpointSmall) {
+      display: flex;
+
+      .company-emblem {
+        margin-bottom: 0;
       }
     }
 
-    .address {
-      line-height: 1.4;
-      margin-left: 12px;
-    }
+    .company-emblem {
+      margin-bottom: 20px;
+      margin-right: 20px;
 
-    .menu {
-      margin-left: auto;
-      text-transform: uppercase;
-
-      ul {
-        margin: 0;
-        line-height: 1.4;
-        list-style-type: none;
-
-        li {
-          @media (min-width: $breakpointMedium) {
-            display: inline;
-            margin-right: 10px;
-          }
+      svg {
+        g {
+          fill: white;
         }
       }
     }
 
-    .language {
-      margin-left: 30px;
-      align-self: flex-start;
+    .company-address {
+      margin-right: 50px;
+      line-height: 1.4;
+    }
+  }
+
+  .menu {
+    margin-left: auto;
+
+    ul {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      line-height: 1.4;
+      list-style-type: none;
+
+      li {
+        @media (min-width: $breakpointMedium) {
+          display: inline;
+          margin-right: 10px;
+        }
+      }
     }
   }
 }
