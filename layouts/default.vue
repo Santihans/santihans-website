@@ -1,5 +1,5 @@
 <template>
-  <div id="layout" class="scrollTop">
+  <div id="layout" class="scrollTop scrollTopExtendend">
     <app-header />
     <div id="page">
       <nuxt />
@@ -22,7 +22,8 @@
     mounted () {
       var self = this
       document.addEventListener('scroll', _.throttle(function () {
-        self.$el.classList.toggle('scrollTop', document.documentElement.scrollTop < 100)
+        self.$el.classList.toggle('scrollTop', document.documentElement.scrollTop < window.screen.height / 10)
+        self.$el.classList.toggle('scrollTopExtendend', document.documentElement.scrollTop < window.screen.height / 5)
       }, 200))
     }
   }

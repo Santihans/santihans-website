@@ -2,23 +2,29 @@
 @import "node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 #header {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   left: 0;
   height: $headerHeight;
   position: fixed;
   top: 0;
+  transition: box-shadow 200ms 800ms;
   width: 100%;
   z-index: 10;
 
+
   .header-background {
-    background-color: black;
+    background-color: $colorBgHeader;
     height: 100%;
     position: absolute;
     transform: translateY(0);
-    transition: 400ms;
+    transition: 400ms 400ms;
     width: 100%;
   }
 
-  #layout.scrollTop & {
+  #layout.scrollTopExtendend & {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    transition: none;
+
     .header-background {
       transform: translateY(-100%);
       transition: none;
@@ -37,6 +43,11 @@
     @media(min-width: $breakpointSmall) {
       padding-left: 5vw;
       padding-right: 5vw;
+    }
+
+    @media(min-width: $breakpointMedium) {
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 

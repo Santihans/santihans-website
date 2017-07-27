@@ -1,4 +1,8 @@
+@import '~assets/styles/variables.scss';
+
 .wallpaper {
+  position: relative;
+  overflow: hidden;
   text-align: center;
 
   .more {
@@ -16,20 +20,21 @@
       font-size: 30px;
     }
 
-    #layout.scrollTop & {
+    #layout.scrollTopExtendend & {
       opacity: 0.5;
     }
   }
 
   .parallax-inner {
-    margin-top: 20%;
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    height: 50%;
+    margin-top: 100px;
 
     > * {
       opacity: 0;
-      transform: translateY(-40%);
+      transform: translateY(-60%);
       transition: 200ms;
 
       &:nth-child(1) {
@@ -46,12 +51,39 @@
     }
 
     h1 {
-      font-size: 4em;
+      font-size: 1.2em;
+      color: #ffc2c2;
+
+      @media(min-width: $breakpointSmall) {
+        font-size: 2em;
+      }
+
+      @media(min-width: $breakpointMedium) {
+        font-size: 3em;
+      }
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, .5);
+
+      @media(min-width: $breakpointSmall) {
+        font-size: 1.3em;
+      }
+
+      @media(min-width: $breakpointMedium) {
+        font-size: 1.5em;
+      }
     }
 
     svg {
-      width: 100px;
+      display: inline-block;
       fill: white;
+      width: 60px;
+    }
+
+    .bottom {
+      margin-top: auto;
     }
 
     #layout.scrollTop & {
@@ -75,10 +107,58 @@
   }
 
   .parallax__content {
-    background-image: linear-gradient(to bottom, transparent, rgba(51, 19, 37, 0.4));
+    background-image: linear-gradient(to bottom, transparent, rgba(51, 19, 37, 0) 25%, rgba(51, 19, 37, 0.6));
   }
 
   .parallax__image {
     bottom: 40%;
+  }
+
+  .wallpaper-overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    transition: 700ms;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &::before {
+      background-image: linear-gradient(to top, rgb(181, 86, 124), $colorBgHeader 60%);
+    }
+
+    &::after {
+      background-image: url('~assets/images/skyline.svg');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: 200%;
+
+      @media(min-width: $breakpointSmall) {
+        background-size: 150%;
+      }
+
+      @media(min-width: $breakpointMedium) {
+        background-size: 120%;
+        background-position: 100% 110%;
+      }
+
+      @media(min-width: $breakpointLarge) {
+        background-size: contain;
+      }
+    }
+
+    #layout.scrollTopExtendend & {
+      transform: translateY(100%);
+    }
   }
 }

@@ -1,0 +1,44 @@
+@import "~assets/styles/variables.scss";
+
+.illustration {
+  border-bottom: 6px solid #cccccc;
+  margin-bottom: 8vh;
+
+  img {
+    width: 70%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -70%);
+    transition: 1000ms;
+    position: absolute;
+
+    @media(min-width: $breakpointSmall) {
+      width: 50%;
+    }
+
+    @media(min-width: $breakpointMedium) {
+      width: 35%;
+    }
+
+    @media(min-width: $breakpointLarge) {
+      width: 480px;
+    }
+
+    #layout.scrollTopExtendend & {
+      opacity: 0;
+      transition: none;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.services {
+  opacity: 1;
+  transition: 200ms 500ms;
+
+  #layout.scrollTopExtendend & {
+    transition: none;
+    opacity: 0;
+  }
+
+}
