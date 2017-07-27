@@ -47,5 +47,5 @@
 </script>
 
 <style lang="scss">
-  @import "Wallpaper.scss";
+  @import "wallpaper.scss";
 </style>

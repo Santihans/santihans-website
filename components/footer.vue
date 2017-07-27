@@ -70,5 +70,5 @@
 </script>
 
 <style lang="scss">
-  @import "Footer.scss";
+  @import "footer.scss";
 </style>

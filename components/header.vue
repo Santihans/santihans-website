@@ -69,5 +69,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "Header.scss";
+  @import "header.scss";
 </style>
