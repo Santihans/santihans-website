@@ -16,13 +16,8 @@
 </template>
 
 <script>
-  import wallpaper from '~components/Wallpaper.vue'
-
   export default {
     name: 'ContactPage',
-    components: {
-      'section-wallpaper': wallpaper
-    },
     head () {
       return {
         title: this.$t('pages.contact')

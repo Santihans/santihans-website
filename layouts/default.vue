@@ -8,14 +8,14 @@
 
 <script>
 
-  import Header from '~components/Header.vue'
-  import Footer from '~components/Footer.vue'
+  import header from '~components/header.vue'
+  import footer from '~components/footer.vue'
   import _ from 'underscore'
 
   export default {
     components: {
-      'app-header': Header,
-      'app-footer': Footer
+      'app-header': header,
+      'app-footer': footer
     },
     mounted () {
       var self = this
