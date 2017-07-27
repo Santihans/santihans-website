@@ -3,6 +3,9 @@
     <h2>Angebot</h2>
     <p>Wir erstellen schlichte, funktionale Webseiten für jeden Kunden individuell. Unser Angebot richtet sich so wohl an Private, Vereine für kleine staische Webseiten, wie auch an Unternhemen mit gehobenen Ansprüchen.</p>
 
+    <h2 class="">Website for extraordinary demands</h2>
+    <h2 class="">Stunning websites</h2>
+
     <p>Alle unsere Webseiten bieten:</p>
     <ul>
       <li>Funktional und modern</li>

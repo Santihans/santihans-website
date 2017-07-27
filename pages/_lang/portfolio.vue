@@ -1,6 +1,13 @@
 <template>
   <div>
-    <h1>{{ $t('pages.portfolio') }}</h1>
+    <div class="page-header">
+      <div class="boundaries">
+        <h2 class="white--text">{{ $t('pages.portfolio') }}</h2>
+      </div>
+    </div>
+    <div class="page-content boundaries">
+      <h1>{{ $t('pages.portfolio') }}</h1>
+    </div>
   </div>
 </template>
 
@@ -18,5 +25,10 @@
 </script>
 
 <style>
-
+.page-header {
+  height: 400px;
+  background-color: #d65b32;
+  display: flex;
+  align-items: flex-end;
+}
 </style>

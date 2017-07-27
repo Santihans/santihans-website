@@ -21,7 +21,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: {color: '#3B8070'},
+  loading: {color: 'red'},
 
   css: [
     {src: '~assets/styles/app.styl', lang: 'styl'},
@@ -43,7 +43,6 @@ module.exports = {
   /*
    ** Build configuration
    */
-
   build: {
     vendor: ['jquery', 'vuetify', 'underscore'],
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="index">
     <section-wallpaper></section-wallpaper>
     <section-services></section-services>
   </div>

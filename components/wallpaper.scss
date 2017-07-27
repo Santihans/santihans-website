@@ -1,22 +1,81 @@
 .wallpaper {
   text-align: center;
 
-  h1 {
-    margin-bottom: .3em;
-    text-transform: uppercase;
-  }
-
-
   .more {
-    position: absolute;
-    padding: 20px;
     bottom: 0;
+    font-size: 50px;
     left: 50%;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    transition: opacity 200ms 400ms;
     transform: translateX(-50%);
+    will-change: opacity;
 
     .icon {
       font-size: 30px;
     }
+
+    #layout.scrollTop & {
+      opacity: 0.5;
+    }
+  }
+
+  .parallax-inner {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    > * {
+      opacity: 0;
+      transform: translateY(-40%);
+      transition: 200ms;
+
+      &:nth-child(1) {
+        transition-delay: 100ms;
+      }
+
+      &:nth-child(2) {
+        transition-delay: 200ms;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 300ms;
+      }
+    }
+
+    h1 {
+      font-size: 4em;
+    }
+
+    svg {
+      width: 100px;
+      fill: white;
+    }
+
+    #layout.scrollTop & {
+      > * {
+        opacity: 1;
+        transform: translateY(0);
+
+        &:nth-child(1) {
+          transition-delay: 0s;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0s;
+        }
+      }
+    }
+  }
+
+  .parallax__content {
+    background-image: linear-gradient(to bottom, transparent, rgba(51, 19, 37, 0.4));
   }
 
   .parallax__image {

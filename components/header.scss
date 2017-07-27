@@ -21,6 +21,7 @@
   #layout.scrollTop & {
     .header-background {
       transform: translateY(-100%);
+      transition: none;
       background-color: transparent;
     }
   }
