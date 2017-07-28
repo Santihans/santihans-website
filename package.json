@@ -2,7 +2,7 @@
   "name": "santihans-website-nuxt",
   "version": "1.0.0",
   "description": "Static website for santihans.com",
-  "author": "christopheschwyzer <christophe.schwyzer@cargomedia.ch>",
+  "author": "christopheschwyzer <kingchiller@gmail.com>",
   "private": true,
   "dependencies": {
     "hamburgers": "^0.9.1",
