@@ -13,11 +13,6 @@
             <path
               d="M65.56,188.48,28.7,213.74V335.25H53.37V300a12.19,12.19,0,0,1,12.19-12.19h0A12.19,12.19,0,0,1,77.75,300v35.28h24.67V213.74Z"/>
           </svg>
-          <div>
-            <v-btn secondary outline dark large class="white--text">
-              {{ $t('pages.portfolio') }}
-            </v-btn>
-          </div>
         </div>
       </div>
       <div class="more">

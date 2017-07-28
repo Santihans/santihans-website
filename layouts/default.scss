@@ -24,8 +24,10 @@ body {
   }
 }
 
+img,
 svg {
   display: block;
+  max-width: 100%;
 }
 
 h1,
@@ -45,8 +47,8 @@ h2 {
 }
 
 section {
-  padding-top: 10vh;
-  padding-bottom: 10vh;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
 }
 
 .boundaries {

@@ -53,6 +53,9 @@
     h1 {
       font-size: 1.2em;
       color: #ffc2c2;
+      padding: 20px;
+      border: 2px solid;
+      background: rgba(21, 19, 19, 0.08);
 
       @media(min-width: $breakpointSmall) {
         font-size: 2em;
