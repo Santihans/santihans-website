@@ -22,7 +22,7 @@ export default {
   mounted() {
     var $self = $(this.$el)
     $(document).on('scroll', _.throttle(function () {
-      $self.toggleClass('scrollTop', $(document).scrollTop() < window.screen.height / 10)
+      $self.toggleClass('scrollTop', $(document).scrollTop() < window.screen.height / 12)
       $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 5)
     }, 200))
   }

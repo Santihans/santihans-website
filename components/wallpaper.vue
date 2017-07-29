@@ -1,6 +1,6 @@
 <template>
 <div class="wallpaper">
-  <v-parallax src="/bg-4.jpg" v-bind:style="{'height': calcHeight}">
+  <div class="parallax" v-bind:style="{'height': calcHeight}">
     <div class="parallax-inner">
       <h1>{{ $t('headline') }}</h1>
       <div class="tagline">{ {{ $t('tagline') }} }</div>
@@ -17,7 +17,7 @@
     <div class="more">
       <v-icon>expand_more</v-icon>
     </div>
-  </v-parallax>
+  </div>
 
   <div class="wallpaper-overlay"></div>
 </div>
@@ -31,7 +31,7 @@ export default {
       calcHeight: '800px'
     }
   },
-  beforeMount() {
+  mounted() {
     if (process.browser) {
       this.calcHeight = window.innerHeight + 'px'
     }

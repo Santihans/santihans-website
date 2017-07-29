@@ -1,6 +1,6 @@
 <template>
-  <div id='services' class="boundaries">
-    <section class="service-webdesign">
+  <div id='services'>
+    <section class="service-webdesign boundaries">
       <h2>{{ $t('webdesign.headline') }}</h2>
       <p class="abstract">{{ $t('webdesign.abstract') }}</p>
 
@@ -17,7 +17,7 @@
       //something
     </section>
 
-    <section class="service-branding">
+    <section class="service-branding boundaries">
       <h2>{{ $t('branding.headline') }}</h2>
       <p class="abstract">{{ $t('branding.abstract') }}</p>
 
@@ -34,7 +34,7 @@
       </div>
     </section>
 
-    <section class="advertising">
+    <section class="advertising boundaries">
       <h2>{{ $t('advertising.headline') }}</h2>
       <p class="abstract">{{ $t('advertising.abstract') }}</p>
     </section>
@@ -53,28 +53,28 @@
       return {
         branding: [
           {
-            src: 'images/branding/denkmal.png'
+            src: '/images/branding/denkmal.png'
           },
           {
-            src: 'images/branding/cargomedia.png'
+            src: '/images/branding/cargomedia.png'
           },
           {
-            src: 'images/branding/frontale-2016.png'
+            src: '/images/branding/frontale-2016.png'
           },
           {
-            src: 'images/branding/gundeli-street-team.png'
+            src: '/images/branding/gundeli-street-team.png'
           },
           {
-            src: 'images/branding/kingchiller.png'
+            src: '/images/branding/kingchiller.png'
           },
           {
-            src: 'images/branding/frontale.jpg'
+            src: '/images/branding/frontale.jpg'
           },
           {
-            src: 'images/branding/schiff-mode.png'
+            src: '/images/branding/schiff-mode.png'
           },
           {
-            src: 'images/branding/art44.png'
+            src: '/images/branding/art44.png'
           }
         ]
       }
