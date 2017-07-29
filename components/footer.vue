@@ -16,8 +16,8 @@
 </template>
 
 <script>
-  import language from '~components/lanuage.vue'
-  import address from '~components/address.vue'
+  import language from '~/components/lanuage.vue'
+  import address from '~/components/address.vue'
 
   export default {
     components: {

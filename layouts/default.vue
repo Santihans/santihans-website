@@ -10,8 +10,8 @@
 
 <script>
 
-  import header from '~components/header.vue'
-  import footer from '~components/footer.vue'
+  import header from '~/components/header.vue'
+  import footer from '~/components/footer.vue'
   import _ from 'underscore'
 
   export default {

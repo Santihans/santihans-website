@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import address from '~components/address.vue'
+  import address from '~/components/address.vue'
 
   export default {
     components: {

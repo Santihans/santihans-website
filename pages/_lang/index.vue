@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import wallpaper from '~components/wallpaper.vue'
-  import services from '~components/services.vue'
+  import wallpaper from '~/components/wallpaper.vue'
+  import services from '~/components/services.vue'
 
   export default {
     name: 'HomePage',

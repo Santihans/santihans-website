@@ -1,5 +1,6 @@
 /* eslint-disable */
-import router from '~router'
+import Router from 'vue-router'
+
 /*
  ** Only run on client-side and only in production mode
  */
@@ -18,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
   /*
    ** Every time the route changes (fired on initialization too)
    */
-  router.afterEach((to, from) => {
+  Router.afterEach((to, from) => {
     /*
      ** We tell Google Analytic to add a page view
      */

@@ -33,7 +33,7 @@
       }
     },
     beforeMount () {
-      if (process.BROWSER_BUILD) {
+      if (process.browser) {
         this.calcHeight = window.innerHeight + 'px'
       }
     },
