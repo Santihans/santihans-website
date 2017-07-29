@@ -11,15 +11,12 @@
     transform: translate(-50%, -70%);
     transition: 1000ms;
     position: absolute;
-
     @media(min-width: $breakpointSmall) {
       width: 50%;
     }
-
     @media(min-width: $breakpointMedium) {
       width: 35%;
     }
-
     @media(min-width: $breakpointLarge) {
       width: 480px;
     }
@@ -40,5 +37,4 @@
     transition: none;
     opacity: 0;
   }
-
 }

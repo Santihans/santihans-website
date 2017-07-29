@@ -56,11 +56,9 @@
       padding: 20px;
       border: 2px solid;
       background: rgba(21, 19, 19, 0.08);
-
       @media(min-width: $breakpointSmall) {
         font-size: 2em;
       }
-
       @media(min-width: $breakpointMedium) {
         font-size: 3em;
       }
@@ -69,11 +67,9 @@
     .tagline {
       font-size: 1.2em;
       color: rgba(255, 255, 255, .5);
-
       @media(min-width: $breakpointSmall) {
         font-size: 1.3em;
       }
-
       @media(min-width: $breakpointMedium) {
         font-size: 1.5em;
       }
@@ -126,8 +122,8 @@
     transition: 700ms;
     width: 100%;
 
-    &::before,
-    &::after {
+    &::after,
+    &::before {
       content: '';
       height: 100%;
       left: 0;
@@ -145,16 +141,13 @@
       background-repeat: no-repeat;
       background-position: bottom center;
       background-size: 200%;
-
       @media(min-width: $breakpointSmall) {
         background-size: 150%;
       }
-
       @media(min-width: $breakpointMedium) {
         background-size: 120%;
         background-position: 100% 110%;
       }
-
       @media(min-width: $breakpointLarge) {
         background-size: contain;
       }

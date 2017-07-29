@@ -57,7 +57,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'QuotesCalculator'
-  }
+export default {
+  name: 'QuotesCalculator'
+}
 </script>

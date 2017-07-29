@@ -8,8 +8,8 @@
   align-items: flex-end;
   background-color: rgb(77, 96, 89);
 
-  &::before,
-  &::after {
+  &::after,
+  &::before {
     content: '';
     height: 100px;
     position: absolute;
@@ -40,9 +40,10 @@
     h2 {
       font-size: 6em;
       font-weight: bold;
-      line-height: 1;
+
       margin-bottom: -0.15em;
       text-align: right;
+      line-height: 1;
       text-transform: uppercase;
     }
   }

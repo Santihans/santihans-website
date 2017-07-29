@@ -11,7 +11,6 @@
   width: 100%;
   z-index: 10;
 
-
   .header-background {
     background-color: $colorBgHeader;
     height: 100%;
@@ -39,12 +38,10 @@
     padding-left: 10px;
     padding-right: 0;
     position: relative;
-
     @media(min-width: $breakpointSmall) {
       padding-left: 5vw;
       padding-right: 5vw;
     }
-
     @media(min-width: $breakpointMedium) {
       padding-left: 12px;
       padding-right: 12px;
@@ -66,7 +63,6 @@
   display: flex;
   font-size: 1.1rem;
   margin-left: auto;
-
   @media(min-width: $breakpointSmall) {
     font-size: 1.2em;
 
@@ -92,7 +88,9 @@
     }
 
     .hamburger {
-      .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+      .hamburger-inner,
+      .hamburger-inner::after,
+      .hamburger-inner::before {
         background-color: $colorSubtle;
       }
     }
@@ -118,7 +116,9 @@
     z-index: 1;
     transform: scale(.9);
 
-    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
       background-color: white;
     }
   }
@@ -152,7 +152,7 @@
     right: 0;
     top: 0;
     transform: translateX(110%);
-    transition: transform .33s cubic-bezier(.33, 0, .2, 1);
+    transition: transform 0.33s cubic-bezier(.33, 0, .2, 1);
     width: 240px;
 
     .menuList {
@@ -160,7 +160,6 @@
       flex-direction: column;
     }
   }
-
   @media(min-width: $breakpointSmall) {
     .hamburger {
       display: none;
