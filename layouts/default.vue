@@ -12,6 +12,7 @@
 import header from '~/components/header.vue'
 import footer from '~/components/footer.vue'
 import _ from 'underscore'
+import $ from 'jquery'
 
 export default {
   components: {
@@ -19,10 +20,10 @@ export default {
     'app-footer': footer
   },
   mounted() {
-    var self = this
-    document.addEventListener('scroll', _.throttle(function () {
-      self.$el.classList.toggle('scrollTop', document.documentElement.scrollTop < window.screen.height / 10)
-      self.$el.classList.toggle('scrollTopExtendend', document.documentElement.scrollTop < window.screen.height / 5)
+    var $self = $(this.$el)
+    $(document).on('scroll', _.throttle(function () {
+      $self.toggleClass('scrollTop', $(document).scrollTop() < window.screen.height / 10)
+      $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 5)
     }, 200))
   }
 }
