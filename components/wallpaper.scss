@@ -5,26 +5,6 @@
   overflow: hidden;
   text-align: center;
 
-  .more {
-    bottom: 0;
-    font-size: 50px;
-    left: 50%;
-    opacity: 0;
-    padding: 20px;
-    position: absolute;
-    transition: opacity 200ms 500ms;
-    transform: translateX(-50%);
-    will-change: opacity;
-
-    .icon {
-      font-size: 30px;
-    }
-
-    #layout.scrollTopExtendend & {
-      opacity: 0.5;
-    }
-  }
-
   .parallax {
     background-image: url('~assets/images/bg-3.jpg');
     background-position: center;
@@ -45,6 +25,24 @@
       position: absolute;
       top: 0;
       width: 100%;
+    }
+
+    .more {
+      bottom: 0;
+      left: 50%;
+      opacity: 0;
+      padding: 20px;
+      position: absolute;
+      transition: opacity 200ms 500ms;
+      transform: translateX(-50%);
+
+      .icon {
+        font-size: 50px;
+      }
+
+      #layout.scrollTopExtendend & {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -99,16 +97,6 @@
       }
     }
 
-    svg {
-      display: inline-block;
-      fill: white;
-      width: 60px;
-    }
-
-    .bottom {
-      margin-top: auto;
-    }
-
     #layout.scrollTop & {
       > * {
         opacity: 1;
@@ -130,13 +118,26 @@
   }
 
   .wallpaper-overlay {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: center;
     left: 0;
     position: absolute;
     top: 0;
     transform: translateY(0);
     transition: 700ms;
     width: 100%;
+
+    .clouds {
+      flex-basis: auto;
+      margin-top: 15vh;
+      position: relative;
+
+      > svg {
+        fill: rgba(255,255, 255, .5);
+      }
+    }
 
     &::after,
     &::before {
@@ -158,10 +159,9 @@
       background-position: bottom center;
       background-size: 200%;
       @media(min-width: $breakpointSmall) {
-        background-size: 150%;
+        background-size: 100%;
       }
       @media(min-width: $breakpointMedium) {
-        background-size: 120%;
         background-position: 100% 110%;
       }
       @media(min-width: $breakpointLarge) {

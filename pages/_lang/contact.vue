@@ -2,11 +2,9 @@
 <div>
   <div class="page-header">
     <iframe src="https://snazzymaps.com/embed/6150" width="100%" height="430px" style="border:none;"></iframe>
-    <div class="boundaries">
-      <h2 class="white--text">{{ $t('pages.contact') }}</h2>
-    </div>
   </div>
   <section class="page-content boundaries">
+    <h2>{{ $t('pages.contact') }}</h2>
     <component-address />
   </section>
 </div>

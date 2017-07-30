@@ -2,7 +2,7 @@
 <div id="index">
   <section-wallpaper></section-wallpaper>
   <div class="illustration">
-    <img src="~assets/images/devices.svg" alt="Illustration">
+    <img src="~assets/images/Webdesign.svg" alt="Illustration">
   </div>
   <section-services></section-services>
 </div>

@@ -4,21 +4,31 @@
   border-bottom: 6px solid #cccccc;
   margin-bottom: 8vh;
 
+  @media(min-width: $breakpointSmall) {
+    margin-bottom: 110px;
+  }
+
   img {
-    width: 70%;
+    width: 100%;
     left: 50%;
     opacity: 1;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -55%);
     transition: 1000ms;
     position: absolute;
+    @media(min-width: 500px) {
+      width: 80%;
+    }
     @media(min-width: $breakpointSmall) {
-      width: 50%;
+      width: 70%;
+    }
+    @media(min-width: 800px) {
+      width: 60%;
     }
     @media(min-width: $breakpointMedium) {
-      width: 35%;
+      width: 50%;
     }
     @media(min-width: $breakpointLarge) {
-      width: 480px;
+      width: 620px;
     }
 
     #layout.scrollTopExtendend & {
