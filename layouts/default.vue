@@ -1,11 +1,11 @@
 <template>
-<div id="layout" class="scrollTop scrollTopExtendend">
+<v-app id="layout" class="scrollTop scrollTopExtendend">
   <app-header />
   <div id="page">
     <nuxt />
   </div>
   <app-footer />
-</div>
+</v-app>
 </template>
 
 <script>

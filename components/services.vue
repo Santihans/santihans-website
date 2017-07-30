@@ -3,7 +3,6 @@
     <section class="service-webdesign boundaries">
       <h2>{{ $t('webdesign.headline') }}</h2>
       <p class="abstract">{{ $t('webdesign.abstract') }}</p>
-
       <img src="images/webdesign/brigittehenke.jpg" alt="Webdesign">
       <div>
         <v-btn large primary raised="false">Get a quote</v-btn>

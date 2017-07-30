@@ -10,9 +10,7 @@ export default {
       'portfolio': 'Portfolio',
       'contact': 'Contact',
       'agb': 'AGB'
-    },
-    'headline': 'Modern. Responsive. Accessible.',
-    'more': 'Offer'
+    }
   },
   de: {
     'meta': {
@@ -25,8 +23,6 @@ export default {
       'portfolio': 'Portfolio',
       'contact': 'Kontakt',
       'agb': 'AGB'
-    },
-    'headline': 'Modern. Ansprechend. Barrierefrei.',
-    'more': 'Angebot'
+    }
   }
 }

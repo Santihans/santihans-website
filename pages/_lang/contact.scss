@@ -35,7 +35,25 @@
 }
 
 .page-content {
-  .company-emblem {
-    display: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  .company {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    .company-emblem {
+      display: none;
+    }
+  }
+
+  .contact-form {
+    width: 600px;
+    max-width: 100%;
+
+    .card {
+      padding: 20px;
+    }
   }
 }
