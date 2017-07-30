@@ -133,9 +133,10 @@
       flex-basis: auto;
       margin-top: 15vh;
       position: relative;
+      z-index: 1;
 
       > svg {
-        fill: rgba(255,255, 255, .5);
+        fill: rgb(255, 173, 186);
       }
     }
 
@@ -166,6 +167,9 @@
       }
       @media(min-width: $breakpointLarge) {
         background-size: contain;
+      }
+      @media(min-width: $breakpointExtraLarge) {
+        background-position: 100% 130%;
       }
     }
 

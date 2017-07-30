@@ -1,8 +1,8 @@
 <template>
 <div id="index">
   <section-wallpaper></section-wallpaper>
-  <div class="webdesign-illustration">
-    <img src="~assets/images/Webdesign.svg" alt="Illustration">
+  <div class="illustration-webdesign">
+    <img src="~assets/images/webdesign.svg" alt="Illustration">
   </div>
   <section class="service-webdesign boundaries">
     <h2>{{ $t('webdesign.headline') }}</h2>
@@ -15,11 +15,10 @@
     </div>
   </section>
 
-  <section class="divider">
-    //something
-  </section>
+  <div class="illustration-branding"></div>
 
   <section class="service-branding boundaries">
+    <img class="illustration" src="~assets/images/branding.svg" alt="Illustration">
     <h2>{{ $t('branding.headline') }}</h2>
     <p class="abstract">{{ $t('branding.abstract') }}</p>
 
@@ -62,25 +61,13 @@ export default {
           src: '/images/branding/denkmal.png'
         },
         {
-          src: '/images/branding/cargomedia.png'
-        },
-        {
           src: '/images/branding/frontale-2016.png'
         },
         {
           src: '/images/branding/gundeli-street-team.png'
         },
         {
-          src: '/images/branding/kingchiller.png'
-        },
-        {
-          src: '/images/branding/frontale.jpg'
-        },
-        {
           src: '/images/branding/schiff-mode.png'
-        },
-        {
-          src: '/images/branding/art44.png'
         }
       ]
     }
@@ -89,7 +76,7 @@ export default {
     messages: {
       en: {
         webdesign: {
-          headline: 'Stunning Websites',
+          headline: 'Stunning Webdesign',
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
         },
         branding: {
@@ -97,8 +84,8 @@ export default {
           abstract: 'We develop corporate identitiy solutions that perfectly represent the values of your organisation. Leave customers with a lasting positive first impression.'
         },
         advertising: {
-          headline: 'Creative Advertising',
-          abstract: 'We help you aquire new customers with targeted smart advertising.'
+          headline: 'Smart Advertising',
+          abstract: 'We help you aquire new customers with targeted creative advertising.'
         }
       },
       de: {
