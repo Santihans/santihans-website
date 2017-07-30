@@ -13,6 +13,7 @@ export default ({
   app.i18n = new VueI18n({
     locale: store.state.locale,
     fallbackLocale: 'en',
-    messages: Translations
+    messages: Translations,
+    silentTranslationWarn: true
   })
 }
