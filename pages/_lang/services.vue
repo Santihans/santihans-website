@@ -38,7 +38,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page-header {
   height: 400px;
   background-color: #663399;
