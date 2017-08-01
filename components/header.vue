@@ -2,7 +2,7 @@
 <div id="header">
   <div class="header-background"></div>
   <div class="header-navigation boundaries">
-    <nuxt-link v-ripple class="logo" alt="Santihans Logo" :to="path('/')">
+    <nuxt-link v-ripple class="logo" alt="Santihans Logo" :to="localePath('/')">
       <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 350">
           <title>logo</title>
           <g>
@@ -28,13 +28,13 @@
         </button>
       <div class="menu">
         <ul class="menuList">
-          <nuxt-link v-ripple tag="li" :to="path('/services')" exact>
+          <nuxt-link v-ripple tag="li" :to="localePath('/services')" exact>
             <a>{{ $t("pages.services") }}</a>
           </nuxt-link>
-          <nuxt-link v-ripple tag="li" :to="path('/portfolio')" exact>
+          <nuxt-link v-ripple tag="li" :to="localePath('/portfolio')" exact>
             <a>{{ $t("pages.portfolio") }}</a>
           </nuxt-link>
-          <nuxt-link v-ripple tag="li" :to="path('/contact')" exact>
+          <nuxt-link v-ripple tag="li" :to="localePath('/contact')" exact>
             <a>{{ $t("pages.contact") }}</a>
           </nuxt-link>
         </ul>
@@ -58,11 +58,6 @@ export default {
           this.isActive = state
         }
       }
-    }
-  },
-  methods: {
-    path(url) {
-      return (this.$i18n.locale === 'en' ? url : '/' + this.$i18n.locale + url)
     }
   }
 }

@@ -8,10 +8,10 @@
     <h2>{{ $t('webdesign.headline') }}</h2>
     <p class="abstract">{{ $t('webdesign.abstract') }}</p>
     <div>
-      <v-btn large primary raised="false">Get a quote</v-btn>
+      <v-btn large primary :to="localePath('/services')">{{ $t('pages.portfolio') }}</v-btn>
     </div>
     <div>
-      <v-btn flat large>Portfolio</v-btn>
+      <v-btn flat large :to="localePath('/portfolio')">{{ $t('pages.portfolio') }}</v-btn>
     </div>
   </section>
 
@@ -28,10 +28,10 @@
       </v-flex>
     </v-layout>
     <div>
-      <v-btn large primary>Learn more</v-btn>
+      <v-btn large primary :to="localePath('/services')">{{ $t('pages.services') }}</v-btn>
     </div>
     <div>
-      <v-btn flat large>Portfolio</v-btn>
+      <v-btn flat large :to="localePath('/portfolio')">{{ $t('pages.portfolio') }}</v-btn>
     </div>
   </section>
 
@@ -50,6 +50,7 @@ export default {
   components: {
     'section-wallpaper': wallpaper
   },
+  scrollToTop: true,
   head() {
     return {
       title: this.$t('pages.home')

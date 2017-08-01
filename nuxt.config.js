@@ -32,6 +32,7 @@ module.exports = {
   plugins: [
     {src: '~plugins/vuetify.js'},
     {src: '~plugins/i18n.js'},
+    {src: '~plugins/localePath.js'},
     {src: '~plugins/ga.js', ssr: false},
     {src: '~plugins/webFontLoader.js', ssr: false}
   ],
