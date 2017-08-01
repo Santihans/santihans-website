@@ -2,18 +2,15 @@
 
 #contact {
   .page-header {
-    align-items: center;
     background-color: $colorYellow;
     background-image: url('~assets/images/contact-bg.svg');
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
     border-bottom: 4px solid $colorPink;
-    display: flex;
     height: 50vh;
     min-height: 280px;
     max-height: 400px;
-    justify-content: center;
     position: relative;
     @media(min-width: $breakpointMedium) {
       background-size: contain;

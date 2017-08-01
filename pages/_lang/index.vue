@@ -8,10 +8,10 @@
     <h2>{{ $t('webdesign.headline') }}</h2>
     <p class="abstract">{{ $t('webdesign.abstract') }}</p>
     <div>
-      <v-btn large primary :to="localePath('/services')">{{ $t('pages.portfolio') }}</v-btn>
+      <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
     </div>
     <div>
-      <v-btn flat large :to="localePath('/portfolio')">{{ $t('pages.portfolio') }}</v-btn>
+      <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
     </div>
   </section>
 
@@ -28,16 +28,24 @@
       </v-flex>
     </v-layout>
     <div>
-      <v-btn large primary :to="localePath('/services')">{{ $t('pages.services') }}</v-btn>
+      <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
     </div>
     <div>
-      <v-btn flat large :to="localePath('/portfolio')">{{ $t('pages.portfolio') }}</v-btn>
+      <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
     </div>
   </section>
+
+  <div class="illustration-advertising"></div>
 
   <section class="advertising boundaries">
     <h2>{{ $t('advertising.headline') }}</h2>
     <p class="abstract">{{ $t('advertising.abstract') }}</p>
+    <div>
+      <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
+    </div>
+    <div>
+      <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
+    </div>
   </section>
 </div>
 </template>
@@ -76,6 +84,8 @@ export default {
   i18n: {
     messages: {
       en: {
+        more: 'Learn more',
+        contact: 'Contact us',
         webdesign: {
           headline: 'Stunning Webdesign',
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
@@ -90,6 +100,8 @@ export default {
         }
       },
       de: {
+        more: 'Mehr Erfahren',
+        contact: 'Kontakt',
         webdesign: {
           headline: 'Webseiten zum staunen',
           abstract: 'Wir erstellen schlichte, funktionale Webseiten für jeden Kunden individuell. Unser Angebot richtet sich so wohl an Private, Vereine für kleine staische Webseiten, wie auch an Unternhemen mit gehobenen Ansprüchen.'
