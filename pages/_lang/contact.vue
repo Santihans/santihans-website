@@ -20,6 +20,7 @@
         <component-contact-form />
       </div>
       <div class="card-map">
+        <spinner background="white"></spinner>
         <iframe src="https://snazzymaps.com/embed/6150"></iframe>
         <v-btn primary href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</v-btn>
       </div>
@@ -31,11 +32,13 @@
 <script>
 import address from '~/components/contactAddress.vue'
 import contactForm from '~/components/contactForm.vue'
+import Spinner from 'vue-loading-spinner/src/components/DoubleBounce.vue'
 
 export default {
   components: {
     'component-address': address,
-    'component-contact-form': contactForm
+    'component-contact-form': contactForm,
+    'spinner': Spinner
   },
   head() {
     return {
