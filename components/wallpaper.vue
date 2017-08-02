@@ -42,7 +42,7 @@ export default {
     messages: {
       en: {
         headline: 'Webdesign. Branding. Advertising.',
-        tagline: 'A digital communications agency'
+        tagline: 'Santihans is a digital communications agency'
       },
       de: {
         headline: 'Webdesign. Logos. Werbung.',

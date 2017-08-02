@@ -33,6 +33,16 @@
       }
     }
 
+    &::after {
+      background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0));
+      content: '';
+      height: 20%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
     h1 {
       color: white;
       left: 50%;
