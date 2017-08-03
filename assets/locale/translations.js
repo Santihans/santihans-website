@@ -9,7 +9,7 @@ export default {
       'services': 'Services',
       'portfolio': 'Portfolio',
       'contact': 'Contact',
-      'agb': 'AGB'
+      'agb': 'Terms'
     }
   },
   de: {

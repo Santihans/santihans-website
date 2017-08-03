@@ -1,9 +1,7 @@
 <template>
 <div>
   <div class="page-header">
-    <div class="boundaries">
-      <h2 class="white--text">{{ $t('pages.portfolio') }}</h2>
-    </div>
+    <h1>{{ $t('pages.portfolio') }}</h1>
   </div>
   <div class="page-content boundaries">
     <h1>{{ $t('pages.portfolio') }}</h1>
@@ -23,11 +21,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.page-header {
-  height: 400px;
-  background-color: #d65b32;
-  display: flex;
-  align-items: flex-end;
-}
+<style lang="scss" scoped>
+@import 'portfolio.scss';
 </style>

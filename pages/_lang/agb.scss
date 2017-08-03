@@ -1,0 +1,29 @@
+@import '~assets/styles/variables.scss';
+
+#agb {
+  .page-header {
+    background-color: $colorPink;
+    height: 30vh;
+  }
+
+  iframe {
+    border: 0;
+    height: 7200px;
+    width: 100%;
+    @media(min-width: $breakpointMini) {
+      height: 6000px;
+    }
+    @media(min-width: 500px) {
+      height: 5500px;
+    }
+    @media(min-width: $breakpointSmall) {
+      height: 5000px;
+    }
+    @media(min-width: 800px) {
+      height: 4600px;
+    }
+    @media(min-width: $breakpointMedium) {
+      height: 4400px;
+    }
+  }
+}

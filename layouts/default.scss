@@ -78,3 +78,32 @@ section {
     width: 70%;
   }
 }
+
+.page-header {
+  background-color: black;
+  background-image: url('~assets/images/skyline-santihans.svg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  border-bottom: 4px solid $colorPink;
+  height: 50vh;
+  min-height: 280px;
+  max-height: 400px;
+  position: relative;
+  @media(min-width: $breakpointMedium) {
+    background-position: 50% 70%;
+  }
+  @media(min-width: $breakpointExtraLarge) {
+    background-position: bottom center;
+    background-size: 1100px;
+  }
+
+  h1 {
+    color: white;
+    left: 50%;
+    position: absolute;
+    text-shadow: 3px 4px $colorPink;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

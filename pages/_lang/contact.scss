@@ -4,17 +4,7 @@
   .page-header {
     background-color: $colorYellow;
     background-image: url('~assets/images/contact-bg.svg');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
-    border-bottom: 4px solid $colorPink;
-    height: 50vh;
-    min-height: 280px;
-    max-height: 400px;
-    position: relative;
-    @media(min-width: $breakpointMedium) {
-      background-size: contain;
-    }
+    border-color: $colorPink;
 
     &::before {
       background-image: url('~assets/images/contact.svg');
@@ -41,15 +31,6 @@
       position: absolute;
       top: 0;
       width: 100%;
-    }
-
-    h1 {
-      color: white;
-      left: 50%;
-      position: absolute;
-      text-shadow: 3px 4px $colorPink;
-      top: 50%;
-      transform: translate(-50%, -50%);
     }
 
     svg {

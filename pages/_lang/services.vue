@@ -38,11 +38,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.page-header {
-  height: 400px;
-  background-color: #663399;
-  display: flex;
-  align-items: flex-end;
-}
+<style lang="scss" scoped>
+@import 'services.scss';
 </style>
