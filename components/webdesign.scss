@@ -1,0 +1,9 @@
+@import "~assets/styles/variables.scss";
+
+.teaser {
+  margin-left: auto;
+  margin-right: auto;
+  @media(min-width: $breakpointSmall) {
+    width: 70%;
+  }
+}

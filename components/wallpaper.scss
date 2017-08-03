@@ -37,6 +37,7 @@
       transform: translateX(-50%);
 
       .icon {
+        color: white;
         font-size: 50px;
       }
 
@@ -71,11 +72,11 @@
     }
 
     h1 {
+      background-color: $colorPink;
+      color: rgba(255, 255, 255, .8);
       font-size: 1.2em;
-      color: #ffc2c2;
+      letter-spacing: -0.02em;
       padding: 20px;
-      border: 2px solid;
-      background: rgba(21, 19, 19, 0.08);
       @media(min-width: $breakpointSmall) {
         font-size: 2em;
       }
@@ -85,8 +86,8 @@
     }
 
     .tagline {
-      font-size: 1.2em;
-      color: rgba(255, 255, 255, .5);
+      font-size: 0.8em;
+      color: rgba(255, 255, 255, .7);
       @media(min-width: $breakpointSmall) {
         font-size: 1.3em;
       }

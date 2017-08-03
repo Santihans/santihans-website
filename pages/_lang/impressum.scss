@@ -1,0 +1,23 @@
+@import '~assets/styles/variables.scss';
+
+#impressum {
+  .page-header {
+    background-color: #2b2b2b;
+    background-image: url('~assets/images/skyline-santihans.svg');
+    border-color: $colorPink;
+
+    svg {
+      path {
+        fill: rgb(76, 72, 64);
+      }
+    }
+  }
+
+  .page-content {
+    .contact {
+      i {
+        display: none;
+      }
+    }
+  }
+}

@@ -9,7 +9,8 @@ export default {
       'services': 'Services',
       'portfolio': 'Portfolio',
       'contact': 'Contact',
-      'agb': 'Terms'
+      'agb': 'Terms',
+      'impressum': 'Disclaimer'
     }
   },
   de: {
@@ -22,7 +23,8 @@ export default {
       'services': 'Angebot',
       'portfolio': 'Portfolio',
       'contact': 'Kontakt',
-      'agb': 'AGB'
+      'agb': 'AGB',
+      'impressum': 'Impressum'
     }
   }
 }
