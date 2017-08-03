@@ -14,7 +14,9 @@
       <section class="page-content boundaries">
         <h2>{{ i.title }}</h2>
         <component-webdesign v-show="i.id === 'webdesign'"></component-webdesign>
-        <div>
+        <component-branding v-show="i.id === 'branding'"></component-branding>
+        <component-advertising v-show="i.id === 'advertising'"></component-advertising>
+        <div class="text-xs-center">
           <v-btn primary large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
         </div>
       </section>
@@ -26,6 +28,8 @@
 
 <script>
 import Webdesign from '~/components/webdesign.vue'
+import Branding from '~/components/branding.vue'
+import Advertising from '~/components/advertising.vue'
 
 export default {
   data() {
@@ -51,7 +55,9 @@ export default {
     }
   },
   components: {
-    'component-webdesign': Webdesign
+    'component-webdesign': Webdesign,
+    'component-branding': Branding,
+    'component-advertising': Advertising
   },
   i18n: {
     messages: {

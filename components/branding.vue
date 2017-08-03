@@ -1,18 +1,13 @@
 <template>
-<div class="component-webdesign">
+<div class="component-branding">
   <p class="abstract">{{ $t('abstract') }}</p>
-  <div class="teaser">
-    <img src="/images/webdesign/brigittehenke-responsive.jpg" alt="Webdesign">
-  </div>
 
   <h3>Interaktive Offerte</h3>
 
   <h3>References</h3>
   <v-layout wrap class="references">
     <v-flex xs6 sm3 v-for="(item,i) in branding" :key="i">
-      <a :href="item.url" target="_blank">
       <img :src="item.src" alt="Example">
-      </a>
     </v-flex>
   </v-layout>
 </div>
@@ -23,20 +18,16 @@ export default {
   data() {
     return {
       branding: [{
-          src: '/images/webdesign/frontale.jpg',
-          url: 'http://frontale-festival.github.io'
+          src: '/images/branding/denkmal.png'
         },
         {
-          src: '/images/webdesign/denkmal.jpg',
-          url: 'http://denkmal.org'
+          src: '/images/branding/frontale-2016.png'
         },
         {
-          src: '/images/webdesign/brigittehenke.jpg',
-          url: 'http://brigittehenke.ch'
+          src: '/images/branding/gundeli-street-team.png'
         },
         {
-          src: '/images/webdesign/madeinbasel.jpg',
-          url: 'http://madeinbasel.org'
+          src: '/images/branding/schiff-mode.png'
         }
       ]
     }
@@ -55,5 +46,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "webdesign.scss"
+@import "branding.scss"
 </style>

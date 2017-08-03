@@ -1,9 +1,16 @@
 @import "~assets/styles/variables.scss";
 
 .teaser {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 6vh auto;
   @media(min-width: $breakpointSmall) {
     width: 70%;
+  }
+}
+
+.references {
+  margin-bottom: 5vh;
+
+  a {
+    display: block;
   }
 }

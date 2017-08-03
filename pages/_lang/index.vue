@@ -21,12 +21,6 @@
     <img class="illustration" src="~assets/images/branding.svg" alt="Illustration">
     <h2>{{ $t('branding.headline') }}</h2>
     <p class="abstract">{{ $t('branding.abstract') }}</p>
-
-    <v-layout wrap class="references">
-      <v-flex xs6 sm3 v-for="(item,i) in branding" :key="i">
-        <img :src="item.src" alt="Example">
-      </v-flex>
-    </v-layout>
     <div>
       <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
     </div>
@@ -77,23 +71,6 @@ export default {
       title: this.$t('pages.home')
     }
   },
-  data() {
-    return {
-      branding: [{
-          src: '/images/branding/denkmal.png'
-        },
-        {
-          src: '/images/branding/frontale-2016.png'
-        },
-        {
-          src: '/images/branding/gundeli-street-team.png'
-        },
-        {
-          src: '/images/branding/schiff-mode.png'
-        }
-      ]
-    }
-  },
   i18n: {
     messages: {
       en: {
@@ -105,7 +82,7 @@ export default {
         },
         branding: {
           headline: 'Individual Branding',
-          abstract: 'We develop corporate identitiy solutions that perfectly represent the values of your organisation. Leave customers with a lasting positive first impression.'
+          abstract: 'We develop corporate identitiy solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
           headline: 'Smart Advertising',
