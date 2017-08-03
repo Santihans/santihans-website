@@ -6,23 +6,6 @@
     background-image: url('~assets/images/contact-bg.svg');
     border-color: $colorPink;
 
-    &::before {
-      background-image: url('~assets/images/contact.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 90%;
-      background-size: 100%;
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      @media(min-width: $breakpointSmall) {
-        background-position: 70% 100%;
-        background-size: 700px;
-      }
-    }
-
     &::after {
       background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0));
       content: '';
