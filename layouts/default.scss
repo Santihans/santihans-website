@@ -36,6 +36,10 @@ h2 {
   font-family: 'Raleway', 'Roboto', 'Helvetica', sans-serif;
 }
 
+h3 {
+  text-align: center;
+}
+
 #layout {
   min-height: 100vh;
   display: flex;
@@ -67,6 +71,19 @@ section {
 
 .abstract {
   font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-align: center;
+  @media(min-width: $breakpointSmall) {
+    width: 80%;
+  }
+  @media(min-width: $breakpointMedium) {
+    width: 70%;
+  }
+}
+
+.responsive-text {
   margin-left: auto;
   margin-right: auto;
   width: 90%;

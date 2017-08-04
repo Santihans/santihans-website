@@ -74,11 +74,21 @@
     h1 {
       background-color: $colorPink;
       color: rgba(255, 255, 255, .8);
-      font-size: 1.2em;
+      font-size: 0.9em;
       letter-spacing: -0.02em;
+      line-height: 1.4;
+      margin-left: 5vw;
+      margin-right: 5vw;
       padding: 20px;
+      @media(min-width: $breakpointMini) {
+        font-size: 1.2em;
+        margin-left: 0;
+        margin-right: 0;
+      }
       @media(min-width: $breakpointSmall) {
         font-size: 2em;
+        padding-left: 5vw;
+        padding-right: 5vw;
       }
       @media(min-width: $breakpointMedium) {
         font-size: 3em;
@@ -88,7 +98,8 @@
     .tagline {
       font-size: 0.8em;
       color: rgba(255, 255, 255, .7);
-      @media(min-width: $breakpointSmall) {
+      display: none;
+      @media(min-width:$breakpointSmall) {
         font-size: 1.3em;
       }
       @media(min-width: $breakpointMedium) {

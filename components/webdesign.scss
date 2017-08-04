@@ -1,15 +1,122 @@
 @import "~assets/styles/variables.scss";
 
 .teaser {
-  margin: 6vh auto;
+  margin: 6vh auto 0;
   @media(min-width: $breakpointSmall) {
     width: 70%;
   }
 }
 
-.references {
-  margin-bottom: 5vh;
+.services {
+  .services-advanced,
+  .services-basic {
+    background-color: $colorBg;
+    margin-bottom: 4vh;
+    padding-top: 3px;
+  }
 
+  .services-advanced,
+  .services-advanced-inner,
+  .services-basic {
+    .icon {
+      margin-right: 12px;
+    }
+
+    &.expansion-panel > li {
+      border: 0;
+    }
+
+    .inner {
+      background-color: $colorBgSubtle;
+      padding-left: 50px;
+      position: relative;
+
+      &::after {
+        border: 6px solid transparent;
+        border-bottom-color: $colorBgSubtle;
+        bottom: 100%;
+        content: '';
+        left: 20px;
+        position: absolute;
+      }
+    }
+  }
+
+  .services-advanced {
+    .inner {
+      padding: 0 20px;
+    }
+
+    .services-advanced-inner {
+      box-shadow: none;
+
+      .inner {
+        background-color: mix($colorBg, $colorBgSubtle);
+        padding: 12px 15px 12px 40px;
+
+        &::after {
+          border-bottom-color: mix($colorBg, $colorBgSubtle);
+          left: 16px;
+        }
+      }
+
+      .icon {
+        bottom: 2px;
+        color: #c1c1c1;
+        font-size: 14px;
+        position: relative;
+      }
+    }
+  }
+}
+
+.offer {
+  background: $colorTurquoise;
+  padding: 12px;
+
+  .offer-footer,
+  .offer-head,
+  h3 {
+    color: white;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+  }
+
+  .offer-head {
+    position: relative;
+
+    .price {
+      background-color: $colorPink;
+      padding: 10px;
+      position: absolute;
+      right: 12px;
+      top: 100%;
+      z-index: 1;
+    }
+  }
+
+  .stepper--vertical .stepper__content {
+    padding: 12px;
+  }
+
+  .stepper-content {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 12px;
+  }
+
+  .stepper-action {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.references {
   a {
     display: block;
   }
