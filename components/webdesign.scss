@@ -1,5 +1,17 @@
 @import "~assets/styles/variables.scss";
 
+h3 {
+  margin-bottom: 0.6em;
+}
+
+h4 + p {
+  max-width: 75%;
+}
+
+.responsive-text {
+  margin-bottom: 1em;
+}
+
 .teaser {
   margin: 6vh auto 0;
   @media(min-width: $breakpointSmall) {
@@ -7,47 +19,65 @@
   }
 }
 
-.services {
-  .services-advanced,
-  .services-basic {
+.expansion-custom {
+  &:not(.level-2) {
     background-color: $colorBg;
-    margin-bottom: 4vh;
     padding-top: 3px;
   }
 
-  .services-advanced,
-  .services-advanced-inner,
-  .services-basic {
-    .icon {
-      margin-right: 12px;
-    }
-
-    &.expansion-panel > li {
-      border: 0;
-    }
-
-    .inner {
-      background-color: $colorBgSubtle;
-      padding-left: 50px;
-      position: relative;
-
-      &::after {
-        border: 6px solid transparent;
-        border-bottom-color: $colorBgSubtle;
-        bottom: 100%;
-        content: '';
-        left: 20px;
-        position: absolute;
-      }
-    }
+  .icon {
+    margin-right: 12px;
   }
 
-  .services-advanced {
+  &.expansion-panel > li {
+    border: 0;
+  }
+
+  .inner {
+    background-color: $colorBgSubtle;
+    padding-left: 50px;
+    position: relative;
+
+    &::after {
+      border: 6px solid transparent;
+      border-bottom-color: $colorBgSubtle;
+      bottom: 100%;
+      content: '';
+      left: 20px;
+      position: absolute;
+    }
+  }
+}
+
+.services {
+  background-color: $colorTurquoise;
+  padding: 20px 12px 12px;
+
+  .responsive-text,
+  .services-footer,
+  h3 {
+    color: $colorBg;
+  }
+
+  h3 {
+    margin-bottom: 12px;
+  }
+
+  .services-footer {
+    line-height: 1.2;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 7px;
+    text-align: center;
+    width: 70%;
+  }
+
+  .expansion-custom {
     .inner {
       padding: 0 20px;
     }
 
-    .services-advanced-inner {
+    &.level-2 {
       box-shadow: none;
 
       .inner {
@@ -70,20 +100,22 @@
   }
 }
 
+.references {
+  a {
+    display: block;
+  }
+}
+
 .offer {
   background: $colorTurquoise;
-  padding: 12px;
+  padding: 20px 12px;
 
   .offer-footer,
   .offer-head,
   h3 {
     color: white;
-    text-align: center;
-  }
-
-  h3 {
-    margin-top: 1vh;
     margin-bottom: 2vh;
+    text-align: center;
   }
 
   .offer-head {
@@ -113,11 +145,5 @@
   .stepper-action {
     display: flex;
     justify-content: flex-end;
-  }
-}
-
-.references {
-  a {
-    display: block;
   }
 }

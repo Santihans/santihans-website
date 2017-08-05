@@ -1,32 +1,25 @@
 <template>
 <div class="component-webdesign">
-  <p class="abstract">{{ $t('abstract') }}</p>
-  <div class="teaser">
-    <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
-  </div>
-
+  <section class="intro">
+    <h2>Webdesign</h2>
+    <p class="abstract">{{ $t('abstract') }}</p>
+    <div class="teaser">
+      <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
+    </div>
+    <div class="text-xs-center">
+      <v-btn large flat outline :to="localePath('/contact')">Interaktive Offerte</v-btn>
+    </div>
+  </section>
   <section class="services">
-    <h3>Basisangebot</h3>
-    <p class="responsive-text">Wir sind spezialisiert auf Konzeption, Design und Umsetzung von Webseiten. Mit anderen Worten: Wir kümmern uns um alles was der Kunde im Browser zu sehen bekommt. Wir setzen Webseiten nach einer bestehenden Vorlage um oder übernehmen gleich Konzeption
-      und Design (Layout, Farbkonzepte, UI/UX, usw.) von Beginn weg. Alle unsere Webseiten erfüllen grundsätzlich folgende Basisfunktionen:</p>
-    <v-expansion-panel class="services-basic">
-      <v-expansion-panel-content v-for="(item,i) in servicesBasic" :key="i">
-        <div slot="header">
-          <v-icon success>check_circle</v-icon>{{ item.label }}</div>
-        <v-card>
-          <v-card-text class="inner">{{ item.details}}</v-card-text>
-        </v-card>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-
-    <h4>Weitere Dienstleistungen</h4>
-    <v-expansion-panel class="services-advanced">
+    <h3>Dienstleistungen</h3>
+    <div class="responsive-text">Hier finden Sie alle unsere Webdesign-Angebote im Überblick.</div>
+    <v-expansion-panel class="expansion-custom">
       <v-expansion-panel-content v-for="(item,i) in servicesAdvanced" :key="i">
         <div slot="header">
           <v-icon accent>add_circle</v-icon>{{ item.label }}</div>
         <v-card>
           <v-card-text class="inner">
-            <v-expansion-panel class="services-advanced-inner">
+            <v-expansion-panel class="expansion-custom level-2">
               <v-expansion-panel-content v-for="(item,i) in item.items" :key="i">
                 <div slot="header">
                   <v-icon accent>fiber_manual_record</v-icon>{{ item.label }}</div>
@@ -36,6 +29,21 @@
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-card-text>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <div class="services-footer"><small>Vermissen Sie eine Dienstleistung? Wir arbeiten mit mehreren Partnern zusammen und finden bestimmt eine Lösung für ihre Bedürfnisse. Kontaktieren Sie uns.</small></div>
+  </section>
+
+  <section class="basics">
+    <h4>Basisangebot</h4>
+    <p>Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen grundsätzlich über folgende Basisfunktionen:</p>
+    <v-expansion-panel class="expansion-custom">
+      <v-expansion-panel-content v-for="(item,i) in servicesBasic" :key="i">
+        <div slot="header">
+          <v-icon success>check_circle</v-icon>{{ item.label }}</div>
+        <v-card>
+          <v-card-text class="inner">{{ item.details}}</v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -117,8 +125,10 @@
       <small>*Gilt als Anhaltspunkt für ein Beratungsgespräch. Ersetzt nicht die schriftliche Offerte. Preisänderungen vorbehalten.</small>
     </div>
   </section>
+
   <section class="references">
-    <h3>References</h3>
+    <h4>Referenzen</h4>
+    <p>Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.</p>
     <v-layout wrap class="references">
       <v-flex xs6 sm3 v-for="(item,i) in referencesBranding" :key="i">
         <a v-ripple :href="item.url" target="_blank">
@@ -170,7 +180,26 @@ export default {
         }
       ],
       servicesAdvanced: [{
-          label: 'Website',
+          label: 'Design',
+          items: [{
+              label: 'Webdesign',
+              details: 'Unser Steckenpferd. Wir konzipieren, gestalten ihre Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess ihren Bedürfnen an. Dabei arbeiten wir in mehreren Iterationen und kreiren eine Webseite nach ihren Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.',
+              price: '100'
+            },
+            {
+              label: 'Illustrationen und Grafikelemente',
+              details: 'Wir erstellen Grafikelemente, Icons, Illustrationen und ähnliches. Wir bearbeiten Photos und verbessern Bildmaterial mithilfe von Adobe Photoshop. ',
+              price: '100'
+            },
+            {
+              label: 'Stock Photos',
+              details: 'Wir kümmern uns um die Suche und Erwerb geeigneter Photos um ihrer Webseite zu illustrieren.',
+              price: '100'
+            }
+          ]
+        },
+        {
+          label: 'Webseite',
           items: [{
               label: 'CMS',
               details: 'Sie möchten den Inhalt ihrer Webseite selbst verwalten? Kein Problem. Wir bieten Content Management System (CMS) Lösungen via <a href="https://prismic.io" target="_blank">prismic.io</a> an. Wir verknüpfen ihre Webseite für eine sichere, zuverlässige Verwaltung ihrer Inhalte.',
@@ -216,12 +245,12 @@ export default {
         {
           label: 'Infrastruktur',
           items: [{
-              label: 'Ihre Domain',
+              label: 'Persönliche Domain',
               details: 'Wir übernehmen die Domainregistrierung (z.b. http://www.hansmuster.ch) für sie. Wir prüfen Verfügbarkeit ihres gewünschten Domains und machen allenfalls Alternativvorschläge. (via <a href="https://cyon.ch" target="_blank">cyon.ch</a>)',
               price: '100'
             },
             {
-              label: 'Ihre Email',
+              label: 'Persönliche Email',
               details: 'Wir stellen Email-Server zur verfügung. Falls sie über einen eigene Domain verfügen erhalten sie ihre Wunsch-Email-Adressen. Z.b. info@hansmuster.ch (via <a href="https://cyon.ch" target="_blank">cyon.ch</a>)',
               price: '100'
             }
@@ -277,7 +306,7 @@ export default {
         abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
       },
       de: {
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos iusto, eligendi ducimus quaerat officiis illo aliquid. Maxime ducimus soluta, eveniet, eum fugit asperiores quam, nam nisi eius sit id reprehenderit.'
+        abstract: 'Wir sind spezialisiert auf Konzeption, Design und Umsetzung von Webseiten. Wir gestalten alles was der Kunde im Browser zu sehen bekommt. Wir setzen Webseiten nach einer bestehenden Vorlage um oder übernehmen Konzeption und Design von Beginn weg.'
       }
     }
   }

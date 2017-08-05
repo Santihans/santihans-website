@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="services">
   <div class="page-header">
     <h1>{{ $t('pages.services') }}</h1>
   </div>
@@ -11,18 +11,13 @@
       </v-tabs-item>
     </v-tabs-bar>
     <v-tabs-content v-for="i in items" :key="i" :id="'tab-' + items.indexOf(i)">
-      <section class="page-content boundaries">
-        <h2>{{ i.title }}</h2>
+      <div class="page-content boundaries">
         <component-webdesign v-show="i.id === 'webdesign'"></component-webdesign>
         <component-branding v-show="i.id === 'branding'"></component-branding>
         <component-advertising v-show="i.id === 'advertising'"></component-advertising>
-        <div class="text-xs-center">
-          <v-btn primary large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
-        </div>
-      </section>
+      </div>
     </v-tabs-content>
   </v-tabs>
-
 </div>
 </template>
 
@@ -76,6 +71,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import 'services.scss';
 </style>

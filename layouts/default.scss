@@ -69,8 +69,8 @@ section {
   }
 }
 
-.abstract {
-  font-size: 1.2em;
+.abstract,
+.responsive-text {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -83,17 +83,8 @@ section {
   }
 }
 
-.responsive-text {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-align: center;
-  @media(min-width: $breakpointSmall) {
-    width: 80%;
-  }
-  @media(min-width: $breakpointMedium) {
-    width: 70%;
-  }
+.abstract {
+  font-size: 1.2em;
 }
 
 .page-header {
