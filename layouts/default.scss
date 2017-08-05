@@ -60,8 +60,8 @@ section {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   width: $maxPageSize;
   @media(min-width: $breakpointMedium) {
     padding-left: 12px;
@@ -73,8 +73,10 @@ section {
 .responsive-text {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
   text-align: center;
+  @media(min-width: $breakpointMini) {
+    width: 90%;
+  }
   @media(min-width: $breakpointSmall) {
     width: 80%;
   }
