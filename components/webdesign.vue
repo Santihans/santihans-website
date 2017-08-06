@@ -39,7 +39,7 @@
     <h4>Basisangebot</h4>
     <p>Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen grundsätzlich über folgende Basisfunktionen:</p>
     <v-expansion-panel class="expansion-custom">
-      <v-expansion-panel-content v-for="(item,i) in services.basic" :key="i">
+      <v-expansion-panel-content v-for="(item,i) in services.basic.items" :key="i">
         <div slot="header">
           <v-icon success>check_circle</v-icon>{{ item.label }}</div>
         <v-card>

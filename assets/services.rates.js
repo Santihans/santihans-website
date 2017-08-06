@@ -3,9 +3,11 @@ export default {
     graphics: 50,
     development: 100
   },
-  monthly: {
-    hosting: 5,
-    support: 20
+  yearly: {
+    domain: 30,
+    email: 5,
+    hosting: 30,
+    support: 1000
   },
   base: 900
 }

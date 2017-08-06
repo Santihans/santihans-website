@@ -5,10 +5,7 @@
     <p class="responsive-text">Nimm dir 2 Minuten Zeit um eine unverbindliche Offerte zusammenzustellen.*</p>
     <div class="price">
       <div class="price-initial">
-        ab CHF <span v-text.number="offerSummary.rateInitial"></span>
-      </div>
-      <div class="price-recurring">
-        + CHF <span v-text.number="offerSummary.rateMonthly"></span> pro Monat
+        ab CHF <span v-text.number="offerSummary.rateInitial + offerSummary.rateYearly"></span>
       </div>
     </div>
   </div>
@@ -24,7 +21,7 @@
       </v-stepper-step>
       <v-stepper-content step="1">
         <div class="stepper-content">
-          <v-radio v-for="(item,i) in services.client.size" v-model="services.client.selectedSize" :key="i" :label="item.label" :hint="item.hint" persistent-hint :value="item.priceMultiplyer"></v-radio>
+          <v-radio v-for="(value, key, index) in services.client.size" v-model="services.client.selectedSize" :key="index" :label="value.label" :hint="value.hint" persistent-hint :value="key"></v-radio>
           <v-checkbox :label="services.client.nonprofit.label" v-model="services.client.nonprofit.selected" :hint="services.client.nonprofit.hint" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn primary @click="step = 2">Continue</v-btn>
@@ -75,23 +72,26 @@
         </div>
       </v-stepper-content>
 
-      <v-stepper-step step="5" editable>
+      <v-stepper-step step="5">
         Zusamenfassung
       </v-stepper-step>
       <v-stepper-content step="5">
         <div class="stepper-content">
-          Achtung: Sie haben "Design" ausgeschlossen. Ich verstehe dass ich die …
-          <ul v-for="items in offerSummary.summary" v-if="items.hasOwnProperty('initial')">
-            <li v-for="item in items">
-              {{ item.label }} - ({{ item.hours }}h) - Total: {{ item.rateTotal }}
-            </li>
-          </ul>
-          <hr>
-          <ul v-for="items in offerSummary.summary" v-if="items.hasOwnProperty('recurring')">
-            <li v-for="item in items">
-              Monatliche Kosten: {{ item.label }} - {{ item.rateMonthly }}
-            </li>
-          </ul>
+          <v-data-table class="table-offer-initial" v-bind:headers="headerInitial" :items="offerSummary.summary.initial" hide-actions>
+            <template slot="items" scope="props">
+              <td>{{ props.item.label }}</td>
+              <td class="text-xs-right">{{ props.item.hours }}</td>
+              <td class="text-xs-right">{{ props.item.rateHourly }}</td>
+              <td class="text-xs-right"><span class="total">{{ props.item.rateTotal }}</span></td>
+            </template>
+          </v-data-table>
+          <v-data-table class="table-offer-recurring" v-bind:headers="headersRecurring" :items="offerSummary.summary.recurring" hide-actions v-show="offerSummary.summary.recurring.length">
+            <template slot="items" scope="props">
+              <td>{{ props.item.label }}</td>
+              <td class="text-xs-right">{{ props.item.units }}</td>
+              <td class="text-xs-right"><span class="total">{{ props.item.rateYearly }}</span></td>
+            </template>
+          </v-data-table>
         </div>
         <div class="stepper-action">
           <v-btn flat @click="step = 4">Zurück</v-btn>
@@ -115,29 +115,33 @@ export default {
   computed: {
     offerSummary: function () {
       var self = this
-      var summary = []
+      var summary = {}
       var rateInitialTotal = this.rates.base
-      var rateMonthlyTotal = 0
+      var multiplyer = this.services.client.size[this.services.client.selectedSize].priceMultiplyer
+      var rateYearlyTotal = 0
+
+      summary.initial = [{
+        label: this.services.basic.label + ' (' + this.services.client.size[this.services.client.selectedSize].label + ')',
+        rateTotal: rateInitialTotal * multiplyer
+      }]
+      summary.recurring = []
 
       _.each(this.services.advanced, function (type) {
         _.each(type.items, function (item) {
-          if (item.selected && item.hasOwnProperty('units')) {
-            if (item.hasOwnProperty('recurringMonthly') && item.recurringMonthly) {
-              summary.push({
-                recurring: {
-                  label: item.label,
-                  rateMonthly: self.rates.monthly[item.rate] * item.units
-                }
+          if (item.selected && item.hasOwnProperty('units') && item.hasOwnProperty('rate')) {
+            if (item.hasOwnProperty('recurringYearly') && item.recurringYearly) {
+              summary.recurring.push({
+                label: item.label,
+                units: item.units,
+                rateYearly: self.rates.yearly[item.rate] * item.units
               })
-              rateMonthlyTotal += self.rates.monthly[item.rate] * item.units
+              rateYearlyTotal += self.rates.yearly[item.rate] * item.units
             } else {
-              summary.push({
-                initial: {
-                  label: item.label,
-                  hours: item.units,
-                  rateHourly: self.rates.hourly[item.rate],
-                  rateTotal: self.rates.hourly[item.rate] * item.units
-                }
+              summary.initial.push({
+                label: item.label,
+                hours: item.units * multiplyer,
+                rateHourly: self.rates.hourly[item.rate],
+                rateTotal: self.rates.hourly[item.rate] * item.units * multiplyer
               })
               rateInitialTotal += self.rates.hourly[item.rate] * item.units
             }
@@ -145,14 +149,28 @@ export default {
         })
       })
 
-      rateInitialTotal *= this.services.client.selectedSize
+      rateInitialTotal *= multiplyer
       if (this.services.client.nonprofit.selected) {
-        rateInitialTotal *= this.services.client.nonprofit.priceMultiplyer
+        var discount = rateInitialTotal * this.services.client.nonprofit.discount
+        rateInitialTotal -= discount
+        summary.initial.push({
+          label: this.services.client.nonprofit.label + ' (-' + this.services.client.nonprofit.discount * 100 + '%)',
+          rateTotal: -discount
+        })
       }
+
+      summary.initial.push({
+        label: 'Total',
+        rateTotal: rateInitialTotal
+      })
+      summary.recurring.push({
+        label: 'Total pro Jahr',
+        rateYearly: rateYearlyTotal
+      })
 
       return {
         rateInitial: rateInitialTotal,
-        rateMonthly: rateMonthlyTotal,
+        rateYearly: rateYearlyTotal,
         summary: summary
       }
     }
@@ -161,7 +179,46 @@ export default {
     return {
       services: Services,
       rates: Rates,
-      step: 1
+      step: 1,
+      headerInitial: [{
+          text: 'Leistung',
+          align: 'left',
+          sortable: false,
+          value: 'label'
+        },
+        {
+          text: 'Anzahl Stunden',
+          sortable: false,
+          value: 'hours'
+        },
+        {
+          text: 'Stundenansatz CHF',
+          sortable: false,
+          value: 'rateTotal'
+        },
+        {
+          text: 'Total CHF',
+          sortable: false,
+          value: 'rateTotal'
+        }
+      ],
+      headersRecurring: [{
+          text: 'Wiederkehrende Leistung',
+          align: 'left',
+          sortable: false,
+          value: 'label'
+        },
+        {
+          text: 'Einheiten',
+          sortable: false,
+          value: 'units'
+        },
+        {
+          text: 'Total CHF',
+          sortable: false,
+          value: 'rateYearly'
+        }
+      ]
     }
   }
 }
