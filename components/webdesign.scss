@@ -126,41 +126,4 @@ h4 + p {
 .offer {
   background: $colorTurquoise;
   padding: 20px 12px;
-
-  .offer-footer,
-  .offer-head,
-  h3 {
-    color: white;
-    margin-bottom: 2vh;
-    text-align: center;
-  }
-
-  .offer-head {
-    position: relative;
-
-    .price {
-      background-color: $colorPink;
-      padding: 10px;
-      position: absolute;
-      right: 12px;
-      top: 100%;
-      z-index: 1;
-    }
-  }
-
-  .stepper--vertical .stepper__content {
-    padding: 12px;
-  }
-
-  .stepper-content {
-    border-bottom: 2px dashed #eaeaea;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    padding-right: 12px;
-  }
-
-  .stepper-action {
-    display: flex;
-    justify-content: flex-end;
-  }
 }
