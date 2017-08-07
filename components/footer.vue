@@ -18,11 +18,11 @@
         <li><a href="twitter.com/santihans" target="_blank">Twitter</a></li>
         <li><a href="https://www.instagram.com/santihans4056" target="_blank">Instagram</a></li>
         <li><a href="facebook.com/santihans" target="_blank">Facebook</a></li>
-        <nuxt-link v-ripple tag="li" :to="localePath('/agb')" exact>
-          <a>{{ $t("pages.agb") }}</a>
+        <nuxt-link v-ripple tag="li" :to="localePath('/terms')" exact>
+          <a>{{ $t("pages.terms") }}</a>
         </nuxt-link>
-        <nuxt-link v-ripple tag="li" :to="localePath('/impressum')" exact>
-          <a>{{ $t("pages.impressum") }}</a>
+        <nuxt-link v-ripple tag="li" :to="localePath('/disclaimer')" exact>
+          <a>{{ $t("pages.disclaimer") }}</a>
         </nuxt-link>
       </ul>
     </div>

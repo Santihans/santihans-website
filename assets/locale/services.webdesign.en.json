@@ -65,7 +65,7 @@
       ]
     },
     "functionality": {
-      "label": "functionality",
+      "label": "Functionality",
       "items": [{
           "label": "CMS",
           "details": "You want to manage your website's content independently? We got you covered. We offer Content Management System (CMS) via <a href='https://prismic.io' target='_blank'>prismic.io</a>.",
@@ -104,7 +104,7 @@
       ]
     },
     "infrastructure": {
-      "label": "infrastructure",
+      "label": "Infrastructure",
       "items": [{
           "label": "Hosting (Recommended)",
           "details": "Maximum speed, security and reliability: We host our products on Google Firebase. All websites are served using HTTPS.",

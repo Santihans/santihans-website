@@ -1,8 +1,8 @@
 <template lang="html">
-  <div id="agb">
+  <div id="terms">
   <div class="page-header">
     <div class="boundaries">
-      <h1 class="white--text">{{ $t('pages.agb') }}</h1>
+      <h1 class="white--text">{{ $t('pages.terms') }}</h1>
     </div>
   </div>
   <div class="page-content boundaries">
@@ -16,5 +16,5 @@ export default {}
 </script>
 
 <style lang="scss">
-@import 'agb.scss';
+@import 'terms.scss';
 </style>

@@ -150,7 +150,7 @@ const services = {
       ]
     },
     infrastructure: {
-      label: 'Infrastruktur',
+      label: 'advanced.infrastructure.label',
       items: [{
           // Hosting
           label: 'advanced.infrastructure.items[0].label',
@@ -184,7 +184,7 @@ const services = {
       ]
     },
     support: {
-      label: 'Support',
+      label: 'advanced.support.label',
       items: [{
           // Basic Support
           label: 'advanced.support.items[0].label',

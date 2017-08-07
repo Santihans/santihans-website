@@ -1,5 +1,5 @@
 <template>
-<div id="impressum">
+<div id="disclaimer">
   <div class="page-header">
     <div class="clouds boundaries">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 117">
@@ -11,7 +11,7 @@
         </g>
       </svg>
     </div>
-    <h1>{{ $t('pages.impressum') }}</h1>
+    <h1>{{ $t('pages.disclaimer') }}</h1>
   </div>
   <section class="page-content boundaries">
     <component-address />
@@ -28,12 +28,12 @@ export default {
   },
   head() {
     return {
-      title: this.$t('pages.impressum')
+      title: this.$t('pages.disclaimer')
     }
   }
 }
 </script>
 
 <style lang="scss">
-@import "impressum.scss";
+@import "disclaimer.scss";
 </style>
