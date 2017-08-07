@@ -6,15 +6,15 @@
   <v-tabs dark fixed centered>
     <v-tabs-bar slot="activators">
       <v-tabs-slider></v-tabs-slider>
-      <v-tabs-item v-for="i in items" :key="i" :href="'#tab-' + items.indexOf(i)">
-        {{ i.title }}
+      <v-tabs-item v-for="(item, key, index) in items" :key="index" :href="'#tab-' + index">
+        {{ item.title }}
       </v-tabs-item>
     </v-tabs-bar>
-    <v-tabs-content v-for="i in items" :key="i" :id="'tab-' + items.indexOf(i)">
+    <v-tabs-content v-for="(item, key, index) in items" :key="index" :id="'tab-' + index">
       <div class="page-content boundaries">
-        <component-webdesign v-show="i.id === 'webdesign'"></component-webdesign>
-        <component-branding v-show="i.id === 'branding'"></component-branding>
-        <component-advertising v-show="i.id === 'advertising'"></component-advertising>
+        <component-webdesign v-show="key === 'webdesign'"></component-webdesign>
+        <component-branding v-show="key === 'branding'"></component-branding>
+        <component-advertising v-show="key === 'advertising'"></component-advertising>
       </div>
     </v-tabs-content>
   </v-tabs>
@@ -29,19 +29,17 @@ import Advertising from '~/components/advertising.vue'
 export default {
   data() {
     return {
-      items: [{
-          id: 'webdesign',
+      items: {
+        webdesign: {
           title: this.$t('webdesign')
         },
-        {
-          id: 'branding',
+        branding: {
           title: this.$t('branding')
         },
-        {
-          id: 'advertising',
+        advertising: {
           title: this.$t('advertising')
         }
-      ]
+      }
     }
   },
   head() {

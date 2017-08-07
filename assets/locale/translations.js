@@ -11,6 +11,14 @@ export default {
       'contact': 'Contact',
       'agb': 'Terms',
       'impressum': 'Disclaimer'
+    },
+    buttons: {
+      continue: 'Continue',
+      back: 'Back',
+      save: 'Save',
+      send: 'Send',
+      sendRequest: 'Send Request',
+      confirm: 'Confirm'
     }
   },
   de: {
@@ -25,6 +33,14 @@ export default {
       'contact': 'Kontakt',
       'agb': 'AGB',
       'impressum': 'Impressum'
+    },
+    buttons: {
+      continue: 'Weiter',
+      back: 'Zurück',
+      save: 'Speichern',
+      send: 'Abschicken',
+      sendRequest: 'Anfrage Senden',
+      confirm: 'Bestätigen'
     }
   }
 }

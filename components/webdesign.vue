@@ -36,14 +36,14 @@
   </section>
 
   <section class="basics">
-    <h4>Basisangebot</h4>
-    <p>Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen grundsätzlich über folgende Basisfunktionen:</p>
+    <h4>{{ $t(services.basic.label) }}</h4>
+    <p>{{ $t(services.basic.description) }}</p>
     <v-expansion-panel class="expansion-custom">
       <v-expansion-panel-content v-for="(item,i) in services.basic.items" :key="i">
         <div slot="header">
-          <v-icon success>check_circle</v-icon>{{ item.label }}</div>
+          <v-icon success>check_circle</v-icon>{{ $t(`${item.label}`) }}</div>
         <v-card>
-          <v-card-text class="inner">{{ item.details}}</v-card-text>
+          <v-card-text class="inner">{{ $t(`${item.details}`) }}</v-card-text>
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
@@ -68,8 +68,9 @@
 </template>
 
 <script>
-import Services from '~/assets/services.webdesign.js'
+import { services, messages } from '~/assets/services.webdesign.js'
 import Offer from '~/components/offer.vue'
+var extend = require('node.extend')
 
 export default {
   components: {
@@ -77,7 +78,7 @@ export default {
   },
   data() {
     return {
-      services: Services,
+      services: services,
       referencesBranding: [{
           src: '/images/webdesign/frontale.jpg',
           url: 'http://frontale-festival.github.io'
@@ -97,25 +98,7 @@ export default {
       ]
     }
   },
-  i18n: {
-    messages: {
-      en: {
-        abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.',
-        form: {
-          email: 'Email',
-          message: 'Message'
-        }
-
-      },
-      de: {
-        abstract: 'Wir sind spezialisiert auf Konzeption, Design und Umsetzung von Webseiten. Wir gestalten alles was der Kunde im Browser zu sehen bekommt. Wir setzen Webseiten nach einer bestehenden Vorlage um oder übernehmen Konzeption und Design von Beginn weg.',
-        form: {
-          email: 'E-mail',
-          message: 'Bemerkungen'
-        }
-      }
-    }
-  }
+  i18n: extend(true, {}, messages, {})
 }
 </script>
 

@@ -1,51 +1,52 @@
-export default {
+const services = {
   client: {
     selectedSize: 'small',
     size: {
       small: {
-        label: 'Klein',
-        hint: 'Statische Webseite, Portrait',
+        label: 'client.size.small.label',
+        hint: 'client.size.small.hint',
         priceMultiplyer: 1
       },
       medium: {
-        label: 'Mittel',
-        hint: 'Blog, Galerie, Kleinunternehmen, Verein',
+        label: 'client.size.medium.label',
+        hint: 'client.size.medium.hint',
         priceMultiplyer: 2
       },
       large: {
-        label: 'Gross',
-        hint: 'Unternehmen, Grossprojekt, Onlinehandel, App',
+        label: 'client.size.large.label',
+        hint: 'client.size.large.hint',
         priceMultiplyer: 4
       }
     },
     nonprofit: {
-      label: 'NonProfit',
-      hint: 'Rabatt für Non-Profit Organisationn, Open Souce Projekte, NGOs',
+      label: 'client.nonprofit.label',
+      hint: 'client.nonprofit.hint',
       selected: false,
       discount: 0.2
     }
   },
   basic: {
-    label: 'Basisangebot',
+    label: 'basic.label',
+    description: 'basic.description',
     items: [{
-        label: '100% Responsiveness',
-        details: 'Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiletelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo.'
+        label: 'basic.items[0].label',
+        details: 'basic.items[0].details'
       },
       {
-        label: 'Support für moderne Browser',
-        details: 'Wir unterstützen alle gängigen modernen Browser. Wir garantieren grundsätzlich für die gesamte Funktionalität einer App oder Webseite. Unterstützt werden insbesondere Chrome, Firefox, Safari, Microsoft Edge.'
+        label: 'basic.items[1].label',
+        details: 'basic.items[1].details'
       },
       {
-        label: 'Barrierrefreiheit (Standard)',
-        details: 'Webseiten und Apps werden grundsätzlich nach bester Praxis programmiert. Dies ermöglicht eine grundsätzliche Barrierrefreiheit (Z.b. screen reader). Achtung: Absolute Barrierrefreiheit wird im Basisangebot jedoch nicht garantiert.'
+        label: 'basic.items[2].label',
+        details: 'basic.items[2].details'
       },
       {
-        label: 'Google Analytics',
-        details: 'Zugang zu den Analyse Werkzeugen von Google Analytics. Finde heraus woher auf deine Webseite zugegriffen wird, welche Seiten wie lange besucht werden, usw. Achtung: Für diesen Service ist zusätzlich ein Google Account erforderlich.'
+        label: 'basic.items[3].label',
+        details: 'basic.items[3].details'
       },
       {
-        label: 'Zugang zum Source Code',
-        details: 'Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Privat oder öffentlich - Sie erhalten vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich.'
+        label: 'basic.items[4].label',
+        details: 'basic.items[4].details'
       }
     ]
   },
@@ -203,4 +204,107 @@ export default {
       ]
     }
   }
+}
+const messages = {
+  messages: {
+    en: {
+      client: {
+        size: {
+          small: {
+            label: 'Small',
+            hint: 'Static Website, Portrait'
+          },
+          medium: {
+            label: 'Medium',
+            hint: 'Blog, Gallery, Startup, Organisation'
+          },
+          large: {
+            label: 'Large',
+            hint: 'Company, Large Project, Online Shop, App'
+          }
+        },
+        nonprofit: {
+          label: 'Non-Profit',
+          hint: 'Discount for non-profit organisations, open-souce projects, NGOs'
+        }
+      },
+      basic: {
+        label: 'Base Package',
+        description: 'No matter the size of your project - all our websites include the following features:',
+        items: [{
+            label: '100% Responsiveness',
+            details: 'More than 50% of a website\'s traffic usually comes from mobile devices and tablets. We design mobile-first and garantee a great user experience on all screen sizes.'
+          },
+          {
+            label: 'Modern Browser Support',
+            details: 'We support all modern browsers. We garantee full functionality for all features. Supported are up-to-date versions of Chrome, Firefox, Safari, Microsoft Edge.'
+          },
+          {
+            label: 'Accessibility (Standard)',
+            details: 'We structure websites semantically and implement content following best practises. This leads to principle accessibility. (e.g. screen reader). Note: Full accessibility check is offered as an additional service.'
+          },
+          {
+            label: 'Google Analytics',
+            details: 'You get access to Google Analytics tools. Get full insights on your audience. Traffic sources, languages, etc. Note: Google Account required.'
+          },
+          {
+            label: 'Full Source Code Access',
+            details: 'Without special agreement the source code will be public. (Open-Source Software). On request you\'ll get full access to the source code. Note: Github Account required.'
+          }
+        ]
+      }
+    },
+    de: {
+      client: {
+        size: {
+          small: {
+            label: 'Klein',
+            hint: 'Statische Webseite, Portrait'
+          },
+          medium: {
+            label: 'Mittel',
+            hint: 'Blog, Galerie, Kleinunternehmen, Verein'
+          },
+          large: {
+            label: 'Gross',
+            hint: 'Unternehmen, Grossprojekt, Onlinehandel, App'
+          }
+        },
+        nonprofit: {
+          label: 'Non-Profit',
+          hint: 'Rabatt für Non-Profit Organisationen, Open Souce Projekte, NGOs'
+        }
+      },
+      basic: {
+        label: 'Basisangebot',
+        description: 'Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen über folgende Eigenschaften:',
+        items: [{
+            label: '100% Responsiveness',
+            details: 'Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiletelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo.'
+          },
+          {
+            label: 'Support für moderne Browser',
+            details: 'Wir unterstützen alle gängigen modernen Browser. Wir garantieren grundsätzlich für die gesamte Funktionalität einer App oder Webseite. Unterstützt werden insbesondere Chrome, Firefox, Safari, Microsoft Edge.'
+          },
+          {
+            label: 'Barrierrefreiheit (Standard)',
+            details: 'Webseiten und Apps werden grundsätzlich nach bester Praxis programmiert. Dies ermöglicht eine grundsätzliche Barrierrefreiheit (Z.b. screen reader). Achtung: Absolute Barrierrefreiheit wird im Basisangebot jedoch nicht garantiert.'
+          },
+          {
+            label: 'Google Analytics',
+            details: 'Zugang zu den Analyse Werkzeugen von Google Analytics. Finde heraus woher auf deine Webseite zugegriffen wird, welche Seiten wie lange besucht werden, usw. Achtung: Für diesen Service ist zusätzlich ein Google Account erforderlich.'
+          },
+          {
+            label: 'Zugang zum Source Code',
+            details: 'Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Sie erhalten vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich.'
+          }
+        ]
+      }
+    }
+  }
+}
+
+export {
+  services,
+  messages
 }
