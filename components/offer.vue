@@ -16,8 +16,8 @@
       </v-stepper-step>
 
       <v-stepper-step step="1" v-bind:complete="step > 1">
-        {{ $t('step.1.title') }}
-        <small>{{ $t('step.1.directions') }}</small>
+        {{ $t('step.initial.title') }}
+        <small>{{ $t('step.initial.directions') }}</small>
       </v-stepper-step>
       <v-stepper-content step="1">
         <div class="stepper-content">
@@ -30,12 +30,12 @@
       </v-stepper-content>
 
       <v-stepper-step step="2" v-bind:complete="step > 2">
-        {{ $t('services.advanced.design.label') }}
+        {{ $t(`${services.advanced.design.label}`) }}
         <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="2">
         <div class="stepper-content">
-          <v-checkbox v-for="(item,i) in services.advanced.design.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.design.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`) + (item.hasOwnProperty('extra') ? ' (' + $t(`${item.extra}`) + ')' : '')" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn flat @click="step = 1">{{ $t('buttons.back') }}</v-btn>
             <v-btn primary @click="step = 3">{{ $t('buttons.continue') }}</v-btn>
@@ -44,7 +44,7 @@
       </v-stepper-content>
 
       <v-stepper-step step="3" v-bind:complete="step > 3">
-        {{ $t('services.advanced.functionality.label') }}
+        {{ $t(`${services.advanced.functionality.label}`) }}
         <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="3">
@@ -58,12 +58,12 @@
       </v-stepper-content>
 
       <v-stepper-step step="4" v-bind:complete="step > 4">
-        {{ $t('services.advanced.infrastructure.label') }} / {{ $t('services.advanced.support.label') }}
+        {{ $t(`${services.advanced.infrastructure.label}`) }} / {{ $t(`${services.advanced.support.label}`) }}
         <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="4">
         <div class="stepper-content">
-          <v-checkbox v-for="(item,i) in services.advanced.infrastructure.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.infrastructure.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)  + (item.hasOwnProperty('extra') ? ' (' + $t(`${item.extra}`) + ')' : '')" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <v-checkbox v-for="(item,i) in services.advanced.support.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn flat @click="step = 3">{{ $t('buttons.back') }}</v-btn>
@@ -72,14 +72,14 @@
         </div>
       </v-stepper-content>
 
-      <v-stepper-step step="5">
-        Zusamenfassung
+      <v-stepper-step step="5" editable>
+        {{ $t('step.summary.title') }}
       </v-stepper-step>
       <v-stepper-content step="5">
         <div class="stepper-content">
           <v-data-table class="table-offer-initial" v-bind:headers="headerInitial" :items="offerSummary.summary.initial" hide-actions>
             <template slot="items" scope="props">
-              <td>{{ $t(`${props.item.label}`) }}</td>
+              <td>{{ $t(`${props.item.label}`) }} <span v-if="props.item.hasOwnProperty('extra')">({{ $t(`${props.item.extra}`) }})</span></td>
               <td class="text-xs-right">{{ props.item.hours }}</td>
               <td class="text-xs-right">{{ props.item.rateHourly }}</td>
               <td class="text-xs-right"><span class="total">{{ props.item.rateTotal }}</span></td>
@@ -101,7 +101,7 @@
     </v-stepper>
   </form>
   <div class="offer-footer">
-    <small>*Gilt als Anhaltspunkt für ein Beratungsgespräch. Ersetzt nicht die schriftliche Offerte. Preisänderungen vorbehalten.</small>
+    <small>* {{ $t('offer.footer') }}</small>
   </div>
 </div>
 </template>
@@ -122,7 +122,8 @@ export default {
       var rateYearlyTotal = 0
 
       summary.initial = [{
-        label: this.services.basic.label + ' (' + this.services.client.size[this.services.client.selectedSize].label + ')',
+        label: this.services.basic.label,
+        extra: this.services.client.size[this.services.client.selectedSize].label,
         rateTotal: rateInitialTotal * multiplyer
       }]
       summary.recurring = []
@@ -155,7 +156,8 @@ export default {
         var discount = rateInitialTotal * this.services.client.nonprofit.discount
         rateInitialTotal -= discount
         summary.initial.push({
-          label: this.services.client.nonprofit.label + ' (-' + this.services.client.nonprofit.discount * 100 + '%)',
+          label: this.services.client.nonprofit.label,
+          extra: ' (-' + this.services.client.nonprofit.discount * 100 + '%)',
           rateTotal: -discount
         })
       }
@@ -228,12 +230,16 @@ export default {
         offer: {
           heading: 'Instant Quote',
           intro: 'Use our interactive widget and get a quote in just 2 minutes',
-          startingPrice: 'starting at'
+          startingPrice: 'starting at',
+          footer: 'This interactive quote is an estimation based on past experiences. Final quote may differ. Rates may change at any time.'
         },
         step: {
-          1: {
-            title: 'Scope',
+          initial: {
+            title: 'Project Scope',
             directions: 'Choose type of project'
+          },
+          summary: {
+            title: 'Summary'
           }
         }
       },
@@ -241,12 +247,16 @@ export default {
         offer: {
           heading: 'Interaktive Offerte',
           intro: 'Nimm dir 2 Minuten Zeit um eine unverbindliche Offerte zusammenzustellen.',
-          startingPrice: 'ab'
+          startingPrice: 'ab',
+          footer: 'Offerte ist eine Schätzung basierend auf Erfahrungswerte. Definitive Offerte kann abweichen. Preisänderungen vorbehalten.'
         },
         step: {
-          1: {
+          initial: {
             title: 'Umfang der Webseite',
             directions: 'Wähle die Art des Projektes'
+          },
+          summary: {
+            title: 'Zusammenfassung'
           }
         }
       }

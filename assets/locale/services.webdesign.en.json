@@ -31,8 +31,8 @@
         "details": "We support all modern browsers. We guarantee full functionality for all features. Supported are up-to-date versions of Chrome, Firefox, Safari, Microsoft Edge."
       },
       {
-        "label": "Accessibility (Standard)",
-        "details": "We structure websites semantically and implement content following best practices. This leads to principle accessibility. (e.g. screen reader). Note: Full accessibility check is offered as an additional service."
+        "label": "Accessibility",
+        "details": "We structure websites semantically and implement all websites following best practices. In other words, we provide accessibility by design. (E.g. For people using screen reader). Note: We don't guarantee full accessibility as a basic feature. We do offer a full accessibility check as an additional service."
       },
       {
         "label": "Google Analytics",
@@ -48,7 +48,7 @@
     "design": {
       "label": "Design",
       "items": [{
-          "label": "Webdesign (Recommended)",
+          "label": "Webdesign",
           "details": "What we do best. We draft your website, create style guide, wireframes and prototypes. Through iteration processes we finalize the design together with our customer. We consult on structure, colors, fonts, UI,  etc.",
           "hint": "We design your Website: Layout, fonts, colors, etc."
         },
@@ -93,7 +93,7 @@
         },
         {
           "label": "Accessibility +",
-          "details": "We check with online validation tools to make sure your website fulfills all accessibility criteria. Details: http://a11yproject.com/",
+          "details": "We check with online validation tools to make sure your website fulfills all accessibility criteria. Details: <a href='http://a11yproject.com/' target='_blank'>http://a11yproject.com/</a>",
           "hint": "Guaranteed Accessibility"
         },
         {
@@ -106,7 +106,7 @@
     "infrastructure": {
       "label": "Infrastructure",
       "items": [{
-          "label": "Hosting (Recommended)",
+          "label": "Hosting",
           "details": "Maximum speed, security and reliability: We host our products on Google Firebase. All websites are served using HTTPS.",
           "hint": "Google Firebase hosting (HTTPS)"
         },
@@ -136,5 +136,6 @@
         }
       ]
     }
-  }
+  },
+  "recommended": "Recommended"
 }

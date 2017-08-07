@@ -31,8 +31,8 @@
         "details": "Wir unterstützen alle gängigen modernen Browser. Wir garantieren grundsätzlich für die gesamte Funktionalität einer App oder Webseite. Unterstützt werden insbesondere Chrome, Firefox, Safari, Microsoft Edge."
       },
       {
-        "label": "Barrierefreiheit (Standard)",
-        "details": "Webseiten und Apps werden grundsätzlich nach bester Praxis programmiert. Dies ermöglicht eine grundsätzliche Barrierefreiheit (Z.b. screen reader). Achtung: Absolute Barrierefreiheit wird im Basisangebot jedoch nicht garantiert."
+        "label": "Barrierefreiheit",
+        "details": "Webseiten und Apps werden grundsätzlich semantisch und nach bewährten Prinzipien programmiert. Dies stellt generelle Barrierefreiheit sicher. (Z.b. für Menschen die auch Screen-Reader angewiesen sind). Achtung: Wir überprüfen Barrierefreiheit nicht - dieser Service kann zusätzlich erworben werden."
       },
       {
         "label": "Google Analytics",
@@ -48,7 +48,7 @@
     "design": {
       "label": "Design",
       "items": [{
-          "label": "Webdesign (Empfohlen)",
+          "label": "Webdesign",
           "details": "Unser Steckenpferd. Wir konzipieren und gestalten ihre Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess ihren Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach ihren Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.",
           "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben"
         },
@@ -93,7 +93,7 @@
         },
         {
           "label": "Barrierefreiheit +",
-          "details": "Wir testen ihre Webseite mit aktuellen 'Prüfwerkzeugen' für eine garantierte Barrierefreiheit. Details: http://a11yproject.com/",
+          "details": "Wir testen ihre Webseite mit aktuellen 'Prüfwerkzeugen' für eine garantierte Barrierefreiheit. Details: <a href='http://a11yproject.com/' target='_blank'>http://a11yproject.com/</a>",
           "hint": "Garantierte Barrierefreiheit"
         },
         {
@@ -106,7 +106,7 @@
     "infrastructure": {
       "label": "Infrastruktur",
       "items": [{
-          "label": "Hosting (Empfohlen)",
+          "label": "Hosting",
           "details": "Maximale Geschwindigkeit, Sicherheit und Verfügbarkeit: Alle unsere Webseiten und Apps werden über Google Firebase zur Verfügung gestellt. Alle Webseiten werden über HTTPS ausgeliefert.",
           "hint": "Wir hosten ihre Webseite mit Google Firebase (HTTPS)"
         },
@@ -136,5 +136,6 @@
         }
       ]
     }
-  }
+  },
+  "recommended": "Empfohlen"
 }

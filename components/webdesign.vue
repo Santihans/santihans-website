@@ -1,8 +1,8 @@
 <template>
 <div class="component-webdesign">
   <section class="intro">
-    <h2>Webdesign</h2>
-    <p class="abstract">{{ $t('abstract') }}</p>
+    <h2>{{ $t('intro.heading') }}</h2>
+    <p class="abstract">{{ $t('intro.abstract') }}</p>
     <div class="teaser">
       <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
     </div>
@@ -12,8 +12,8 @@
   </section>
 
   <section class="services">
-    <h3>Dienstleistungen</h3>
-    <div class="responsive-text">Hier finden Sie alle unsere Webdesign-Angebote im Überblick.</div>
+    <h3>{{ $t('services.heading') }}</h3>
+    <div class="responsive-text">{{ $t('services.intro') }}</div>
     <v-expansion-panel class="expansion-custom">
       <v-expansion-panel-content v-for="(item,i) in services.advanced" :key="i">
         <div slot="header">
@@ -33,7 +33,7 @@
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
-    <div class="services-footer"><small>Vermissen Sie eine Dienstleistung? Wir arbeiten mit mehreren Partnern zusammen und finden bestimmt eine Lösung für ihre Bedürfnisse. Kontaktieren Sie uns.</small></div>
+    <div class="services-footer"><small>{{ $t('services.footer') }}</small></div>
   </section>
 
   <section class="basics">
@@ -54,9 +54,9 @@
     <component-offer/>
   </section>
 
-  <section class="references">
-    <h4>Referenzen</h4>
-    <p>Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.</p>
+  <section class="work">
+    <h4>{{ $t('work.heading') }}</h4>
+    <p>{{ $t('work.intro') }}</p>
     <v-layout wrap class="references">
       <v-flex xs6 sm3 v-for="(item,i) in referencesBranding" :key="i">
         <a v-ripple :href="item.url" target="_blank">
@@ -102,7 +102,34 @@ export default {
   i18n: extend(true, {}, messages, {
     messages: {
       en: {
-
+        intro: {
+          heading: 'Webdesign',
+          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
+        },
+        services: {
+          heading: 'Services',
+          intro: 'Get an overview of all our provided services',
+          footer: 'Missing something? Contact us and we\'ll find a solution!'
+        },
+        work: {
+          heading: 'Work',
+          intro: 'A couple of our recent projects'
+        }
+      },
+      de: {
+        intro: {
+          heading: 'Webdesign',
+          abstract: 'Wir erstellen individuelle, handgemachte Webseiten mit Charakter. Wir legen Wert auf höchte Qualität, nicht nur im Bereich Design und Benutzerfreundlichkeit, sondern auch in den Bereichen Verfügbarkeit und Sicherheit. Wir machen ihren Webauftritt einzigartig.'
+        },
+        services: {
+          heading: 'Dienstleistungen',
+          intro: 'Hier finden Sie alle unsere Webdesign-Angebote im Überblick.',
+          footer: 'Vermissen Sie eine Dienstleistung? Wir arbeiten mit mehreren Partnern zusammen und finden bestimmt eine Lösung für ihre Bedürfnisse. Kontaktieren Sie uns.'
+        },
+        work: {
+          heading: 'Arbeiten',
+          intro: 'Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.'
+        }
       }
     }
   })

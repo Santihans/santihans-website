@@ -60,6 +60,7 @@ const services = {
           label: 'advanced.design.items[0].label',
           details: 'advanced.design.items[0].details',
           hint: 'advanced.design.items[0].hint',
+          extra: 'recommended',
           selected: true,
           units: 8,
           rate: 'graphics'
@@ -156,6 +157,7 @@ const services = {
           label: 'advanced.infrastructure.items[0].label',
           details: 'advanced.infrastructure.items[0].details',
           hint: 'advanced.infrastructure.items[0].hint',
+          extra: 'recommended',
           selected: true,
           units: 1,
           rate: 'hosting',
