@@ -19,6 +19,9 @@ export default {
       send: 'Send',
       sendRequest: 'Send Request',
       confirm: 'Confirm'
+    },
+    directions: {
+      choose: 'Please choose options'
     }
   },
   de: {
@@ -41,6 +44,9 @@ export default {
       send: 'Abschicken',
       sendRequest: 'Anfrage Senden',
       confirm: 'Bestätigen'
+    },
+    directions: {
+      choose: 'Bitte auswählen'
     }
   }
 }

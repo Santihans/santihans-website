@@ -10,21 +10,22 @@
       <v-btn large flat outline :to="localePath('/contact')">Interaktive Offerte</v-btn>
     </div>
   </section>
+
   <section class="services">
     <h3>Dienstleistungen</h3>
     <div class="responsive-text">Hier finden Sie alle unsere Webdesign-Angebote im Überblick.</div>
     <v-expansion-panel class="expansion-custom">
       <v-expansion-panel-content v-for="(item,i) in services.advanced" :key="i">
         <div slot="header">
-          <v-icon accent>add_circle</v-icon>{{ item.label }}</div>
+          <v-icon accent>add_circle</v-icon>{{ $t(`${item.label}`) }}</div>
         <v-card>
           <v-card-text class="inner">
             <v-expansion-panel class="expansion-custom level-2">
               <v-expansion-panel-content v-for="(item,i) in item.items" :key="i">
                 <div slot="header">
-                  <v-icon accent>fiber_manual_record</v-icon>{{ item.label }}</div>
+                  <v-icon accent>fiber_manual_record</v-icon>{{ $t(`${item.label}`) }}</div>
                 <v-card>
-                  <v-card-text class="inner" v-html="item.details"></v-card-text>
+                  <v-card-text class="inner" v-html="$t(`${item.details}`)"></v-card-text>
                 </v-card>
               </v-expansion-panel-content>
             </v-expansion-panel>
@@ -98,7 +99,13 @@ export default {
       ]
     }
   },
-  i18n: extend(true, {}, messages, {})
+  i18n: extend(true, {}, messages, {
+    messages: {
+      en: {
+
+      }
+    }
+  })
 }
 </script>
 

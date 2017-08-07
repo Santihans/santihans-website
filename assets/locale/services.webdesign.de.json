@@ -1,0 +1,140 @@
+{
+  "client": {
+    "size": {
+      "small": {
+        "label": "Klein",
+        "hint": "Statische Webseite, Portrait"
+      },
+      "medium": {
+        "label": "Mittel",
+        "hint": "Blog, Galerie, Kleinunternehmen, Verein"
+      },
+      "large": {
+        "label": "Gross",
+        "hint": "Unternehmen, Grossprojekt, Onlinehandel, App"
+      }
+    },
+    "nonprofit": {
+      "label": "Non-Profit",
+      "hint": "Rabatt für Non-Profit Organisationen, Open Source Projekte, NGOs"
+    }
+  },
+  "basic": {
+    "label": "Basisangebot",
+    "description": "Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen über folgende Eigenschaften:",
+    "items": [{
+        "label": "100% Responsiveness",
+        "details": "Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiltelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo."
+      },
+      {
+        "label": "Support für moderne Browser",
+        "details": "Wir unterstützen alle gängigen modernen Browser. Wir garantieren grundsätzlich für die gesamte Funktionalität einer App oder Webseite. Unterstützt werden insbesondere Chrome, Firefox, Safari, Microsoft Edge."
+      },
+      {
+        "label": "Barrierefreiheit (Standard)",
+        "details": "Webseiten und Apps werden grundsätzlich nach bester Praxis programmiert. Dies ermöglicht eine grundsätzliche Barrierefreiheit (Z.b. screen reader). Achtung: Absolute Barrierefreiheit wird im Basisangebot jedoch nicht garantiert."
+      },
+      {
+        "label": "Google Analytics",
+        "details": "Zugang zu den Analyse Werkzeugen von Google Analytics. Finde heraus woher auf deine Webseite zugegriffen wird, welche Seiten wie lange besucht werden, usw. Achtung: Für diesen Service ist zusätzlich ein Google Account erforderlich."
+      },
+      {
+        "label": "Zugang zum Source Code",
+        "details": "Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Sie erhalten vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich."
+      }
+    ]
+  },
+  "advanced": {
+    "design": {
+      "label": "Design",
+      "items": [{
+          "label": "Webdesign (Empfohlen)",
+          "details": "Unser Steckenpferd. Wir konzipieren und gestalten ihre Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess ihren Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach ihren Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.",
+          "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben"
+        },
+        {
+          "label": "Infografiken",
+          "details": "Wir erstellen Grafikelemente, Icons, Illustrationen und ähnliches. Wir bearbeiten Photos und verbessern Bildmaterial mithilfe von Adobe Photoshop. ",
+          "hint": "Erstellen von Illustrationen passend zu ihrem Inhalt."
+        },
+        {
+          "label": "Stock Photos",
+          "details": "Wir kümmern uns um die Suche und Erwerb geeigneter Photos um ihrer Webseite zu illustrieren.",
+          "hint": "Wir suchen und erwerben passende Photos"
+        }
+      ]
+    },
+    "functionality": {
+      "label": "Funktionalität",
+      "items": [{
+          "label": "CMS",
+          "details": "Sie möchten den Inhalt ihrer Webseite selbst verwalten? Wir bieten eine sichere, zuverlässige und wartungsfreie Verwaltung ihrer Inhalte an. Dazu verwenden wir die CMS-Lösungen von <a href='https://prismic.io' target='_blank'>prismic.io</a>.",
+          "hint": "Content Management System: Verwalten sie ihre Inhalte selber"
+        },
+        {
+          "label": "Onlineshop",
+          "details": "Wir integrieren Online Shops wie z.B. Shopify.",
+          "hint": "Verkaufen sie Produkte online"
+        },
+        {
+          "label": "Lokalisation",
+          "details": "Haben Sie internationale Kundschaft? Wir bauen ihre Webseite nach Wunsch mehrsprachig auf.",
+          "hint": "Stellen Sie ihre Webseite in mehreren Sprachen zur Verfügung"
+        },
+        {
+          "label": "Formulare",
+          "details": "Wir erstellen Formulare jeglicher Art. Achtung: Wir bieten nur begrenzt server-seitige Verarbeitung der Formulardaten an. Für einfache Kontaktformulare verwenden wir die Dienstleistungen von <a href='https://formspree.io' target='_blank'>Formspree</a>",
+          "hint": "Formulare für Newsletter, Kontakt, Offerten, usw."
+        },
+        {
+          "label": "Interaktive Widgets",
+          "details": "Ob Animation, Mini-Games oder interaktive Widgets. Der Fantasie sind keine Grenzen gesetzt.",
+          "hint": "Browser-basierte interaktive Komponenten"
+        },
+        {
+          "label": "Barrierefreiheit +",
+          "details": "Wir testen ihre Webseite mit aktuellen 'Prüfwerkzeugen' für eine garantierte Barrierefreiheit. Details: http://a11yproject.com/",
+          "hint": "Garantierte Barrierefreiheit"
+        },
+        {
+          "label": "Browser-Support +",
+          "details": "Zusätzliche Unterstützung für bestimmte Browser (Versionen)",
+          "hint": "Garantierte Kompatibilität für erwünschte Browser"
+        }
+      ]
+    },
+    "infrastructure": {
+      "label": "Infrastruktur",
+      "items": [{
+          "label": "Hosting (Empfohlen)",
+          "details": "Maximale Geschwindigkeit, Sicherheit und Verfügbarkeit: Alle unsere Webseiten und Apps werden über Google Firebase zur Verfügung gestellt. Alle Webseiten werden über HTTPS ausgeliefert.",
+          "hint": "Wir hosten ihre Webseite mit Google Firebase (HTTPS)"
+        },
+        {
+          "label": "Persönliche Domain",
+          "details": "Wir übernehmen die Domain-Registrierung (z.b. http://www.hansmuster.ch) für sie. Wir prüfen Verfügbarkeit ihres gewünschten Domains und machen allenfalls Alternativvorschläge. (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "Wir registrieren ihre Wunsch-Domain"
+        },
+        {
+          "label": "Persönliche Email",
+          "details": "Wir stellen Email-Server zur verfügung. Falls sie über einen eigene Domain verfügen erhalten sie ihre Wunsch-Email-Adressen. Z.b. info@hansmuster.ch (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "Wir kümmern uns um ihre Email-Adresse"
+        }
+      ]
+    },
+    "support": {
+      "label": "Support",
+      "items": [{
+          "label": "Standard Support",
+          "details": "- Instandhaltung Ihrer Webseite\n- Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)\n- Kosmetische Änderungen\n- Maximal 5 Arbeitsstunden pro Monat\n- Siehe AGBs für weitere Informationen",
+          "hint": "Standard Support"
+        },
+        {
+          "label": "Premium Support",
+          "details": "Sie erhalten alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:\n- Ihre Anfragen werden vorgezogen, resp. priorisiert.\n- Maximal 10 Arbeitsstunden pro Monat\n- Siehe AGBs für weitere Informationen",
+          "hint": "Premium Support - Du kommst an erster Stelle"
+        }
+      ]
+    }
+  }
+}

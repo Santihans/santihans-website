@@ -30,12 +30,12 @@
       </v-stepper-content>
 
       <v-stepper-step step="2" v-bind:complete="step > 2">
-        Design
-        <small>Bitte auswählen</small>
+        {{ $t('services.advanced.design.label') }}
+        <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="2">
         <div class="stepper-content">
-          <v-checkbox v-for="(item,i) in services.advanced.design.items" v-model="item.selected" :key="i" :label="item.label" :hint="item.hint" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.design.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn flat @click="step = 1">{{ $t('buttons.back') }}</v-btn>
             <v-btn primary @click="step = 3">{{ $t('buttons.continue') }}</v-btn>
@@ -44,12 +44,12 @@
       </v-stepper-content>
 
       <v-stepper-step step="3" v-bind:complete="step > 3">
-        Funktionalität
-        <small>Bitte auswählen</small>
+        {{ $t('services.advanced.functionality.label') }}
+        <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="3">
         <div class="stepper-content">
-          <v-checkbox v-for="(item,i) in services.advanced.functionality.items" v-model="item.selected" :key="i" :label="item.label" :hint="item.hint" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.functionality.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn flat @click="step = 2">{{ $t('buttons.back') }}</v-btn>
             <v-btn primary @click="step = 4">{{ $t('buttons.continue') }}</v-btn>
@@ -58,13 +58,13 @@
       </v-stepper-content>
 
       <v-stepper-step step="4" v-bind:complete="step > 4">
-        Infrastruktur/Support
-        <small>Bitte auswählen</small>
+        {{ $t('services.advanced.infrastructure.label') }} / {{ $t('services.advanced.support.label') }}
+        <small>{{ $t('directions.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="4">
         <div class="stepper-content">
-          <v-checkbox v-for="(item,i) in services.advanced.infrastructure.items" v-model="item.selected" :key="i" :label="item.label" :hint="item.hint" persistent-hint light></v-checkbox>
-          <v-checkbox v-for="(item,i) in services.advanced.support.items" v-model="item.selected" :key="i" :label="item.label" :hint="item.hint" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.infrastructure.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
+          <v-checkbox v-for="(item,i) in services.advanced.support.items" v-model="item.selected" :key="i" :label="$t(`${item.label}`)" :hint="$t(`${item.hint}`)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn flat @click="step = 3">{{ $t('buttons.back') }}</v-btn>
             <v-btn primary @click="step = 5">{{ $t('buttons.continue') }}</v-btn>
@@ -79,7 +79,7 @@
         <div class="stepper-content">
           <v-data-table class="table-offer-initial" v-bind:headers="headerInitial" :items="offerSummary.summary.initial" hide-actions>
             <template slot="items" scope="props">
-              <td>{{ props.item.label }}</td>
+              <td>{{ $t(`${props.item.label}`) }}</td>
               <td class="text-xs-right">{{ props.item.hours }}</td>
               <td class="text-xs-right">{{ props.item.rateHourly }}</td>
               <td class="text-xs-right"><span class="total">{{ props.item.rateTotal }}</span></td>
@@ -87,7 +87,7 @@
           </v-data-table>
           <v-data-table class="table-offer-recurring" v-bind:headers="headersRecurring" :items="offerSummary.summary.recurring" hide-actions v-show="offerSummary.summary.recurring.length">
             <template slot="items" scope="props">
-              <td>{{ props.item.label }}</td>
+              <td>{{ $t(`${props.item.label}`) }}</td>
               <td class="text-xs-right">{{ props.item.units }}</td>
               <td class="text-xs-right"><span class="total">{{ props.item.rateYearly }}</span></td>
             </template>
@@ -236,7 +236,6 @@ export default {
             directions: 'Choose type of project'
           }
         }
-
       },
       de: {
         offer: {
