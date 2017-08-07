@@ -119,7 +119,7 @@ export default {
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Wir erstellen individuelle, handgemachte Webseiten mit Charakter. Wir legen Wert auf höchte Qualität, nicht nur im Bereich Design und Benutzerfreundlichkeit, sondern auch in den Bereichen Verfügbarkeit und Sicherheit. Wir machen ihren Webauftritt einzigartig.'
+          abstract: 'Wir erstellen individuelle, aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, nicht nur im Bereich Verfügbarkeit und Sicherheit, sondern vor allem auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.'
         },
         services: {
           heading: 'Dienstleistungen',

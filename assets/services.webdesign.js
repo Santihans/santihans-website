@@ -194,7 +194,7 @@ const services = {
           hint: 'advanced.support.items[0].hint',
           selected: false,
           units: 1,
-          rate: 'advanced.support',
+          rate: 'support',
           recurringYearly: true
         },
         {
@@ -204,7 +204,7 @@ const services = {
           hint: 'advanced.support.items[1].hint',
           selected: false,
           units: 1,
-          rate: 'advanced.support',
+          rate: 'support',
           recurringYearly: true
         }
       ]

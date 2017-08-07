@@ -157,17 +157,17 @@ export default {
         rateInitialTotal -= discount
         summary.initial.push({
           label: this.services.client.nonprofit.label,
-          extra: ' (-' + this.services.client.nonprofit.discount * 100 + '%)',
+          extra: '-' + this.services.client.nonprofit.discount * 100 + '%',
           rateTotal: -discount
         })
       }
 
       summary.initial.push({
-        label: 'Total',
+        label: 'step.summary.total',
         rateTotal: rateInitialTotal
       })
       summary.recurring.push({
-        label: 'Total pro Jahr',
+        label: 'step.summary.totalYearly',
         rateYearly: rateYearlyTotal
       })
 
@@ -184,40 +184,40 @@ export default {
       rates: Rates,
       step: 1,
       headerInitial: [{
-          text: 'Leistung',
+          text: this.$t('headerInitial[0]'),
           align: 'left',
           sortable: false,
           value: 'label'
         },
         {
-          text: 'Anzahl Stunden',
+          text: this.$t('headerInitial[1]'),
           sortable: false,
           value: 'hours'
         },
         {
-          text: 'Stundenansatz CHF',
+          text: this.$t('headerInitial[2]'),
           sortable: false,
           value: 'rateTotal'
         },
         {
-          text: 'Total CHF',
+          text: this.$t('headerInitial[3]'),
           sortable: false,
           value: 'rateTotal'
         }
       ],
       headersRecurring: [{
-          text: 'Wiederkehrende Leistung',
+          text: this.$t('headerRecurring[0]'),
           align: 'left',
           sortable: false,
           value: 'label'
         },
         {
-          text: 'Einheiten',
+          text: this.$t('headerRecurring[1]'),
           sortable: false,
           value: 'units'
         },
         {
-          text: 'Total CHF',
+          text: this.$t('headerRecurring[2]'),
           sortable: false,
           value: 'rateYearly'
         }
@@ -239,9 +239,22 @@ export default {
             directions: 'Choose type of project'
           },
           summary: {
-            title: 'Summary'
+            title: 'Summary',
+            total: 'Total',
+            totalYearly: 'Total per year'
           }
-        }
+        },
+        headerInitial: [
+          'Service',
+          'Hours',
+          'Rate/hour in CHF',
+          'Total CHF'
+        ],
+        headerRecurring: [
+          'Recurring Service',
+          'Units',
+          'Total CHF'
+        ]
       },
       de: {
         offer: {
@@ -256,9 +269,22 @@ export default {
             directions: 'Wähle die Art des Projektes'
           },
           summary: {
-            title: 'Zusammenfassung'
+            title: 'Zusammenfassung',
+            total: 'Total',
+            totalYearly: 'Total pro Jahr'
           }
-        }
+        },
+        headerInitial: [
+          'Leistung',
+          'Anzahl Stunden',
+          'Stundenansatz CHF',
+          'Total CHF'
+        ],
+        headerRecurring: [
+          'Wiederkehrende Leistung',
+          'Einheiten',
+          'Total CHF'
+        ]
       }
     }
   })
