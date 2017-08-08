@@ -7,7 +7,7 @@
       <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
     </div>
     <div class="text-xs-center">
-      <v-btn large flat outline :to="localePath('/contact')">Interaktive Offerte</v-btn>
+      <v-btn large flat outline to="#offer">{{ $t('intro.quote')}}</v-btn>
     </div>
   </section>
 
@@ -50,7 +50,7 @@
     </v-expansion-panel>
   </section>
 
-  <section class="offer">
+  <section id="offer" class="offer">
     <component-offer/>
   </section>
 
@@ -104,7 +104,9 @@ export default {
       en: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
+          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.',
+          quote: 'Get a Quote'
+
         },
         services: {
           heading: 'Services',
@@ -119,7 +121,8 @@ export default {
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Wir erstellen individuelle, aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, nicht nur im Bereich Verfügbarkeit und Sicherheit, sondern vor allem auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.'
+          abstract: 'Wir erstellen individuelle, aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, nicht nur im Bereich Verfügbarkeit und Sicherheit, sondern vor allem auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
+          quote: 'Interaktive Offerte'
         },
         services: {
           heading: 'Dienstleistungen',

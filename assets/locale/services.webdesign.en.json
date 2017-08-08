@@ -48,7 +48,7 @@
     "design": {
       "label": "Design",
       "items": [{
-          "label": "Webdesign",
+          "label": "Custom Design",
           "details": "What we do best. We draft your website, create style guide, wireframes and prototypes. Through iteration processes we finalize the design together with our customer. We consult on structure, colors, fonts, UI,  etc.",
           "hint": "We design your Website: Layout, fonts, colors, etc."
         },

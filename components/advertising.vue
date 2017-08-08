@@ -1,10 +1,10 @@
 <template>
 <div class="component-advertising">
-  <p class="abstract">{{ $t('abstract') }}</p>
+  <section>
+    <h2>{{ $t('heading') }}</h2>
+    <p class="abstract">{{ $t('abstract') }}</p>
+  </section>
 
-  <h3>Interaktive Offerte</h3>
-
-  <h3>References</h3>
 
 </div>
 </template>
@@ -14,9 +14,11 @@ export default {
   i18n: {
     messages: {
       en: {
+        heading: 'Advertising',
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum eligendi aliquam officia, dolorum natus unde libero repellendus inventore consectetur odit expedita debitis consequatur dolores. Inventore ducimus laboriosam, error voluptas numquam.'
       },
       de: {
+        heading: 'Werbung',
         abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos iusto, eligendi ducimus quaerat officiis illo aliquid. Maxime ducimus soluta, eveniet, eum fugit asperiores quam, nam nisi eius sit id reprehenderit.'
       }
     }
