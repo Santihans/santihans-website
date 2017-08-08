@@ -53,7 +53,8 @@ module.exports = {
     {src: '~plugins/i18n.js'},
     {src: '~plugins/localePath.js'},
     {src: '~plugins/ga.js', ssr: false},
-    {src: '~plugins/webFontLoader.js',ssr: false}
+    {src: '~plugins/webFontLoader.js',ssr: false},
+    {src: '~plugins/vueSmoothScroll.js'}
   ],
 
   router: {
@@ -64,7 +65,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['jquery', 'vuetify', 'underscore', 'vue-loading-spinner'],
+    vendor: ['jquery', 'vuetify', 'underscore', 'vue-loading-spinner', 'vue-smooth-scroll'],
 
     /*
      ** Run ESLINT on save

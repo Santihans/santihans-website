@@ -7,7 +7,7 @@
       <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
     </div>
     <div class="text-xs-center">
-      <v-btn large flat outline to="#offer">{{ $t('intro.quote')}}</v-btn>
+      <v-btn large flat outline to="#offer" v-smooth-scroll="{offset: -70 }">{{ $t('intro.quote')}}</v-btn>
     </div>
   </section>
 
