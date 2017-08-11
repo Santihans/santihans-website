@@ -45,7 +45,7 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      this.active = this.$route.hash ? this.$route.hash.substring(1) : 'webdesign'
+      this.active = this.$route.hash && this.tabs.hasOwnProperty(this.$route.hash.substring(1)) ? this.$route.hash.substring(1) : 'webdesign'
     }
   },
   head() {
