@@ -22,7 +22,7 @@
     <h2>{{ $t('branding.headline') }}</h2>
     <p class="abstract">{{ $t('branding.abstract') }}</p>
     <div>
-      <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
+      <v-btn large primary :to="localePath('/services#branding')">{{ $t('more') }}</v-btn>
     </div>
     <div>
       <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
@@ -48,7 +48,7 @@
     <h2>{{ $t('advertising.headline') }}</h2>
     <p class="abstract">{{ $t('advertising.abstract') }}</p>
     <div>
-      <v-btn large primary :to="localePath('/services')">{{ $t('more') }}</v-btn>
+      <v-btn large primary :to="localePath('/services#advertising')">{{ $t('more') }}</v-btn>
     </div>
     <div>
       <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>

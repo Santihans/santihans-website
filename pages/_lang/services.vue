@@ -3,18 +3,18 @@
   <div class="page-header">
     <h1>{{ $t('pages.services') }}</h1>
   </div>
-  <v-tabs dark fixed centered>
+  <v-tabs dark fixed centered v-model="active">
     <v-tabs-bar slot="activators">
       <v-tabs-slider></v-tabs-slider>
-      <v-tabs-item v-for="(item, key, index) in items" :key="index" :href="'#tab-' + index">
+      <v-tabs-item v-for="(item, key, index) in tabs" :key="key" :to="'#' + key">
         {{ item.title }}
       </v-tabs-item>
     </v-tabs-bar>
-    <v-tabs-content v-for="(item, key, index) in items" :key="index" :id="'tab-' + index">
+    <v-tabs-content v-for="(item, key, index) in tabs" :key="key" :id="key">
       <div class="page-content boundaries">
-        <component-webdesign v-show="key === 'webdesign'"></component-webdesign>
-        <component-branding v-show="key === 'branding'"></component-branding>
-        <component-advertising v-show="key === 'advertising'"></component-advertising>
+        <component-webdesign v-if="key === 'webdesign'"></component-webdesign>
+        <component-branding v-if="key === 'branding'"></component-branding>
+        <component-advertising v-if="key === 'advertising'"></component-advertising>
       </div>
     </v-tabs-content>
   </v-tabs>
@@ -29,7 +29,8 @@ import Advertising from '~/components/advertising.vue'
 export default {
   data() {
     return {
-      items: {
+      active: null,
+      tabs: {
         webdesign: {
           title: this.$t('webdesign')
         },
@@ -40,6 +41,11 @@ export default {
           title: this.$t('advertising')
         }
       }
+    }
+  },
+  watch: {
+    '$route' (to, from) {
+      this.active = this.$route.hash ? this.$route.hash.substring(1) : 'webdesign'
     }
   },
   head() {
