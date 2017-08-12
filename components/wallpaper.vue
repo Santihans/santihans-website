@@ -41,12 +41,12 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'Webdesign. Branding. Advertising.',
-        tagline: 'Santihans is a digital communications agency'
+        headline: 'Visual Communication',
+        tagline: 'Webdesign. Branding. Advertising.'
       },
       de: {
-        headline: 'Webdesign. Logos. Werbung.',
-        tagline: 'Agentur für digitale Kommunikation'
+        headline: 'Visuelle Kommunikation',
+        tagline: 'Webdesign. Marken. Werbung.'
       }
     }
   }

@@ -78,7 +78,7 @@ export default {
         contact: 'Contact us',
         webdesign: {
           headline: 'Stunning Webdesign',
-          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.'
+          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details so you don\'t have to.'
         },
         branding: {
           headline: 'Individual Branding',
@@ -86,15 +86,23 @@ export default {
         },
         advertising: {
           headline: 'Smart Advertising',
-          abstract: 'We help you aquire new customers with targeted creative advertising.'
+          abstract: 'We help you aquire new customers with targeted creative advertising. We create everything from ad campaigns to print products like business cards or packaging solutions.'
         }
       },
       de: {
         more: 'Mehr Erfahren',
         contact: 'Kontakt',
         webdesign: {
-          headline: 'Webseiten zum staunen',
-          abstract: 'Wir erstellen schlichte, funktionale Webseiten für jeden Kunden individuell. Unser Angebot richtet sich so wohl an Private, Vereine für kleine staische Webseiten, wie auch an Unternhemen mit gehobenen Ansprüchen.'
+          headline: 'Fabelhafte Webseiten',
+          abstract: 'Wir erstellen individuelle, handgemachte Kommunikationslösungen im Bereich Webdesign. Wir legen höchsten Wert auf ansprechendes Design, Funktionaliät, Verfügbarkeit und Barrierefreiheit.'
+        },
+        branding: {
+          headline: 'Individuelle Marken',
+          abstract: 'Hinterlassen sie einen bleibenden Eindruck! Wir entwickeln eine einzigartige Idendität für ihre Organisation oder ihr Projekt. Unsere Marken zeichnen sich aus durch Schlichtheit, Wiedererkennbarkeit und Einzigartigkeit. Zudem stellen wir sicher dass die Werte ihrer Organisation im Design repräsentiert werden.'
+        },
+        advertising: {
+          headline: 'Wirksame Werbung',
+          abstract: 'Erweitern sie ihre Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten digitale Werbekampanien nach ihren Wünschen. Wir kümmern uns auch um Druck Produkte wie Plakate, Visitenkarten, Verpackungen, usw.'
         }
       }
     }
