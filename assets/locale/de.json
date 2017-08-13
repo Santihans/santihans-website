@@ -1,12 +1,12 @@
 {
   "meta": {
-    "description": "Santihans ist eine Kommunikation und Design Agentur aus dem St. Johann in Basel.",
-    "keywords": "Santihans, Webdesign, Design, Marken, Kunst, Kommunikation, Identität, Vision, St. Johann, 4056, Basel, Schweiz"
+    "description": "Santihans ist eine Kommunikation und Design Agentur im St. Johann, 4056 Basel.",
+    "keywords": "Santihans, Webdesign, Design, Marken, Kunst, Kommunikation, Werbung, Identität, Vision, St. Johann, 4056, Basel, Schweiz"
   },
   "pages": {
     "home": "Home",
     "services": "Angebot",
-    "portfolio": "Portfolio",
+    "store": "Shop",
     "contact": "Kontakt",
     "terms": "AGB",
     "disclaimer": "Impressum"
