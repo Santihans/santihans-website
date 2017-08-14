@@ -50,10 +50,18 @@
 
   .logo {
     display: block;
+    position: relative;
     width: 160px;
 
-    g {
-      fill: white;
+    .beta {
+      background-color: $colorFg;
+      color: $colorBg;
+      bottom: 5px;
+      font-size: 0.7em;
+      font-weight: bold;
+      left: 100%;
+      padding: 0 4px;
+      position: absolute;
     }
   }
 }
