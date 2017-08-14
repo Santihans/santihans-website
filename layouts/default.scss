@@ -111,9 +111,16 @@ section {
   h1 {
     color: white;
     left: 50%;
+    opacity: 0;
     position: absolute;
     text-shadow: 3px 4px $colorPink;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    transform: translate(-50%, -100%) scale(.5);
+    transition: 200ms;
+
+    #layout.scrollTop & {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }

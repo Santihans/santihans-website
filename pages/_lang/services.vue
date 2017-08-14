@@ -1,6 +1,7 @@
 <template>
 <div id="services">
   <div class="page-header">
+    <img src="~assets/images/header-services.svg" alt="Illustration">
     <h1>{{ $t('pages.services') }}</h1>
   </div>
   <v-tabs dark fixed centered v-model="active">
