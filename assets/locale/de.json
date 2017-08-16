@@ -17,7 +17,8 @@
     "save": "Speichern",
     "send": "Abschicken",
     "sendRequest": "Anfrage Senden",
-    "confirm": "Bestätigen"
+    "confirm": "Bestätigen",
+    "close": "Schliessen"
   },
   "directions": {
     "choose": "Bitte auswählen"

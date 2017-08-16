@@ -7,7 +7,7 @@
   <v-tabs dark fixed centered v-model="active">
     <v-tabs-bar slot="activators">
       <v-tabs-slider></v-tabs-slider>
-      <v-tabs-item v-for="(item, key, index) in tabs" :key="key" :to="'#' + key">
+      <v-tabs-item v-for="(item, key, index) in tabs" :key="key" :to="'#' + key" exact>
         {{ item.title }}
       </v-tabs-item>
     </v-tabs-bar>

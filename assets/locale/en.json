@@ -17,7 +17,8 @@
     "save": "Save",
     "send": "Send",
     "sendRequest": "Send Request",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "close": "Close"
   },
   "directions": {
     "choose": "Please choose options"

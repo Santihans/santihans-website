@@ -50,6 +50,46 @@ h3 {
   flex-grow: 1;
 }
 
+#navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+
+  .emblem {
+    display: flex;
+    height: 90px;
+    justify-content: center;
+
+    svg {
+      width: 50px;
+      fill: $colorPink;
+    }
+  }
+
+  .list {
+    flex-grow: 1;
+  }
+
+  .divider {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+
+  .language {
+    display: flex;
+    justify-content: center;
+    padding: 5px 16px;
+
+    > * {
+      padding: 5px;
+    }
+  }
+
+  .btn-close {
+    flex-shrink: 0;
+  }
+}
+
 section {
   padding-top: 8vh;
   padding-bottom: 8vh;

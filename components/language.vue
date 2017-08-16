@@ -1,17 +1,17 @@
 <template>
 <div class="language" :title="$t('language')">
-  <div v-if="$i18n.locale === 'en'">
+  <template v-if="$i18n.locale === 'en'">
     <div><strong>{{ $t('links.english') }}</strong></div>
     <nuxt-link :to="`/de` + $route.fullPath" active-class="none" exact>
       {{ $t('links.german') }}
     </nuxt-link>
-  </div>
-  <div v-else>
+  </template>
+  <template v-else>
     <div><strong>{{ $t('links.german') }}</strong></div>
     <nuxt-link :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none" exact>
       {{ $t('links.english') }}
     </nuxt-link>
-  </div>
+  </template>
 </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
       en: {
         language: 'Language',
         'links': {
-          'german': 'German',
+          'german': 'Deutsch',
           'english': 'English'
         }
       },
@@ -35,7 +35,7 @@ export default {
         language: 'Sprache',
         'links': {
           'german': 'Deutsch',
-          'english': 'Englisch'
+          'english': 'English'
         }
       }
     }
