@@ -15,6 +15,9 @@
   </div>
   <section class="page-content boundaries">
     <component-address />
+    <div class="registry">
+      CHE-244.875.499
+    </div>
   </section>
 </div>
 </template>
