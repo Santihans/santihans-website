@@ -6,14 +6,10 @@
   .page-header {
     background-color: $colorTurquoise;
     border-bottom: 0;
+  }
 
-    img {
-      bottom: 0;
-      left: 50%;
-      position: absolute;
-      transform: translateX(-50%);
-      width: 720px;
-    }
+  .tabs__bar {
+    background-color: $colorViolett;
   }
 
   .tabs__slider {

@@ -4,7 +4,7 @@ const main = [{
     icon: 'home'
   },
   {
-    path: '/services',
+    path: '/services#webdesign',
     label: 'pages.services',
     icon: 'palette'
   },

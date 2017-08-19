@@ -2,13 +2,8 @@
 
 .page-header {
   background-color: $colorViolett;
-}
 
-.construction {
-  border: 2px dashed #cacaca;
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  padding: 2em;
-  text-align: center;
+  svg g {
+    fill: #a473b9;
+  }
 }
