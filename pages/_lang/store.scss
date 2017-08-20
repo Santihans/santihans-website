@@ -3,7 +3,7 @@
 .page-header {
   background-color: $colorViolett;
 
-  svg g {
-    fill: #a473b9;
+  .clouds svg g {
+    fill: lighten($colorViolett, 8);
   }
 }

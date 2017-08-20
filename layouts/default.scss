@@ -134,26 +134,25 @@ section {
   background-image: url('~assets/images/skyline-santihans.svg');
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-size: cover;
+  background-size: contain;
   border-bottom: 4px solid $colorPink;
-  height: 50vh;
-  min-height: 280px;
-  max-height: 400px;
+  height: 240px;
   position: relative;
-  @media(min-width: $breakpointMedium) {
-    background-position: 50% 70%;
+  @media(min-width: $breakpointMini) {
+    height: 300px;
   }
-  @media(min-width: $breakpointExtraLarge) {
-    background-position: bottom center;
-    background-size: 1100px;
+  @media(min-width: $breakpointSmall) {
+    height: 360px;
+  }
+  @media(min-width: $breakpointMedium) {
+    height: 400px;
   }
 
   h1 {
-    color: white;
+    color: rgba(0,0,0,.12);
     left: 50%;
     opacity: 0;
     position: absolute;
-    text-shadow: 3px 4px $colorPink;
     top: 40%;
     transform: translate(-50%, -100%) scale(.5);
     transition: 200ms;
@@ -162,6 +161,10 @@ section {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
     }
+  }
+
+  .clouds {
+    position: relative;
   }
 
   img {

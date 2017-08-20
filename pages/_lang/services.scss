@@ -6,6 +6,10 @@
   .page-header {
     background-color: $colorTurquoise;
     border-bottom: 0;
+
+    .clouds svg g {
+      fill: lighten($colorTurquoise, 8);
+    }
   }
 
   .tabs__bar {

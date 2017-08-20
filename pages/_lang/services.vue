@@ -1,8 +1,9 @@
 <template>
 <div id="services">
   <div class="page-header">
-    <img src="~assets/images/header-services.svg" alt="Illustration">
     <h1>{{ $t('pages.services') }}</h1>
+    <component-clouds />
+    <img src="~assets/images/header-services.svg" alt="Illustration">
   </div>
   <v-tabs dark fixed centered v-model="active">
     <v-tabs-bar slot="activators">
@@ -26,6 +27,7 @@
 import Webdesign from '~/components/webdesign.vue'
 import Branding from '~/components/branding.vue'
 import Advertising from '~/components/advertising.vue'
+import clouds from '~/components/clouds.vue'
 
 export default {
   data() {
@@ -57,7 +59,8 @@ export default {
   components: {
     'component-webdesign': Webdesign,
     'component-branding': Branding,
-    'component-advertising': Advertising
+    'component-advertising': Advertising,
+    'component-clouds': clouds
   },
   i18n: {
     messages: {
