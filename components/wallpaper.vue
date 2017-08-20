@@ -41,11 +41,11 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'Visual Communication',
+        headline: 'Creative Company',
         tagline: 'Webdesign. Branding. Advertising.'
       },
       de: {
-        headline: 'Visuelle Kommunikation',
+        headline: 'Creative Company',
         tagline: 'Webdesign. Marken. Werbung.'
       }
     }

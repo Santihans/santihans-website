@@ -16,10 +16,13 @@
       width: 100%;
     }
 
-    svg {
-      path {
-        fill: #ffcf72;
-      }
+    h1 {
+      color: white;
+      text-shadow: 2px 3px $colorPink;
+    }
+
+    .clouds svg g {
+      fill: lighten($colorYellow, 8);
     }
   }
 
@@ -27,29 +30,30 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-top: 3vh;
     position: relative;
-    top: -120px;
 
-    .card {
+    .flex {
       display: flex;
       flex-direction: column;
       width: 100%;
-      @media(min-width: $breakpointMedium) {
+      @media(min-width: 800px) {
         flex-direction: row;
       }
     }
 
-    .card-contact,
-    .card-map {
-      flex: 1 0 50%;
+    .flex-contact,
+    .flex-map {
+      flex-grow: 1;
     }
 
-    .card-map {
+    .flex-map {
+      flex-basis: 40%;
       background-color: rgb(77,96,89);
       height: 300px;
       overflow: hidden;
       position: relative;
-      @media(min-width: $breakpointMedium) {
+      @media(min-width: 800px) {
         height: auto;
         order: -1;
       }
@@ -75,8 +79,10 @@
       }
     }
 
-    .card-contact {
-      padding: 20px;
+    .flex-contact {
+      @media(min-width: 800px) {
+        padding: 0 20px;
+      }
 
       .contact {
         margin-top: 1vh;

@@ -74,32 +74,33 @@
     h1 {
       background-color: $colorPink;
       color: rgba(255, 255, 255, .8);
-      font-size: 1.4em;
+      font-size: 1.9em;
       letter-spacing: -0.02em;
       line-height: 1.4;
       margin: 0 3vw 0.2em;
       padding: 20px;
       @media(min-width: $breakpointMini) {
-        font-size: 1.8em;
+        font-size: 2.4em;
         margin-left: 0;
         margin-right: 0;
       }
       @media(min-width: $breakpointSmall) {
-        font-size: 2.6em;
+        font-size: 3.6em;
         padding-left: 5vw;
         padding-right: 5vw;
       }
       @media(min-width: 800px) {
-        font-size: 3.2em;
+        font-size: 4.5em;
       }
       @media(min-width: $breakpointMedium) {
-        font-size: 3.8em;
+        font-size: 5.2em;
       }
     }
 
     .tagline {
       font-size: 0.9em;
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255, 255, 255, .8);
+      text-shadow: 1px 1px rgba(0,0,0,.2);
       @media(min-width:$breakpointSmall) {
         font-size: 1.4em;
       }
@@ -162,7 +163,7 @@
     }
 
     &::before {
-      background-image: linear-gradient(to top, rgb(181, 86, 124), $colorBgHeader 60%);
+      background-image: linear-gradient(to top, rgb(181, 86, 124), $colorPink 60%);
     }
 
     &::after {
