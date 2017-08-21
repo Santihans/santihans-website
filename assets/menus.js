@@ -21,6 +21,10 @@ const main = [{
 ]
 
 const about = [{
+    path: '/about',
+    label: 'pages.about',
+    icon: 'face'
+  }, {
     path: '/terms',
     label: 'pages.terms',
     icon: 'work'

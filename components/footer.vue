@@ -19,9 +19,6 @@
         <li v-for="item in social">
           <a :href="item.url" target="_blank">{{ item.label }}</a>
         </li>
-        <nuxt-link v-for="item in about" v-ripple tag="li" :to="localePath(`${item.path}`)" exact>
-          <a>{{ $t(`${item.label}`) }}</a>
-        </nuxt-link>
       </ul>
     </div>
   </div>

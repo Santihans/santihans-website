@@ -1,7 +1,7 @@
 @import "~assets/styles/variables.scss";
 
 #footer {
-  background-color: #2b2b2b;
+  background-color: $colorNight;
   color: white;
   padding-bottom: 7vw;
   padding-top: 7vw;
@@ -12,6 +12,7 @@
 
   a {
     color: #AEC4D7;
+    color: lighten($colorPink, 20);
     text-decoration: none;
   }
 
