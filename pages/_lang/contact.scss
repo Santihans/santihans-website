@@ -2,22 +2,12 @@
 
 #contact {
   .page-header {
-    background-color: $colorYellow;
+    background-color: $colorPink;
     background-image: url('~assets/images/contact-bg.svg');
-    border-color: $colorPink;
-
-    &::after {
-      background-image: linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,0));
-      content: '';
-      height: 20%;
-      left: 0;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
+    border-color: $colorTurquoise;
 
     .clouds svg g {
-      fill: lighten($colorYellow, 8);
+      fill: lighten($colorPink, 8);
     }
   }
 

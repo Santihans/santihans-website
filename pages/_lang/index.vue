@@ -81,7 +81,7 @@ export default {
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details so you don\'t have to.'
         },
         branding: {
-          headline: 'Individual Branding',
+          headline: 'Iconic Branding',
           abstract: 'We develop corporate identitiy solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
