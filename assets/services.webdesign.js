@@ -57,6 +57,7 @@ const services = {
     design: {
       label: 'advanced.design.label',
       items: [{
+        // Web Design
           label: 'advanced.design.items[0].label',
           details: 'advanced.design.items[0].details',
           hint: 'advanced.design.items[0].hint',
@@ -66,6 +67,7 @@ const services = {
           rate: 'graphics'
         },
         {
+          // Graphic Design
           label: 'advanced.design.items[1].label',
           details: 'advanced.design.items[1].details',
           hint: 'advanced.design.items[1].hint',
@@ -74,6 +76,7 @@ const services = {
           rate: 'graphics'
         },
         {
+          // Stock Photos
           label: 'advanced.design.items[2].label',
           details: 'advanced.design.items[2].details',
           hint: 'advanced.design.items[2].hint',

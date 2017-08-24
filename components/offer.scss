@@ -63,4 +63,38 @@
   .table-offer-initial {
     margin-bottom: 2em;
   }
+
+  .btn-print {
+    margin-right: auto;
+  }
+}
+
+// Additional css is for print
+.summary {
+  .print-only {
+    display: none;
+  }
+
+  .summary-meta {
+    .logo {
+      width: 300px;
+      margin: 0 auto 3em;
+    }
+
+    .contact .icon {
+      display: none;
+    }
+
+    .date {
+      margin-top: 1em;
+    }
+
+    h4 {
+      margin-top: 1em;
+    }
+  }
+
+  .summary-legal {
+    margin-top: 2em;
+  }
 }

@@ -19,7 +19,9 @@
     "send": "Abschicken",
     "sendRequest": "Anfrage Senden",
     "confirm": "Bestätigen",
-    "close": "Schliessen"
+    "close": "Schliessen",
+    "cancel": "Abbrechen",
+    "print": "Drucken"
   },
   "directions": {
     "choose": "Bitte auswählen"

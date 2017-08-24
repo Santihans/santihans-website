@@ -8,11 +8,11 @@
       <div>
         <span itemprop="postalCode">4056</span>&nbsp;<span itemprop="addressLocality">Basel</span>
       </div>
-      <span itemprop="addressCountry">Switzerland</span>
+      <span v-show="showCountry" itemprop="addressCountry">Switzerland</span>
     </div>
   </div>
   <div class="contact-virtual">
-    <div class="phone">
+    <div v-show="showPhone" class="phone">
       <v-icon>phone</v-icon>
       <span itemprop="telephone">
               <a href="tel:+41798318079">+41 79 831 80 79</a></span>
@@ -25,3 +25,18 @@
   </div>
 </div>
 </template>
+
+<script>
+export default {
+  props: {
+    showCountry: {
+      type: Boolean,
+      default: true
+    },
+    showPhone: {
+      type: Boolean,
+      default: true
+    }
+  }
+}
+</script>

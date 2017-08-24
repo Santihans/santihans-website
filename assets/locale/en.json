@@ -19,7 +19,9 @@
     "send": "Send",
     "sendRequest": "Send Request",
     "confirm": "Confirm",
-    "close": "Close"
+    "close": "Close",
+    "cancel": "Cancel",
+    "print": "Print"
   },
   "directions": {
     "choose": "Please choose options"

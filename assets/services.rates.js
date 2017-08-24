@@ -1,7 +1,7 @@
 export default {
   hourly: {
-    graphics: 50,
-    development: 100
+    graphics: 60,
+    development: 120
   },
   yearly: {
     domain: 30,
