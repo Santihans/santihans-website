@@ -1,5 +1,5 @@
 <template>
-<div class="component-offer">
+<div class="component-quote-webdesign">
   <div class="offer-head">
     <h3>{{ $t('offer.heading') }}</h3>
     <p class="responsive-text">{{ $t('offer.intro') }}*</p>
@@ -72,7 +72,7 @@
         </div>
       </v-stepper-content>
 
-      <v-stepper-step step="5" editable>
+      <v-stepper-step step="5">
         {{ $t('step.summary.title') }}
       </v-stepper-step>
       <v-stepper-content step="5">
@@ -328,7 +328,7 @@ export default {
           headingPrint: 'Provisorische Offerte',
           intro: 'Nimm dir 2 Minuten Zeit um eine unverbindliche Offerte zusammenzustellen.',
           startingPrice: 'ab',
-          footer: 'Offerte ist eine Schätzung basierend auf Erfahrungswerte. Definitive Offerte kann abweichen. Preisänderungen vorbehalten.'
+          footer: 'Offerte ist eine Schätzung basierend auf Erfahrungswerten. Definitive Offerte kann abweichen. Preisänderungen vorbehalten.'
         },
         step: {
           initial: {
@@ -366,5 +366,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "offer.scss";
+@import "quoteWebdesign.scss";
 </style>

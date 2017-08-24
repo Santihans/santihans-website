@@ -7,7 +7,7 @@
       <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
     </div>
     <div class="text-xs-center">
-      <v-btn large flat outline to="#offer" v-smooth-scroll="{offset: -70 }">{{ $t('intro.quote')}}</v-btn>
+      <v-btn large flat outline to="#quote" v-smooth-scroll="{offset: -70 }">{{ $t('intro.quote')}}</v-btn>
     </div>
   </section>
 
@@ -50,8 +50,8 @@
     </v-expansion-panel>
   </section>
 
-  <section id="offer" class="offer">
-    <component-offer/>
+  <section id="quote" class="quote">
+    <component-quote-webdesign/>
   </section>
 
   <section class="work">
@@ -70,12 +70,12 @@
 
 <script>
 import { services, messages } from '~/assets/services.webdesign.js'
-import Offer from '~/components/offer.vue'
+import Quote from '~/components/quoteWebdesign.vue'
 var extend = require('node.extend')
 
 export default {
   components: {
-    'component-offer': Offer
+    'component-quote-webdesign': Quote
   },
   data() {
     return {
