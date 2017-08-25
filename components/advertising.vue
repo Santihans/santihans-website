@@ -3,9 +3,11 @@
   <section>
     <h2>{{ $t('heading') }}</h2>
     <p class="abstract">{{ $t('abstract') }}</p>
+    <p class="abstract">{{ $t('placeholder') }}</p>
+    <div class="text-xs-center">
+      <v-btn large primary :to="localePath('/contact')">{{ $t('pages.contact')}}</v-btn>
+    </div>
   </section>
-
-
 </div>
 </template>
 
@@ -15,11 +17,13 @@ export default {
     messages: {
       en: {
         heading: 'Advertising',
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum eligendi aliquam officia, dolorum natus unde libero repellendus inventore consectetur odit expedita debitis consequatur dolores. Inventore ducimus laboriosam, error voluptas numquam.'
+        abstract: 'We help you aquire new customers with targeted creative advertising. We create everything from ad campaigns to print products like business cards or packaging solutions.',
+        placeholder: 'More on the topic coming soon. Contact us for more information.'
       },
       de: {
         heading: 'Werbung',
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos iusto, eligendi ducimus quaerat officiis illo aliquid. Maxime ducimus soluta, eveniet, eum fugit asperiores quam, nam nisi eius sit id reprehenderit.'
+        abstract: 'Erweitern sie ihre Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten sowohl digitale Werbekampanien als auch physiche Werbeartikel nach ihren Wünschen.',
+        placeholder: 'Weiter Informationen folgen. Kontaktiere uns in der Zwischenzeit.'
       }
     }
   }
