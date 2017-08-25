@@ -89,7 +89,7 @@ export default {
             required: 'Required',
             invalidEmail: 'Invalid e-mail'
           },
-          attachment: 'Quote',
+          attachment: 'Personal Quote',
           successMessage: 'Thank you for your message. We\'ll get back to you as soon as possible.'
         }
       },
@@ -104,7 +104,7 @@ export default {
             required: 'Erforderlich',
             invalidEmail: 'Ungültige Email'
           },
-          attachment: 'Offerte',
+          attachment: 'Persönliche Offerte',
           successMessage: 'Vielen Dank für die Nachricht. Wir melden uns so schnell wie möglich.'
         }
       }
