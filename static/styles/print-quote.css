@@ -46,15 +46,15 @@ table.table tbody td{font-weight:400;font-size:13px;}
 /*! CSS Used from: Embedded */
 *,*::after,*::before{-webkit-box-sizing:border-box;box-sizing:border-box;}
 img{display:block;max-width:100%;}
-.responsive-text{margin-left:auto;margin-right:auto;text-align:center;}
+.abstract{margin-left:auto;margin-right:auto;text-align:center;}
 @media (min-width: 400px){
-.responsive-text{width:90%;}
+.abstract{width:90%;}
 }
 @media (min-width: 600px){
-.responsive-text{width:80%;}
+.abstract{width:80%;}
 }
 @media (min-width: 995px){
-.responsive-text{width:70%;}
+.abstract{width:70%;}
 }
 /*! CSS Used from: Embedded */
 h4{margin-bottom:0;}
@@ -62,7 +62,7 @@ h4{margin-bottom:0;}
 h4{margin-bottom:0.3em;}
 }
 h4{padding-left:5px;padding-right:5px;}
-.responsive-text{margin-bottom:1em;}
+.abstract{margin-bottom:1em;}
 /*! CSS Used from: Embedded */
 .component-offer .stepper-content{border-bottom:2px dashed #eaeaea;padding-bottom:12px;padding-left:20px;padding-right:12px;}
 .component-offer table.table tr:last-child td:last-child{font-weight:bold;}

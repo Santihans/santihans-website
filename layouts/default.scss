@@ -31,13 +31,29 @@ svg {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+}
+
+h1,
+h2 {
   font-family: 'Raleway', 'Roboto', 'Helvetica', sans-serif;
 }
 
+h2 {
+  + .abstract {
+    font-size: 1.2em;
+  }
+}
+
 h3 {
-  text-align: center;
+  font-weight: bold;
+
+  + .abstract {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+  }
 }
 
 #layout {
@@ -91,8 +107,34 @@ h3 {
 }
 
 section {
-  padding-top: 8vh;
-  padding-bottom: 8vh;
+  padding-top: 6em;
+  padding-bottom: 4em;
+
+  &.section--shadow {
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 90px 90px -60px rgba(0, 0, 0, 0.03);
+    margin-bottom: 2em;
+  }
+}
+
+.section--dark {
+  background-color: $colorTurquoise;
+  margin-top: 2em;
+  padding: 30px 12px 12px;
+
+  h3,
+  h4,
+  p {
+    color: $colorBg;
+  }
+
+  h3 {
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    margin-top: 0;
+  }
 }
 
 .boundaries {
@@ -109,8 +151,7 @@ section {
   }
 }
 
-.abstract,
-.responsive-text {
+.abstract {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -123,10 +164,6 @@ section {
   @media(min-width: $breakpointMedium) {
     width: 70%;
   }
-}
-
-.abstract {
-  font-size: 1.2em;
 }
 
 .page-header {
@@ -188,5 +225,40 @@ section {
     display: flex;
     justify-content: center;
     margin-top: 1em;
+  }
+}
+
+.expansion {
+  h4 {
+    margin-top: 1.4em;
+    margin-bottom: 0.4em;
+  }
+
+  .expansion-custom {
+    background-color: $colorBg;
+    padding-top: 3px;
+
+    .icon {
+      margin-right: 12px;
+    }
+
+    &.expansion-panel > li {
+      border: 0;
+    }
+
+    .inner {
+      background-color: mix($colorBg, $colorBgSubtle);
+      padding-left: 50px;
+      position: relative;
+
+      &::after {
+        border: 6px solid transparent;
+        border-bottom-color: mix($colorBg, $colorBgSubtle);
+        bottom: 100%;
+        content: '';
+        left: 20px;
+        position: absolute;
+      }
+    }
   }
 }

@@ -2,7 +2,7 @@
 <div class="component-quote-webdesign">
   <div class="offer-head">
     <h3>{{ $t('offer.heading') }}</h3>
-    <p class="responsive-text">{{ $t('offer.intro') }}*</p>
+    <p class="abstract">{{ $t('offer.intro') }}*</p>
     <div class="price">
       <div class="price-initial">
         {{ $t('offer.startingPrice') }} CHF <span v-text.number="offerSummary.rateInitial + offerSummary.rateYearly"></span>
@@ -101,7 +101,7 @@
             </template>
           </v-data-table>
           <div class="summary-legal print-only" aria-hidden="true">
-            <div class="responsive-text">
+            <div class="abstract">
               <small>* {{ $t('offer.footer') }}</small>
             </div>
           </div>
