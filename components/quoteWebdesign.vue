@@ -206,10 +206,9 @@ export default {
         $html.prepend(styles)
       }).then(function () {
         w.document.write($html[0].outerHTML)
-        _.delay(function () {
-          w.print()
-          w.close()
-        }, 200)
+      }).then(function () {
+        w.print()
+        w.close()
       })
     }
   },
