@@ -1,0 +1,79 @@
+{
+  "client": {
+    "label": "Scope",
+    "hint": "Choose the magnitude of your project",
+    "size": {
+      "small": {
+        "label": "Neighborhood",
+        "hint": "Local brand, city wide audience."
+      },
+      "medium": {
+        "label": "Regional",
+        "hint": "Brands suited for a broader, colorful, and cultural diverse audience."
+      },
+      "large": {
+        "label": "Worldwide",
+        "hint": "International audience. Brands with respect for the diversity of cultures, styles, languages, design traditions. Sky is the limit."
+      }
+    },
+    "nameExists": {
+      "label": "Existing Name",
+      "hint": "I already have a brand name."
+    },
+    "nonprofit": {
+      "label": "Non-Profit",
+      "hint": "Discount for non-profit organizations, open-source projects, NGOs."
+    }
+  },
+  "advanced": {
+    "name": {
+      "label": "Brand Name",
+      "items": [{
+          "label": "Brand Name Research",
+          "details": "We research possible brand names based on your profession, project or product.",
+          "hint": "We come up with a collection of suitable brand names for you."
+        },
+        {
+          "label": "Branding Workshop",
+          "details": "Full day workshop where we define core brand values and research brand names together.",
+          "hint": "Workshop to develop core brand values and ultimately, your brand name."
+        },
+        {
+          "label": "Register Domain",
+          "details": "Research and register (free) domain names (.com, .ch, etc.).",
+          "hint": "Research and register your domain."
+        },
+        {
+          "label": "Tagline",
+          "details": "We come up with the perfect tagline/slogan for your brand.",
+          "hint": "Research tagline/slogan for your brand."
+        }
+      ]
+    },
+    "design": {
+      "label": "Design",
+      "items": [{
+          "label": "Logo/Trademark",
+          "details": "A great logo is priceless. The trademark is the single most important piece and the core of your brand communications. We develop simple, universally comprehensible and unique logo designs that perfectly represent your company and values.",
+          "hint": "We develop simple, universally comprehensible and unique logo designs that perfectly represent your company and values."
+        },
+        {
+          "label": "Brand Assets",
+          "details": "We create design assets for your brand: Backgrounds, illustrations, image enhancements, business cards, etc.",
+          "hint": "E.g. Illustrations, backgrounds, business cards, etc."
+        },
+        {
+          "label": "Style Guide",
+          "details": "Style guidance for your brand identity: Typography, colors, spacing, etc.",
+          "hint": "Style guide: Typography, color, etc."
+        },
+        {
+          "label": "Style Guide: Web, UI",
+          "details": "Additional style guide for web and user interface design. Buttons, spacing, gradients, interactivity, etc.",
+          "hint": "Additional style guide for digital user interfaces."
+        }
+      ]
+    }
+  },
+  "recommended": "Recommended"
+}

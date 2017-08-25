@@ -72,7 +72,6 @@ export default {
   methods: {
     toggleNavigation: function (state) {
       this.drawer = state
-      console.log(this.drawer)
     }
   },
   mounted() {

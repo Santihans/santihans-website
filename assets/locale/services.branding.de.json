@@ -1,0 +1,79 @@
+{
+  "client": {
+    "label": "Umfang",
+    "hint": "Wähle die Grössenordnung deines Projektes",
+    "size": {
+      "small": {
+        "label": "Nachbarschaft",
+        "hint": "Lokale Marke, Kundschaft aus deiner Stadt."
+      },
+      "medium": {
+        "label": "Regional",
+        "hint": "Marken für ein breiteres, kulturell vielfältigeres Publikum."
+      },
+      "large": {
+        "label": "Weltweit",
+        "hint": "Internationale Kundschaft. Marken welche eine grösstmögliche Diversität an Kulturen, Sprachen, Stile, Traditionen respektieren."
+      }
+    },
+    "nameExists": {
+      "label": "Namen vorhanden",
+      "hint": "Ich besitze bereits einen Markennamen"
+    },
+    "nonprofit": {
+      "label": "Non-Profit",
+      "hint": "Rabatt für Non-Profit Organisationen, Open Source Projekte, NGOs"
+    }
+  },
+  "advanced": {
+    "name": {
+      "label": "Markennamen",
+      "items": [{
+          "label": "Markennamen Recherche",
+          "details": "Wir recherchieren mögliche Markennamen auf Grundlage ihrer Tätigkeit, ihres Projektes oder Produkts.",
+          "hint": "Wir erarbeiten eine Liste mit passenden Markennamen"
+        },
+        {
+          "label": "Workshop: Markenentwicklung",
+          "details": "Ganz-tägiger Workshop um die Werte und Eigenschaften ihrer Marke zu definieren. Anschliessend Markennamen-Recherche im Team.",
+          "hint": "Workshop um die Werte und Eigenschaften ihrer Marke zu definieren. Anregungen zur Namensfindung."
+        },
+        {
+          "label": "Domain",
+          "details": "Recherche und Registration (freier) Domain Namen. (.com, .ch, etc.).",
+          "hint": "Recherche und Registration einer Domain"
+        },
+        {
+          "label": "Slogan",
+          "details": "Wir recherchieren und entwickeln den perfekten Slogan für ihre Marke.",
+          "hint": "Recherche für den perfekten Slogan"
+        }
+      ]
+    },
+    "design": {
+      "label": "Design",
+      "items": [{
+          "label": "Logo/Trademark",
+          "details": "Ein gutes Logo ist unbezahlbar - es ist der Kern für ihre Marken-Kommunikation. Wir entwickeln einfache, universell verständliche und einzigartige Logos welche ihr Unternehmen und ihre Werte perfekt repräsentieren.",
+          "hint": "Einfache, universell verständliche und einzigartige Logos welche ihr Unternehmen und ihre Werte perfekt repräsentieren."
+        },
+        {
+          "label": "Grafikdesign",
+          "details": "Wir erstellen zusätzliche Utensilien für ihre Marke: Hintergründe, Illustrationen, Photobearbeitung, Visitenkarten, usw.",
+          "hint": "Z.B. Hintergründe, Illustrationen, Photobearbeitung, Visitenkarten, usw."
+        },
+        {
+          "label": "Style Guide",
+          "details": "Wir erarbeiten die Gestaltungsrichtlinien für ihre Marken-Identität: Typographie, Farben, Abstände, usw.",
+          "hint": "Gestaltungsrichtlinien für ihre Marke: Typographie, Farben, usw."
+        },
+        {
+          "label": "Style Guide: Web, UI",
+          "details": "Zusätzliche Gestaltungsrichtlinien für Webanwendungen und Benutzeroberflächen (UI). Knöpfe, Abstände, Verläufe, Interaktivität, usw.",
+          "hint": "Zusätzliche Gestaltungsrichtlinien für Benutzeroberflächen (UI)"
+        }
+      ]
+    }
+  },
+  "recommended": "Empfohlen"
+}

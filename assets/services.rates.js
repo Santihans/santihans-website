@@ -1,7 +1,10 @@
 export default {
   hourly: {
     graphics: 60,
-    development: 120
+    development: 120,
+    workshop: 160,
+    copywriter: 80,
+    org: 60
   },
   yearly: {
     domain: 30,
@@ -9,5 +12,9 @@ export default {
     hosting: 30,
     support: 1000
   },
-  base: 900
+  base: {
+    webdesign: 900,
+    branding: 0,
+    advertising: 999
+  }
 }

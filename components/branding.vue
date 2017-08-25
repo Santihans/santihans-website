@@ -4,7 +4,6 @@
     <h2>{{ $t('heading') }}</h2>
     <p class="abstract">{{ $t('abstract') }}</p>
 
-
     <h4>{{ $t('work') }}</h4>
     <v-layout wrap class="references">
       <v-flex xs6 sm3 v-for="(item,i) in branding" :key="i">
@@ -12,11 +11,20 @@
       </v-flex>
     </v-layout>
   </section>
+
+  <section id="quote" class="quote">
+    <component-quote-branding />
+  </section>
 </div>
 </template>
 
 <script>
+import Quote from '~/components/quoteBranding.vue'
+
 export default {
+  components: {
+    'component-quote-branding': Quote
+  },
   data() {
     return {
       branding: [{
@@ -38,12 +46,12 @@ export default {
     messages: {
       en: {
         heading: 'Branding',
-        abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.',
+        abstract: 'A brand is an idea, a promise, a set of expectations that, taken together, account for a consumer\'s decision to choose one product over the other. A brand has to be universally understandable, and at the same time, be as unique as a fingerprint. We help you create this brand.',
         work: 'Work'
       },
       de: {
         heading: 'Markengestaltung',
-        abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos iusto, eligendi ducimus quaerat officiis illo aliquid. Maxime ducimus soluta, eveniet, eum fugit asperiores quam, nam nisi eius sit id reprehenderit.',
+        abstract: 'Eine Marke ist eine Idee, ein Versprechen, eine Sammlung von Erwartungen welche, zusammengenommen, für den Kunden die Entscheidungsgrundlage bilden, ein Produkt dem anderen vorzuziehen. Eine Marke soll universell verständlich und gleichzeitig einzigartig sein. Wir helfen ihnen diese Marke zu entwickeln.',
         work: 'Arbeiten'
       }
     }
