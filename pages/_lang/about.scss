@@ -2,7 +2,20 @@
 
 #about {
   .page-header {
-    background-color: $colorTurquoise;
+    background-color: $colorNightBlue;
+
+    .clouds svg g {
+      fill: lighten($colorNightBlue, 8);
+    }
+
+    .illustration {
+      .ship {
+        left: 24%;
+        position: absolute;
+        top: 71%;
+        width: 27%;
+      }
+    }
   }
 
   .page-content {}

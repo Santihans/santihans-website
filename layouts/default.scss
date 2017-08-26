@@ -204,12 +204,13 @@ section {
     position: relative;
   }
 
-  img {
+  .illustration {
     bottom: 0;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
     width: 720px;
+    max-width: 100%;
   }
 }
 

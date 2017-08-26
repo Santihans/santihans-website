@@ -2,13 +2,18 @@
 <div id="about">
   <div class="page-header">
     <h1>{{ $t('pages.about') }}</h1>
+    <component-clouds />
+    <div class="illustration">
+      <img src="~assets/images/header-about.svg" alt="Illustration">
+      <img class="ship" src="~assets/images/header-about-ship.svg" alt="Illustration">
+    </div>
   </div>
-  <section class="page-content boundaries">
-    <section class="mission">
+  <div class="page-content boundaries">
+    <section class="mission section--shadow">
       <h2>{{ $t('mission.heading') }}</h2>
       <p class="abstract">{{ $t('mission.abstract') }}</p>
     </section>
-    <section class="team">
+    <section class="team section--shadow">
       <h2>{{ $t('team.heading') }}</h2>
       <p class="abstract">{{ $t('team.abstract') }}</p>
     </section>
@@ -16,16 +21,21 @@
       <h2>{{ $t('name.heading') }}</h2>
       <p class="abstract">{{ $t('name.abstract') }}</p>
     </section>
-  </section>
+  </div>
 </div>
 </template>
 
 <script>
+import Clouds from '~/components/clouds.vue'
+
 export default {
   head() {
     return {
       title: this.$t('pages.about')
     }
+  },
+  components: {
+    'component-clouds': Clouds
   },
   i18n: {
     messages: {

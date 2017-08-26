@@ -2,12 +2,11 @@
 
 #contact {
   .page-header {
-    background-color: $colorPink;
+    background-color: $colorNightGreen;
     background-image: url('~assets/images/contact-bg.svg');
-    border-color: $colorTurquoise;
 
     .clouds svg g {
-      fill: lighten($colorPink, 8);
+      fill: lighten($colorNightGreen, 8);
     }
   }
 

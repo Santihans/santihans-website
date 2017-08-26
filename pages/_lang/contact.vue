@@ -3,7 +3,7 @@
   <div class="page-header">
     <h1>{{ $t('pages.contact') }}</h1>
     <component-clouds />
-    <img src="~assets/images/header-contact.svg" alt="Illustration">
+    <img class="illustration" src="~assets/images/header-contact.svg" alt="Illustration">
   </div>
   <section class="page-content boundaries">
     <div class="flex">

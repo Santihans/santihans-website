@@ -3,7 +3,7 @@
   <div class="page-header">
     <h1>{{ $t('pages.services') }}</h1>
     <component-clouds />
-    <img src="~assets/images/header-services.svg" alt="Illustration">
+    <img class="illustration" src="~assets/images/header-services.svg" alt="Illustration">
   </div>
   <v-tabs dark fixed centered v-model="active">
     <v-tabs-bar slot="activators">
