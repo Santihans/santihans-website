@@ -104,6 +104,9 @@
       @media(min-width:$breakpointSmall) {
         font-size: 1.4em;
       }
+      @media(min-width: 800px) {
+        font-size: 1.6em;
+      }
       @media(min-width: $breakpointMedium) {
         font-size: 1.8em;
       }

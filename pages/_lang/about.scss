@@ -18,5 +18,33 @@
     }
   }
 
-  .page-content {}
+  .page-content {
+    .team {
+      .members {
+        text-align: center;
+
+        .member-thumb {
+          padding: 15px;
+
+          img {
+            background: white;
+            border-radius: 50%;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            padding: 3px;
+          }
+        }
+
+        .member-name {
+          font-size: 1.1em;
+          font-weight: bold;
+        }
+
+        .member-position {
+          font-size: 0.9em;
+        }
+
+        .member-contacts {}
+      }
+    }
+  }
 }

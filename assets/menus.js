@@ -37,7 +37,7 @@ const about = [{
 ]
 
 const social = [{
-    url: 'https://twitter.com/santihans',
+    url: 'https://twitter.com/santihans4056',
     label: 'Twitter'
   },
   {
@@ -45,7 +45,7 @@ const social = [{
     label: 'Instagram'
   },
   {
-    url: 'https://facebook.com/santihans',
+    url: 'https://www.facebook.com/santihans4056/',
     label: 'Facebook'
   }
 ]

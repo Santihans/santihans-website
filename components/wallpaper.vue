@@ -3,7 +3,7 @@
   <div class="parallax" v-bind:style="{'height': calcHeight}">
     <div class="parallax-inner">
       <h1>{{ $t('headline') }}</h1>
-      <div class="tagline" v-text="'{' + $t('tagline') + '}'"></div>
+      <div class="tagline">{{ $t('tagline') }}</div>
     </div>
     <div class="more">
       <v-icon>expand_more</v-icon>
