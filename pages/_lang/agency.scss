@@ -1,4 +1,17 @@
 @import '~assets/styles/variables.scss';
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 #agency {
   .page-header {
@@ -10,6 +23,7 @@
 
     .illustration {
       .ship {
+        animation: float 10s ease-in-out infinite;
         left: 24%;
         position: absolute;
         top: 71%;
