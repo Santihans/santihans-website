@@ -1,6 +1,6 @@
 @import '~assets/styles/variables.scss';
 
-#about {
+#agency {
   .page-header {
     background-color: $colorNightBlue;
 
@@ -23,8 +23,15 @@
       .members {
         text-align: center;
 
+        .flex {
+          margin-bottom: 1em;
+        }
+
         .member-thumb {
-          padding: 15px;
+          padding: 3vw;
+          @media(min-width: $breakpointSmall) {
+            padding: 15px;
+          }
 
           img {
             background: white;

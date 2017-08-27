@@ -21,10 +21,11 @@ const main = [{
 ]
 
 const about = [{
-    path: '/about',
-    label: 'pages.about',
+    path: '/agency',
+    label: 'pages.agency',
     icon: 'face'
-  }, {
+  },
+  {
     path: '/terms',
     label: 'pages.terms',
     icon: 'work'

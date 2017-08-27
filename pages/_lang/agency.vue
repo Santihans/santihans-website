@@ -1,11 +1,11 @@
 <template>
-<div id="about">
+<div id="agency">
   <div class="page-header">
-    <h1>{{ $t('pages.about') }}</h1>
+    <h1>{{ $t('pages.agency') }}</h1>
     <component-clouds />
     <div class="illustration">
-      <img src="~assets/images/header-about.svg" alt="Illustration">
-      <img class="ship" src="~assets/images/header-about-ship.svg" alt="Illustration">
+      <img src="~assets/images/header-agency.svg" alt="Illustration">
+      <img class="ship" src="~assets/images/header-agency-ship.svg" alt="Illustration">
     </div>
   </div>
   <div class="page-content boundaries">
@@ -20,7 +20,7 @@
       <v-layout class="members" wrap justify-center>
         <v-flex xs6 sm3 v-for="(item,i) in team" :key="i">
           <div class="member-thumb">
-            <img :src="'/images/about/' +item.thumb" alt="Photo">
+            <img :src="'/images/agency/' +item.thumb" alt="Photo">
           </div>
           <div class="member-name">
             {{ item.name }}
@@ -51,7 +51,7 @@ import Clouds from '~/components/clouds.vue'
 export default {
   head() {
     return {
-      title: this.$t('pages.about')
+      title: this.$t('pages.agency')
     }
   },
   data() {
@@ -111,7 +111,7 @@ export default {
     messages: {
       en: {
         company: {
-          heading: 'Company',
+          heading: 'About us',
           abstract: 'Santihans is a design and communications agency with its main focus on web design, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
         },
         team: {
@@ -130,7 +130,7 @@ export default {
       },
       de: {
         company: {
-          heading: 'Agentur',
+          heading: 'Über uns',
           abstract: 'Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  und mit Zugang zum Rhein.'
         },
         team: {
@@ -154,5 +154,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "about.scss";
+@import "agency.scss";
 </style>
