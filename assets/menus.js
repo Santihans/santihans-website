@@ -9,9 +9,9 @@ const main = [{
     icon: 'palette'
   },
   {
-    path: '/store',
-    label: 'pages.store',
-    icon: 'local_shipping'
+    path: '/work',
+    label: 'pages.work',
+    icon: 'style'
   },
   {
     path: '/contact',
@@ -24,6 +24,11 @@ const about = [{
     path: '/agency',
     label: 'pages.agency',
     icon: 'face'
+  },
+  {
+    path: '/store',
+    label: 'pages.store',
+    icon: 'local_shipping'
   },
   {
     path: '/terms',

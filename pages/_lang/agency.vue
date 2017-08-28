@@ -58,7 +58,7 @@ export default {
     return {
       team: [{
           thumb: 'christophe.jpg',
-          position: 'Founder, Design, Web',
+          position: 'Founder, Designer, Web Enthusiast',
           name: 'Christophe',
           contacts: [{
               label: 'Email',
@@ -77,15 +77,11 @@ export default {
         {
           thumb: 'remo.jpg',
           position: 'Consultant Strategy & Finance',
-          name: 'Remo',
-          contacts: [{
-            label: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/remo-kübler-70738012a'
-          }]
+          name: 'Remo'
         },
         {
           thumb: 'david.jpg',
-          position: 'Consultant Grahic Design',
+          position: 'Consultant Graphic Design',
           name: 'David',
           contacts: [{
             label: 'Facebook',

@@ -1,0 +1,56 @@
+@import '~assets/styles/variables.scss';
+
+#work {
+  .page-header {
+    background-color: $colorViolett;
+
+    .clouds svg g {
+      fill: lighten($colorViolett, 8);
+    }
+  }
+
+  .page-content {
+    .portfolio {
+      .portfolio-dialog {
+        max-width: 100%;
+      }
+
+      .portfolio-link {
+        display: block;
+        margin-bottom: 8px;
+        text-decoration: none;
+      }
+
+      .project {
+        padding: 10px;
+
+        .name {
+          font-weight: bold;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .tags {
+          font-size: 0.8em;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+
+          li {
+            color: $colorSubtle;
+            display: inline;
+            margin-right: 5px;
+
+            &::before {
+              content: '#';
+            }
+          }
+        }
+      }
+    }
+  }
+}
