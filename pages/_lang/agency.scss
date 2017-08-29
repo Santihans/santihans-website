@@ -67,5 +67,28 @@
         .member-contacts {}
       }
     }
+
+    .partner {
+      text-align: center;
+
+      .flex {
+        margin-bottom: 1em;
+      }
+
+      .partner-logo {
+        align-items: flex-end;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+
+        > * {
+          max-height: 100%;
+        }
+      }
+
+      .partner-description {
+        padding: 0.5em;
+      }
+    }
   }
 }

@@ -37,9 +37,25 @@
       </v-layout>
     </section>
 
-    <section class="mission">
+    <section class="mission section--shadow">
       <h2>{{ $t('mission.heading') }}</h2>
       <p class="abstract">{{ $t('mission.abstract') }}</p>
+    </section>
+
+    <section class="partner">
+      <h2>{{ $t('partner.heading') }}</h2>
+      <p class="abstract">{{ $t('partner.abstract') }}</p>
+      <v-layout class="partner" wrap justify-center>
+        <v-flex xs6 sm3 v-for="(item,i) in partner" :key="i">
+          <div class="partner-logo">
+            <img :src="'/images/agency/' + item.logo" :alt="item.name">
+          </div>
+          <div class="partner-description">
+            {{ item.description }}
+          </div>
+          <v-btn flat outline :href="item.web" target="_blank">{{ $t('buttons.website') }}</v-btn>
+        </v-flex>
+      </v-layout>
     </section>
   </div>
 </div>
@@ -97,6 +113,19 @@ export default {
             url: 'mailto:info@santihans.com'
           }]
         }
+      ],
+      partner: [{
+          logo: 'cometas.svg',
+          name: 'cometas',
+          web: 'http://cometas.ch',
+          description: 'Digitale Kurse, Web- und Mobile-Software.'
+        },
+        {
+          logo: 'taktwerk.svg',
+          name: 'taktwerk',
+          web: 'http://taktwerk.ch',
+          description: 'Digitalisierung für KMU aus Industrie und Bau.'
+        }
       ]
     }
   },
@@ -122,6 +151,13 @@ export default {
         mission: {
           heading: 'Mission',
           abstract: 'Santihans produces appealing, custom-made and thought-through communication solutions for demanding customers. The company\'s style follows modern design principles, is sometimes out of the ordinary, often minimalistic, but always unique.'
+        },
+        partner: {
+          heading: 'Partner',
+          abstract: 'Santihans works together with great companies.'
+        },
+        buttons: {
+          website: 'Website'
         }
       },
       de: {
@@ -141,8 +177,14 @@ export default {
         mission: {
           heading: 'Mission',
           abstract: 'Die Agentur produziert ansprechende, handgemachte und durchdachte Kommunikationslösungen für anspruchsvolle Kunden. Santihans’ Stil folgt modernen Design-Prinzipien, ist manchmal ungewöhnlich, oft minimalistisch, aber immer einzigartig.'
+        },
+        partner: {
+          heading: 'Partner',
+          abstract: 'Santihans arbeitet mit hervorragenden Partnern zusammen.'
+        },
+        buttons: {
+          website: 'Webseite'
         }
-
       }
     }
   }

@@ -78,7 +78,7 @@ export default {
         {
           id: 'brigittehenke',
           name: 'Brigitte Henke',
-          tags: ['webdesign'],
+          tags: ['webdesign', 'cms'],
           abstract: 'Personal Portfolio Website',
           details: {}
         },
