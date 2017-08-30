@@ -24,7 +24,6 @@
 <script>
 import { main } from '~/assets/menus.js'
 export default {
-  name: 'Header',
   data() {
     return {
       main: main,
