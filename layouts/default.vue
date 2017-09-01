@@ -64,7 +64,7 @@ export default {
     'app-language': language
   },
   data: () => ({
-    drawer: true,
+    drawer: false,
     main: main,
     about: about,
     social: social
