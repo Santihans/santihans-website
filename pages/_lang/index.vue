@@ -98,7 +98,7 @@ export default {
         },
         branding: {
           headline: 'Individuelle Marken',
-          abstract: 'Hinterlassen sie einen bleibenden Eindruck! Wir entwickeln eine einzigartige Idendität für ihre Organisation oder ihr Projekt. Unsere Marken zeichnen sich aus durch Schlichtheit, Wiedererkennbarkeit und Einzigartigkeit. Zudem stellen wir sicher dass die Werte ihrer Organisation im Design repräsentiert werden.'
+          abstract: 'Hinterlassen sie einen bleibenden Eindruck! Wir entwickeln eine einzigartige Idendität für ihre Organisation oder ihr Projekt. Unsere Logos sind schlicht, wiedererkennbar und einzigartig.'
         },
         advertising: {
           headline: 'Wirksame Werbung',

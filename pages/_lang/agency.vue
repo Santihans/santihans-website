@@ -98,11 +98,7 @@ export default {
         {
           thumb: 'david.jpg',
           position: 'Consultant Graphic Design',
-          name: 'David',
-          contacts: [{
-            label: 'Facebook',
-            url: 'https://www.facebook.com/david.steiner.986'
-          }]
+          name: 'David'
         },
         {
           thumb: 'team-placeholder.svg',
@@ -119,13 +115,13 @@ export default {
           name: 'cometas',
           web: 'http://cometas.ch',
           description: 'Digitale Kurse, Web- und Mobile-Software.'
-        },
-        {
-          logo: 'taktwerk.svg',
-          name: 'taktwerk',
-          web: 'http://taktwerk.ch',
-          description: 'Digitalisierung für KMU aus Industrie und Bau.'
         }
+        // {
+        //   logo: 'taktwerk.svg',
+        //   name: 'taktwerk',
+        //   web: 'http://taktwerk.ch',
+        //   description: 'Digitalisierung für KMU aus Industrie und Bau.'
+        // }
       ]
     }
   },
