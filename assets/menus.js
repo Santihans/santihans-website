@@ -33,11 +33,6 @@ const about = [{
   {
     path: '/terms',
     label: 'pages.terms',
-    icon: 'work'
-  },
-  {
-    path: '/disclaimer',
-    label: 'pages.disclaimer',
     icon: 'info'
   }
 ]
