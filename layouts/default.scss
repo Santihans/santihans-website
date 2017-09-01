@@ -214,7 +214,7 @@ section {
   }
 }
 
-.dialog-custom {
+.dialog-custom .dialog {
   background-color: $colorBg;
   padding: 20px 4vw;
   @media(min-width: $breakpointMedium) {
