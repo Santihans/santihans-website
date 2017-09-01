@@ -126,12 +126,12 @@
       "label": "Support",
       "items": [{
           "label": "Basic Support",
-          "details": "-Website maintenance\n-Consulting and support for integrated services(CMS, E-commerce, usw.)\n-Cosmetic adjustments\n-Max. 5 working hours per month\n-Read terms for more information",
+          "details": "<ul><li>Website maintenance</li><li>Consulting and support for integrated services(CMS, E-commerce, usw.)</li><li>Cosmetic adjustments</li><li>Max. 5 working hours per month</li><li>Read terms for more information</li></ul>",
           "hint": "Standard Support"
         },
         {
           "label": "Premium Support",
-          "details": "You'll get all benefits from the 'Basic Support' contract. Additionally:\n-Priority lane. Be the first in line.\n-Max. 10 working hours per month\n-Read terms for more information",
+          "details": "You'll get all benefits from the 'Basic Support' contract. Additionally:<ul><li>Priority lane. Be the first in line.</li><li>Max. 10 working hours per month</li><li>Read terms for more information</li></ul>",
           "hint": "Premium Support - Be the first in line"
         }
       ]

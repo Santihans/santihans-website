@@ -126,12 +126,12 @@
       "label": "Support",
       "items": [{
           "label": "Standard Support",
-          "details": "- Instandhaltung Ihrer Webseite\n- Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)\n- Kosmetische Änderungen\n- Maximal 5 Arbeitsstunden pro Monat\n- Siehe AGBs für weitere Informationen",
+          "details": "<ul><li>Instandhaltung Ihrer Webseite</li><li>Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)</li><li>Kosmetische Änderungen</li><li>Maximal 5 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
           "hint": "Standard Support"
         },
         {
           "label": "Premium Support",
-          "details": "Sie erhalten alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:\n- Ihre Anfragen werden vorgezogen, resp. priorisiert.\n- Maximal 10 Arbeitsstunden pro Monat\n- Siehe AGBs für weitere Informationen",
+          "details": "Sie erhalten alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:<ul><li>Ihre Anfragen werden vorgezogen, resp. priorisiert.</li><li>Maximal 10 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
           "hint": "Premium Support - Du kommst an erster Stelle"
         }
       ]

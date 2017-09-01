@@ -10,7 +10,7 @@
       <div>
         <v-btn large primary to="#webdesign-services" v-smooth-scroll="{offset: -70 }">{{ $t('services.heading')}}</v-btn>
       </div>
-      <v-btn large flat to="#webdesign-work" v-smooth-scroll="{offset: -70 }">{{ $t('work.heading')}}</v-btn>
+      <v-btn large flat :to="localePath('/work')">{{ $t('buttons.showcase')}}</v-btn>
     </div>
   </section>
 
@@ -18,21 +18,22 @@
     <component-quote-webdesign/>
   </section>
 
-  <section id="webdesign-work" class="section--shadow">
-    <h3>{{ $t('work.heading') }}</h3>
-    <p class="abstract">{{ $t('work.intro') }}</p>
-    <v-layout wrap class="references">
-      <v-flex xs6 sm3 v-for="(item,i) in references" :key="i">
-        <a v-ripple :href="item.url" target="_blank">
-        <img :src="item.src" alt="Example">
-      </a>
-      </v-flex>
-    </v-layout>
-  </section>
-
   <section id="webdesign-services" class="services">
     <h3>{{ $t('services.heading') }}</h3>
     <p class="abstract">{{ $t('services.intro') }}</p>
+
+    <div class="expansion" v-for="(item, i) in services.advanced" :key="i">
+      <h4>{{ $t(`${item.label}`) }}</h4>
+      <v-expansion-panel class="expansion-custom">
+        <v-expansion-panel-content v-for="(item,i) in item.items" :key="i">
+          <div slot="header">
+            <v-icon>check_circle</v-icon>{{ $t(`${item.label}`) }}</div>
+          <v-card>
+            <v-card-text class="inner" v-html="$t(`${item.details}`)"></v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
+    </div>
 
     <div class="basics section--dark">
       <h4>{{ $t(services.basic.label) }}</h4>
@@ -49,21 +50,7 @@
         </v-expansion-panel>
       </div>
     </div>
-
-    <div class="expansion" v-for="(item, i) in services.advanced" :key="i">
-      <h4>{{ $t(`${item.label}`) }}</h4>
-      <v-expansion-panel class="expansion-custom">
-        <v-expansion-panel-content v-for="(item,i) in item.items" :key="i">
-          <div slot="header">
-            <v-icon>check_circle</v-icon>{{ $t(`${item.label}`) }}</div>
-          <v-card>
-            <v-card-text class="inner" v-html="$t(`${item.details}`)"></v-card-text>
-          </v-card>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </div>
   </section>
-
 </div>
 </template>
 
@@ -78,24 +65,7 @@ export default {
   },
   data() {
     return {
-      services: services,
-      references: [{
-          src: '/images/webdesign/frontale.jpg',
-          url: 'http://frontale-festival.github.io'
-        },
-        {
-          src: '/images/webdesign/denkmal.jpg',
-          url: 'http://denkmal.org'
-        },
-        {
-          src: '/images/webdesign/brigittehenke.jpg',
-          url: 'http://brigittehenke.ch'
-        },
-        {
-          src: '/images/webdesign/madeinbasel.jpg',
-          url: 'http://madeinbasel.org'
-        }
-      ]
+      services: services
     }
   },
   i18n: extend(true, {}, messages, {
@@ -105,15 +75,10 @@ export default {
           heading: 'Webdesign',
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.',
           quote: 'Get a Quote'
-
         },
         services: {
           heading: 'Services',
-          intro: 'Get an overview of all our provided services'
-        },
-        work: {
-          heading: 'Work',
-          intro: 'A couple of our recent projects'
+          intro: 'Get an overview of all our provided web design services in detail. Should you miss anything feel free to contact us - we\'ll surely find a solution for your specific needs.'
         }
       },
       de: {
@@ -125,10 +90,6 @@ export default {
         services: {
           heading: 'Dienstleistungen',
           intro: 'Hier finden Sie alle unsere Webdesign-Angebote nochmals im Detail. Sollten sie eine Dienstleistung vermissen kontaktieren sie uns - wir finden bestimmt eine Lösung.'
-        },
-        work: {
-          heading: 'Referenzen',
-          intro: 'Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.'
         }
       }
     }
