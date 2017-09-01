@@ -43,18 +43,36 @@ module.exports = {
     color: '#F96673'
   },
 
-  css: [
-    {src: '~assets/styles/app.styl', lang: 'styl'},
-    {src: '~assets/styles/variables.scss', lang: 'scss'}
+  css: [{
+      src: '~assets/styles/app.styl',
+      lang: 'styl'
+    },
+    {
+      src: '~assets/styles/variables.scss',
+      lang: 'scss'
+    }
   ],
 
-  plugins: [
-    {src: '~plugins/vuetify.js'},
-    {src: '~plugins/i18n.js'},
-    {src: '~plugins/localePath.js'},
-    {src: '~plugins/ga.js', ssr: false},
-    {src: '~plugins/webFontLoader.js',ssr: false},
-    {src: '~plugins/vueSmoothScroll.js'}
+  plugins: [{
+      src: '~plugins/vuetify.js'
+    },
+    {
+      src: '~plugins/i18n.js'
+    },
+    {
+      src: '~plugins/localePath.js'
+    },
+    {
+      src: '~plugins/ga.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/webFontLoader.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/vueSmoothScroll.js'
+    }
   ],
 
   router: {
