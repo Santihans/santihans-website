@@ -5,9 +5,7 @@
     <p class="abstract">{{ $t('intro.abstract') }}</p>
     <v-layout wrap class="references">
       <v-flex xs6 sm3 v-for="(item,i) in references" :key="i">
-        <a v-ripple :href="item.url" target="_blank">
         <img :src="item.src" alt="Example">
-      </a>
       </v-flex>
     </v-layout>
     <div class="text-xs-center">

@@ -30,7 +30,7 @@
           </div>
           <div class="member-contacts">
             <div v-for="item in item.contacts">
-              <a :href="item.url" target="_blank">{{ item.label }}</a>
+              <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
             </div>
           </div>
         </v-flex>
@@ -53,7 +53,7 @@
           <div class="partner-description">
             {{ item.description }}
           </div>
-          <v-btn flat outline :href="item.web" target="_blank">{{ $t('buttons.website') }}</v-btn>
+          <v-btn flat outline :href="item.web" target="_blank" rel="noopener">{{ $t('buttons.website') }}</v-btn>
         </v-flex>
       </v-layout>
     </section>

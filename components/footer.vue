@@ -17,7 +17,7 @@
     <div class="menu" :title="$t('about')">
       <ul>
         <li v-for="item in social">
-          <a :href="item.url" target="_blank">{{ item.label }}</a>
+          <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
         </li>
       </ul>
     </div>
