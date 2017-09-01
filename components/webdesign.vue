@@ -78,7 +78,7 @@ export default {
         },
         services: {
           heading: 'Services',
-          intro: 'Get an overview of all our provided web design services in detail. Should you miss anything feel free to contact us - we\'ll surely find a solution for your specific needs.'
+          intro: 'Get an overview of all our provided webdesign services in detail. Should you miss anything feel free to contact us - we\'ll surely find a solution for your specific needs.'
         }
       },
       de: {

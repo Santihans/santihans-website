@@ -22,8 +22,8 @@ export default {
       },
       de: {
         heading: 'Werbung',
-        abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten sowohl digitale Werbekampanien als auch physiche Werbeartikel nach deinen Wünschen.',
-        placeholder: 'Weiter Informationen folgen. Kontaktiere uns in der Zwischenzeit.'
+        abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten sowohl digitale Werbekampanien als auch physische Werbeartikel nach deinen Wünschen.',
+        placeholder: 'Weiter Informationen folgen. In der Zwischenzeit kontaktiere uns.'
       }
     }
   }

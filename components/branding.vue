@@ -72,11 +72,11 @@ export default {
       en: {
         intro: {
           heading: 'Branding',
-          abstract: 'A brand is an idea, a promise, a set of expectations that, taken together, account for a consumer\'s decision to choose one product over the other.'
+          abstract: 'A brand is an idea, a promise, a set of expectations that, taken together, account for a consumer\'s decision to choose one product over the other. We help you create this brand.'
         },
         services: {
           heading: 'Services',
-          abstract: 'A brand has to be universally understandable, and at the same time, be as unique as a fingerprint. We help you create this brand.'
+          abstract: 'A good brand is universally understandable, and at the same time, unique as a fingerprint. We focus on minimalistic, but smart logo design with class and character.'
         }
       },
       de: {
@@ -86,7 +86,7 @@ export default {
         },
         services: {
           heading: 'Dienstleistungen',
-          abstract: 'Eine Marke soll universell verständlich und gleichzeitig einzigartig sein. Wir helfen dir diese Marke zu entwickeln.'
+          abstract: 'Eine gute Marke ist universell verständlich und gleichzeitig einzigartig. Wir kreiren minimalistische, aber intelligente Logos mit Klasse und Charakter.'
         }
       }
     }

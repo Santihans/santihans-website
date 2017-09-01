@@ -86,7 +86,7 @@ export default {
         },
         advertising: {
           headline: 'Smart Advertising',
-          abstract: 'We help you aquire new customers with targeted creative advertising. We create everything from ad campaigns to print products like business cards or packaging solutions.'
+          abstract: 'We help you aquire new customers with targeted creative advertising. We create everything from ad campaigns to print products like business cards and packaging solutions.'
         }
       },
       de: {
@@ -94,7 +94,7 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Fabelhafte Webseiten',
-          abstract: 'Wir erstellen individuelle, handgemachte Kommunikationslösungen im Bereich Webdesign. Wir legen höchsten Wert auf ansprechendes Design, Funktionaliät, Verfügbarkeit und Barrierefreiheit.'
+          abstract: 'Wir erstellen individuelle Kommunikationslösungen im Bereich Webdesign. Wir legen höchsten Wert auf ansprechendes Design, Funktionaliät, Verfügbarkeit und Barrierefreiheit.'
         },
         branding: {
           headline: 'Individuelle Marken',

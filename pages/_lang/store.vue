@@ -37,7 +37,7 @@ export default {
       de: {
         construction: {
           heading: 'Im Aufbau',
-          info: 'Hier entsteht unser Shop für lokale Kunstarbeiten und Designartikel. Wir bitten um etwas Geduld bis zur Eröffnung. Komm später wieder.'
+          info: 'Hier entsteht unser Shop für lokale Kunstarbeiten und Designartikel. Bis zur Eröffnung bitten wir um etwas Geduld. Komm später wieder vorbei.'
         }
       }
     }

@@ -134,7 +134,7 @@ export default {
       en: {
         company: {
           heading: 'About us',
-          abstract: 'Santihans is a design and communications agency with its main focus on web design, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
+          abstract: 'Santihans is a design and communications agency with its main focus on webdesign, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
         },
         team: {
           heading: 'Team',
