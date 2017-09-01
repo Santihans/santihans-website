@@ -138,7 +138,7 @@ export default {
         },
         team: {
           heading: 'Team',
-          abstract: 'Tiny team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we use the possibilities of the Internet, work remotely, communicate and collaborate online. (We meet to celebrate though.)',
+          abstract: 'Tiny team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we use the possibilities of the Internet, work remotely, communicate and collaborate online. (We meet in person to celebrate though.)',
           christophe: {
             position: 'Founder, Designer, Web Enthusiast'
           },
@@ -173,7 +173,7 @@ export default {
         },
         team: {
           heading: 'Team',
-          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne Bürozeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir treffen uns zum feiern.)',
+          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne Bürozeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
           christophe: {
             position: 'Gründer, Designer, Tausendsassa'
           },
