@@ -22,7 +22,7 @@ export default {
       },
       de: {
         heading: 'Werbung',
-        abstract: 'Erweitern sie ihre Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten sowohl digitale Werbekampanien als auch physiche Werbeartikel nach ihren Wünschen.',
+        abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten sowohl digitale Werbekampanien als auch physiche Werbeartikel nach deinen Wünschen.',
         placeholder: 'Weiter Informationen folgen. Kontaktiere uns in der Zwischenzeit.'
       }
     }

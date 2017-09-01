@@ -1,5 +1,7 @@
 {
   "client": {
+    "label": "Projekt Umfang",
+    "hint": "Wähle die Grössenordnung deines Projekts",
     "size": {
       "small": {
         "label": "Klein",
@@ -21,7 +23,7 @@
   },
   "basic": {
     "label": "Basisangebot",
-    "description": "Unabhängig von der Grösse ihres Projektes - alle unsere Webseiten verfügen über folgende Eigenschaften:",
+    "description": "Unabhängig von der Grösse deines Projekts - alle unsere Webseiten verfügen über folgende Eigenschaften:",
     "items": [{
         "label": "100% Responsiveness",
         "details": "Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiltelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo."
@@ -49,18 +51,18 @@
       "label": "Design",
       "items": [{
           "label": "Webdesign",
-          "details": "Unser Steckenpferd. Wir konzipieren und gestalten ihre Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess ihren Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach ihren Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.",
-          "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben"
+          "details": "Unser Steckenpferd. Wir konzipieren und gestalten deine Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess deinen Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach deinen Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.",
+          "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben."
         },
         {
           "label": "Infografiken",
           "details": "Wir erstellen Grafikelemente, Icons, Illustrationen und ähnliches. Wir bearbeiten Photos und verbessern Bildmaterial mithilfe von Adobe Photoshop. ",
-          "hint": "Erstellen von Illustrationen passend zu ihrem Inhalt."
+          "hint": "Erstellen von Illustrationen passend zu deinem Inhalt."
         },
         {
           "label": "Stock Photos",
-          "details": "Wir kümmern uns um die Suche und Erwerb geeigneter Photos um ihrer Webseite zu illustrieren.",
-          "hint": "Wir suchen und erwerben passende Photos"
+          "details": "Wir kümmern uns um die Suche und den Erwerb geeigneter Photos um deine Webseite zu illustrieren.",
+          "hint": "Wir suchen und erwerben passende Photos."
         }
       ]
     },
@@ -68,18 +70,18 @@
       "label": "Funktionalität",
       "items": [{
           "label": "CMS",
-          "details": "Sie möchten den Inhalt ihrer Webseite selbst verwalten? Wir bieten eine sichere, zuverlässige und wartungsfreie Verwaltung ihrer Inhalte an. Dazu verwenden wir die CMS-Lösungen von <a href='https://prismic.io' target='_blank'>prismic.io</a>.",
-          "hint": "Content Management System: Verwalten sie ihre Inhalte selber"
+          "details": "Du möchtest den Inhalt deiner Webseite selbst verwalten? Wir bieten eine sichere, zuverlässige und wartungsfreie Verwaltung deiner Inhalte an. Dazu verwenden wir z.B. die CMS-Lösungen von <a href='https://prismic.io' target='_blank'>prismic.io</a>.",
+          "hint": "Content Management System: Verwalte deine Inhalte selber."
         },
         {
           "label": "Onlineshop",
           "details": "Wir integrieren Online Shops wie z.B. Shopify.",
-          "hint": "Verkaufen sie Produkte online"
+          "hint": "Verkaufe deine Produkte online."
         },
         {
-          "label": "Lokalisation",
-          "details": "Haben Sie internationale Kundschaft? Wir bauen ihre Webseite nach Wunsch mehrsprachig auf.",
-          "hint": "Stellen Sie ihre Webseite in mehreren Sprachen zur Verfügung"
+          "label": "Sprachen/Lokalisation",
+          "details": "Hast du internationale Kundschaft? Wir bauen deine Webseite nach Wunsch mehrsprachig auf.",
+          "hint": "Stelle deine Webseite in mehreren Sprachen zur Verfügung."
         },
         {
           "label": "Formulare",
@@ -89,17 +91,17 @@
         {
           "label": "Interaktive Widgets",
           "details": "Ob Animation, Mini-Games oder interaktive Widgets. Der Fantasie sind keine Grenzen gesetzt.",
-          "hint": "Browser-basierte interaktive Komponenten"
+          "hint": "Browser-basierte interaktive Komponenten."
         },
         {
           "label": "Barrierefreiheit +",
-          "details": "Wir testen ihre Webseite mit aktuellen 'Prüfwerkzeugen' für eine garantierte Barrierefreiheit. Details: <a href='http://a11yproject.com/' target='_blank'>http://a11yproject.com/</a>",
-          "hint": "Garantierte Barrierefreiheit"
+          "details": "Wir testen deine Webseite mit aktuellen 'Prüfwerkzeugen' für eine garantierte Barrierefreiheit. Details: <a href='http://a11yproject.com/' target='_blank'>http://a11yproject.com/</a>",
+          "hint": "Garantierte Barrierefreiheit."
         },
         {
           "label": "Browser-Support +",
           "details": "Zusätzliche Unterstützung für bestimmte Browser (Versionen)",
-          "hint": "Garantierte Kompatibilität für erwünschte Browser"
+          "hint": "Garantierte Kompatibilität für erwünschte Browser."
         }
       ]
     },
@@ -108,17 +110,17 @@
       "items": [{
           "label": "Hosting",
           "details": "Maximale Geschwindigkeit, Sicherheit und Verfügbarkeit: Alle unsere Webseiten und Apps werden über Google Firebase zur Verfügung gestellt. Alle Webseiten werden über HTTPS ausgeliefert.",
-          "hint": "Wir hosten ihre Webseite mit Google Firebase (HTTPS)"
+          "hint": "Wir hosten deine Webseite mit Google Firebase (HTTPS)."
         },
         {
           "label": "Persönliche Domain",
-          "details": "Wir übernehmen die Domain-Registrierung (z.b. http://www.hansmuster.ch) für sie. Wir prüfen Verfügbarkeit ihres gewünschten Domains und machen allenfalls Alternativvorschläge. (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
-          "hint": "Wir registrieren ihre Wunsch-Domain"
+          "details": "Wir übernehmen die Domain-Registrierung (z.b. http://www.hansmuster.ch) für dich. Wir prüfen Verfügbarkeit deines gewünschten Domains und machen allenfalls Alternativvorschläge. (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "Wir registrieren deine Wunsch-Domain."
         },
         {
           "label": "Persönliche Email",
-          "details": "Wir stellen Email-Server zur verfügung. Falls sie über einen eigene Domain verfügen erhalten sie ihre Wunsch-Email-Adressen. Z.b. info@hansmuster.ch (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
-          "hint": "Wir kümmern uns um ihre Email-Adresse"
+          "details": "Wir stellen Email-Server zur verfügung. Falls du über einen eigene Domain verfügst erhältst du deine Wunsch-Email-Adressen. Z.b. info@hansmuster.ch (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "Wir kümmern uns um deine Email-Adresse."
         }
       ]
     },
@@ -126,12 +128,12 @@
       "label": "Support",
       "items": [{
           "label": "Standard Support",
-          "details": "<ul><li>Instandhaltung Ihrer Webseite</li><li>Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)</li><li>Kosmetische Änderungen</li><li>Maximal 5 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
+          "details": "<ul><li>Instandhaltung deiner Webseite</li><li>Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)</li><li>Kosmetische Änderungen</li><li>Maximal 5 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
           "hint": "Standard Support"
         },
         {
           "label": "Premium Support",
-          "details": "Sie erhalten alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:<ul><li>Ihre Anfragen werden vorgezogen, resp. priorisiert.</li><li>Maximal 10 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
+          "details": "Du erhältst alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:<ul><li>Deine Anfragen werden vorgezogen, resp. priorisiert.</li><li>Maximal 10 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
           "hint": "Premium Support - Du kommst an erster Stelle"
         }
       ]

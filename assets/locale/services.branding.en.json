@@ -1,6 +1,6 @@
 {
   "client": {
-    "label": "Scope",
+    "label": "Project Scope",
     "hint": "Choose the magnitude of your project",
     "size": {
       "small": {

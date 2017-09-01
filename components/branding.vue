@@ -77,24 +77,16 @@ export default {
         services: {
           heading: 'Services',
           abstract: 'A brand has to be universally understandable, and at the same time, be as unique as a fingerprint. We help you create this brand.'
-        },
-        work: {
-          heading: 'Referenzen',
-          intro: 'Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.'
         }
       },
       de: {
         intro: {
           heading: 'Markengestaltung',
-          abstract: 'Eine Marke ist eine Idee, ein Versprechen, eine Sammlung von Erwartungen welche, zusammengenommen, für den Kunden die Entscheidungsgrundlage bilden, ein Produkt dem anderen vorzuziehen.'
+          abstract: 'Eine Marke ist eine Idee, ein Versprechen, eine Sammlung von Erwartungen. Zusammengenommen bilden diese Dinge die Entscheidungsgrundlage für den Erwerb eines Produktes.'
         },
         services: {
           heading: 'Dienstleistungen',
-          abstract: ' Eine Marke soll universell verständlich und gleichzeitig einzigartig sein. Wir helfen ihnen diese Marke zu entwickeln.'
-        },
-        work: {
-          heading: 'Referenzen',
-          intro: 'Im Folgenden finden Sie eine Auswahl an kürzlich realisierten Projekten.'
+          abstract: 'Eine Marke soll universell verständlich und gleichzeitig einzigartig sein. Wir helfen dir diese Marke zu entwickeln.'
         }
       }
     }

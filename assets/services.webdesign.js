@@ -3,6 +3,8 @@ import DE from '~/assets/locale/services.webdesign.de.json'
 
 const services = {
   client: {
+    label: 'client.label',
+    hint: 'client.hint',
     selectedSize: 'small',
     size: {
       small: {
@@ -57,7 +59,7 @@ const services = {
     design: {
       label: 'advanced.design.label',
       items: [{
-        // Web Design
+          // Web Design
           label: 'advanced.design.items[0].label',
           details: 'advanced.design.items[0].details',
           hint: 'advanced.design.items[0].hint',

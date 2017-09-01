@@ -114,9 +114,7 @@ export default {
         }
       },
       de: {
-        portfolio: {
-
-        }
+        portfolio: {}
       }
     }
   }

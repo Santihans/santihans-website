@@ -28,7 +28,7 @@
 
       <v-stepper-step step="2" v-bind:complete="step > 2">
         {{ $t(`${services.advanced.name.label}`) }}
-        <small>{{ $t('directions.choose') }}</small>
+        <small>{{ $t('step.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="2">
         <div class="stepper-content">
@@ -42,7 +42,7 @@
       </v-stepper-content>
 
       <v-stepper-step step="3 " v-bind:complete="step> 3"> {{ $t(`${services.advanced.design.label}`) }}
-        <small>{{ $t('directions.choose') }}</small>
+        <small>{{ $t('step.choose') }}</small>
       </v-stepper-step>
       <v-stepper-content step="3">
         <div class="stepper-content">
@@ -113,6 +113,8 @@ import { services, messages } from '~/assets/services.branding.js'
 import Rates from '~/assets/services.rates.js'
 import address from '~/components/contactAddress.vue'
 import contactForm from '~/components/contactForm.vue'
+import EN from '~/assets/locale/quote.en.json'
+import DE from '~/assets/locale/quote.de.json'
 var extend = require('node.extend')
 
 export default {
@@ -224,64 +226,8 @@ export default {
   },
   i18n: extend(true, {}, messages, {
     messages: {
-      en: {
-        offer: {
-          heading: 'Instant Quote',
-          headingPrint: 'Provisional Quote',
-          intro: 'Use our interactive widget and get a quote in just 2 minutes',
-          startingPrice: 'starting at',
-          footer: 'This interactive quote is an estimation based on past experiences. Final quote may differ. Rates may change at any time.'
-        },
-        step: {
-          summary: {
-            title: 'Summary',
-            total: 'Total',
-            totalYearly: 'Total per year'
-          }
-        },
-        headerInitial: [
-          'Service',
-          'Hours',
-          'Rate/hour in CHF',
-          'Total CHF'
-        ],
-        contactTitle: 'Send request',
-        success: {
-          heading: 'Thank You',
-          buttons: {
-            print: 'Print Quote'
-          }
-        }
-      },
-      de: {
-        offer: {
-          heading: 'Interaktive Offerte',
-          headingPrint: 'Provisorische Offerte',
-          intro: 'Nimm dir 2 Minuten Zeit um eine unverbindliche Offerte zusammenzustellen.',
-          startingPrice: 'ab',
-          footer: 'Offerte ist eine Schätzung basierend auf Erfahrungswerten. Definitive Offerte kann abweichen. Preisänderungen vorbehalten.'
-        },
-        step: {
-          summary: {
-            title: 'Zusammenfassung',
-            total: 'Total',
-            totalYearly: 'Total pro Jahr'
-          }
-        },
-        headerInitial: [
-          'Leistung',
-          'Anzahl Stunden',
-          'Stundenansatz CHF',
-          'Total CHF'
-        ],
-        contactTitle: 'Anfrage senden',
-        success: {
-          heading: 'Vielen Dank',
-          buttons: {
-            print: 'Offerte drucken'
-          }
-        }
-      }
+      en: EN,
+      de: DE
     }
   })
 }

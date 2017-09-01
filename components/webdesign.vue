@@ -84,12 +84,12 @@ export default {
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Wir erstellen individuelle, aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, sowohl im Bereich Verfügbarkeit und Sicherheit, als auch vor allem in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
+          abstract: 'Wir erstellen aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, sowohl im Bereich Verfügbarkeit und Sicherheit, als auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
           quote: 'Interaktive Offerte'
         },
         services: {
           heading: 'Dienstleistungen',
-          intro: 'Hier finden Sie alle unsere Webdesign-Angebote nochmals im Detail. Sollten sie eine Dienstleistung vermissen kontaktieren sie uns - wir finden bestimmt eine Lösung.'
+          intro: 'Hier findest du alle unsere Webdesign-Angebote nochmals im Detail. Solltest du eine Dienstleistung vermissen kontaktiere uns - wir finden bestimmt eine Lösung.'
         }
       }
     }

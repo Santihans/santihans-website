@@ -1,5 +1,7 @@
 {
   "client": {
+    "label": "Project Scope",
+    "hint": "Choose the scope of your website",
     "size": {
       "small": {
         "label": "Small",

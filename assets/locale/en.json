@@ -1,6 +1,6 @@
 {
   "meta": {
-    "description": "Santihans is a communication design company located in 4056 Basel, Switzerland.",
+    "description": "Santihans is a design and communications agency with its main focus on web design, branding and advertising.",
     "keywords": "Santihans, Webdesign, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland"
   },
   "pages": {
@@ -23,8 +23,5 @@
     "cancel": "Cancel",
     "print": "Print",
     "showcase": "Showcase"
-  },
-  "directions": {
-    "choose": "Please choose options"
   }
 }

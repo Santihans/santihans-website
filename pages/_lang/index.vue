@@ -98,11 +98,11 @@ export default {
         },
         branding: {
           headline: 'Individuelle Marken',
-          abstract: 'Hinterlassen sie einen bleibenden Eindruck! Wir entwickeln eine einzigartige Idendität für ihre Organisation oder ihr Projekt. Unsere Logos sind schlicht, wiedererkennbar und einzigartig.'
+          abstract: 'Hinterlasse einen bleibenden Eindruck! Wir entwickeln eine einzigartige Idendität für deine Organisation oder dein Projekt. Unsere Logos sind schlicht, wiedererkennbar und einzigartig.'
         },
         advertising: {
           headline: 'Wirksame Werbung',
-          abstract: 'Erweitern sie ihre Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten digitale Werbekampanien nach ihren Wünschen. Wir kümmern uns auch um Druckprodukte wie Plakate, Visitenkarten, Verpackungen, usw.'
+          abstract: 'Erweiter deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten digitale Werbekampanien nach deinen Wünschen. Wir kümmern uns auch um Druckprodukte wie Plakate, Visitenkarten, Verpackungen und ähnliches'
         }
       }
     }

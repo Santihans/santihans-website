@@ -72,9 +72,10 @@ export default {
   },
   data() {
     return {
-      team: [{
+      team: {
+        christophe: {
           thumb: 'christophe.jpg',
-          position: 'Founder, Designer, Web Enthusiast',
+          position: this.$t('team.christophe.position'),
           name: 'Christophe',
           contacts: [{
               label: 'Email',
@@ -90,26 +91,26 @@ export default {
             }
           ]
         },
-        {
+        remo: {
           thumb: 'remo.jpg',
-          position: 'Consultant Strategy & Finance',
+          position: this.$t('team.remo.position'),
           name: 'Remo'
         },
-        {
+        david: {
           thumb: 'david.jpg',
-          position: 'Consultant Graphic Design',
+          position: this.$t('team.david.position'),
           name: 'David'
         },
-        {
-          thumb: 'team-placeholder.svg',
-          position: this.$t('team.apply.position'),
-          name: this.$t('team.apply.name'),
+        et: {
+          thumb: 'et.svg',
+          position: this.$t('team.et.position'),
+          name: this.$t('team.et.name'),
           contacts: [{
-            label: this.$t('team.apply.contact'),
+            label: this.$t('team.et.contact'),
             url: 'mailto:info@santihans.com'
           }]
         }
-      ],
+      },
       partner: [{
           logo: 'cometas.svg',
           name: 'cometas',
@@ -138,7 +139,16 @@ export default {
         team: {
           heading: 'Team',
           abstract: 'Tiny team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we use the possibilities of the Internet, work remotely, communicate and collaborate online. (We meet to celebrate though.)',
-          apply: {
+          christophe: {
+            position: 'Founder, Designer, Web Enthusiast'
+          },
+          remo: {
+            position: 'Consultant Strategy & Finance'
+          },
+          david: {
+            position: 'Consultant Graphic Design'
+          },
+          et: {
             position: 'Whatever you do best',
             name: 'You?',
             contact: 'Apply'
@@ -164,8 +174,17 @@ export default {
         team: {
           heading: 'Team',
           abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne Bürozeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir treffen uns zum feiern.)',
-          apply: {
-            position: 'Wo dein Talent liegt',
+          christophe: {
+            position: 'Gründer, Designer, Tausendsassa'
+          },
+          remo: {
+            position: 'Beratung Strategie/Finanzen'
+          },
+          david: {
+            position: 'Grafikdesign Freelancer'
+          },
+          et: {
+            position: 'Was ist deine Leidenschaft? Wo liegt dein Talent?',
             name: 'Du?',
             contact: 'Bewirb dich'
           }
