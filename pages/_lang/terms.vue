@@ -29,7 +29,7 @@
       <v-dialog class="terms-dialog" v-model="dialog" width="600" content-class="dialog-custom terms">
         <v-btn class="btn-dialog" primary large slot="activator">Allgemeine Geschäftsbedingungen</v-btn>
         <iframe src="https://docs.google.com/document/d/176JnYi7_ogncO0YzUDNk5IdSM1sGt9xtoSRxu3_uajM/pub"></iframe>
-        <div class="dialog-custom-footer">
+        <div class="dialog-footer">
           <v-btn primary @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
         </div>
       </v-dialog>

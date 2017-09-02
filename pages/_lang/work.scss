@@ -11,6 +11,8 @@
 
   .page-content {
     .portfolio {
+      padding-top: 2em;
+
       .portfolio-dialog {
         max-width: 100%;
       }
@@ -50,6 +52,55 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.dialog-custom.dialog-custom--portfolio {
+  .dialog {
+    padding: 0;
+
+    .dialog-content,
+    .dialog-header {
+      padding: 50px 4vw 30px;
+      @media(min-width: $breakpointMedium) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .dialog-header {
+      position: relative;
+
+      .abstract {
+        margin-bottom: 1em;
+      }
+
+      .btn-close {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .dialog-content {
+      padding-top: 20px;
+
+      h4 {
+        margin-top: 1em;
+      }
+
+      .image {
+        margin-bottom: 2em;
+      }
+
+      .image-caption {
+        background-color: #f3f3f3;
+        color: mix($colorBg, $colorFg, 10);
+        font-size: 0.9em;
+        padding: 5px 10px;
+        text-align: center;
       }
     }
   }

@@ -214,18 +214,20 @@ section {
   }
 }
 
-.dialog-custom .dialog {
-  background-color: $colorBg;
-  padding: 20px 4vw;
-  @media(min-width: $breakpointMedium) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+.dialog-custom {
+  .dialog {
+    background-color: $colorBg;
+    padding: 20px 4vw;
+    @media(min-width: $breakpointMedium) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
 
-  .dialog-custom-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
+    .dialog-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 1em;
+    }
   }
 }
 

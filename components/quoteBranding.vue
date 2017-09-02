@@ -91,7 +91,7 @@
             <component-contact-form :title="$t('contactTitle')" subject="Santihans Branding Quote" :quote="offerSummary" @success="formPostSuccess">
               <v-btn flat @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
             </component-contact-form>
-            <div class="dialog-custom-footer" v-show="formSuccess">
+            <div class="dialog-footer" v-show="formSuccess">
               <v-btn class="btn-print" flat @click="printSummary()">{{ $t('success.buttons.print' )}}</v-btn>
               <v-btn primary @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
             </div>

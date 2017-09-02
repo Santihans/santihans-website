@@ -175,7 +175,7 @@ export default {
           heading: 'Team',
           abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne Bürozeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
           christophe: {
-            position: 'Gründer, Designer, Tausendsassa'
+            position: 'Gründer, Tausendsassa'
           },
           remo: {
             position: 'Beratung Strategie/Finanzen'
