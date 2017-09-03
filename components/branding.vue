@@ -12,7 +12,7 @@
       <div>
         <v-btn large primary to="#branding-services" v-smooth-scroll="{offset: -70 }">{{ $t('services.heading')}}</v-btn>
       </div>
-      <v-btn large flat :to="localePath('/contact')">{{ $t('pages.contact')}}</v-btn>
+      <v-btn large flat :to="localePath('/work')">{{ $t('buttons.showcase')}}</v-btn>
     </div>
   </section>
 
