@@ -6,7 +6,9 @@
       <div class="tagline">{{ $t('tagline') }}</div>
     </div>
     <div class="more">
-      <v-icon>expand_more</v-icon>
+      <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
+        <v-icon>expand_more</v-icon>
+      </v-btn>
     </div>
   </div>
 

@@ -35,6 +35,7 @@
       position: absolute;
       transition: opacity 200ms 500ms;
       transform: translateX(-50%);
+      z-index: 1;
 
       .icon {
         color: white;

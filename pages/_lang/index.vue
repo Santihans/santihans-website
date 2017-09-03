@@ -4,7 +4,7 @@
   <div class="illustration-webdesign">
     <img src="~assets/images/webdesign.svg" alt="Illustration">
   </div>
-  <section class="service-webdesign boundaries">
+  <section id="sectionWebDesign" class="service-webdesign boundaries">
     <h2>{{ $t('webdesign.headline') }}</h2>
     <p class="abstract">{{ $t('webdesign.abstract') }}</p>
     <div>

@@ -86,8 +86,8 @@ export default {
   mounted() {
     var $self = $(this.$el)
     $(document).on('scroll', _.throttle(function () {
-      $self.toggleClass('scrollTop', $(document).scrollTop() < window.screen.height / 12)
-      $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 5)
+      $self.toggleClass('scrollTop', $(document).scrollTop() < 10)
+      $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 8)
     }, 100))
   }
 }
