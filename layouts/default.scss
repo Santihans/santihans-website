@@ -173,10 +173,13 @@ section {
   background-position: bottom center;
   background-size: contain;
   border-bottom: 4px solid $colorPink;
-  height: 240px;
+  height: 220px;
   position: relative;
   @media(min-width: $breakpointMini) {
-    height: 300px;
+    height: 260px;
+  }
+  @media(min-width: 500px) {
+    height: 280px;
   }
   @media(min-width: $breakpointSmall) {
     height: 360px;
@@ -201,7 +204,10 @@ section {
   }
 
   .clouds {
-    position: relative;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .illustration {
