@@ -113,7 +113,7 @@
           <v-dialog v-model="dialog" width="600" content-class="dialog-custom">
             <v-btn primary slot="activator">{{ $t('buttons.sendRequest') }}</v-btn>
             <h3 v-show="formSuccess">{{ $t('success.heading') }}</h3>
-            <component-contact-form :title="$t('contactTitle')" subject="Santihans Webdesign Quote" :quote="offerSummary" @success="formPostSuccess">
+            <component-contact-form :title="$t('contactTitle')" subject="Santihans Web Design Quote" :quote="offerSummary" @success="formPostSuccess">
               <v-btn flat @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
             </component-contact-form>
             <div class="dialog-footer" v-show="formSuccess">

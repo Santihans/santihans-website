@@ -77,7 +77,7 @@ export default {
         more: 'Learn more',
         contact: 'Contact us',
         webdesign: {
-          headline: 'Stunning Webdesign',
+          headline: 'Stunning Web Design',
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details so you don\'t have to.'
         },
         branding: {

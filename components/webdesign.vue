@@ -4,7 +4,7 @@
     <h2>{{ $t('intro.heading') }}</h2>
     <p class="abstract">{{ $t('intro.abstract') }}</p>
     <div class="teaser">
-      <img src="/images/webdesign/santihans-responsive.jpg" alt="Webdesign">
+      <img src="/images/webdesign/santihans-responsive.jpg" alt="Web Design">
     </div>
     <div class="text-xs-center">
       <div>
@@ -72,7 +72,7 @@ export default {
     messages: {
       en: {
         intro: {
-          heading: 'Webdesign',
+          heading: 'Web Design',
           abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details for maximum customer satisfaction.',
           quote: 'Get a Quote'
         },

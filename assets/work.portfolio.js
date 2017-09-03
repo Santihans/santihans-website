@@ -73,7 +73,7 @@ const portfolio = {
       },
       images: [{
           src: 'cargomedia-mobile-stripe.jpg',
-          caption: 'Webdesign'
+          caption: 'Web Design'
         },
         {
           src: 'cargomedia-logo.svg',
@@ -162,19 +162,19 @@ const portfolio = {
       },
       images: [{
           src: 'brigittehenke-mobile-stripe.jpg',
-          caption: 'Webdesign Mobile'
+          caption: 'Web Design Mobile'
         },
         {
           src: 'brigittehenke-responsive-1.jpg',
-          caption: 'Webdesign Responsive'
+          caption: 'Web Design Responsive'
         },
         {
           src: 'brigittehenke-responsive-2.jpg',
-          caption: 'Webdesign Responsive'
+          caption: 'Web Design Responsive'
         },
         {
           src: 'brigittehenke-responsive-3.jpg',
-          caption: 'Webdesign Responsive'
+          caption: 'Web Design Responsive'
         }
       ]
     }
