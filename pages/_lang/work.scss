@@ -63,11 +63,8 @@
 
     .dialog-content,
     .dialog-header {
-      padding: 50px 4vw 30px;
-      @media(min-width: $breakpointMedium) {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
+      padding-top: 50px;
+      padding-bottom: 30px;
     }
 
     .dialog-header {

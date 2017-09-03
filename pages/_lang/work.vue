@@ -9,7 +9,7 @@
     <section class="portfolio">
       <v-layout wrap>
         <v-flex xs6 sm4 v-for="(item, key, index) in portfolio" :key="key" @keyup.esc="item.dialog=false">
-          <v-dialog lazy v-model="item.dialog" class="portfolio-dialog" width="800" content-class="dialog-custom dialog-custom--portfolio">
+          <v-dialog lazy fullscreen v-model="item.dialog" class="portfolio-dialog" width="800" content-class="dialog-custom dialog-custom--portfolio">
             <nuxt-link class="portfolio-link" v-ripple slot="activator" alt="Preview" :to="{ path: localePath('/work')}">
               <v-card>
                 <img :src="'/images/work/' + key + '/thumb.png'" alt="Preview">
@@ -22,18 +22,20 @@
               </v-card>
             </nuxt-link>
             <div class="dialog-header" :style="{'background-color': item.details.colorBg}">
-              <v-btn icon large class="btn-close" @click="item.dialog = false">
-                <v-icon>close</v-icon>
-              </v-btn>
-              <h3 :style="{'color': item.details.colorFg}">{{ item.name }}</h3>
-              <p class="abstract" :style="{'color': item.details.colorFg}">
-                {{ $t(`${item.details.abstract}`) }}
-              </p>
-              <div v-if="item.details.hasOwnProperty('website')" class="text-xs-center">
-                <v-btn flat outline dark :style="{'color': item.details.colorFg}" :href="item.details.website" target="_blank">{{ $t('buttons.visitWebsite') }}</v-btn>
+              <div class="boundaries">
+                <v-btn icon large class="btn-close" @click="item.dialog = false">
+                  <v-icon>close</v-icon>
+                </v-btn>
+                <h3 :style="{'color': item.details.colorFg}">{{ item.name }}</h3>
+                <p class="abstract" :style="{'color': item.details.colorFg}">
+                  {{ $t(`${item.details.abstract}`) }}
+                </p>
+                <div v-if="item.details.hasOwnProperty('website')" class="text-xs-center">
+                  <v-btn flat outline dark :style="{'color': item.details.colorFg}" :href="item.details.website" target="_blank">{{ $t('buttons.visitWebsite') }}</v-btn>
+                </div>
               </div>
             </div>
-            <div class="dialog-content">
+            <div class="dialog-content boundaries">
               <div v-if="item.details.hasOwnProperty('scope')" class="scope">
                 <h4>{{ $t('heading.scope') }}</h4>
                 <ul>
