@@ -2,6 +2,11 @@
 <div id="terms">
   <div class="page-header">
     <h1>{{ $t('pages.terms') }}</h1>
+    <component-clouds />
+    <div class="illustration">
+      <img src="~assets/images/header-terms.svg" alt="Illustration">
+      <img class="tumbleweed" src="~assets/images/header-terms-tumbleweed.svg" alt="Illustration">
+    </div>
   </div>
   <div class="page-content boundaries">
     <section class="impressum section--shadow">
@@ -40,10 +45,12 @@
 </template>
 
 <script>
+import clouds from '~/components/clouds.vue'
 import address from '~/components/contactAddress.vue'
 
 export default {
   components: {
+    'component-clouds': clouds,
     'component-address': address
   },
   head() {
