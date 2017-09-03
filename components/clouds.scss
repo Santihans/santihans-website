@@ -12,6 +12,10 @@
 .clouds {
   padding-top: 12px;
 
+  path {
+    transform-box: fill-box;
+  }
+
   .fast {
     animation: clouds-fast 100s ease-out infinite;
   }
