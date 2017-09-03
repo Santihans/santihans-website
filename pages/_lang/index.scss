@@ -18,6 +18,9 @@
     transform: translate(-50%, -55%);
     transition: 1000ms;
     width: 100%;
+    @media(min-width: $breakpointMini) {
+      width: 90%;
+    }
     @media(min-width: 500px) {
       width: 80%;
     }
