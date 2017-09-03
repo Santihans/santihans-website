@@ -12,6 +12,11 @@
     "agency": "Agentur",
     "terms": "Impressum"
   },
+  "service": {
+    "webdesign": "Webdesign",
+    "branding": "Branding",
+    "advertising": "Werbung"
+  },
   "buttons": {
     "continue": "Weiter",
     "back": "Zurück",

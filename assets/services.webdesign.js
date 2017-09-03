@@ -193,7 +193,7 @@ const services = {
     support: {
       label: 'advanced.support.label',
       items: [{
-          // Basic Support
+          // Basic Supportd
           label: 'advanced.support.items[0].label',
           details: 'advanced.support.items[0].details',
           hint: 'advanced.support.items[0].hint',

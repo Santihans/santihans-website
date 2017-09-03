@@ -35,13 +35,13 @@ export default {
       active: null,
       tabs: {
         webdesign: {
-          title: this.$t('webdesign')
+          title: this.$t('service.webdesign')
         },
         branding: {
-          title: this.$t('branding')
+          title: this.$t('service.branding')
         },
         advertising: {
-          title: this.$t('advertising')
+          title: this.$t('service.advertising')
         }
       }
     }
@@ -61,20 +61,6 @@ export default {
     'component-branding': Branding,
     'component-advertising': Advertising,
     'component-clouds': clouds
-  },
-  i18n: {
-    messages: {
-      en: {
-        webdesign: 'Webdesign',
-        branding: 'Branding',
-        advertising: 'Advertising'
-      },
-      de: {
-        webdesign: 'Webdesign',
-        branding: 'Branding',
-        advertising: 'Werbung'
-      }
-    }
   }
 }
 </script>

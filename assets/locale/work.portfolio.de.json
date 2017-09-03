@@ -1,0 +1,73 @@
+{
+  "portfolio": {
+    "denkmal": {
+      "details": {
+        "abstract": "Basel's Event Kalender fürs Nachtleben.",
+        "scope": {
+          "webdesign": "Design, UI mit existierendem Backend",
+          "branding": "Marken Redesign, Farben, Schriftarten",
+          "advertising": "Postkarten, Kleber, Banner"
+        }
+      }
+    },
+    "cargomedia": {
+      "details": {
+        "abstract": "Anspruchsvolle Web-Applikationen.",
+        "scope": {
+          "webdesign": "Statische Webseite mit CMS",
+          "branding": "Unternehmensidentität, Markengestaltung, Farben, Schriftarten, Illustrationen (Avatare)"
+        }
+      }
+    },
+    "frontale": {
+      "details": {
+        "abstract": "Festival für frankophone Musik.",
+        "scope": {
+          "webdesign": "Statische Webseite, Hosting",
+          "branding": "Markengestaltung, Farben, Schriftarten"
+        }
+      }
+    },
+    "gundelistreetteam": {
+      "details": {
+        "abstract": "Lokale Laufgruppe.",
+        "scope": {
+          "branding": "Markengestaltung, Farben"
+        }
+      }
+    },
+    "brigittehenke": {
+      "details": {
+        "abstract": "Künstlerin",
+        "scope": {
+          "webdesign": "Gestaltung, Statische Webseite mit CMS, Hosting"
+        }
+      }
+    },
+    "kingchiller": {
+      "details": {
+        "abstract": "Demo-Projekt",
+        "scope": {
+          "branding": "Markengestaltung, Farben"
+        }
+      }
+    },
+    "marguerite": {
+      "details": {
+        "abstract": "Freizeit Projekt",
+        "scope": {
+          "branding": "Markengestaltung, Farben",
+          "advertising": "Illustration, Flugblatt"
+        }
+      }
+    },
+    "schiffmode": {
+      "details": {
+        "abstract": "Demo-Projekt.",
+        "scope": {
+          "branding": "Markengestaltung, Farben"
+        }
+      }
+    }
+  }
+}

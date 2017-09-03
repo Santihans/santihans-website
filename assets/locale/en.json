@@ -12,6 +12,11 @@
     "agency": "Agency",
     "terms": "Disclaimer"
   },
+  "service": {
+    "webdesign": "Webdesign",
+    "branding": "Branding",
+    "advertising": "Advertising"
+  },
   "buttons": {
     "continue": "Continue",
     "back": "Back",
