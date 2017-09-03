@@ -74,12 +74,21 @@ export default {
       this.drawer = state
     }
   },
+  beforeMount() {
+    var lang = navigator.language || navigator.userLanguage
+    var self = this
+    if (this.$i18n.locale === 'en' && lang.substring(0, 2) === 'de') {
+      _.once(function () {
+        self.$router.replace({ path: `/de` + self.$route.fullPath })
+      }())
+    }
+  },
   mounted() {
     var $self = $(this.$el)
     $(document).on('scroll', _.throttle(function () {
       $self.toggleClass('scrollTop', $(document).scrollTop() < window.screen.height / 12)
       $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 5)
-    }, 200))
+    }, 100))
   }
 }
 </script>
