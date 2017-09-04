@@ -2,7 +2,7 @@
 <v-app id="layout" class="scrollTop scrollTopExtendend">
   <app-header v-on:drawer="toggleNavigation"></app-header>
   <v-navigation-drawer id="navigation" class="pb-0" persistent temporary right height="100%" enable-resize-watcher v-model="drawer">
-    <div class="emblem">
+    <nuxt-link class="emblem" :to="localePath('/')">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
         <title>emblem</title>
         <rect x="199.62" y="213.56" width="121.69" height="121.69" />
@@ -10,7 +10,7 @@
         <polygon points="127.28 17.75 127.28 116.53 174.9 67.14 174.9 17.75 127.28 17.75" />
         <path d="M65.56,188.48,28.7,213.74V335.25H53.37V300a12.19,12.19,0,0,1,12.19-12.19h0A12.19,12.19,0,0,1,77.75,300v35.28h24.67V213.74Z" />
       </svg>
-    </div>
+    </nuxt-link>
     <v-list dense>
       <v-list-tile v-for="(item, i) in main" :key="i" nuxt exact v-ripple :to="localePath(`${item.path}`)">
         <v-list-tile-action>

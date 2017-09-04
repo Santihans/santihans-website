@@ -93,6 +93,7 @@ h3 {
 
   .language {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     padding: 5px 16px;
 
