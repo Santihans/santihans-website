@@ -74,12 +74,6 @@
 .dialog-custom.terms .dialog {
   padding: 20px 2vw;
 
-  .iframe-wrapper {
-    //iOS iframe scrolling bug
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-  }
-
   iframe {
     border: 0;
     height: 60vh;
