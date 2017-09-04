@@ -10,11 +10,12 @@ export default {
     domain: 30,
     email: 5,
     hosting: 30,
-    support: 1000
+    support: 250,
+    supportPremium: 400
   },
   base: {
-    webdesign: 900,
-    branding: 0,
+    webdesign: 700,
+    branding: 200,
     advertising: 999
   }
 }

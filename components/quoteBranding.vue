@@ -185,7 +185,8 @@ export default {
 
       summary = [{
         label: this.$t(this.services.client.label),
-        extra: this.$t(this.services.client.size[this.services.client.selectedSize].label)
+        extra: this.$t(this.services.client.size[this.services.client.selectedSize].label),
+        rateTotal: rateInitialTotal * multiplyer
       }]
 
       _.each(this.services.advanced, function (type) {

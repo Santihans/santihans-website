@@ -100,7 +100,7 @@ const services = {
           details: 'advanced.functionality.items[0].details',
           hint: 'advanced.functionality.items[0].hint',
           selected: false,
-          units: 18,
+          units: 16,
           rate: 'development'
         },
         {
@@ -109,7 +109,7 @@ const services = {
           details: 'advanced.functionality.items[1].details',
           hint: 'advanced.functionality.items[1].hint',
           selected: false,
-          units: 18,
+          units: 16,
           rate: 'development'
         },
         {
@@ -118,7 +118,7 @@ const services = {
           details: 'advanced.functionality.items[2].details',
           hint: 'advanced.functionality.items[2].hint',
           selected: false,
-          units: 12,
+          units: 8,
           rate: 'development'
         },
         {
@@ -127,7 +127,7 @@ const services = {
           details: 'advanced.functionality.items[3].details',
           hint: 'advanced.functionality.items[3].hint',
           selected: false,
-          units: 12,
+          units: 8,
           rate: 'development'
         },
         {
@@ -136,7 +136,7 @@ const services = {
           details: 'advanced.functionality.items[4].details',
           hint: 'advanced.functionality.items[4].hint',
           selected: false,
-          units: 18,
+          units: 16,
           rate: 'development'
         },
         {
@@ -213,7 +213,7 @@ const services = {
           hint: 'advanced.support.items[1].hint',
           selected: false,
           units: 1,
-          rate: 'support',
+          rate: 'supportPremium',
           recurringYearly: true
         }
       ]

@@ -45,7 +45,7 @@ const services = {
           hint: 'advanced.name.items[0].hint',
           hidden: 'services.client.nameExists.selected',
           selected: false,
-          units: 16,
+          units: 8,
           rate: 'copywriter'
         },
         {
@@ -87,7 +87,7 @@ const services = {
           hint: 'advanced.design.items[0].hint',
           extra: 'recommended',
           selected: true,
-          units: 24,
+          units: 8,
           rate: 'graphics'
         },
         {
@@ -96,7 +96,7 @@ const services = {
           details: 'advanced.design.items[1].details',
           hint: 'advanced.design.items[1].hint',
           selected: false,
-          units: 8,
+          units: 4,
           rate: 'graphics'
         },
         {
