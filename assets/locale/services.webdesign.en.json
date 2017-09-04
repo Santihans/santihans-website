@@ -1,0 +1,147 @@
+{
+  "client": {
+    "label": "Project Scope",
+    "hint": "Choose the scope of your website",
+    "size": {
+      "small": {
+        "label": "Small",
+        "hint": "Static Website, Portrait"
+      },
+      "medium": {
+        "label": "Medium",
+        "hint": "Gallery, Startup, Organization"
+      },
+      "large": {
+        "label": "Large",
+        "hint": "Company, Large Project, Online Shop, App"
+      }
+    },
+    "nonprofit": {
+      "label": "Non-Profit",
+      "hint": "Discount for non-profit organizations, open-source projects, NGOs"
+    }
+  },
+  "basic": {
+    "label": "Base Package",
+    "description": "No matter the size of your project - all our websites include the following features:",
+    "items": [{
+        "label": "Consulting and Company",
+        "details": "We consult you on the possibilities of modern web design, discuss the scope and options of your project and accompany you during the project's process with regular iteration meetings to guarantee satisfying results."
+      },
+      {
+        "label": "100% Responsiveness",
+        "details": "More than 50% of a website's traffic usually comes from mobile devices and tablets. We design mobile-first and guarantee a great user experience on all screen sizes."
+      },
+      {
+        "label": "Modern Browser Support",
+        "details": "We support all modern browsers. We guarantee full functionality for all features. Supported are up-to-date versions of Chrome, Firefox, Safari, Microsoft Edge."
+      },
+      {
+        "label": "Accessibility",
+        "details": "We structure websites semantically and implement all websites following best practices. In other words, we provide accessibility by design. (E.g. For people using screen reader). Note: We don't guarantee full accessibility as a basic feature. We do offer a full accessibility check as an additional service."
+      },
+      {
+        "label": "Google Analytics",
+        "details": "You get access to Google Analytics tools. Get full insights on your audience. Traffic sources, languages, etc. Note: Google Account required."
+      },
+      {
+        "label": "Full Source Code Access",
+        "details": "Without special agreement the source code will be public. (Open-Source Software). On request you'll get full access to the source code. Note: Github Account required."
+      }
+    ]
+  },
+  "advanced": {
+    "design": {
+      "label": "Design",
+      "items": [{
+          "label": "Custom Design",
+          "details": "What we do best. We draft your website, create style guide, wireframes and prototypes. Through iteration processes we finalize the design together with our customer. We consult on structure, colors, fonts, UI,  etc. We also offer redesign and progressive enhancement services for your existing website and therefor work with your established backend.",
+          "hint": "We design your Website: Layout, fonts, colors, etc."
+        },
+        {
+          "label": "Infographics",
+          "details": "We create graphics, icons, illustrations. We enhance your photos and assets using Adobe Photoshop.",
+          "hint": "We create graphical assets that suit your content"
+        },
+        {
+          "label": "Stock Photos",
+          "details": "We handle search and acquisition of suitable stock photos.",
+          "hint": "Search and acquisition of suitable design assets"
+        }
+      ]
+    },
+    "functionality": {
+      "label": "Functionality",
+      "items": [{
+          "label": "CMS",
+          "details": "You want to manage your website's content independently? We got you covered. We offer Content Management System (CMS) via <a href='https://prismic.io' target='_blank'>prismic.io</a>.",
+          "hint": "Content Management System: Be in charge of your content"
+        },
+        {
+          "label": "E-commerce",
+          "details": "We integrate e-commerce solutions like Shopify.",
+          "hint": "Sell your goods online"
+        },
+        {
+          "label": "Localization",
+          "details": "International audience? We can support multiple languages and take care of localization.",
+          "hint": "Localize your website with additional languages"
+        },
+        {
+          "label": "Forms",
+          "details": "We create custom forms. Note: We do not support server-side data handling our own. We support simple contact forms with <a href='https://formspree.io' target='_blank'>Formspree</a>",
+          "hint": "Forms for newsletter, contact, quotes, etc."
+        },
+        {
+          "label": "Interactive Widgets",
+          "details": "Animations, mini-games or interactive widgets - we create all sorts of browser-based assets",
+          "hint": "Browser-based interactive components"
+        },
+        {
+          "label": "Accessibility +",
+          "details": "We check with online validation tools to make sure your website fulfills all accessibility criteria. Details: <a href='http://a11yproject.com/' target='_blank'>http://a11yproject.com/</a>",
+          "hint": "Guaranteed Accessibility"
+        },
+        {
+          "label": "Browser-Support +",
+          "details": "Additional Support for specific browser (version)",
+          "hint": "Guaranteed compatibility for desired browsers"
+        }
+      ]
+    },
+    "infrastructure": {
+      "label": "Infrastructure",
+      "items": [{
+          "label": "Hosting",
+          "details": "Maximum speed, security and reliability: We host our products on Google Firebase. All websites are served using HTTPS.",
+          "hint": "Google Firebase hosting (HTTPS)"
+        },
+        {
+          "label": "Personal Domain",
+          "details": "We register your desired domain (z.b. http://www.example.com) for you. We check availability and suggest alternatives if necessary. (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "We register your desired domain"
+        },
+        {
+          "label": "Personal Email",
+          "details": "We setup an email-server for you. Should you own your own domain you can choose your own custom email-address. E.g. info@example.com (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "hint": "We take care of your email needs"
+        }
+      ]
+    },
+    "support": {
+      "label": "Support",
+      "items": [{
+          "label": "Basic Support",
+          "details": "<ul><li>Website maintenance</li><li>Consulting and support for integrated services(CMS, E-commerce, usw.)</li><li>Cosmetic adjustments</li><li>Max. 5 working hours per month</li><li>Read terms for more information</li></ul>",
+          "hint": "Standard Support"
+        },
+        {
+          "label": "Premium Support",
+          "details": "You'll get all benefits from the 'Basic Support' contract. Additionally:<ul><li>Priority lane. Be the first in line.</li><li>Max. 10 working hours per month</li><li>Read terms for more information</li></ul>",
+          "hint": "Premium Support - Be the first in line"
+        }
+      ]
+    }
+  },
+  "recommended": "Recommended"
+}

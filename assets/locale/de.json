@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "description": "Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung.",
+    "keywords": "Santihans, Webdesign, Design, Marken, Kunst, Kommunikation, Werbung, Identität, Vision, St. Johann, 4056, Basel, Schweiz"
+  },
+  "pages": {
+    "home": "Home",
+    "services": "Angebot",
+    "work": "Arbeiten",
+    "store": "Shop",
+    "contact": "Kontakt",
+    "agency": "Agentur",
+    "terms": "Impressum"
+  },
+  "service": {
+    "webdesign": "Webdesign",
+    "branding": "Branding",
+    "advertising": "Werbung"
+  },
+  "buttons": {
+    "continue": "Weiter",
+    "back": "Zurück",
+    "save": "Speichern",
+    "send": "Abschicken",
+    "sendRequest": "Anfrage Senden",
+    "confirm": "Bestätigen",
+    "close": "Schliessen",
+    "cancel": "Abbrechen",
+    "print": "Drucken",
+    "showcase": "Portfolio",
+    "visitWebsite": "Webseite besuchen"
+  }
+}

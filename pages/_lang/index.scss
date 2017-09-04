@@ -1,0 +1,171 @@
+@import "~assets/styles/variables.scss";
+
+#index {
+  text-align: center;
+}
+
+.illustration-webdesign {
+  border-bottom: 6px solid #cccccc;
+  margin-bottom: 8vh;
+  @media(min-width: $breakpointSmall) {
+    margin-bottom: 110px;
+  }
+
+  img {
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -55%);
+    transition: 1000ms;
+    width: 100%;
+    @media(min-width: $breakpointMini) {
+      width: 90%;
+    }
+    @media(min-width: 500px) {
+      width: 80%;
+    }
+    @media(min-width: $breakpointSmall) {
+      width: 70%;
+    }
+    @media(min-width: 800px) {
+      width: 60%;
+    }
+    @media(min-width: $breakpointMedium) {
+      width: 50%;
+    }
+    @media(min-width: $breakpointLarge) {
+      width: 620px;
+    }
+
+    #layout.scrollTopExtendend & {
+      opacity: 0;
+      transition: none;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.service-webdesign {
+  opacity: 1;
+  transition: 200ms 500ms;
+
+  #layout.scrollTopExtendend & {
+    transition: none;
+    opacity: 0;
+  }
+
+  img {
+    margin: 4vh auto;
+    max-height: 45vh;
+  }
+}
+
+.illustration-branding {
+  background-color: $colorViolett;
+  background-image: url('~assets/images/branding-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  border-bottom: 6px solid #cccccc;
+  height: 50vw;
+  @media(min-width: $breakpointSmall) {
+    height: 300px;
+  }
+  @media(min-width: $breakpointExtraLarge) {
+    background-size: contain;
+  }
+}
+
+.service-branding {
+  padding-top: 120px;
+  position: relative;
+  @media(min-width: 500px) {
+    padding-top: 170px;
+  }
+
+  .illustration {
+    bottom: 100%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 41.6%);
+    width: 90%;
+    @media(min-width: $breakpointMini) {
+      width: 70%;
+    }
+    @media(min-width: $breakpointSmall) {
+      width: 60%;
+    }
+    @media(min-width: 800px) {
+      width: 480px;
+    }
+  }
+
+  .references {
+    max-width: 90%;
+    margin: 8vh auto 3vh;
+
+    &.layout .flex {
+      @media (min-width: $breakpointMedium) {
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+    }
+
+    img {
+      border: 1px solid #d3d3d3;
+      margin-bottom: 8px;
+      @media (min-width: $breakpointMedium) {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}
+
+.illustration-advertising {
+  background-color: $colorTurquoise;
+  background-image: url('~assets/images/skyline-ny.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  border-bottom: 6px solid #cccccc;
+  height: 50vw;
+  position: relative;
+  @media(min-width: $breakpointSmall) {
+    height: 360px;
+  }
+  @media(min-width: $breakpointExtraLarge) {
+    background-size: contain;
+  }
+
+  .clouds {
+    svg {
+      path {
+        fill: #74c1b9;
+      }
+    }
+  }
+
+  .illustration {
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 95%;
+    @media(min-width: 500px) {
+      width: 80%;
+    }
+    @media(min-width: $breakpointMedium) {
+      width: 800px;
+    }
+  }
+
+  .zeppelin {
+    bottom: 70%;
+    position: absolute;
+    right: 30%;
+    width: 180px;
+    @media(min-width: $breakpointSmall) {
+      width: 260px;
+    }
+  }
+}

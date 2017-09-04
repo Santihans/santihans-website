@@ -1,0 +1,82 @@
+@import '~assets/styles/variables.scss';
+@keyframes tumbleweed {
+  0% {
+    transform: translate(-100vw, 0) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(-60vw, -50%) rotate(300deg);
+  }
+
+  30% {
+    transform: translate(-40vw, 0) rotate(420deg);
+  }
+
+  40% {
+    transform: translate(-20vw, -25%) rotate(600deg);
+  }
+
+  50% {
+    transform: translate(0, 0) rotate(720deg);
+  }
+
+  75% {
+    transform: translate(50vw, -30%) rotate(1300deg);
+  }
+
+  100% {
+    transform: translate(100vw, 0) rotate(2460deg);
+  }
+}
+
+#terms {
+  .page-header {
+    background-color: $colorYellow;
+    background-image: url('~assets/images/terms-bg.svg');
+
+    .clouds svg g {
+      fill: lighten($colorYellow, 8);
+    }
+
+    .illustration {
+      .tumbleweed {
+        animation: tumbleweed 9s linear infinite;
+        left: 50%;
+        position: absolute;
+        bottom: 0;
+        width: 10%;
+      }
+    }
+  }
+
+  .page-content {
+    .contact {
+      i {
+        display: none;
+      }
+    }
+
+    .registry {
+      margin-top: 1em;
+    }
+
+    h4 {
+      margin-top: 2em;
+    }
+
+    .terms-dialog {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+
+.dialog-custom.terms .dialog {
+  padding: 20px 2vw;
+
+  iframe {
+    border: 0;
+    height: 60vh;
+    width: 100%;
+  }
+}

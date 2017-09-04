@@ -1,0 +1,35 @@
+{
+  "offer": {
+    "heading": "Interaktive Offerte",
+    "headingPrint": "Provisorische Offerte",
+    "intro": "Nimm dir 2 Minuten Zeit um eine unverbindliche Offerte zusammenzustellen.",
+    "startingPrice": "ab",
+    "footer": "Unverbindliche Offerte. Definitive Offerte kann abweichen. Preisänderungen vorbehalten."
+  },
+  "step": {
+    "choose": "Bitte auswählen",
+    "summary": {
+      "title": "Zusammenfassung",
+      "total": "Total",
+      "totalYearly": "Total pro Jahr"
+    }
+  },
+  "headerInitial": [
+    "Leistung",
+    "Anzahl Stunden",
+    "Stundenansatz CHF",
+    "Total CHF"
+  ],
+  "headerRecurring": [
+    "Wiederkehrende Leistung",
+    "Einheiten",
+    "Total CHF"
+  ],
+  "contactTitle": "Anfrage senden",
+  "success": {
+    "heading": "Vielen Dank",
+    "buttons": {
+      "print": "Offerte drucken"
+    }
+  }
+}

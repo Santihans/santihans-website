@@ -1,0 +1,73 @@
+{
+  "portfolio": {
+    "denkmal": {
+      "details": {
+        "abstract": "Basel's event calendar made by locals.",
+        "scope": {
+          "webdesign": "Design, UI with existing backend",
+          "branding": "Logo Redesign, Colors, Fonts",
+          "advertising": "Postcards, Stickers, Banners"
+        }
+      }
+    },
+    "cargomedia": {
+      "details": {
+        "abstract": "Large-scale web applications.",
+        "scope": {
+          "webdesign": "Static website with headless CMS backend",
+          "branding": "CI, Logo Design, Colors, Fonts, Illustrations (Avatars)"
+        }
+      }
+    },
+    "frontale": {
+      "details": {
+        "abstract": "Festival for frankophone music.",
+        "scope": {
+          "webdesign": "Static website, Hosting",
+          "branding": "Logo Design, Colors, Fonts"
+        }
+      }
+    },
+    "gundelistreetteam": {
+      "details": {
+        "abstract": "Local Running Community.",
+        "scope": {
+          "branding": "Logo Design, Colors"
+        }
+      }
+    },
+    "brigittehenke": {
+      "details": {
+        "abstract": "Artist",
+        "scope": {
+          "webdesign": "Design, Single-Page-Application, Headless CMS, Hosting"
+        }
+      }
+    },
+    "kingchiller": {
+      "details": {
+        "abstract": "Just a demo.",
+        "scope": {
+          "branding": "Logo Design, Colors"
+        }
+      }
+    },
+    "marguerite": {
+      "details": {
+        "abstract": "Fun Project",
+        "scope": {
+          "branding": "Logo Design, Colors",
+          "advertising": "Illustrations, Flyers"
+        }
+      }
+    },
+    "schiffmode": {
+      "details": {
+        "abstract": "Just a demo.",
+        "scope": {
+          "branding": "Logo, Colors"
+        }
+      }
+    }
+  }
+}

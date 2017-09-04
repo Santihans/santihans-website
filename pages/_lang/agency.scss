@@ -1,0 +1,94 @@
+@import '~assets/styles/variables.scss';
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#agency {
+  .page-header {
+    background-color: $colorNightBlue;
+
+    .clouds svg g {
+      fill: lighten($colorNightBlue, 8);
+    }
+
+    .illustration {
+      .ship {
+        animation: float 10s ease-in-out infinite;
+        left: 24%;
+        position: absolute;
+        top: 71%;
+        width: 27%;
+      }
+    }
+  }
+
+  .page-content {
+    .team {
+      .members {
+        text-align: center;
+
+        .flex {
+          margin-bottom: 1em;
+        }
+
+        .member-thumb {
+          padding: 3vw;
+          @media(min-width: $breakpointSmall) {
+            padding: 15px;
+          }
+
+          img {
+            background: white;
+            border-radius: 50%;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            padding: 3px;
+          }
+        }
+
+        .member-name {
+          font-size: 1.1em;
+          font-weight: bold;
+        }
+
+        .member-position {
+          font-size: 0.9em;
+        }
+
+        .member-contacts {}
+      }
+    }
+
+    .partner {
+      text-align: center;
+
+      .flex {
+        margin-bottom: 1em;
+      }
+
+      .partner-logo {
+        align-items: flex-end;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+
+        > * {
+          max-height: 100%;
+        }
+      }
+
+      .partner-description {
+        padding: 0.5em;
+      }
+    }
+  }
+}
