@@ -25,6 +25,10 @@
     "label": "Basisangebot",
     "description": "Unabhängig von der Grösse deines Projekts - alle unsere Webseiten verfügen über folgende Eigenschaften:",
     "items": [{
+        "label": "Beratung und Begleitung",
+        "details": "Wir beraten dich und zeigen dir die Möglichkeiten von modernem Webdesign. Zu Beginn einigen wir uns auf den Umfang und die Einzelheiten deines Projekts, danach begleiten wir dich während des ganzen Prozesses - mit regelmässigen Zusammenkünften - um zu einem vollständig zufriedenstellenden Ergebnis zu gelangen."
+      },
+      {
         "label": "100% Responsiveness",
         "details": "Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiltelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo."
       },
@@ -42,7 +46,7 @@
       },
       {
         "label": "Zugang zum Source Code",
-        "details": "Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Sie erhalten vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich."
+        "details": "Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Du erhältst vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich."
       }
     ]
   },
@@ -51,7 +55,7 @@
       "label": "Design",
       "items": [{
           "label": "Webdesign",
-          "details": "Unser Steckenpferd. Wir konzipieren und gestalten deine Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess deinen Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach deinen Wünschen und Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw.",
+          "details": "Unser Steckenpferd. Wir konzipieren und gestalten deine Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess deinen Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach deinen Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw. Wir bieten auch die Neugestaltung bestehender Webseiten an und können uns dabei deinem bewährten Backend anpassen.",
           "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben."
         },
         {

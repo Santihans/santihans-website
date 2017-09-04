@@ -52,6 +52,10 @@ const services = {
       {
         label: 'basic.items[4].label',
         details: 'basic.items[4].details'
+      },
+      {
+        label: 'basic.items[5].label',
+        details: 'basic.items[5].details'
       }
     ]
   },

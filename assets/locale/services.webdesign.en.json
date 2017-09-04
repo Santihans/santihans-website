@@ -25,6 +25,10 @@
     "label": "Base Package",
     "description": "No matter the size of your project - all our websites include the following features:",
     "items": [{
+        "label": "Consulting and Company",
+        "details": "We consult you on the possibilities of modern web design, discuss the scope and options of your project and accompany you during the project's process with regular iteration meetings to guarantee satisfying results."
+      },
+      {
         "label": "100% Responsiveness",
         "details": "More than 50% of a website's traffic usually comes from mobile devices and tablets. We design mobile-first and guarantee a great user experience on all screen sizes."
       },
@@ -51,7 +55,7 @@
       "label": "Design",
       "items": [{
           "label": "Custom Design",
-          "details": "What we do best. We draft your website, create style guide, wireframes and prototypes. Through iteration processes we finalize the design together with our customer. We consult on structure, colors, fonts, UI,  etc.",
+          "details": "What we do best. We draft your website, create style guide, wireframes and prototypes. Through iteration processes we finalize the design together with our customer. We consult on structure, colors, fonts, UI,  etc. We also offer redesign and progressive enhancement services for your existing website and therefor work with your established backend.",
           "hint": "We design your Website: Layout, fonts, colors, etc."
         },
         {
