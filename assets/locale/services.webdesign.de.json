@@ -30,7 +30,7 @@
       },
       {
         "label": "100% Responsiveness",
-        "details": "Gewöhnliche kommen über 50% des Internet-Verkehrs von Mobiltelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo."
+        "details": "Gewöhnlich kommen über 50% des Internet-Verkehrs von Mobiltelefonen und Tablets. Wir garantieren funktionierende Webseiten für alle Bildschirmgrössen. Dabei gestalten wir nach dem mobile-first (Mobile zuerst) Kredo."
       },
       {
         "label": "Support für moderne Browser",
@@ -38,15 +38,15 @@
       },
       {
         "label": "Barrierefreiheit",
-        "details": "Webseiten und Apps werden grundsätzlich semantisch und nach bewährten Prinzipien programmiert. Dies stellt generelle Barrierefreiheit sicher. (Z.b. für Menschen die auch Screen-Reader angewiesen sind). Achtung: Wir überprüfen Barrierefreiheit nicht - dieser Service kann zusätzlich erworben werden."
+        "details": "Webseiten und Apps werden grundsätzlich semantisch und nach bewährten Richtlinien programmiert. Dies stellt generelle Barrierefreiheit sicher (z.B. für Menschen die auch Screen-Reader angewiesen sind). Achtung: Wir überprüfen Barrierefreiheit nicht - dieser Service kann zusätzlich erworben werden."
       },
       {
         "label": "Google Analytics",
-        "details": "Zugang zu den Analyse Werkzeugen von Google Analytics. Finde heraus woher auf deine Webseite zugegriffen wird, welche Seiten wie lange besucht werden, usw. Achtung: Für diesen Service ist zusätzlich ein Google Account erforderlich."
+        "details": "Du erhältst Zugang zu den Analyse-Werkzeugen von Google Analytics. Finde heraus woher auf deine Webseite zugegriffen wird, welche Seiten wie lange besucht werden, usw. Achtung: Für diesen Service ist zusätzlich ein Google-Account erforderlich."
       },
       {
         "label": "Zugang zum Source Code",
-        "details": "Falls nicht anders vereinbart ist der Source Code öffentlich zugänglich (Als Open-Source Software). Du erhältst vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github Account erforderlich."
+        "details": "Falls nicht anders vereinbart, ist der Source Code öffentlich zugänglich (als Open-Source Software). Du erhältst vollen Zugang zum Source Code. Achtung: Für diesen Service ist zusätzlich ein Github-Account erforderlich."
       }
     ]
   },
@@ -56,17 +56,17 @@
       "items": [{
           "label": "Webdesign",
           "details": "Unsere Passion. Wir konzipieren und gestalten deine Webseite von A-Z. Nach Wunsch erstellen wir Wireframes, Prototypen und passen den Prozess deinen Bedürfnissen an. Dabei arbeiten wir in mehreren Iterationen und kreieren eine Webseite nach deinen Vorstellungen. Wir erstellen Farbkonzepte, Styleguides, User Interfaces, usw. Wir bieten auch die Neugestaltung bestehender Webseiten an und können uns dabei deinem bewährten Backend anpassen.",
-          "hint": "Gestaltung der Webseite: Struktur, Layout, Schriften, Farben."
+          "hint": "Gestaltung der Webseite: Layout, Schriften, Farben."
         },
         {
           "label": "Infografiken",
-          "details": "Wir erstellen Grafikelemente, Icons, Illustrationen und ähnliches. Wir bearbeiten Photos und verbessern Bildmaterial mithilfe von Adobe Photoshop. ",
+          "details": "Wir erstellen Grafikelemente, Icons, Illustrationen und Ähnliches. Wir bearbeiten Fotos und verbessern Bildmaterial mithilfe von Adobe Photoshop. ",
           "hint": "Erstellen von Illustrationen passend zu deinem Inhalt."
         },
         {
-          "label": "Stock Photos",
-          "details": "Wir kümmern uns um die Suche und den Erwerb geeigneter Photos um deine Webseite zu illustrieren.",
-          "hint": "Wir suchen und erwerben passende Photos."
+          "label": "Stock Fotos",
+          "details": "Wir kümmern uns um die Suche und den Erwerb geeigneter Fotos um deine Webseite zu illustrieren.",
+          "hint": "Wir suchen und erwerben passende Fotos."
         }
       ]
     },
@@ -79,7 +79,7 @@
         },
         {
           "label": "Onlineshop",
-          "details": "Wir integrieren Online Shops wie z.B. Shopify.",
+          "details": "Wir integrieren Onlineshops wie z.B. Shopify.",
           "hint": "Verkaufe deine Produkte online."
         },
         {
@@ -89,7 +89,7 @@
         },
         {
           "label": "Formulare",
-          "details": "Wir erstellen Formulare jeglicher Art. Achtung: Wir bieten nur begrenzt server-seitige Verarbeitung der Formulardaten an. Für einfache Kontaktformulare verwenden wir die Dienstleistungen von <a href='https://formspree.io' target='_blank'>Formspree</a>",
+          "details": "Wir erstellen Formulare jeglicher Art. Achtung: Wir bieten nur begrenzt server-seitige Verarbeitung der Formulardaten an. Für einfache Kontaktformulare verwenden wir die Dienstleistungen von <a href='https://formspree.io' target='_blank'>Formspree</a>.",
           "hint": "Formulare für Newsletter, Kontakt, Offerten, usw."
         },
         {
@@ -104,7 +104,7 @@
         },
         {
           "label": "Browser-Support +",
-          "details": "Zusätzliche Unterstützung für bestimmte Browser (Versionen)",
+          "details": "Wir bieten zusätzliche Unterstützung für bestimmte Browser (Versionen) an.",
           "hint": "Garantierte Kompatibilität für erwünschte Browser."
         }
       ]
@@ -118,12 +118,12 @@
         },
         {
           "label": "Persönliche Domain",
-          "details": "Wir übernehmen die Domain-Registrierung (z.b. http://www.hansmuster.ch) für dich. Wir prüfen Verfügbarkeit deines gewünschten Domains und machen allenfalls Alternativvorschläge. (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "details": "Wir übernehmen die Domain-Registrierung (z.B. http://www.hansmuster.ch) für dich. Wir prüfen Verfügbarkeit deiner gewünschten Domain und machen allenfalls Alternativvorschläge (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>).",
           "hint": "Wir registrieren deine Wunsch-Domain."
         },
         {
           "label": "Persönliche Email",
-          "details": "Wir stellen Email-Server zur verfügung. Falls du über einen eigene Domain verfügst erhältst du deine Wunsch-Email-Adressen. Z.b. info@hansmuster.ch (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>)",
+          "details": "Wir stellen Email-Server zur Verfügung. Falls du über eine eigene Domain verfügst, erhältst du deine Wunsch-Email-Adressen. Z.B. info@hansmuster.ch (via <a href='https://cyon.ch' target='_blank'>cyon.ch</a>).",
           "hint": "Wir kümmern uns um deine Email-Adresse."
         }
       ]
@@ -133,12 +133,12 @@
       "items": [{
           "label": "Standard Support",
           "details": "<ul><li>Instandhaltung deiner Webseite</li><li>Beratung und Support für integrierte Dienstleistungen (CMS, Shop, usw.)</li><li>Kosmetische Änderungen</li><li>Maximal 5 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
-          "hint": "Standard Support"
+          "hint": "Standard Support."
         },
         {
           "label": "Premium Support",
           "details": "Du erhältst alle Leistungen aus dem 'Standard Support' Vertrag. Zusätzlich:<ul><li>Deine Anfragen werden vorgezogen, resp. priorisiert.</li><li>Maximal 10 Arbeitsstunden pro Monat</li><li>Siehe AGBs für weitere Informationen</li></ul>",
-          "hint": "Premium Support - Du kommst an erster Stelle"
+          "hint": "Premium Support - Du kommst an erster Stelle."
         }
       ]
     }

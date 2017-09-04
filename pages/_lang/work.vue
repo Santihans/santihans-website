@@ -48,7 +48,8 @@
               <h4>{{ $t('heading.impressions') }}</h4>
               <figure class="image " v-for="image in item.details.images ">
                 <img :src=" '/images/work/' + key + '/' + image.src " :alt="image.caption ">
-                <figcaption class="image-caption ">{{ image.caption }}</figcaption>
+                <figcaption v-if="$i18n.locale === 'en'" class="image-caption ">{{ image.caption.en }}</figcaption>
+                <figcaption v-if="$i18n.locale === 'de'" class="image-caption ">{{ image.caption.de }}</figcaption>
               </figure>
               <div class="dialog-footer ">
                 <v-btn primary @click="[item.dialog=false, $router.push(localePath('/work'))]">{{ $t('buttons.close' )}}</v-btn>

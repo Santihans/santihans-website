@@ -13,7 +13,7 @@
       },
       "large": {
         "label": "Weltweit",
-        "hint": "Internationale Kundschaft. Marken, welche eine grösstmögliche Diversität an Kulturen, Sprachen, Stile, Traditionen respektieren."
+        "hint": "Internationale Kundschaft. Marken, welche eine grösstmögliche Diversität an Kulturen, Sprachen, Stilen, Traditionen respektieren."
       }
     },
     "nameExists": {
@@ -40,13 +40,13 @@
         },
         {
           "label": "Domain",
-          "details": "Recherche und Registrierung (freier) Domain Namen. (.com, .ch, etc.).",
+          "details": "Recherche und Registrierung (freier) Domain Namen (.com, .ch, etc.).",
           "hint": "Recherche und Registration einer Domain."
         },
         {
           "label": "Slogan",
           "details": "Wir recherchieren und entwickeln den perfekten Slogan für deine Marke.",
-          "hint": "Recherche für den perfekten Slogan"
+          "hint": "Recherche für den perfekten Slogan."
         }
       ]
     },
@@ -54,13 +54,13 @@
       "label": "Design",
       "items": [{
           "label": "Logo/Trademark",
-          "details": "Ein gutes Logo ist unbezahlbar - es ist der Kern für deine Marken-Kommunikation. Wir entwickeln einfache, universell verständliche und einzigartige Logos welche dein Unternehmen und dessen Werte perfekt repräsentieren.",
-          "hint": "Einfache, universell verständliche und einzigartige Logos welche dein Unternehmen und dessen Werte perfekt repräsentieren."
+          "details": "Ein gutes Logo ist unbezahlbar - es ist der Kern deiner Marken-Kommunikation. Wir entwickeln einfache, universell verständliche und einzigartige Logos, welche dein Unternehmen und dessen Werte perfekt repräsentieren.",
+          "hint": "Einfache, universell verständliche und einzigartige Logos, welche dein Unternehmen und dessen Werte perfekt repräsentieren."
         },
         {
           "label": "Grafikdesign",
-          "details": "Wir erstellen zusätzliche Utensilien für deine Marke: Hintergründe, Illustrationen, Photobearbeitung, Visitenkarten, usw.",
-          "hint": "Z.B. Hintergründe, Illustrationen, Photobearbeitung, Visitenkarten, usw."
+          "details": "Wir erstellen zusätzliche Utensilien für deine Marke: Hintergründe, Illustrationen, Fotobearbeitung, Visitenkarten, usw.",
+          "hint": "Z.B. Hintergründe, Illustrationen, Fotobearbeitung, Visitenkarten, usw."
         },
         {
           "label": "Style Guide",
@@ -70,7 +70,7 @@
         {
           "label": "Style Guide: Web, UI",
           "details": "Zusätzliche Gestaltungsrichtlinien für Webanwendungen und Benutzeroberflächen (UI). Knöpfe, Abstände, Verläufe, Interaktivität, usw.",
-          "hint": "Zusätzliche Gestaltungsrichtlinien für Benutzeroberflächen (UI)"
+          "hint": "Zusätzliche Gestaltungsrichtlinien für Benutzeroberflächen (UI)."
         }
       ]
     }
