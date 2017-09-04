@@ -18,43 +18,73 @@ const portfolio = {
       },
       images: [{
           src: 'denkmal-mobile-stripe.jpg',
-          caption: 'Loading Screen / Daytime Mode / Nighttime Mode / Details'
+          caption: {
+            en: 'Loading Screen / Daytime Mode / Nighttime Mode / Details',
+            de: 'Ladeseite / Tagmodus / Nachtmodus / Details'
+          }
         },
         {
           src: 'denkmal-responsive-1.jpg',
-          caption: 'Denkmal Normal Mode'
+          caption: {
+            en: 'Daytime Mode',
+            de: 'Tagmodus'
+          }
         },
         {
           src: 'denkmal-logo-1.png',
-          caption: 'Daytime Logo'
+          caption: {
+            en: 'Daytime Logo',
+            de: 'Tagmodus Logo'
+          }
         },
         {
           src: 'denkmal-logo-2.png',
-          caption: 'Nighttime Logo'
+          caption: {
+            en: 'Nighttime Logo',
+            de: 'Nachtmodus Logo'
+          }
         },
         {
           src: 'denkmal-sticker-1.png',
-          caption: 'Sticker Example'
+          caption: {
+            en: 'Sticker Example',
+            de: 'Aufkleber Beispiel'
+          }
         },
         {
           src: 'denkmal-sticker-2.png',
-          caption: 'Sticker Example'
+          caption: {
+            en: 'Sticker Example',
+            de: 'Aufkleber Beispiel'
+          }
         },
         {
           src: 'denkmal-sticker-3.png',
-          caption: 'Sticker Example'
+          caption: {
+            en: 'Sticker Example',
+            de: 'Aufkleber Beispiel'
+          }
         },
         {
           src: 'denkmal-sticker-4.png',
-          caption: 'Sticker Example'
+          caption: {
+            en: 'Sticker Example',
+            de: 'Aufkleber Beispiel'
+          }
         },
         {
           src: 'denkmal-postcard.jpg',
-          caption: 'Event Postcard'
+          caption: {
+            en: 'Postcard',
+            de: 'Postkarte'
+          }
         },
         {
           src: 'denkmal-process-1.png',
-          caption: 'Logo Design Process'
+          caption: {
+            en: 'Impression Design Process',
+            de: 'Eindruck Designprozess'
+          }
         }
       ]
     }
@@ -73,15 +103,24 @@ const portfolio = {
       },
       images: [{
           src: 'cargomedia-mobile-stripe.jpg',
-          caption: 'Web Design'
+          caption: {
+            en: 'Web Design',
+            de: 'Webdesign'
+          }
         },
         {
           src: 'cargomedia-logo.svg',
-          caption: 'Logo Design'
+          caption: {
+            en: 'Logo Design',
+            de: 'Logodesign'
+          }
         },
         {
           src: 'cargomedia-avatars.svg',
-          caption: 'Illustrations'
+          caption: {
+            en: 'Illustrations (Avatars)',
+            de: 'Illustrationen (Avatare)'
+          }
         }
       ]
     }
@@ -101,23 +140,38 @@ const portfolio = {
       },
       images: [{
           src: 'frontale-mobile-stripe.jpg',
-          caption: 'Webdesign'
+          caption: {
+            en: 'Web Design',
+            de: 'Webdesign'
+          }
         },
         {
           src: 'frontale-postcard.png',
-          caption: 'Postcard'
+          caption: {
+            en: 'Postcard',
+            de: 'Postkarte'
+          }
         },
         {
           src: 'frontale-rooster.svg',
-          caption: 'Rooster Illustration'
+          caption: {
+            en: 'Illustration',
+            de: 'Illustration'
+          }
         },
         {
           src: 'frontale-print.jpg',
-          caption: 'Print Banner'
+          caption: {
+            en: 'Print Banner',
+            de: 'Werbeplane'
+          }
         },
         {
           src: 'frontale-header-2015.png',
-          caption: 'Banner 2015'
+          caption: {
+            en: 'Banner 2015',
+            de: 'Banner 2015'
+          }
         }
       ]
     }
@@ -135,15 +189,24 @@ const portfolio = {
       },
       images: [{
           src: 'gundelistreetteam-print.jpg',
-          caption: 'Shirts'
-        },
-        {
-          src: 'gundelistreetteam-logo-blue.svg',
-          caption: 'Logo Male'
+          caption: {
+            en: 'Shirts',
+            de: 'T-Shirts'
+          }
         },
         {
           src: 'gundelistreetteam-logo-pink.svg',
-          caption: 'Logo Female'
+          caption: {
+            en: 'Logo Female',
+            de: 'Logo Frauen'
+          }
+        },
+        {
+          src: 'gundelistreetteam-logo-blue.svg',
+          caption: {
+            en: 'Logo Male',
+            de: 'Logo Männer'
+          }
         }
       ]
     }
@@ -162,19 +225,31 @@ const portfolio = {
       },
       images: [{
           src: 'brigittehenke-mobile-stripe.jpg',
-          caption: 'Web Design Mobile'
+          caption: {
+            en: 'Web Design Mobile',
+            de: 'Webdesign Mobile'
+          }
         },
         {
           src: 'brigittehenke-responsive-1.jpg',
-          caption: 'Web Design Responsive'
+          caption: {
+            en: 'Responsive Web Design',
+            de: 'Responsive Webdesign'
+          }
         },
         {
           src: 'brigittehenke-responsive-2.jpg',
-          caption: 'Web Design Responsive'
+          caption: {
+            en: 'Responsive Web Design',
+            de: 'Responsive Webdesign'
+          }
         },
         {
           src: 'brigittehenke-responsive-3.jpg',
-          caption: 'Web Design Responsive'
+          caption: {
+            en: 'Responsive Web Design',
+            de: 'Responsive Webdesign'
+          }
         }
       ]
     }
@@ -193,7 +268,10 @@ const portfolio = {
       },
       images: [{
         src: 'kingchiller-logo.svg',
-        caption: 'Logo Design'
+        caption: {
+          en: 'Logo Design',
+          de: 'Logodesign'
+        }
       }]
     }
   },
@@ -211,11 +289,17 @@ const portfolio = {
       },
       images: [{
           src: 'marguerite-logo.jpg',
-          caption: 'Logo Drafts'
+          caption: {
+            en: 'Logo Drafts',
+            de: 'Logo Entwürfe'
+          }
         },
         {
           src: 'marguerite-flyer.jpg',
-          caption: 'Folded Flyers'
+          caption: {
+            en: 'Folded Flyers',
+            de: 'Gefaltete Flugblätter'
+          }
         }
       ]
     }
@@ -233,7 +317,10 @@ const portfolio = {
       },
       images: [{
         src: 'schiffmode-logo.svg',
-        caption: 'Logo Design'
+        caption: {
+          en: 'Logo Design',
+          de: 'Logodesign'
+        }
       }]
     }
   }
