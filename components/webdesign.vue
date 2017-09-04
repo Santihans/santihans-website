@@ -78,18 +78,18 @@ export default {
         },
         services: {
           heading: 'Services',
-          intro: 'Get an overview of all our provided webdesign services in detail. Should you miss anything feel free to contact us - we\'ll surely find a solution for your specific needs.'
+          intro: 'Get an overview of all our provided web design services in detail. Should you miss anything feel free to contact us - we\'ll surely find a solution for your specific needs.'
         }
       },
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Wir erstellen aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität, sowohl im Bereich Verfügbarkeit und Sicherheit, als auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
+          abstract: 'Wir erstellen aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität. Sowohl im Bereich Verfügbarkeit und Sicherheit als auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
           quote: 'Interaktive Offerte'
         },
         services: {
           heading: 'Dienstleistungen',
-          intro: 'Hier findest du alle unsere Webdesign-Angebote nochmals im Detail. Solltest du eine Dienstleistung vermissen kontaktiere uns - wir finden bestimmt eine Lösung.'
+          intro: 'Hier findest du alle unsere Webdesign-Angebote nochmals im Detail. Solltest du eine Dienstleistung vermissen, kontaktiere uns - wir finden bestimmt eine Lösung.'
         }
       }
     }

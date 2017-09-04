@@ -102,7 +102,7 @@ export default {
         },
         advertising: {
           headline: 'Wirksame Werbung',
-          abstract: 'Erweiter deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten digitale Werbekampanien nach deinen Wünschen. Wir kümmern uns auch um Druckprodukte wie Plakate, Visitenkarten, Verpackungen und ähnliches'
+          abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. Wir erarbeiten digitale Werbekampagnen nach deinen Wünschen. Wir kümmern uns auch um Druckprodukte wie Plakate, Visitenkarten, Verpackungen und Ähnliches'
         }
       }
     }

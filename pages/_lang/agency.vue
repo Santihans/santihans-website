@@ -169,13 +169,13 @@ export default {
       de: {
         company: {
           heading: 'Über uns',
-          abstract: 'Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  und mit Zugang zum Rhein.'
+          abstract: 'Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  mit Zugang zum Rhein.'
         },
         team: {
           heading: 'Team',
-          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne Bürozeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
+          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
           christophe: {
-            position: 'Gründer, Tausendsassa'
+            position: 'Gründer, Designer, Webenthusiast'
           },
           remo: {
             position: 'Beratung Strategie/Finanzen'
