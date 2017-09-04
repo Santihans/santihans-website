@@ -72,21 +72,21 @@ export default {
       en: {
         intro: {
           heading: 'Branding',
-          abstract: 'A brand is an idea, a promise, a set of expectations that, taken together, account for a consumer\'s decision to choose one product over the other. We help you create this brand.'
+          abstract: 'A brand is an idea, a promise, a set of expectations that, taken together, account for a consumer\'s decision to choose one product over the other. We create universally understandable and unique brands for every customer individually.'
         },
         services: {
           heading: 'Services',
-          abstract: 'A good brand is universally understandable, and at the same time, unique as a fingerprint. We focus on minimalistic, but smart logo design with class and character.'
+          abstract: 'We focus on simplistic, individual and convincing logo design with character. Based on the core company values and through multiple iterations we create the perfect logo for you.'
         }
       },
       de: {
         intro: {
           heading: 'Markengestaltung',
-          abstract: 'Eine Marke ist eine Idee, ein Versprechen, eine Sammlung von Erwartungen. Zusammengenommen bilden diese Dinge die Entscheidungsgrundlage für den Erwerb eines Produktes.'
+          abstract: 'Eine Marke ist eine Idee, ein Versprechen, eine Sammlung von Erwartungen - sie bildet die Entscheidungsgrundlage für den Erwerb eines Produktes. Wir entwickeln universell verständliche und einzigartige Marken für jeden Kunden individuell.'
         },
         services: {
           heading: 'Dienstleistungen',
-          abstract: 'Eine gute Marke ist universell verständlich und gleichzeitig einzigartig. Wir kreiren minimalistische, aber intelligente Logos mit Klasse und Charakter.'
+          abstract: 'Unser Hauptaugenmerk richtet sich auf minimalistische, individuelle und überzeugende Logos mit Charakter. Basierend auf den Kernattributen deiner Organisation und durch einen mehrstufigen Iterationsprozess erstellen wir das perfekte Logo.'
         }
       }
     }
