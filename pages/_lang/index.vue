@@ -94,7 +94,7 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Fabelhafte Webseiten',
-          abstract: 'Wir erstellen individuelle Kommunikationslösungen im Bereich Webdesign. Wir legen höchsten Wert auf ansprechendes Design, Funktionaliät, Verfügbarkeit und Barrierefreiheit.'
+          abstract: 'Wir erstellen individuelle Kommunikationslösungen im Bereich Webdesign. Wir legen höchsten Wert auf ansprechendes Design, Funktionalität, Verfügbarkeit und Barrierefreiheit.'
         },
         branding: {
           headline: 'Individuelle Marken',
