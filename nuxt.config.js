@@ -17,7 +17,12 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'Santihans is a communication design company located in 4056 Basel, Switzerland.'
+        content: 'Santihans is a design and communications agency with its main focus on web design, branding and advertising.'
+      },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: 'Santihans, Web Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland'
       }
     ],
     link: [{
