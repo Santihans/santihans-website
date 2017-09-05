@@ -77,6 +77,9 @@ export default {
   beforeMount() {
     var lang = navigator.language || navigator.userLanguage
     var self = this
+    if (this.$route.fullPath.indexOf('/de') === 0) {
+      this.$i18n.locale = 'de'
+    }
     if (this.$i18n.locale === 'en' && lang.substring(0, 2) === 'de') {
       _.once(function () {
         self.$router.replace({ path: `/de` + self.$route.fullPath })
