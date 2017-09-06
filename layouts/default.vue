@@ -80,6 +80,13 @@ export default {
   methods: {
     toggleNavigation: function (state) {
       this.drawer = state
+    },
+    handleScroll: function () {
+      var $self = $(this.$el)
+      _.throttle(function () {
+        $self.toggleClass('scrollTop', $(document).scrollTop() < 10)
+        $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 8)
+      }, 100)()
     }
   },
   beforeMount() {
@@ -92,11 +99,11 @@ export default {
     }
   },
   mounted() {
-    var $self = $(this.$el)
-    $(document).on('scroll', _.throttle(function () {
-      $self.toggleClass('scrollTop', $(document).scrollTop() < 10)
-      $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 8)
-    }, 100))
+    this.handleScroll()
+    document.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy: function () {
+    document.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
