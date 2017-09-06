@@ -1,14 +1,17 @@
 <template>
 <div class="wallpaper">
-  <div class="parallax" v-bind:style="{'height': calcHeight}">
-    <div class="parallax-inner">
-      <h1>{{ $t('headline') }}</h1>
-      <div class="tagline">{{ $t('tagline') }}</div>
-    </div>
-    <div class="more">
-      <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
-        <v-icon>expand_more</v-icon>
-      </v-btn>
+  <div class="parallax">
+    <div class="parallax-image"></div>
+    <div class="parallax-content">
+      <div class="content">
+        <h1>{{ $t('headline') }}</h1>
+        <div class="tagline">{{ $t('tagline') }}</div>
+      </div>
+      <div class="more">
+        <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
+          <v-icon>expand_more</v-icon>
+        </v-btn>
+      </div>
     </div>
   </div>
 
@@ -28,11 +31,6 @@ export default {
   data() {
     return {
       calcHeight: '800px'
-    }
-  },
-  mounted() {
-    if (process.browser) {
-      this.calcHeight = window.innerHeight + 'px'
     }
   },
   i18n: {
