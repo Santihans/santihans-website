@@ -103,5 +103,9 @@ module.exports = {
         })
       }
     }
+  },
+
+  generate: {
+    routes: ['/', '/agency', '/contact', '/services', '/store', '/terms', '/work', '/de', '/de/agency', '/de/contact', '/de/services', '/de/store', '/de/terms', '/de/work']
   }
 }
