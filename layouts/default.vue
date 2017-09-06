@@ -12,7 +12,15 @@
       </svg>
     </nuxt-link>
     <v-list dense>
-      <v-list-tile v-for="(item, i) in main" :key="i" nuxt exact v-ripple :to="localePath(`${item.path}`)">
+      <v-list-tile nuxt exact v-ripple :to="localePath(`${main[0].path}`)">
+        <v-list-tile-action>
+          <v-icon class="grey--text text--darken-1">{{ main[0].icon }}</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-title>
+          {{ $t(`${main[0].label}`) }}
+        </v-list-tile-title>
+      </v-list-tile>
+      <v-list-tile v-for="(item, i) in main.slice(1)" :key="i" nuxt v-ripple :to="localePath(`${item.path}`)">
         <v-list-tile-action>
           <v-icon class="grey--text text--darken-1">{{ item.icon }}</v-icon>
         </v-list-tile-action>
@@ -21,7 +29,7 @@
         </v-list-tile-title>
       </v-list-tile>
       <v-divider inset></v-divider>
-      <v-list-tile v-for="(item, i) in about" :key="i" nuxt exact v-ripple :to="localePath(`${item.path}`)">
+      <v-list-tile v-for="(item, i) in about" :key="i" nuxt v-ripple :to="localePath(`${item.path}`)">
         <v-list-tile-action>
           <v-icon class="grey--text text--darken-1">{{ item.icon }}</v-icon>
         </v-list-tile-action>
