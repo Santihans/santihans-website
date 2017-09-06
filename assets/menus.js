@@ -48,6 +48,10 @@ const social = [{
   {
     url: 'https://www.facebook.com/santihans4056/',
     label: 'Facebook'
+  },
+  {
+    url: 'https://github.com/Santihans',
+    label: 'Github'
   }
 ]
 
