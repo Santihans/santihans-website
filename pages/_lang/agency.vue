@@ -173,7 +173,7 @@ export default {
         },
         team: {
           heading: 'Team',
-          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Wir nutzen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
+          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Wir nützen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
           christophe: {
             position: 'Gründer, Designer, Webenthusiast'
           },
