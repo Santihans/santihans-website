@@ -1,21 +1,21 @@
 export default {
   hourly: {
-    graphics: 60,
-    development: 120,
-    workshop: 160,
-    copywriter: 80,
-    org: 60
+    graphics: 90,
+    development: 130,
+    workshop: 200,
+    copywriter: 110,
+    org: 80
   },
   yearly: {
-    domain: 30,
-    email: 5,
-    hosting: 30,
-    support: 250,
-    supportPremium: 400
+    domain: 50,
+    email: 20,
+    hosting: 50,
+    support: 400,
+    supportPremium: 600
   },
   base: {
-    webdesign: 700,
-    branding: 200,
+    webdesign: 900,
+    branding: 350,
     advertising: 999
   }
 }

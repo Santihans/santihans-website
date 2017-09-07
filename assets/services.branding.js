@@ -15,12 +15,12 @@ const services = {
       medium: {
         label: 'client.size.medium.label',
         hint: 'client.size.medium.hint',
-        priceMultiplyer: 2
+        priceMultiplyer: 3
       },
       large: {
         label: 'client.size.large.label',
         hint: 'client.size.large.hint',
-        priceMultiplyer: 4
+        priceMultiplyer: 10
       }
     },
     nameExists: {
@@ -87,7 +87,7 @@ const services = {
           hint: 'advanced.design.items[0].hint',
           extra: 'recommended',
           selected: true,
-          units: 8,
+          units: 12,
           rate: 'graphics'
         },
         {
@@ -96,7 +96,7 @@ const services = {
           details: 'advanced.design.items[1].details',
           hint: 'advanced.design.items[1].hint',
           selected: false,
-          units: 4,
+          units: 6,
           rate: 'graphics'
         },
         {
@@ -106,7 +106,7 @@ const services = {
           hint: 'advanced.design.items[2].hint',
           extra: 'recommended',
           selected: false,
-          units: 8,
+          units: 12,
           rate: 'graphics'
         },
         {
@@ -115,7 +115,7 @@ const services = {
           details: 'advanced.design.items[3].details',
           hint: 'advanced.design.items[3].hint',
           selected: false,
-          units: 8,
+          units: 10,
           rate: 'graphics'
         }
       ]
