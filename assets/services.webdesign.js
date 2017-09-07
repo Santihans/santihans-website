@@ -15,12 +15,12 @@ const services = {
       medium: {
         label: 'client.size.medium.label',
         hint: 'client.size.medium.hint',
-        priceMultiplyer: 2
+        priceMultiplyer: 3
       },
       large: {
         label: 'client.size.large.label',
         hint: 'client.size.large.hint',
-        priceMultiplyer: 4
+        priceMultiplyer: 6
       }
     },
     nonprofit: {
@@ -69,7 +69,7 @@ const services = {
           hint: 'advanced.design.items[0].hint',
           extra: 'recommended',
           selected: true,
-          units: 8,
+          units: 10,
           rate: 'graphics'
         },
         {
