@@ -62,10 +62,11 @@ import { TimelineLite, Linear } from 'gsap'
 
 export default {
   mounted() {
+    var distance = window.innerWidth / 2 + this.$el.offsetWidth
     var zeppelin = document.querySelector('.zeppelin')
     var tlZeppelin = new TimelineLite()
-    tlZeppelin.set(zeppelin, { x: '-1000' })
-    tlZeppelin.to(zeppelin, 120, { x: '1000', repeat: -1, ease: Linear.easeNone })
+    tlZeppelin.set(zeppelin, { x: -distance })
+    tlZeppelin.to(zeppelin, 120, { x: distance, repeat: -1, ease: Linear.easeNone })
   }
 }
 </script>
