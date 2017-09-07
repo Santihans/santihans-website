@@ -18,7 +18,10 @@
   <div class="illustration-branding"></div>
 
   <section class="service-branding boundaries">
-    <img class="illustration" src="~assets/images/branding.svg" alt="Illustration">
+    <div class="illustration">
+      <img src="~assets/images/branding.svg" alt="Illustration">
+      <component-watch/>
+    </div>
     <h2>{{ $t('branding.headline') }}</h2>
     <p class="abstract">{{ $t('branding.abstract') }}</p>
     <div>
@@ -50,6 +53,7 @@
 
 <script>
 import wallpaper from '~/components/wallpaper.vue'
+import watch from '~/components/watch.vue'
 import clouds from '~/components/clouds.vue'
 import zeppelin from '~/components/zeppelin.vue'
 
@@ -57,6 +61,7 @@ export default {
   name: 'HomePage',
   components: {
     'component-wallpaper': wallpaper,
+    'component-watch': watch,
     'component-clouds': clouds,
     'component-zeppelin': zeppelin
   },

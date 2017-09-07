@@ -1,0 +1,12 @@
+.watch {
+  position: relative;
+  width: 100px;
+
+  .watch-hours,
+  .watch-minutes,
+  .watch-seconds {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

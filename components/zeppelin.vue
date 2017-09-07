@@ -58,13 +58,14 @@
 </template>
 
 <script>
-import { TweenMax, Linear } from 'gsap'
+import { TimelineLite, Linear } from 'gsap'
 
 export default {
   mounted() {
-    var flag = document.querySelector('.zeppelin')
-    TweenMax.set(flag, { x: '-1000' })
-    TweenMax.to(flag, 120, { x: '1000', repeat: -1, ease: Linear.easeNone })
+    var zeppelin = document.querySelector('.zeppelin')
+    var tlZeppelin = new TimelineLite()
+    tlZeppelin.set(zeppelin, { x: '-1000' })
+    tlZeppelin.to(zeppelin, 120, { x: '1000', repeat: -1, ease: Linear.easeNone })
   }
 }
 </script>
