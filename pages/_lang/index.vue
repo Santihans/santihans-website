@@ -2,7 +2,10 @@
 <div id="index">
   <component-wallpaper></component-wallpaper>
   <div class="illustration-webdesign">
-    <img src="~assets/images/webdesign.svg" alt="Illustration">
+    <div class="illustration">
+      <img src="~assets/images/webdesign.svg" alt="Illustration">
+      <img class="arrow" src="~assets/images/arrow.svg" alt="Illustration">
+    </div>
   </div>
   <section id="sectionWebDesign" class="service-webdesign boundaries">
     <h2>{{ $t('webdesign.headline') }}</h2>

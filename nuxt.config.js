@@ -89,11 +89,12 @@ module.exports = {
    */
   build: {
     vendor: ['jquery', 'vuetify', 'underscore', 'vue-loading-spinner', 'vue-smooth-scroll'],
-
     /*
      ** Run ESLINT on save
      */
     extend(config, ctx) {
+      config.devtool = false
+      
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
