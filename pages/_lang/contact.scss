@@ -8,6 +8,13 @@
     .clouds svg g {
       fill: lighten($colorNightGreen, 8);
     }
+
+    .ufo {
+      bottom: 0;
+      position: absolute;
+      right: 14%;
+      width: 19%;
+    }
   }
 
   .page-content {
