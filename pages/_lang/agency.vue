@@ -143,7 +143,7 @@ export default {
             position: 'Founder, Designer, Web Enthusiast'
           },
           remo: {
-            position: 'Consultant Strategy & Finance'
+            position: 'Consultant Strategy'
           },
           david: {
             position: 'Consultant Graphic Design'
@@ -178,7 +178,7 @@ export default {
             position: 'Gründer, Designer, Webenthusiast'
           },
           remo: {
-            position: 'Beratung Strategie/Finanzen'
+            position: 'Beratung Strategie'
           },
           david: {
             position: 'Grafikdesign Freelancer'
