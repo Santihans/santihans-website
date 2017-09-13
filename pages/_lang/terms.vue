@@ -12,7 +12,7 @@
     <section class="impressum section--shadow">
       <component-address />
       <div class="registry">
-        {{ $t('registry')}}: CHE-244.875.499
+        UID: CHE-244.875.499
       </div>
     </section>
 
@@ -66,7 +66,6 @@ export default {
   i18n: {
     messages: {
       en: {
-        registry: 'Commercial Registry',
         legal: 'Legal Notices',
         terms: 'Terms (German)',
         disclaimer: {
@@ -83,7 +82,6 @@ export default {
         }
       },
       de: {
-        registry: 'Handelsregistereintrag',
         legal: 'Rechtliche Hinweise',
         terms: 'AGBs',
         disclaimer: {
