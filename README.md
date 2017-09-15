@@ -1,4 +1,4 @@
-# santihans-website-nuxt
+# santihans-website
 
 > Static website for santihans.com
 

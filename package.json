@@ -1,5 +1,5 @@
 {
-  "name": "santihans-website-nuxt",
+  "name": "santihans-website",
   "version": "1.0.0",
   "description": "Static website for santihans.com",
   "author": "christopheschwyzer <kingchiller@gmail.com>",
@@ -10,7 +10,7 @@
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "node.extend": "^2.0.0",
-    "nuxt": "^1.0.0-rc9",
+    "nuxt": "^1.0.0-rc11",
     "underscore": "^1.8.3",
     "vue-i18n": "^7.0.5",
     "vue-loading-spinner": "^1.0.10",
