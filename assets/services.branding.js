@@ -87,7 +87,7 @@ const services = {
           hint: 'advanced.design.items[0].hint',
           extra: 'recommended',
           selected: true,
-          units: 12,
+          units: 8,
           rate: 'graphics'
         },
         {

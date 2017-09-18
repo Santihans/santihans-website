@@ -21,7 +21,12 @@
       </v-stepper-step>
       <v-stepper-content step="1">
         <div class="stepper-content">
-          <v-radio v-for="(value, key, index) in services.client.size" v-model="services.client.selectedSize" :key="index" :label="$t(`${value.label}`)" :hint="$t(`${value.hint}`)" persistent-hint :value="key"></v-radio>
+          <v-radio-group v-model="services.client.selectedSize">
+            <div v-for="(value, key, index) in services.client.size">
+              <v-radio :key="index" :label="$t(`${value.label}`)" persistent-hint :value="key"></v-radio>
+              <small class="radio-hint">{{ $t(`${value.hint}`) }}</small>
+            </div>
+          </v-radio-group>
           <v-checkbox :label="$t(services.client.nonprofit.label)" v-model="services.client.nonprofit.selected" :hint="$t(services.client.nonprofit.hint)" persistent-hint light></v-checkbox>
           <div class="stepper-action">
             <v-btn primary @click="step = 2">{{ $t('buttons.continue') }}</v-btn>

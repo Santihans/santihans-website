@@ -129,6 +129,10 @@ section {
   }
 }
 
+.flex {
+  padding: 0 5px 10px;
+}
+
 .section--dark {
   background-color: $colorTurquoise;
   margin-top: 2em;
@@ -233,7 +237,7 @@ section {
 }
 
 .dialog-custom {
-  .dialog {
+  &.dialog {
     background-color: $colorBg;
     padding: 20px 4vw;
     @media(min-width: $breakpointMedium) {

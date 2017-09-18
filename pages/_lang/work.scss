@@ -19,7 +19,6 @@
 
       .portfolio-link {
         display: block;
-        margin-bottom: 8px;
         text-decoration: none;
         color: white;
       }
@@ -59,7 +58,7 @@
 }
 
 .dialog-custom.dialog-custom--portfolio {
-  .dialog {
+  &.dialog {
     padding: 0;
 
     .dialog-content,
