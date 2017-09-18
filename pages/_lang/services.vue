@@ -6,19 +6,22 @@
     <img class="illustration" src="~assets/images/header-services.svg" alt="Illustration">
   </div>
   <v-tabs dark fixed centered v-model="active">
-    <v-tabs-bar slot="activators">
-      <v-tabs-slider></v-tabs-slider>
-      <v-tabs-item v-for="(item, key, index) in tabs" :key="key" :to="'#' + key" exact>
+    <v-tabs-bar>
+      <v-tabs-item v-for="(item, key, index) in tabs" :key="key" :to="'#' + key" exact ripple>
         {{ item.title }}
       </v-tabs-item>
+      <v-tabs-slider></v-tabs-slider>
     </v-tabs-bar>
-    <v-tabs-content v-for="(item, key, index) in tabs" :key="key" :id="key">
-      <div class="page-content boundaries">
-        <component-webdesign v-if="key === 'webdesign'"></component-webdesign>
-        <component-branding v-if="key === 'branding'"></component-branding>
-        <component-advertising v-if="key === 'advertising'"></component-advertising>
-      </div>
-    </v-tabs-content>
+    <v-tabs-items>
+      <v-tabs-content v-for="(item, key, index) in tabs" :key="key" :id="key">
+        <div class="page-content boundaries">
+          <component-webdesign v-if="key === 'webdesign'"></component-webdesign>
+          <component-branding v-if="key === 'branding'"></component-branding>
+          <component-advertising v-if="key === 'advertising'"></component-advertising>
+        </div>
+      </v-tabs-content>
+    </v-tabs-items>
+
   </v-tabs>
 </div>
 </template>
