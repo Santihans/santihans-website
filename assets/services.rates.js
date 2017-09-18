@@ -14,7 +14,7 @@ export default {
     supportPremium: 600
   },
   base: {
-    webdesign: 700,
+    webdesign: 600,
     branding: 250,
     advertising: 999
   }
