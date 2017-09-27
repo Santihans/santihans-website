@@ -3,9 +3,13 @@
     "label": "Projekt Umfang",
     "hint": "Wähle die Grössenordnung deines Projekts",
     "size": {
+      "mini": {
+        "label": "Mini",
+        "hint": "Wordpress, Wix, Squarespace"
+      },
       "small": {
         "label": "Klein",
-        "hint": "Statische Webseite, Portrait"
+        "hint": "Individuelle Webseite"
       },
       "medium": {
         "label": "Mittel",

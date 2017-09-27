@@ -7,6 +7,11 @@ const services = {
     hint: 'client.hint',
     selectedSize: 'small',
     size: {
+      mini: {
+        label: 'client.size.mini.label',
+        hint: 'client.size.mini.hint',
+        priceMultiplyer: 0.5
+      },
       small: {
         label: 'client.size.small.label',
         hint: 'client.size.small.hint',
