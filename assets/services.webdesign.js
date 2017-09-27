@@ -7,6 +7,11 @@ const services = {
     hint: 'client.hint',
     selectedSize: 'small',
     size: {
+      mini: {
+        label: 'client.size.mini.label',
+        hint: 'client.size.mini.hint',
+        priceMultiplyer: 0.5
+      },
       small: {
         label: 'client.size.small.label',
         hint: 'client.size.small.hint',
@@ -167,7 +172,7 @@ const services = {
           details: 'advanced.infrastructure.items[0].details',
           hint: 'advanced.infrastructure.items[0].hint',
           extra: 'recommended',
-          selected: true,
+          selected: false,
           units: 1,
           rate: 'hosting',
           recurringYearly: true

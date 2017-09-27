@@ -3,9 +3,13 @@
     "label": "Project Scope",
     "hint": "Choose the scope of your website",
     "size": {
+      "mini": {
+        "label": "Mini",
+        "hint": "Wordpress, Wix, Squarespace"
+      },
       "small": {
         "label": "Small",
-        "hint": "Static Website, Portrait"
+        "hint": "Custom Website"
       },
       "medium": {
         "label": "Medium",
