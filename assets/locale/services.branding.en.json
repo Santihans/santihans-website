@@ -3,6 +3,10 @@
     "label": "Project Scope",
     "hint": "Choose the magnitude of your project",
     "size": {
+      "mini": {
+        "label": "Redesign",
+        "hint": "A fresh new look for your brand."
+      },
       "small": {
         "label": "Neighborhood",
         "hint": "Local brand, city wide audience."

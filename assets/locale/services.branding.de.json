@@ -3,6 +3,10 @@
     "label": "Projekt Umfang",
     "hint": "Wähle die Grössenordnung deines Projekts.",
     "size": {
+      "mini": {
+        "label": "Redesign",
+        "hint": "Ein neuer Glanz für deine Marke."
+      },
       "small": {
         "label": "Nachbarschaft",
         "hint": "Lokale Marke, Kundschaft aus deiner Stadt."
