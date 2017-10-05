@@ -1,5 +1,21 @@
 {
   "portfolio": {
+    "madeinbasel": {
+      "details": {
+        "abstract": "A label for products and services made in Basel.",
+        "scope": {
+          "branding": "Logo Design"
+        }
+      }
+    },
+    "cometas": {
+      "details": {
+        "abstract": "Full-service-agency focusing on learn apps.",
+        "scope": {
+          "branding": "Logo Redesign"
+        }
+      }
+    },
     "denkmal": {
       "details": {
         "abstract": "Basel's event calendar made by locals.",

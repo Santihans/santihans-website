@@ -2,6 +2,71 @@ import EN from '~/assets/locale/work.portfolio.en.json'
 import DE from '~/assets/locale/work.portfolio.de.json'
 
 const portfolio = {
+  madeinbasel: {
+    dialog: false,
+    name: 'Made in Basel',
+    tags: ['branding'],
+    details: {
+      abstract: 'portfolio.madeinbasel.details.abstract',
+      website: 'http://madeinbasel.org',
+      colorBg: '#78ffcc',
+      colorFg: 'black',
+      scope: {
+        branding: 'portfolio.madeinbasel.details.scope.branding'
+      },
+      images: [{
+          src: 'madeinbasel-logo-blue.png',
+          caption: {
+            en: 'New Logo',
+            de: 'Das neue Logo'
+          }
+        },
+        {
+          src: 'madeinbasel-logo-lila.png',
+          caption: {
+            en: 'New Logo',
+            de: 'Das neue Logo'
+          }
+        },
+        {
+          src: 'madeinbasel-logo-green.png',
+          caption: {
+            en: 'New Logo',
+            de: 'Das neue Logo'
+          }
+        }
+      ]
+    }
+  },
+  cometas: {
+    dialog: false,
+    name: 'cometas',
+    tags: ['branding'],
+    details: {
+      abstract: 'portfolio.cometas.details.abstract',
+      website: 'http://cometas.ch',
+      colorBg: '#e73f96',
+      colorFg: 'white',
+      scope: {
+        branding: 'portfolio.cometas.details.scope.branding'
+      },
+      images: [{
+          src: 'cometas-logo.png',
+          caption: {
+            en: 'New Logo',
+            de: 'Das neue Logo'
+          }
+        },
+        {
+          src: 'cometas-redesign.png',
+          caption: {
+            en: 'Logo-Redesign',
+            de: 'Logo-Redesign'
+          }
+        }
+      ]
+    }
+  },
   denkmal: {
     dialog: false,
     name: 'Denkmal.org',

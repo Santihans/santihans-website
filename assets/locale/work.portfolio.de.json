@@ -1,5 +1,21 @@
 {
   "portfolio": {
+    "madeinbasel": {
+      "details": {
+        "abstract": "Ein Label für Produkte und Dienstleistungen aus Basel.",
+        "scope": {
+          "branding": "Logo Design"
+        }
+      }
+    },
+    "cometas": {
+      "details": {
+        "abstract": "Full-Service-Agentur mit Fokus auf Lern-Software.",
+        "scope": {
+          "branding": "Logo Redesign"
+        }
+      }
+    },
     "denkmal": {
       "details": {
         "abstract": "Basel's Event Kalender fürs Nachtleben.",
