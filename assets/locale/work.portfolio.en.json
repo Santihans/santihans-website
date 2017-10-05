@@ -1,5 +1,13 @@
 {
   "portfolio": {
+    "madeinbasel": {
+      "details": {
+        "abstract": "A label for products and services made in Basel.",
+        "scope": {
+          "branding": "Logo Design"
+        }
+      }
+    },
     "cometas": {
       "details": {
         "abstract": "Full-service-agency focusing on learn apps.",
