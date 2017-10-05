@@ -50,8 +50,9 @@
           <div class="partner-logo">
             <img :src="'/images/agency/' + item.logo" :alt="item.name">
           </div>
-          <div class="partner-description">
-            {{ item.description }}
+          <div v-if="item.hasOwnProperty('description')" class="partner-description">
+            <div v-if="$i18n.locale === 'en'">{{ item.description.en }}</div>
+            <div v-if="$i18n.locale === 'de'">{{ item.description.de }}</div>
           </div>
           <v-btn flat outline :href="item.web" target="_blank" rel="noopener">{{ $t('buttons.website') }}</v-btn>
         </v-flex>
@@ -115,7 +116,10 @@ export default {
           logo: 'cometas.svg',
           name: 'cometas',
           web: 'http://cometas.ch',
-          description: 'Digitale Kurse, Web- und Mobile-Software.'
+          description: {
+            de: 'Digitale Kurse, Web- und Mobile-Software.',
+            en: 'Full-service agency focusing on learn apps.'
+          }
         }
         // {
         //   logo: 'taktwerk.svg',
