@@ -2,6 +2,35 @@ import EN from '~/assets/locale/work.portfolio.en.json'
 import DE from '~/assets/locale/work.portfolio.de.json'
 
 const portfolio = {
+  cometas: {
+    dialog: false,
+    name: 'cometas',
+    tags: ['branding'],
+    details: {
+      abstract: 'portfolio.cometas.details.abstract',
+      website: 'http://cometas.ch',
+      colorBg: '#e73f96',
+      colorFg: 'white',
+      scope: {
+        branding: 'portfolio.cometas.details.scope.branding'
+      },
+      images: [{
+          src: 'cometas-logo.png',
+          caption: {
+            en: 'New Logo',
+            de: 'Das neue Logo'
+          }
+        },
+        {
+          src: 'cometas-redesign.png',
+          caption: {
+            en: 'Logo-Redesign',
+            de: 'Logo-Redesign'
+          }
+        }
+      ]
+    }
+  },
   denkmal: {
     dialog: false,
     name: 'Denkmal.org',
