@@ -84,7 +84,7 @@ export default {
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Wir erstellen aussergewöhnliche Webseiten mit Charakter. Wir legen Wert auf höchste Qualität. Sowohl im Bereich Verfügbarkeit und Sicherheit als auch in den Bereichen Design und Benutzerfreundlichkeit. Wir sorgen für einen einzigartigen Auftritt im Netz.',
+          abstract: 'Der erste Eindruck zählt! Deine Webseite ist oft der erste Kontakt zu deiner Kundschaft - sie ist das Aushängeschild deiner Unternehmung und ein fester Bestandteil deiner Markenidentität. Santihans erstellt zugängliche Webseiten mit Fokus auf Design, Benutzerfreundlichkeit und Charakter.',
           quote: 'Interaktive Offerte'
         },
         services: {
