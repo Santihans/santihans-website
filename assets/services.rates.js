@@ -1,10 +1,10 @@
 export default {
   hourly: {
-    graphics: 70,
-    development: 110,
+    graphics: 90,
+    development: 150,
     workshop: 200,
-    copywriter: 110,
-    org: 80
+    copywriter: 150,
+    org: 90
   },
   yearly: {
     domain: 50,

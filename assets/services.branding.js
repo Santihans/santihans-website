@@ -25,7 +25,7 @@ const services = {
       large: {
         label: 'client.size.large.label',
         hint: 'client.size.large.hint',
-        priceMultiplyer: 10
+        priceMultiplyer: 5
       }
     },
     nameExists: {
