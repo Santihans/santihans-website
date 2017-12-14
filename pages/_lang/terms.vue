@@ -14,6 +14,9 @@
       <div class="registry">
         UID: CHE-244.875.499
       </div>
+      <div>
+        MwSt: CHE-244.875.499 MWST
+      </div>
     </section>
 
     <section class="legal section--shadow">
