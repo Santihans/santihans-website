@@ -2,7 +2,7 @@
 <div class="contact" itemscope itemtype="http://schema.org/LocalBusiness">
   <div class="contact-physical">
     <v-icon>place</v-icon>
-    <div itemprop="name">Santihans GmbH</div>
+    <div itemprop="name">SANTiHANS GmbH</div>
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <span itemprop="streetAddress">Mittlere Strasse 60</span>
       <div>
