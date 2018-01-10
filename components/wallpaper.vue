@@ -1,24 +1,24 @@
 <template>
-<div class="wallpaper">
-  <div class="parallax">
-    <div class="parallax-image"></div>
-    <div class="parallax-content">
-      <div class="content">
-        <h1>{{ $t('headline') }}</h1>
-        <div class="tagline">{{ $t('tagline') }}</div>
-      </div>
-      <div class="more">
-        <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
-          <v-icon>expand_more</v-icon>
-        </v-btn>
+  <div class="wallpaper">
+    <div class="parallax">
+      <div class="parallax-image"></div>
+      <div class="parallax-content">
+        <div class="wallpaper-content">
+          <h1>{{ $t('headline') }}</h1>
+          <div class="tagline">{{ $t('tagline') }}</div>
+        </div>
+        <div class="more">
+          <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
+            <v-icon>expand_more</v-icon>
+          </v-btn>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="wallpaper-overlay">
-    <component-clouds />
+    <div class="wallpaper-overlay">
+      <component-clouds />
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -49,5 +49,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "wallpaper.scss";
+@import 'wallpaper.scss';
 </style>

@@ -1,29 +1,29 @@
 <template>
-<div id="contact">
-  <div class="page-header">
-    <h1>{{ $t('pages.contact') }}</h1>
-    <component-clouds />
-    <div class="illustration">
-      <img class="" src="~assets/images/header-contact.svg" alt="Illustration">
-      <component-ufo />
+  <div id="contact">
+    <div class="page-header">
+      <h1>{{ $t('pages.contact') }}</h1>
+      <component-clouds />
+      <div class="illustration">
+        <img class="" src="~assets/images/header-contact.svg" alt="Illustration">
+        <component-ufo />
+      </div>
     </div>
-  </div>
-  <section class="page-content boundaries">
-    <div class="flex">
-      <div class="flex-contact">
-        <div class="address">
-          <component-address />
+    <section class="page-content boundaries">
+      <div class="flex">
+        <div class="flex-contact">
+          <div class="address">
+            <component-address />
+          </div>
+          <component-contact-form />
         </div>
-        <component-contact-form />
+        <div class="flex-map">
+          <spinner background="white"></spinner>
+          <iframe src="https://snazzymaps.com/embed/6150"></iframe>
+          <v-btn color="primary" href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</v-btn>
+        </div>
       </div>
-      <div class="flex-map">
-        <spinner background="white"></spinner>
-        <iframe src="https://snazzymaps.com/embed/6150"></iframe>
-        <v-btn primary href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</v-btn>
-      </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -50,5 +50,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "contact.scss";
+@import 'contact.scss';
 </style>

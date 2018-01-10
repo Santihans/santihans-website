@@ -1,50 +1,50 @@
 <template>
-<div id="terms">
-  <div class="page-header">
-    <h1>{{ $t('pages.terms') }}</h1>
-    <component-clouds />
-    <div class="illustration">
-      <img src="~assets/images/header-terms.svg" alt="Illustration">
-      <img class="tumbleweed" src="~assets/images/header-terms-tumbleweed.svg" alt="Illustration">
+  <div id="terms">
+    <div class="page-header">
+      <h1>{{ $t('pages.terms') }}</h1>
+      <component-clouds />
+      <div class="illustration">
+        <img src="~assets/images/header-terms.svg" alt="Illustration">
+        <img class="tumbleweed" src="~assets/images/header-terms-tumbleweed.svg" alt="Illustration">
+      </div>
     </div>
-  </div>
-  <div class="page-content boundaries">
-    <section class="impressum section--shadow">
-      <component-address />
-      <div class="registry">
-        UID: CHE-244.875.499
-      </div>
-      <div>
-        MwSt: CHE-244.875.499 MWST
-      </div>
-    </section>
-
-    <section class="legal section--shadow">
-      <h2>{{ $t('legal') }}</h2>
-
-      <h4>{{ $t('disclaimer.heading') }}</h4>
-      <p>{{ $t('disclaimer.content') }}</p>
-
-      <h4>{{ $t('copyright.heading') }}</h4>
-      <p>{{ $t('copyright.content') }}</p>
-
-      <h4>{{ $t('cookies.heading') }}</h4>
-      <p v-html="$t('cookies.content')"></p>
-    </section>
-
-    <section>
-      <h2>{{ $t('terms') }}</h2>
-      <v-dialog class="terms-dialog" v-model="dialog" width="600" content-class="dialog-custom terms">
-        <v-btn class="btn-dialog" primary large slot="activator">Allgemeine Geschäftsbedingungen</v-btn>
-        <iframe src="https://docs.google.com/document/d/176JnYi7_ogncO0YzUDNk5IdSM1sGt9xtoSRxu3_uajM/pub"></iframe>
-        <div class="dialog-footer">
-          <v-btn primary @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
+    <div class="page-content boundaries">
+      <section class="impressum section--shadow">
+        <component-address />
+        <div class="registry">
+          UID: CHE-244.875.499
         </div>
-      </v-dialog>
-    </section>
-  </div>
+        <div>
+          MwSt: CHE-244.875.499 MWST
+        </div>
+      </section>
 
-</div>
+      <section class="legal section--shadow">
+        <h2>{{ $t('legal') }}</h2>
+
+        <h4>{{ $t('disclaimer.heading') }}</h4>
+        <p>{{ $t('disclaimer.content') }}</p>
+
+        <h4>{{ $t('copyright.heading') }}</h4>
+        <p>{{ $t('copyright.content') }}</p>
+
+        <h4>{{ $t('cookies.heading') }}</h4>
+        <p v-html="$t('cookies.content')"></p>
+      </section>
+
+      <section>
+        <h2>{{ $t('terms') }}</h2>
+        <v-dialog class="terms-dialog" v-model="dialog" max-width="600" content-class="dialog-custom terms">
+          <v-btn class="btn-dialog" color="primary" large slot="activator">Allgemeine Geschäftsbedingungen</v-btn>
+          <iframe src="https://docs.google.com/document/d/176JnYi7_ogncO0YzUDNk5IdSM1sGt9xtoSRxu3_uajM/pub"></iframe>
+          <div class="dialog-footer">
+            <v-btn color="primary" @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
+          </div>
+        </v-dialog>
+      </section>
+    </div>
+
+  </div>
 </template>
 
 <script>
