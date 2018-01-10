@@ -1,14 +1,14 @@
 <template>
-<div class="component-advertising">
-  <section>
-    <h2>{{ $t('heading') }}</h2>
-    <p class="abstract">{{ $t('abstract') }}</p>
-    <p class="abstract">{{ $t('placeholder') }}</p>
-    <div class="text-xs-center">
-      <v-btn large primary :to="localePath('/contact')">{{ $t('pages.contact')}}</v-btn>
-    </div>
-  </section>
-</div>
+  <div class="component-advertising">
+    <section>
+      <h2>{{ $t('heading') }}</h2>
+      <p class="abstract">{{ $t('abstract') }}</p>
+      <p class="abstract">{{ $t('placeholder') }}</p>
+      <div class="text-xs-center">
+        <v-btn large color="primary" :to="localePath('/contact')">{{ $t('pages.contact')}}</v-btn>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -31,5 +31,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "advertising.scss"
+@import 'advertising.scss';
 </style>

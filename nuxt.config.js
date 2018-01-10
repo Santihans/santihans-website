@@ -7,7 +7,8 @@ module.exports = {
   head: {
     title: 'SANTIHANS',
     titleTemplate: '%s - SANTIHANS',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -17,15 +18,18 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'Santihans is a design and communications agency with its main focus on web design, branding and advertising.'
+        content:
+          'Santihans is a design and communications agency with its main focus on web design, branding and advertising.'
       },
       {
         hid: 'keywords',
         name: 'keywords',
-        content: 'Santihans, Web Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland'
+        content:
+          'Santihans, Web Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland'
       }
     ],
-    link: [{
+    link: [
+      {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
@@ -37,7 +41,8 @@ module.exports = {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
@@ -48,7 +53,8 @@ module.exports = {
     color: '#F96673'
   },
 
-  css: [{
+  css: [
+    {
       src: '~assets/styles/app.styl',
       lang: 'styl'
     },
@@ -58,7 +64,8 @@ module.exports = {
     }
   ],
 
-  plugins: [{
+  plugins: [
+    {
       src: '~plugins/vuetify.js'
     },
     {
@@ -88,14 +95,20 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['jquery', 'vuetify', 'underscore', 'vue-loading-spinner', 'vue-smooth-scroll'],
+    vendor: [
+      'jquery',
+      'vuetify',
+      'underscore',
+      'vue-loading-spinner',
+      'vue-smooth-scroll'
+    ],
     /*
      ** Run ESLINT on save
      */
     extend(config, ctx) {
       config.devtool = false
-      
-      if (ctx.isClient) {
+
+      if (ctx.crlient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -107,6 +120,21 @@ module.exports = {
   },
 
   generate: {
-    routes: ['/', '/agency', '/contact', '/services', '/store', '/terms', '/work', '/de', '/de/agency', '/de/contact', '/de/services', '/de/store', '/de/terms', '/de/work']
+    routes: [
+      '/',
+      '/agency',
+      '/contact',
+      '/services',
+      '/store',
+      '/terms',
+      '/work',
+      '/de',
+      '/de/agency',
+      '/de/contact',
+      '/de/services',
+      '/de/store',
+      '/de/terms',
+      '/de/work'
+    ]
   }
 }

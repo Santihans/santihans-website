@@ -1,25 +1,25 @@
 <template>
-<div class="contactForm">
-  <v-alert v-show="formSuccess" icon="done" success>
-    {{ $t('form.successMessage') }}
-  </v-alert>
-  <div v-show="!formSuccess">
-    <img class="homer" src="~assets/images/homer.svg" alt="Illustration">
-    <h4>{{ title }}</h4>
-    <form method="POST" v-on:submit.prevent="onSubmit">
-      <v-text-field name="name" :label="$t('form.name')" v-model="name" required :rules="[rules.required]"></v-text-field>
-      <v-text-field name="email" :label="$t('form.email')" v-model="email" required :rules="[rules.required, rules.email]"></v-text-field>
-      <v-text-field name="message" :label="$t('form.message')" counter v-model="message" max="400" multi-line :required="!attachment" :rules="[rules.required]"></v-text-field>
-      <div class="attachment" v-show="attachment">
-        <v-icon>attachment</v-icon> {{ $t('form.attachment') }}
-      </div>
-      <div class="form-action">
-        <slot></slot>
-        <v-btn type="submit" primary>{{ $t('form.submit') }}</v-btn>
-      </div>
-    </form>
+  <div class="contactForm">
+    <v-alert v-show="formSuccess" icon="done" success>
+      {{ $t('form.successMessage') }}
+    </v-alert>
+    <div v-show="!formSuccess">
+      <img class="homer" src="~assets/images/homer.svg" alt="Illustration">
+      <h4>{{ title }}</h4>
+      <form method="POST" v-on:submit.prevent="onSubmit">
+        <v-text-field name="name" :label="$t('form.name')" v-model="name" required :rules="[rules.required]"></v-text-field>
+        <v-text-field name="email" :label="$t('form.email')" v-model="email" required :rules="[rules.required, rules.email]"></v-text-field>
+        <v-text-field name="message" :label="$t('form.message')" counter v-model="message" max="400" multi-line :required="!attachment" :rules="[rules.required]"></v-text-field>
+        <div class="attachment" v-show="attachment">
+          <v-icon>attachment</v-icon> {{ $t('form.attachment') }}
+        </div>
+        <div class="form-action">
+          <slot></slot>
+          <v-btn type="submit" color="primary">{{ $t('form.submit') }}</v-btn>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -114,17 +114,17 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~assets/styles/variables.scss";
+@import '~assets/styles/variables.scss';
 .form-action {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 .homer {
-    width: 70px;
-    margin-left: auto;
-    margin-bottom: -50px;
-    @media(min-width: $breakpointMini) {
-        width: 100px;
-    }
+  width: 70px;
+  margin-left: auto;
+  margin-bottom: -50px;
+  @media (min-width: $breakpointMini) {
+    width: 100px;
+  }
 }
 </style>

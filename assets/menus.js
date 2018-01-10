@@ -1,13 +1,14 @@
-const main = [{
+const main = [
+  {
     path: '/',
     label: 'pages.home',
     icon: 'home'
   },
-  {
-    path: '/services',
-    label: 'pages.services',
-    icon: 'palette'
-  },
+  // {
+  //   path: '/services',
+  //   label: 'pages.services',
+  //   icon: 'palette'
+  // },
   {
     path: '/work',
     label: 'pages.work',
@@ -20,16 +21,17 @@ const main = [{
   }
 ]
 
-const about = [{
+const about = [
+  {
     path: '/agency',
     label: 'pages.agency',
     icon: 'face'
   },
-  {
-    path: '/store',
-    label: 'pages.store',
-    icon: 'local_shipping'
-  },
+  // {
+  //   path: '/store',
+  //   label: 'pages.store',
+  //   icon: 'local_shipping'
+  // },
   {
     path: '/terms',
     label: 'pages.terms',
@@ -37,7 +39,8 @@ const about = [{
   }
 ]
 
-const social = [{
+const social = [
+  {
     url: 'https://twitter.com/santihans4056',
     label: 'Twitter'
   },
@@ -55,8 +58,4 @@ const social = [{
   }
 ]
 
-export {
-  main,
-  about,
-  social
-}
+export { main, about, social }

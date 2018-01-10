@@ -36,7 +36,12 @@
     width: 100%;
 
     &::after {
-      background-image: linear-gradient(to bottom, transparent, rgba(51, 19, 37, 0) 25%, rgba(51, 19, 37, 0.6));
+      background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(51, 19, 37, 0) 25%,
+        rgba(51, 19, 37, 0.6)
+      );
       content: '';
       left: 0;
       height: 100%;
@@ -66,7 +71,7 @@
     }
   }
 
-  .content {
+  .wallpaper-content {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -92,26 +97,26 @@
 
     h1 {
       background-color: $colorPink;
-      color: rgba(255, 255, 255, .8);
+      color: rgba(255, 255, 255, 0.8);
       font-size: 1.9em;
       letter-spacing: -0.02em;
       line-height: 1.4;
       margin: 0 3vw 0.2em;
       padding: 20px;
-      @media(min-width: $breakpointMini) {
+      @media (min-width: $breakpointMini) {
         font-size: 2.4em;
         margin-left: 0;
         margin-right: 0;
       }
-      @media(min-width: $breakpointSmall) {
+      @media (min-width: $breakpointSmall) {
         font-size: 3.6em;
         padding-left: 5vw;
         padding-right: 5vw;
       }
-      @media(min-width: 800px) {
+      @media (min-width: 800px) {
         font-size: 4.5em;
       }
-      @media(min-width: $breakpointMedium) {
+      @media (min-width: $breakpointMedium) {
         font-size: 5.2em;
       }
     }
@@ -119,17 +124,17 @@
     .tagline {
       font-size: 1.1em;
       color: aliceblue;
-      text-shadow: 1px 1px rgba(0,0,0,.2);
-      @media(min-width:$breakpointMini) {
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+      @media (min-width: $breakpointMini) {
         font-size: 1.3em;
       }
-      @media(min-width:$breakpointSmall) {
+      @media (min-width: $breakpointSmall) {
         font-size: 1.6em;
       }
-      @media(min-width: 800px) {
+      @media (min-width: 800px) {
         font-size: 2em;
       }
-      @media(min-width: $breakpointMedium) {
+      @media (min-width: $breakpointMedium) {
         font-size: 2.3em;
       }
     }
@@ -188,7 +193,11 @@
     }
 
     &::before {
-      background-image: linear-gradient(to top, rgb(181, 86, 124), $colorPink 60%);
+      background-image: linear-gradient(
+        to top,
+        rgb(181, 86, 124),
+        $colorPink 60%
+      );
     }
 
     &::after {
@@ -196,16 +205,16 @@
       background-repeat: no-repeat;
       background-position: bottom center;
       background-size: 200%;
-      @media(min-width: $breakpointSmall) {
+      @media (min-width: $breakpointSmall) {
         background-size: 100%;
       }
-      @media(min-width: $breakpointMedium) {
+      @media (min-width: $breakpointMedium) {
         background-position: 100% 110%;
       }
-      @media(min-width: $breakpointLarge) {
+      @media (min-width: $breakpointLarge) {
         background-size: contain;
       }
-      @media(min-width: $breakpointExtraLarge) {
+      @media (min-width: $breakpointExtraLarge) {
         background-position: 100% 130%;
       }
     }

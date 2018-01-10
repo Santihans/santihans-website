@@ -1,24 +1,23 @@
 <template>
-<div id="header">
-  <div class="header-background"></div>
-  <div class="header-navigation boundaries">
-    <nuxt-link v-ripple class="logo" alt="Home Page" :to="localePath('/')">
-      <img src="~assets/images/logo-white.svg" alt="Santihans Logo">
-      <div class="beta">
-        beta
-      </div>
-      </svg>
-    </nuxt-link>
-    <ul class="header-navigation-menu">
-      <nuxt-link v-for="(item, index) in main" key="index" v-if="index !== 0" v-ripple tag="li" :to="localePath(`${item.path}`)">
-        <a>{{ $t(`${item.label}`) }}</a>
+  <div id="header">
+    <div class="header-background"></div>
+    <div class="header-navigation boundaries">
+      <nuxt-link v-ripple class="logo" alt="Home Page" :to="localePath('/')">
+        <img src="~assets/images/logo-white.svg" alt="Santihans Logo">
+        <div class="beta">
+          beta
+        </div>
       </nuxt-link>
-    </ul>
-    <v-btn class="hamburger" v-on:click.stop="openNavigation()" fab flat dark role="navigation">
-      <v-icon>menu</v-icon>
-    </v-btn>
+      <ul class="header-navigation-menu">
+        <nuxt-link v-for="(item, index) in main" :key="index" v-if="index !== 0" v-ripple tag="li" :to="localePath(`${item.path}`)">
+          <a>{{ $t(`${item.label}`) }}</a>
+        </nuxt-link>
+      </ul>
+      <v-btn class="hamburger" v-on:click.stop="openNavigation()" fab flat dark role="navigation">
+        <v-icon>menu</v-icon>
+      </v-btn>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -36,6 +35,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "header.scss";
+@import 'header.scss';
 </style>
-le>
