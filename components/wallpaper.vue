@@ -36,11 +36,11 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'Creative Company',
+        headline: 'Digital Experiences',
         tagline: 'Webdesign. Branding. Advertising.'
       },
       de: {
-        headline: 'Creative Company',
+        headline: 'Digital Experiences',
         tagline: 'Webdesign. Marken. Werbung.'
       }
     }
