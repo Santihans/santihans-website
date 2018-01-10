@@ -3,7 +3,7 @@
     <div class="page-header">
       <h1>{{ $t('pages.work') }}</h1>
       <component-clouds />
-      <img class="illustration" src="~assets/images/header-work.svg" alt="Illustration">
+      <img class="illustration" src="~assets/images/header-store.svg" alt="Illustration">
     </div>
     <div class="page-content boundaries">
       <section class="portfolio">
