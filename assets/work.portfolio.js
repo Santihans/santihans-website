@@ -5,7 +5,7 @@ const portfolio = {
   madeinbasel: {
     dialog: false,
     name: 'Made in Basel',
-    tags: ['branding'],
+    tags: ['webdesign', 'branding'],
     details: {
       abstract: 'portfolio.madeinbasel.details.abstract',
       website: 'http://madeinbasel.org',
@@ -14,7 +14,8 @@ const portfolio = {
       scope: {
         branding: 'portfolio.madeinbasel.details.scope.branding'
       },
-      images: [{
+      images: [
+        {
           src: 'madeinbasel-logo-blue.png',
           caption: {
             en: 'New Logo',
@@ -50,7 +51,8 @@ const portfolio = {
       scope: {
         branding: 'portfolio.cometas.details.scope.branding'
       },
-      images: [{
+      images: [
+        {
           src: 'cometas-logo.png',
           caption: {
             en: 'New Logo',
@@ -81,7 +83,8 @@ const portfolio = {
         branding: 'portfolio.denkmal.details.scope.branding',
         advertising: 'portfolio.denkmal.details.scope.advertising'
       },
-      images: [{
+      images: [
+        {
           src: 'denkmal-mobile-stripe.jpg',
           caption: {
             en: 'Loading Screen / Daytime Mode / Nighttime Mode / Details',
@@ -166,7 +169,8 @@ const portfolio = {
         webdesign: 'portfolio.cargomedia.details.scope.webdesign',
         branding: 'portfolio.cargomedia.details.scope.branding'
       },
-      images: [{
+      images: [
+        {
           src: 'cargomedia-mobile-stripe.jpg',
           caption: {
             en: 'Web Design',
@@ -203,7 +207,8 @@ const portfolio = {
         webdesign: 'portfolio.frontale.details.scope.webdesign',
         branding: 'portfolio.frontale.details.scope.branding'
       },
-      images: [{
+      images: [
+        {
           src: 'frontale-mobile-stripe.jpg',
           caption: {
             en: 'Web Design',
@@ -252,7 +257,8 @@ const portfolio = {
       scope: {
         branding: 'portfolio.gundelistreetteam.details.scope.branding'
       },
-      images: [{
+      images: [
+        {
           src: 'gundelistreetteam-print.jpg',
           caption: {
             en: 'Shirts',
@@ -288,7 +294,8 @@ const portfolio = {
       scope: {
         webdesign: 'portfolio.brigittehenke.details.scope.webdesign'
       },
-      images: [{
+      images: [
+        {
           src: 'brigittehenke-mobile-stripe.jpg',
           caption: {
             en: 'Web Design Mobile',
@@ -319,56 +326,58 @@ const portfolio = {
       ]
     }
   },
-  kingchiller: {
-    dialog: false,
-    name: 'Kingchiller',
-    tags: ['branding'],
-    details: {
-      abstract: 'portfolio.kingchiller.details.abstract',
-      website: 'http://kingchiller.com',
-      colorBg: '#4ba629',
-      colorFg: 'white',
-      scope: {
-        branding: 'portfolio.kingchiller.details.scope.branding'
-      },
-      images: [{
-        src: 'kingchiller-logo.svg',
-        caption: {
-          en: 'Logo Design',
-          de: 'Logodesign'
-        }
-      }]
-    }
-  },
-  marguerite: {
-    dialog: false,
-    name: 'Marguerite',
-    tags: ['illustration'],
-    details: {
-      abstract: 'portfolio.marguerite.details.abstract',
-      colorBg: '#54c6d9',
-      colorFg: 'white',
-      scope: {
-        branding: 'portfolio.marguerite.details.scope.branding',
-        advertising: 'portfolio.marguerite.details.scope.advertising'
-      },
-      images: [{
-          src: 'marguerite-logo.jpg',
-          caption: {
-            en: 'Logo Drafts',
-            de: 'Logo Entwürfe'
-          }
-        },
-        {
-          src: 'marguerite-flyer.jpg',
-          caption: {
-            en: 'Folded Flyers',
-            de: 'Gefaltete Flugblätter'
-          }
-        }
-      ]
-    }
-  },
+  // kingchiller: {
+  //   dialog: false,
+  //   name: 'Kingchiller',
+  //   tags: ['branding'],
+  //   details: {
+  //     abstract: 'portfolio.kingchiller.details.abstract',
+  //     website: 'http://kingchiller.com',
+  //     colorBg: '#4ba629',
+  //     colorFg: 'white',
+  //     scope: {
+  //       branding: 'portfolio.kingchiller.details.scope.branding'
+  //     },
+  //     images: [
+  //       {
+  //         src: 'kingchiller-logo.svg',
+  //         caption: {
+  //           en: 'Logo Design',
+  //           de: 'Logodesign'
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
+  // marguerite: {
+  //   dialog: false,
+  //   name: 'Marguerite',
+  //   tags: ['illustration'],
+  //   details: {
+  //     abstract: 'portfolio.marguerite.details.abstract',
+  //     colorBg: '#54c6d9',
+  //     colorFg: 'white',
+  //     scope: {
+  //       branding: 'portfolio.marguerite.details.scope.branding',
+  //       advertising: 'portfolio.marguerite.details.scope.advertising'
+  //     },
+  //     images: [{
+  //         src: 'marguerite-logo.jpg',
+  //         caption: {
+  //           en: 'Logo Drafts',
+  //           de: 'Logo Entwürfe'
+  //         }
+  //       },
+  //       {
+  //         src: 'marguerite-flyer.jpg',
+  //         caption: {
+  //           en: 'Folded Flyers',
+  //           de: 'Gefaltete Flugblätter'
+  //         }
+  //       }
+  //     ]
+  //   }
+  // },
   schiffmode: {
     dialog: false,
     name: 'Schiff Mode',
@@ -380,13 +389,15 @@ const portfolio = {
       scope: {
         branding: 'portfolio.schiffmode.details.scope.branding'
       },
-      images: [{
-        src: 'schiffmode-logo.svg',
-        caption: {
-          en: 'Logo Design',
-          de: 'Logodesign'
+      images: [
+        {
+          src: 'schiffmode-logo.svg',
+          caption: {
+            en: 'Logo Design',
+            de: 'Logodesign'
+          }
         }
-      }]
+      ]
     }
   }
 }
@@ -398,7 +409,4 @@ const messages = {
   }
 }
 
-export {
-  portfolio,
-  messages
-}
+export { portfolio, messages }
