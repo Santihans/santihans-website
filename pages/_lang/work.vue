@@ -9,7 +9,7 @@
       <section class="portfolio">
         <v-layout wrap>
           <v-flex xs6 sm4 v-for="(item, key) in portfolio" :key="key">
-            <v-dialog lazy fullscreen hide-overlay v-model="item.dialog" class="portfolio-dialog" max-width="800" content-class="dialog-custom dialog-custom--portfolio">
+            <v-dialog lazy fullscreen hide-overlay transition="dialog-bottom-transition" v-model="item.dialog" class="portfolio-dialog" max-width="800" content-class="dialog-custom dialog-custom--portfolio">
               <nuxt-link class="portfolio-link" v-ripple slot="activator" alt="Preview" :to="{ path: localePath('/work') + '#' + `${key}`}">
                 <v-card>
                   <img :src="'/images/work/' + key + '/thumb.png'" alt="Preview">

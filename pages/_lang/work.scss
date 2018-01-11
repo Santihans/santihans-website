@@ -68,7 +68,14 @@
     }
 
     .dialog-header {
+      align-items: center;
+      display: flex;
+      min-height: 45vh;
       position: relative;
+
+      h3 {
+        font-size: 2em;
+      }
 
       .abstract {
         margin-bottom: 1em;
