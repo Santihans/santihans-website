@@ -17,7 +17,7 @@
           <component-contact-form />
         </div>
         <div class="flex-map">
-          <spinner background="white"></spinner>
+          <spinner/>
           <iframe src="https://snazzymaps.com/embed/6150"></iframe>
           <v-btn color="primary" href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</v-btn>
         </div>
@@ -29,17 +29,17 @@
 <script>
 import address from '~/components/contactAddress.vue'
 import contactForm from '~/components/contactForm.vue'
-import spinner from 'vue-loading-spinner/src/components/DoubleBounce.vue'
 import clouds from '~/components/clouds.vue'
 import ufo from '~/components/ufo.vue'
+import Spinner from '~/components/Spinner.vue'
 
 export default {
   components: {
     'component-address': address,
     'component-contact-form': contactForm,
-    'spinner': spinner,
     'component-clouds': clouds,
-    'component-ufo': ufo
+    'component-ufo': ufo,
+    Spinner
   },
   head() {
     return {

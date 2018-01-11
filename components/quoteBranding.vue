@@ -6,7 +6,7 @@
       <div class="price">
         <div class="price-initial">
           {{ $t('offer.startingPrice') }} CHF
-          <span v-text.number="offerSummary.rateInitial"></span>
+          <span v-text="offerSummary.rateInitial"></span>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <v-stepper-content step="1">
           <div class="stepper-content">
             <v-radio-group v-model="services.client.selectedSize">
-              <div v-for="(value, key, index) in services.client.size">
+              <div v-for="(value, key, index) in services.client.size" :key="key">
                 <v-radio :key="index" :label="$t(`${value.label}`)" persistent-hint :value="key"></v-radio>
                 <small class="radio-hint">{{ $t(`${value.hint}`) }}</small>
               </div>

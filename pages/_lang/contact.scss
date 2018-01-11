@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      @media(min-width: 800px) {
+      @media (min-width: 800px) {
         flex-direction: row;
       }
     }
@@ -40,11 +40,13 @@
 
     .flex-map {
       flex-basis: 40%;
-      background-color: rgb(77,96,89);
+      background-color: rgb(77, 96, 89);
+      color: white;
       height: 300px;
       overflow: hidden;
       position: relative;
-      @media(min-width: 800px) {
+
+      @media (min-width: 800px) {
         height: auto;
         order: -1;
       }
@@ -71,14 +73,14 @@
     }
 
     .flex-contact {
-      @media(min-width: 800px) {
+      @media (min-width: 800px) {
         padding: 0 20px;
       }
 
       .contact {
         margin-top: 1vh;
         margin-bottom: 4vh;
-        @media(min-width: $breakpointSmall) {
+        @media (min-width: $breakpointSmall) {
           display: flex;
         }
 
