@@ -1,44 +1,39 @@
 <template>
-<div class="language" :title="$t('language')">
-  <template v-if="$i18n.locale === 'en'">
-    <div><strong>{{ $t('links.english') }}</strong></div>
-    <nuxt-link :to="`/de` + $route.fullPath" active-class="none" exact>
-      {{ $t('links.german') }}
-    </nuxt-link>
-  </template>
-  <template v-else>
-    <div><strong>{{ $t('links.german') }}</strong></div>
-    <nuxt-link :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none" exact>
-      {{ $t('links.english') }}
-    </nuxt-link>
-  </template>
-</div>
+  <div class="language" :title="$t('language')">
+    <template v-for="(lang, i) in Object.keys($i18n.messages)" class="language-link">
+      <strong :key="i" v-if="$i18n.locale === lang">{{ $t('links.'+lang) }}</strong>
+      <nuxt-link :key="i" v-else :to="{ params: {lang: lang} }" active-class="none" exact>
+        {{ $t('links.'+lang) }}
+      </nuxt-link>
+      <template v-if="i < lang.length-1"> | </template>
+    </template>
+  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    path(url) {
-      return (this.$i18n.locale === 'en' ? url : '/' + this.$i18n.locale + url)
-    }
-  },
   i18n: {
     messages: {
       en: {
         language: 'Language',
         'links': {
-          'german': 'Deutsch',
-          'english': 'English'
+          'de': 'DE',
+          'en': 'EN'
         }
       },
       de: {
         language: 'Sprache',
         'links': {
-          'german': 'Deutsch',
-          'english': 'English'
+          'de': 'DE',
+          'en': 'EN'
         }
       }
     }
   }
 }
 </script>
+<style lang="scss">
+.language-link {
+  display: inline;
+}
+</style>

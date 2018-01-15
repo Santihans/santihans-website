@@ -1,5 +1,3 @@
-const webpack = require('webpack')
-
 module.exports = {
   /*
    ** Headers of the page
@@ -69,12 +67,6 @@ module.exports = {
       src: '~plugins/vuetify.js'
     },
     {
-      src: '~plugins/i18n.js'
-    },
-    {
-      src: '~plugins/localePath.js'
-    },
-    {
       src: '~plugins/ga.js',
       ssr: false
     },
@@ -87,22 +79,28 @@ module.exports = {
     }
   ],
 
-  router: {
-    middleware: 'i18n'
-  },
+  modules: [
+    [
+      'nuxt-i18n-module',
+      {
+        languages: ['en', 'de']
+      }
+    ]
+  ],
 
   /*
    ** Build configuration
    */
   build: {
+    // analyze: true,
     vendor: ['jquery', 'vuetify', 'underscore', 'vue-smooth-scroll'],
     /*
      ** Run ESLINT on save
      */
-    extend(config, ctx) {
+    extend(config, { isClient }) {
       config.devtool = false
 
-      if (ctx.crlient) {
+      if (isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -111,24 +109,5 @@ module.exports = {
         })
       }
     }
-  },
-
-  generate: {
-    routes: [
-      '/',
-      '/agency',
-      '/contact',
-      '/services',
-      '/store',
-      '/terms',
-      '/work',
-      '/de',
-      '/de/agency',
-      '/de/contact',
-      '/de/services',
-      '/de/store',
-      '/de/terms',
-      '/de/work'
-    ]
   }
 }

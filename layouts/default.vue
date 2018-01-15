@@ -91,15 +91,6 @@ export default {
       }, 100)()
     }
   },
-  beforeMount() {
-    var lang = navigator.language || navigator.userLanguage
-    var self = this
-    if (this.$i18n.locale === 'en' && lang.substring(0, 2) === 'de') {
-      _.once(function () {
-        self.$router.replace({ path: `/de` + self.$route.fullPath })
-      }())
-    }
-  },
   mounted() {
     this.handleScroll()
     document.addEventListener('scroll', this.handleScroll)
