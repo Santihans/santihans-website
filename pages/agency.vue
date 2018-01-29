@@ -78,25 +78,33 @@ export default {
           thumb: 'christophe.jpg',
           position: this.$t('team.christophe.position'),
           name: 'Christophe',
-          contacts: [{
+          contacts: [
+            {
               label: 'Email',
               url: 'mailto:info@santihans.com'
             },
             {
               label: 'Twitter',
               url: 'https://twitter.com/stophecom'
-            },
-            {
-              label: 'Facebook',
-              url: 'https://www.facebook.com/christopheschwyzer'
             }
           ]
         },
-        remo: {
-          thumb: 'remo.jpg',
-          position: this.$t('team.remo.position'),
-          name: 'Remo'
+        nicolas: {
+          thumb: 'nicolas.jpg',
+          position: this.$t('team.nicolas.position'),
+          name: 'Nicolas',
+          contacts: [
+            {
+              label: 'Twitter',
+              url: 'https://twitter.com/NicolasSchmutz'
+            }
+          ]
         },
+        // remo: {
+        //   thumb: 'remo.jpg',
+        //   position: this.$t('team.remo.position'),
+        //   name: 'Remo'
+        // },
         david: {
           thumb: 'david.jpg',
           position: this.$t('team.david.position'),
@@ -106,13 +114,16 @@ export default {
           thumb: 'et.svg',
           position: this.$t('team.et.position'),
           name: this.$t('team.et.name'),
-          contacts: [{
-            label: this.$t('team.et.contact'),
-            url: 'mailto:info@santihans.com'
-          }]
+          contacts: [
+            {
+              label: this.$t('team.et.contact'),
+              url: 'mailto:info@santihans.com'
+            }
+          ]
         }
       },
-      partner: [{
+      partner: [
+        {
           logo: 'cometas.svg',
           name: 'cometas',
           web: 'http://cometas.ch',
@@ -138,13 +149,18 @@ export default {
       en: {
         company: {
           heading: 'About us',
-          abstract: 'Santihans is a design and communications agency with its main focus on web design, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
+          abstract:
+            'Santihans is a design and communications agency with its main focus on web design, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
         },
         team: {
           heading: 'Team',
-          abstract: 'Tiny team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we use the possibilities of the Internet, work remotely, communicate and collaborate online. (We meet in person to celebrate though.)',
+          abstract:
+            'Tiny team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we use the possibilities of the Internet, work remotely, communicate and collaborate online. (We meet in person to celebrate though.)',
           christophe: {
-            position: 'Founder, Designer, Web Enthusiast'
+            position: 'Founder, Designer'
+          },
+          nicolas: {
+            position: 'Partner, Product manager'
           },
           remo: {
             position: 'Consultant Strategy'
@@ -160,7 +176,8 @@ export default {
         },
         mission: {
           heading: 'Mission',
-          abstract: 'Santihans produces appealing, custom-made and thought-through communication solutions for demanding customers. The company\'s style follows modern design principles, is sometimes out of the ordinary, often minimalistic, but always unique.'
+          abstract:
+            "Santihans produces appealing, custom-made and thought-through communication solutions for demanding customers. The company's style follows modern design principles, is sometimes out of the ordinary, often minimalistic, but always unique."
         },
         partner: {
           heading: 'Partner',
@@ -173,13 +190,18 @@ export default {
       de: {
         company: {
           heading: 'Über uns',
-          abstract: 'Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  mit Zugang zum Rhein.'
+          abstract:
+            'Santihans ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  mit Zugang zum Rhein.'
         },
         team: {
           heading: 'Team',
-          abstract: 'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Wir nützen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
+          abstract:
+            'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Wir nützen die Möglichkeiten des Internets, arbeiten remote, kommunizieren und kollaborieren online. (Wir sehen uns um anzustossen.)',
           christophe: {
             position: 'Gründer, Designer, Webenthusiast'
+          },
+          nicolas: {
+            position: 'Partner, Produktmanager'
           },
           remo: {
             position: 'Beratung Strategie'
@@ -195,7 +217,8 @@ export default {
         },
         mission: {
           heading: 'Mission',
-          abstract: 'Santihans produziert ansprechende, handgemachte und durchdachte Kommunikationslösungen für anspruchsvolle Kunden. Santihans’ Stil folgt modernen Design-Prinzipien, ist manchmal ungewöhnlich, oft minimalistisch, aber immer einzigartig.'
+          abstract:
+            'Santihans produziert ansprechende, handgemachte und durchdachte Kommunikationslösungen für anspruchsvolle Kunden. Santihans’ Stil folgt modernen Design-Prinzipien, ist manchmal ungewöhnlich, oft minimalistisch, aber immer einzigartig.'
         },
         partner: {
           heading: 'Partner',
@@ -211,5 +234,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "agency.scss";
+@import 'agency.scss';
 </style>
