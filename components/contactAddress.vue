@@ -15,7 +15,7 @@
     <div v-show="showPhone" class="phone">
       <v-icon>phone</v-icon>
       <span itemprop="telephone">
-              <a href="tel:+41798318079">+41 79 831 80 79</a></span>
+              <a href="tel:+41225754056">+41 22 575 40 56</a></span>
     </div>
     <div class="email">
       <v-icon>email</v-icon>
