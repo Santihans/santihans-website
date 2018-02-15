@@ -71,6 +71,10 @@ module.exports = {
       ssr: false
     },
     {
+      src: '~plugins/crisp.js',
+      ssr: false
+    },
+    {
       src: '~plugins/webFontLoader.js',
       ssr: false
     },
