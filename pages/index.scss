@@ -1,4 +1,5 @@
-@import "~assets/styles/variables.scss";
+@import '~assets/styles/variables.scss';
+
 @keyframes arrow {
   40% {
     transform: translate(-600%, 50%);
@@ -16,7 +17,8 @@
 .illustration-webdesign {
   border-bottom: 6px solid #cccccc;
   margin-bottom: 8vh;
-  @media(min-width: $breakpointSmall) {
+
+  @media (min-width: $breakpointSmall) {
     margin-bottom: 110px;
   }
 
@@ -27,22 +29,28 @@
     transform: translate(-50%, -55%);
     transition: 1000ms;
     width: 100%;
-    @media(min-width: $breakpointMini) {
+
+    @media (min-width: $breakpointMini) {
       width: 90%;
     }
-    @media(min-width: 500px) {
+
+    @media (min-width: 500px) {
       width: 80%;
     }
-    @media(min-width: $breakpointSmall) {
+
+    @media (min-width: $breakpointSmall) {
       width: 70%;
     }
-    @media(min-width: 800px) {
+
+    @media (min-width: 800px) {
       width: 60%;
     }
-    @media(min-width: $breakpointMedium) {
+
+    @media (min-width: $breakpointMedium) {
       width: 50%;
     }
-    @media(min-width: $breakpointLarge) {
+
+    @media (min-width: $breakpointLarge) {
       width: 620px;
     }
 
@@ -85,10 +93,16 @@
   background-size: cover;
   border-bottom: 6px solid #cccccc;
   height: 50vw;
-  @media(min-width: $breakpointSmall) {
+
+  @media (min-width: $breakpointSmall) {
     height: 300px;
   }
-  @media(min-width: $breakpointExtraLarge) {
+
+  @media (min-width: $breakpointMedium) {
+    height: 460px;
+  }
+
+  @media (min-width: $breakpointExtraLarge) {
     background-size: contain;
   }
 }
@@ -96,7 +110,7 @@
 .service-branding {
   padding-top: 120px;
   position: relative;
-  @media(min-width: 500px) {
+  @media (min-width: 500px) {
     padding-top: 170px;
   }
 
@@ -106,13 +120,16 @@
     position: absolute;
     transform: translate(-50%, 41.6%);
     width: 90%;
-    @media(min-width: $breakpointMini) {
+
+    @media (min-width: $breakpointMini) {
       width: 70%;
     }
-    @media(min-width: $breakpointSmall) {
+
+    @media (min-width: $breakpointSmall) {
       width: 60%;
     }
-    @media(min-width: 800px) {
+
+    @media (min-width: 800px) {
       width: 480px;
     }
 
@@ -121,15 +138,18 @@
       right: 40px;
       top: -30px;
       width: 50px;
-      @media(min-width: $breakpointMini) {
+
+      @media (min-width: $breakpointMini) {
         top: -60px;
         width: 60px;
       }
-      @media(min-width: $breakpointSmall) {
+
+      @media (min-width: $breakpointSmall) {
         top: -90px;
         width: 70px;
       }
-      @media(min-width: $breakpointMedium) {
+
+      @media (min-width: $breakpointMedium) {
         top: -60px;
       }
     }
@@ -165,10 +185,16 @@
   border-bottom: 6px solid #cccccc;
   height: 50vw;
   position: relative;
-  @media(min-width: $breakpointSmall) {
+
+  @media (min-width: $breakpointSmall) {
     height: 360px;
   }
-  @media(min-width: $breakpointExtraLarge) {
+
+  @media (min-width: $breakpointMedium) {
+    height: 500px;
+  }
+
+  @media (min-width: $breakpointExtraLarge) {
     background-size: contain;
   }
 
@@ -186,10 +212,12 @@
     position: absolute;
     transform: translateX(-50%);
     width: 95%;
-    @media(min-width: 500px) {
+
+    @media (min-width: 500px) {
       width: 80%;
     }
-    @media(min-width: $breakpointMedium) {
+
+    @media (min-width: $breakpointMedium) {
       width: 800px;
     }
   }
@@ -199,7 +227,8 @@
     position: absolute;
     right: 30%;
     width: 180px;
-    @media(min-width: $breakpointSmall) {
+
+    @media (min-width: $breakpointSmall) {
       width: 260px;
     }
   }

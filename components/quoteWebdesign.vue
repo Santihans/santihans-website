@@ -84,7 +84,7 @@
         <v-stepper-content step="5">
           <div class="stepper-content summary">
             <div class="summary-meta print-only" aria-hidden="true">
-              <img class="logo" src="~assets/images/logo.svg" alt="Santihans Logo">
+              <img class="logo" src="~assets/images/logo.svg" alt="SANTiHANS Logo">
               <component-address :showPhone="false" :showCountry="false" />
               <div class="date">
                 Basel,

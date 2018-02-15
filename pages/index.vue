@@ -97,15 +97,15 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Fabelhafte Webseiten',
-          abstract: 'Santihans erstellt enspruchsvolle Webapplikationen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
+          abstract: 'SANTiHANS erstellt enspruchsvolle Webapplikationen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
         },
         branding: {
           headline: 'Individuelle Marken',
-          abstract: 'Hinterlasse einen bleibenden Eindruck! Santihans entwickelt Marken-Idenditäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Logo-Designs.'
+          abstract: 'Hinterlasse einen bleibenden Eindruck! SANTiHANS entwickelt Marken-Idenditäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Logo-Designs.'
         },
         advertising: {
           headline: 'Wirksame Werbung',
-          abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. Santihans erarbeitet digitale Werbekampagnen nach deinen Wünschen und Vorstellungen.'
+          abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. SANTiHANS erarbeitet digitale Werbekampagnen nach deinen Wünschen und Vorstellungen.'
         }
       }
     }

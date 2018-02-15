@@ -3,8 +3,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'SANTIHANS',
-    titleTemplate: '%s - SANTIHANS',
+    title: 'SANTiHANS',
+    titleTemplate: '%s - SANTiHANS',
     meta: [
       {
         charset: 'utf-8'
@@ -16,14 +16,74 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Santihans is a design and communications agency with its main focus on web design, branding and advertising.'
+        content: 'We are a digital design and communications agency. 😇'
       },
       {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'Santihans, Web Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland'
+          'SANTiHANS, Web Design, Digital Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland, 😇'
+      },
+      {
+        name: 'mobile-web-app-capable',
+        content: 'yes'
+      },
+      {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes'
+      },
+      {
+        name: 'application-name',
+        content: 'SANTiHANS'
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: 'SANTiHANS'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.santihans.com'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.santihans.com/og-image.png'
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'SANTiHANS'
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'We are a digital design and communications agency. 😇'
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'SANTiHANS'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary'
+      },
+      {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@santihans4056'
+      },
+      {
+        hid: 'twitter:creator',
+        name: 'twitter:creator',
+        content: '@stophecom'
       }
     ],
     link: [

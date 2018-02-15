@@ -3,7 +3,7 @@
     <div class="header-background"></div>
     <div class="header-navigation boundaries">
       <nuxt-link v-ripple class="logo" alt="Home Page" :to="localePath('/')">
-        <img src="~assets/images/logo-white.svg" alt="Santihans Logo">
+        <img src="~assets/images/logo-white.svg" alt="SANTiHANS Logo">
         <div class="beta">
           beta
         </div>
