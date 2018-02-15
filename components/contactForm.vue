@@ -50,7 +50,7 @@ export default {
     },
     subject: {
       type: String,
-      default: 'Santihans Inquiry'
+      default: 'SANTiHANS Inquiry'
     },
     quote: {
       type: Object

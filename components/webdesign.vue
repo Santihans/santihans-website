@@ -84,7 +84,7 @@ export default {
       de: {
         intro: {
           heading: 'Webdesign',
-          abstract: 'Der erste Eindruck zählt! Deine Webseite ist oft der erste Kontakt zu deiner Kundschaft - sie ist das Aushängeschild deiner Unternehmung und ein fester Bestandteil deiner Markenidentität. Santihans erstellt zugängliche Webseiten mit Fokus auf Design, Benutzerfreundlichkeit und Charakter.',
+          abstract: 'Der erste Eindruck zählt! Deine Webseite ist oft der erste Kontakt zu deiner Kundschaft - sie ist das Aushängeschild deiner Unternehmung und ein fester Bestandteil deiner Markenidentität. SANTiHANS erstellt zugängliche Webseiten mit Fokus auf Design, Benutzerfreundlichkeit und Charakter.',
           quote: 'Interaktive Offerte'
         },
         services: {
