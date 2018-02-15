@@ -3,9 +3,8 @@
     <div class="parallax">
       <div class="parallax-image"></div>
       <div class="parallax-content">
-        <div class="wallpaper-content">
+        <div class="wallpaper-content boundaries">
           <h1>{{ $t('headline') }}</h1>
-          <div class="tagline">{{ $t('tagline') }}</div>
         </div>
         <div class="more">
           <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
@@ -36,12 +35,10 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'Digital Experiences',
-        tagline: 'Webdesign. Branding. Advertising.'
+        headline: 'We are a digital design and communications agency.'
       },
       de: {
-        headline: 'Digital Experiences',
-        tagline: 'Webdesign. Marken. Werbung.'
+        headline: 'Agentur für Design und Kommunikation.'
       }
     }
   }
