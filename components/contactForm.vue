@@ -1,6 +1,6 @@
 <template>
   <div class="contactForm">
-    <v-alert v-show="formSuccess" icon="done" success>
+    <v-alert v-show="formSuccess" icon="done" color="success">
       {{ $t('form.successMessage') }}
     </v-alert>
     <div v-show="!formSuccess">
@@ -60,7 +60,7 @@ export default {
     onSubmit: function () {
       var self = this
       $.ajax({
-        url: 'https://formspree.io/info@santihans.com',
+        url: 'https://formspree.io/mwobppbm',
         method: 'POST',
         data: {
           _subject: self.subject,
