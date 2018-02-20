@@ -1,6 +1,6 @@
 <template>
   <div class="contactForm">
-    <v-alert v-show="formSuccess" icon="done" success>
+    <v-alert v-show="formSuccess" icon="done" color="success">
       {{ $t('form.successMessage') }}
     </v-alert>
     <div v-show="!formSuccess">
