@@ -17,6 +17,9 @@
         <div>
           MwSt: CHE-244.875.499 MWST
         </div>
+        <div class="madeinbasel">
+          <a href="https://madeinbasel.org" target="_blank" rel="noopener"><img src="/images/madeinbasel.svg" alt="Made in Basel"></a>
+        </div>
       </section>
 
       <section class="legal section--shadow">
