@@ -56,6 +56,17 @@
       }
     }
 
+    .madeinbasel {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5em;
+
+      a {
+        display: block;
+        width: 100px;
+      }
+    }
+
     .registry {
       margin-top: 1em;
     }
