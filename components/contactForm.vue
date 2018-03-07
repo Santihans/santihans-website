@@ -9,10 +9,7 @@
       <form method="POST" v-on:submit.prevent="onSubmit">
         <v-text-field name="name" :label="$t('form.name')" v-model="name" required :rules="[rules.required]"></v-text-field>
         <v-text-field name="email" :label="$t('form.email')" v-model="email" required :rules="[rules.required, rules.email]"></v-text-field>
-        <v-text-field name="message" :label="$t('form.message')" counter v-model="message" max="400" multi-line :required="!attachment" :rules="[rules.required]"></v-text-field>
-        <div class="attachment" v-show="attachment">
-          <v-icon>attachment</v-icon> {{ $t('form.attachment') }}
-        </div>
+        <v-text-field name="message" :label="$t('form.message')" counter v-model="message" max="400" multi-line required :rules="[rules.required]"></v-text-field>
         <div class="form-action">
           <slot></slot>
           <v-btn type="submit" color="primary">{{ $t('form.submit') }}</v-btn>
@@ -31,7 +28,6 @@ export default {
       name: null,
       message: null,
       email: null,
-      attachment: this.quote,
       rules: {
         required: (value) => (value === null || !!value) || this.$t('form.error.required'),
         email: (value) => {
@@ -51,23 +47,19 @@ export default {
     subject: {
       type: String,
       default: 'SANTiHANS Inquiry'
-    },
-    quote: {
-      type: Object
     }
   },
   methods: {
     onSubmit: function () {
       var self = this
       $.ajax({
-        url: 'https://formspree.io/mwobppbm',
+        url: 'https://jumprock.co/mail/santihans',
         method: 'POST',
         data: {
-          _subject: self.subject,
+          subject: self.subject,
           name: self.name,
           email: self.email,
-          message: self.message,
-          quote: self.quote
+          message: self.message
         },
         dataType: 'json'
       }).then(function () {
@@ -89,7 +81,6 @@ export default {
             required: 'Required',
             invalidEmail: 'Invalid e-mail'
           },
-          attachment: 'Personal Quote',
           successMessage: 'Thank you for your message. We\'ll get back to you as soon as possible.'
         }
       },
@@ -104,7 +95,6 @@ export default {
             required: 'Erforderlich',
             invalidEmail: 'Ungültige Email'
           },
-          attachment: 'Persönliche Offerte',
           successMessage: 'Vielen Dank für die Nachricht. Wir melden uns so schnell wie möglich.'
         }
       }
