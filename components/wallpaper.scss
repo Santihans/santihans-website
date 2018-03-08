@@ -1,33 +1,7 @@
 @import '~assets/styles/variables.scss';
 
-@keyframes waves {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
-}
-
-@keyframes rainbow {
-  0% {
-    background-color: $colorPink;
-  }
-  25% {
-    background-color: $colorViolett;
-  }
-  50% {
-    background-color: $colorYellow;
-  }
-  75% {
-    background-color: $colorTurquoise;
-  }
-  100% {
-    background-color: $colorPink;
-  }
-}
-
 .wallpaper {
+  color: white;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -43,11 +17,8 @@
   }
 
   .parallax-image {
-    animation: waves 20s linear infinite;
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500%2C75c0%2C0%2C125-30%2C250-30S0%2C75%2C0%2C75s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3Cpath d='M-500%2C45c0%2C0%2C125-30%2C250-30S0%2C45%2C0%2C45s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3Cpath d='M-500%2C105c0%2C0%2C125-30%2C250-30S0%2C105%2C0%2C105s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3Cpath d='M-500%2C15c0%2C0%2C125-30%2C250-30S0%2C15%2C0%2C15s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3Cpath d='M-500-15c0%2C0%2C125-30%2C250-30S0-15%2C0-15s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3Cpath d='M-500%2C135c0%2C0%2C125-30%2C250-30S0%2C135%2C0%2C135s125%2C30%2C250%2C30s250-30%2C250-30s125-30%2C250-30s250%2C30%2C250%2C30s125%2C30%2C250%2C30s250-30%2C250-30'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-    color: white;
+    background-color: #212121;
+
     height: 100%;
     position: fixed;
     width: 100%;
@@ -61,39 +32,12 @@
     position: absolute;
     width: 100%;
 
-    &::after {
-      background-color: $colorPink;
-      opacity: 0.6;
-      content: '';
-      left: 0;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      width: 100%;
-
-      #layout.scrollTop & {
-        animation: rainbow 6s ease-in-out infinite;
-      }
-    }
-
     .more {
       bottom: 0;
       left: 50%;
-      opacity: 0;
-      padding: 20px;
+      opacity: 0.6;
       position: absolute;
-      transition: opacity 200ms 500ms;
-      transform: translateX(-50%);
       z-index: 1;
-
-      .icon {
-        color: white;
-        font-size: 50px;
-      }
-
-      #layout.scrollTopExtendend & {
-        opacity: 0.5;
-      }
     }
   }
 
@@ -111,7 +55,7 @@
     }
 
     h1 {
-      color: rgba(255, 255, 255, 0.7);
+      color: #fbfbfb;
       font-size: 2.4em;
       letter-spacing: -0.02em;
       line-height: 1.1;

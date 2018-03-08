@@ -7,9 +7,7 @@
           <h1>{{ $t('headline') }}</h1>
         </div>
         <div class="more">
-          <v-btn icon flat>
-            <v-icon>expand_more</v-icon>
-          </v-btn>
+          <sroll-indicator />
         </div>
       </div>
     </div>
@@ -22,10 +20,12 @@
 
 <script>
 import Clouds from '~/components/clouds.vue'
+import srollIndicator from '~/components/srollIndicator.vue'
 
 export default {
   components: {
-    'component-clouds': Clouds
+    'component-clouds': Clouds,
+    srollIndicator
   },
   data() {
     return {
