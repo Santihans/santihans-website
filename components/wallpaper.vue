@@ -7,7 +7,7 @@
           <h1>{{ $t('headline') }}</h1>
         </div>
         <div class="more">
-          <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
+          <v-btn icon flat>
             <v-icon>expand_more</v-icon>
           </v-btn>
         </div>
