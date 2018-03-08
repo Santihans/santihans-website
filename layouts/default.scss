@@ -61,11 +61,19 @@ h2 {
   }
 
   @media (min-width: $breakpointSmall) {
-    font-size: 3.6em;
+    font-size: 3.4em;
   }
 
   + .abstract {
     font-size: 1.2em;
+
+    @media (min-width: $breakpointSmall) {
+      font-size: 1.3em;
+    }
+
+    @media (min-width: $breakpointMedium) {
+      font-size: 1.4em;
+    }
   }
 }
 
@@ -201,7 +209,7 @@ section {
     width: 80%;
   }
   @media (min-width: $breakpointMedium) {
-    width: 70%;
+    width: 75%;
   }
 }
 

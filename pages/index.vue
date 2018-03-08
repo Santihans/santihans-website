@@ -80,32 +80,32 @@ export default {
         more: 'Learn more',
         contact: 'Contact us',
         webdesign: {
-          headline: 'Stunning Web Design',
-          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We care about the details so you don\'t have to.'
+          headline: 'Web Experiences',
+          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We anticipate your customers\'s needs to build better user interfaces.'
         },
         branding: {
-          headline: 'Iconic Branding',
-          abstract: 'We develop corporate identitiy solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
+          headline: 'Corporate Identity',
+          abstract: 'We develop corporate idendity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
-          headline: 'Smart Advertising',
-          abstract: 'We help you aquire new customers with targeted creative advertising. We create everything from ad campaigns to print products like business cards and packaging solutions.'
+          headline: 'Snappy Communication',
+          abstract: 'Spread your message and increase brand awareness! We help you communicate with your target audience by developing new communication assets.'
         }
       },
       de: {
         more: 'Mehr Erfahren',
         contact: 'Kontakt',
         webdesign: {
-          headline: 'Fabelhafte Webseiten',
-          abstract: 'SANTiHANS erstellt enspruchsvolle Webapplikationen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
+          headline: 'Premium Webseiten',
+          abstract: 'Wir erstellen anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
         },
         branding: {
-          headline: 'Individuelle Marken',
-          abstract: 'Hinterlasse einen bleibenden Eindruck! SANTiHANS entwickelt Marken-Idenditäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Logo-Designs.'
+          headline: 'Corporate Identity',
+          abstract: 'Hinterlasse einen bleibenden Eindruck! Wir entwerfen Marken-Identitäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Designs.'
         },
         advertising: {
-          headline: 'Wirksame Werbung',
-          abstract: 'Erweitere deine Kundschaft mithilfe kreativer Werbemassnahmen. SANTiHANS erarbeitet digitale Werbekampagnen nach deinen Wünschen und Vorstellungen.'
+          headline: 'Bissige Kommunikation',
+          abstract: 'Erreiche deine Kundschaft und steigere die Bekanntheit deiner Marke. Wir erarbeiten individuelle Kommunikationslösungen und Werbekampagnen die bewegen.'
         }
       }
     }

@@ -137,9 +137,6 @@ module.exports = {
     {
       src: '~plugins/webFontLoader.js',
       ssr: false
-    },
-    {
-      src: '~plugins/vueSmoothScroll.js'
     }
   ],
 

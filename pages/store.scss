@@ -1,9 +1,0 @@
-@import '~assets/styles/variables.scss';
-
-.page-header {
-  background-color: $colorViolett;
-
-  .clouds svg g {
-    fill: lighten($colorViolett, 8);
-  }
-}

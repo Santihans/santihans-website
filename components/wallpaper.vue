@@ -7,9 +7,7 @@
           <h1>{{ $t('headline') }}</h1>
         </div>
         <div class="more">
-          <v-btn icon flat to="#sectionWebDesign" v-smooth-scroll="{offset: -200 }">
-            <v-icon>expand_more</v-icon>
-          </v-btn>
+          <sroll-indicator />
         </div>
       </div>
     </div>
@@ -22,10 +20,12 @@
 
 <script>
 import Clouds from '~/components/clouds.vue'
+import srollIndicator from '~/components/srollIndicator.vue'
 
 export default {
   components: {
-    'component-clouds': Clouds
+    'component-clouds': Clouds,
+    srollIndicator
   },
   data() {
     return {
@@ -35,10 +35,10 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'We are a digital design and communications agency.'
+        headline: 'We are a premium communications agency for tomorrow’s digital experiences.'
       },
       de: {
-        headline: 'Agentur für Design und Kommunikation.'
+        headline: 'Wir sind eine Premium-Kommunikationsagentur für die digitalen Erlebnisse von morgen.'
       }
     }
   }
