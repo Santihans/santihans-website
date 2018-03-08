@@ -88,7 +88,7 @@ export default {
           abstract: 'We develop corporate idendity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
-          headline: 'Snappy Communications',
+          headline: 'Snappy Communication',
           abstract: 'Spread your message and increase brand awareness! We help you communicate with your target audience by developing new communication assets.'
         }
       },
@@ -97,15 +97,15 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'SANTiHANS erstellt anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
+          abstract: 'Wir erstellen anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
         },
         branding: {
           headline: 'Corporate Identity',
-          abstract: 'Hinterlasse einen bleibenden Eindruck! SANTiHANS entwickelt Marken-Identitäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Designs.'
+          abstract: 'Hinterlasse einen bleibenden Eindruck! Wir entwerfen Marken-Identitäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Designs.'
         },
         advertising: {
           headline: 'Bissige Kommunikation',
-          abstract: 'Erreiche deine Kundschaft und steigere die Bekanntheit deiner Marke. SANTiHANS erarbeitet individuelle Kommunikationslösungen und Werbekampagnen.'
+          abstract: 'Erreiche deine Kundschaft und steigere die Bekanntheit deiner Marke. Wir erarbeiten individuelle Kommunikationslösungen und Werbekampagnen die bewegen.'
         }
       }
     }

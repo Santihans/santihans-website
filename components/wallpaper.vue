@@ -35,10 +35,10 @@ export default {
   i18n: {
     messages: {
       en: {
-        headline: 'We are a digital design and communications agency.'
+        headline: 'We are a premium communications agency for tomorrow’s digital experiences.'
       },
       de: {
-        headline: 'Agentur für Design und Kommunikation.'
+        headline: 'Wir sind eine Premium-Kommunikationsagentur für die digitalen Erlebnisse von morgen.'
       }
     }
   }

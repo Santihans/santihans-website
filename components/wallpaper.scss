@@ -56,22 +56,22 @@
 
     h1 {
       color: #fbfbfb;
-      font-size: 2.4em;
+      font-size: 1.4em;
       letter-spacing: -0.02em;
       line-height: 1.1;
       text-align: left;
 
       @media (min-width: $breakpointMini) {
-        font-size: 2.8em;
+        font-size: 1.8em;
       }
       @media (min-width: $breakpointSmall) {
-        font-size: 3.6em;
+        font-size: 2.5em;
       }
       @media (min-width: 800px) {
-        font-size: 4.3em;
+        font-size: 3.1em;
       }
       @media (min-width: $breakpointMedium) {
-        font-size: 4.6em;
+        font-size: 3.3em;
       }
     }
 
