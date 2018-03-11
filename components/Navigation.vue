@@ -41,7 +41,7 @@
       </ul>
     </nav>
     <language/>
-    <v-btn class="btn-close" fab flat color="secondary" @click="toggleVisibility(false)">
+    <v-btn class="btn-close" fab flat large dark @click="toggleVisibility(false)">
       <v-icon>close</v-icon>
     </v-btn>
   </aside>
@@ -264,8 +264,16 @@ export default {
   .btn-close {
     flex-shrink: 0;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $breakpointMedium) {
+      left: auto;
+      top: 0;
+      transform: none;
+      right: 0;
+    }
   }
 }
 </style>
