@@ -71,10 +71,6 @@ export default {
 <style lang="scss">
 @import '~assets/styles/variables.scss';
 
-$navigationColorLink: $colorPink;
-$navigationColorBg: $colorNight;
-$navigationColorFg: white;
-
 #navigation {
   background-color: $navigationColorBg;
   color: $navigationColorFg;
