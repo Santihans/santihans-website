@@ -43,7 +43,7 @@ $size: 52px;
       animation: scroll-down 0.8s infinite;
       background-color: currentColor;
       height: 100%;
-      width: 1px;
+      width: 2px;
 
       &:nth-child(2) {
         animation-delay: 0.3s;
