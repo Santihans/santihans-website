@@ -71,12 +71,13 @@ export default {
 <style lang="scss">
 @import '~assets/styles/variables.scss';
 
-$colorViolett: $colorPink;
+$navigationColorLink: $colorPink;
+$navigationColorBg: $colorNight;
+$navigationColorFg: white;
+
 #navigation {
-  background-color: $colorViolett;
-  background-color: $colorTurquoise;
-  background-color: $colorNight;
-  color: white;
+  background-color: $navigationColorBg;
+  color: $navigationColorFg;
   display: flex;
   left: 0;
   flex-direction: column;
@@ -128,7 +129,7 @@ $colorViolett: $colorPink;
       transition: 200ms ease-out;
 
       svg {
-        fill: white;
+        fill: $navigationColorFg;
         transition-delay: 200ms;
 
         width: 60px;
@@ -136,13 +137,13 @@ $colorViolett: $colorPink;
 
       &.nuxt-link-exact-active {
         svg {
-          fill: $colorViolett;
+          fill: $navigationColorLink;
         }
       }
 
       @media (any-hover: hover) {
         &:hover svg {
-          fill: $colorViolett;
+          fill: $navigationColorLink;
         }
       }
     }
@@ -152,7 +153,7 @@ $colorViolett: $colorPink;
     list-style-type: none;
 
     a {
-      color: white;
+      color: inherit;
       text-decoration: none;
     }
   }
@@ -202,7 +203,7 @@ $colorViolett: $colorPink;
       position: relative;
 
       &::after {
-        background-color: fade-out($colorViolett, 0.1);
+        background-color: fade-out($navigationColorLink, 0.1);
         content: '';
         height: 12px;
         left: 0;
@@ -256,7 +257,7 @@ $colorViolett: $colorPink;
     transition-delay: 380ms;
 
     a {
-      color: white;
+      color: inherit;
     }
 
     > * {
