@@ -9,11 +9,11 @@
         </div>
       </nuxt-link>
       <ul class="header-navigation-menu">
-        <nuxt-link v-for="(item, index) in main" :key="index" v-if="index !== 0" v-ripple tag="li" :to="localePath(`${item.path}`)">
+        <nuxt-link v-for="(item, index) in main" :key="index" v-if="index !== 0 && index !==2" v-ripple tag="li" :to="localePath(`${item.path}`)">
           <a>{{ $t(`${item.label}`) }}</a>
         </nuxt-link>
       </ul>
-      <v-btn class="hamburger" v-on:click.stop="openNavigation()" fab flat dark role="navigation">
+      <v-btn class="hamburger" @click.stop="openNavigation()" fab flat dark role="navigation">
         <v-icon>menu</v-icon>
       </v-btn>
     </div>
@@ -27,7 +27,7 @@ export default {
     return {
       main: main,
       openNavigation: function () {
-        this.$emit('drawer', true)
+        this.$emit('navigation', true)
       }
     }
   }

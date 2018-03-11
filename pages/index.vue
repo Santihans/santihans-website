@@ -88,7 +88,7 @@ export default {
           abstract: 'We develop corporate idendity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
-          headline: 'Snappy Communication',
+          headline: 'Snappy Communications',
           abstract: 'Spread your message and increase brand awareness! We help you communicate with your target audience by developing new communication assets.'
         }
       },

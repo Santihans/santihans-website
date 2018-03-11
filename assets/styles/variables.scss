@@ -8,7 +8,7 @@ $colorSubtle: #5d5d5d;
 
 $headerHeight: 54px;
 
-$colorBg: white;
+$colorBg: #fbfbfb;
 $colorBgSubtle: #eaeaea;
 $colorFg: #333333;
 
@@ -21,3 +21,7 @@ $colorNight: #212121;
 
 $colorNightGreen: #4d6059;
 $colorNightBlue: #2c7282;
+
+$navigationColorLink: fade-out($colorPink, 0.1);
+$navigationColorBg: $colorNight;
+$navigationColorFg: white;

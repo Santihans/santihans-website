@@ -17,8 +17,7 @@
   }
 
   .parallax-image {
-    background-color: #212121;
-
+    background-color: $colorTurquoise;
     height: 100%;
     position: fixed;
     width: 100%;
@@ -33,7 +32,7 @@
     width: 100%;
 
     .more {
-      bottom: 0;
+      bottom: 50px;
       left: 50%;
       opacity: 0.6;
       position: absolute;
@@ -42,7 +41,7 @@
   }
 
   .wallpaper-content {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,6 +68,7 @@
       }
       @media (min-width: 800px) {
         font-size: 3.1em;
+        width: 78%;
       }
       @media (min-width: $breakpointMedium) {
         font-size: 3.3em;
@@ -78,7 +78,7 @@
     #layout.scrollTop & {
       > * {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-50px);
         transition-delay: 0s;
       }
     }
