@@ -4,15 +4,15 @@ const main = [
     label: 'pages.home',
     icon: 'home'
   },
-  // {
-  //   path: '/services',
-  //   label: 'pages.services',
-  //   icon: 'palette'
-  // },
   {
     path: '/work',
     label: 'pages.work',
     icon: 'style'
+  },
+  {
+    path: '/agency',
+    label: 'pages.agency',
+    icon: 'face'
   },
   {
     path: '/contact',
@@ -22,16 +22,6 @@ const main = [
 ]
 
 const about = [
-  {
-    path: '/agency',
-    label: 'pages.agency',
-    icon: 'face'
-  },
-  // {
-  //   path: '/store',
-  //   label: 'pages.store',
-  //   icon: 'local_shipping'
-  // },
   {
     path: '/terms',
     label: 'pages.terms',

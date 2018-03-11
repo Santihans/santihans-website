@@ -1,87 +1,37 @@
 <template>
   <v-app id="layout" class="scrollTop scrollTopExtendend">
-    <app-header v-on:drawer="toggleNavigation" />
-    <v-navigation-drawer id="navigation" class="pb-0" fixed temporary right v-model="drawer">
-      <nuxt-link class="emblem" :to="localePath('/')">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
-          <title>emblem</title>
-          <rect x="199.62" y="213.56" width="121.69" height="121.69" />
-          <polygon points="127.28 335.25 174.9 335.25 174.9 91.83 127.28 141.22 127.28 335.25" />
-          <polygon points="127.28 17.75 127.28 116.53 174.9 67.14 174.9 17.75 127.28 17.75" />
-          <path d="M65.56,188.48,28.7,213.74V335.25H53.37V300a12.19,12.19,0,0,1,12.19-12.19h0A12.19,12.19,0,0,1,77.75,300v35.28h24.67V213.74Z" />
-        </svg>
-      </nuxt-link>
-      <v-list dense>
-        <v-list-tile nuxt exact v-ripple :to="localePath(`${main[0].path}`)">
-          <v-list-tile-action>
-            <v-icon class="grey--text text--darken-1">{{ main[0].icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>
-            {{ $t(`${main[0].label}`) }}
-          </v-list-tile-title>
-        </v-list-tile>
-        <v-list-tile v-for="(item, i) in main.slice(1)" :key="'a' + i" nuxt v-ripple :to="localePath(`${item.path}`)">
-          <v-list-tile-action>
-            <v-icon class="grey--text text--darken-1">{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>
-            {{ $t(`${item.label}`) }}
-          </v-list-tile-title>
-        </v-list-tile>
-        <v-divider inset></v-divider>
-        <v-list-tile v-for="(item, i) in about" :key="'b' + i" nuxt v-ripple :to="localePath(`${item.path}`)">
-          <v-list-tile-action>
-            <v-icon class="grey--text text--darken-1">{{ item.icon }}</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>
-            {{ $t(`${item.label}`) }}
-          </v-list-tile-title>
-        </v-list-tile>
-        <v-divider inset></v-divider>
-        <v-list-tile v-for="(item, i) in social" :key="'c' + i" nuxt v-ripple :href="item.url" target="_blank" rel="noopener">
-          <v-list-tile-action>
-            <v-icon class="grey--text text--darken-1">launch</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>
-            {{ $t(`${item.label}`) }}
-          </v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-      <app-language/>
-      <v-btn class="btn-close" color="primary" v-on:click="drawer=false">{{ $t('buttons.close') }}</v-btn>
-    </v-navigation-drawer>
+    <app-header v-on:navigation="toggleNavigation" />
+    <navigation v-on:navigation="toggleNavigation" />
     <div id="page">
       <v-content>
         <nuxt />
       </v-content>
     </div>
     <app-footer />
+    <div id="overlay"></div>
   </v-app>
 </template>
 
 <script>
-import { main, about, social } from '~/assets/menus.js'
 import appHeader from '~/components/header.vue'
+import Navigation from '~/components/Navigation.vue'
 import appFooter from '~/components/footer.vue'
-import appLanguage from '~/components/language.vue'
 import _ from 'underscore'
 import $ from 'jquery'
 
 export default {
   components: {
     appHeader,
-    appFooter,
-    appLanguage
+    Navigation,
+    appFooter
   },
   data: () => ({
-    drawer: false,
-    main: main,
-    about: about,
-    social: social
+    navigationVisibility: false,
+    savedScrollTop: 0
   }),
   methods: {
     toggleNavigation: function (state) {
-      this.drawer = state
+      this.navigationVisibility = state
     },
     handleScroll: function () {
       var $self = $(this.$el)
@@ -97,6 +47,30 @@ export default {
   },
   beforeDestroy: function () {
     document.removeEventListener('scroll', this.handleScroll)
+  },
+  watch: {
+    navigationVisibility() {
+      var self = this
+
+      if (this.navigationVisibility) {
+        this.savedScrollTop = window.scrollY
+        $('body').addClass('navigation--visible')
+
+        _.delay(function () {
+          $('body').addClass('noScroll')
+        }, 300)
+
+      } else {
+        $('body').removeClass('noScroll navigation--visible')
+        _.defer(function () {
+          $(document).scrollTop(self.savedScrollTop)
+        })
+      }
+    },
+
+    '$route': function () {
+      this.navigationVisibility = false
+    }
   }
 }
 </script>

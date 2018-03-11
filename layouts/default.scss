@@ -5,7 +5,10 @@
 *::before {
   box-sizing: border-box;
 }
-
+html,
+body {
+  height: 100%;
+}
 body {
   background: #fafafa;
   color: #333;
@@ -21,6 +24,11 @@ body {
   html.wf-active &,
   html.wf-inactive & {
     opacity: 1;
+  }
+
+  &.noScroll {
+    overflow: auto;
+    height: 100%;
   }
 }
 
@@ -50,14 +58,14 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.9em;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.25;
   letter-spacing: -0.02em;
   margin-bottom: 16px;
 
   @media (min-width: $breakpointMini) {
-    font-size: 2.6em;
+    font-size: 2.4em;
   }
 
   @media (min-width: $breakpointSmall) {
@@ -94,55 +102,6 @@ h3 {
 
 #page {
   flex-grow: 1;
-}
-
-#navigation {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-
-  .emblem {
-    display: flex;
-    height: 90px;
-    justify-content: center;
-
-    svg {
-      width: 50px;
-      fill: $colorPink;
-    }
-  }
-
-  .list {
-    flex-grow: 1;
-    flex-shrink: 0;
-  }
-
-  .divider {
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-  }
-
-  .list__tile--active {
-    .icon {
-      color: $colorPink;
-    }
-  }
-
-  .language {
-    align-items: center;
-    display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    padding: 5px 16px;
-
-    > * {
-      padding: 5px;
-    }
-  }
-
-  .btn-close {
-    flex-shrink: 0;
-  }
 }
 
 section {

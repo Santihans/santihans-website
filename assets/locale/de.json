@@ -6,10 +6,8 @@
   },
   "pages": {
     "home": "Home",
-    "services": "Angebot",
     "work": "Arbeiten",
-    "store": "Shop",
-    "contact": "Kontakt",
+    "contact": "Auskunft",
     "agency": "Agentur",
     "terms": "Impressum"
   },
