@@ -90,6 +90,10 @@ export default {
   z-index: 6;
   -webkit-overflow-scrolling: touch;
 
+  @media (min-width: $breakpointMedium) {
+    padding: 80px 120px;
+  }
+
   body.navigation--visible & {
     transform: translateX(0);
 
