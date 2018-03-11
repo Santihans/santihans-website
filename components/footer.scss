@@ -1,4 +1,4 @@
-@import "~assets/styles/variables.scss";
+@import '~assets/styles/variables.scss';
 
 #footer {
   background-color: $colorNight;
@@ -11,9 +11,12 @@
   }
 
   a {
-    color: #AEC4D7;
-    color: lighten($colorPink, 20);
+    color: inherit;
     text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .footer-inner {
@@ -27,19 +30,6 @@
 
       > div {
         margin-bottom: 0;
-      }
-    }
-  }
-
-  .emblem {
-    margin-bottom: 20px;
-    margin-right: 20px;
-
-    svg {
-      width: 90px;
-
-      g {
-        fill: white;
       }
     }
   }

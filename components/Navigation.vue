@@ -199,7 +199,7 @@ export default {
       position: relative;
 
       &::after {
-        background-color: fade-out($navigationColorLink, 0.1);
+        background-color: $navigationColorLink;
         content: '';
         height: 12px;
         left: 0;
