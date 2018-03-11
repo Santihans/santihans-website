@@ -285,13 +285,14 @@ export default {
     position: absolute;
     bottom: 20px;
     left: 50%;
+    margin: 0;
     transform: translateX(-50%);
 
     @media (min-width: $breakpointMedium) {
       left: auto;
-      top: 0;
+      top: 6px;
       transform: none;
-      right: 0;
+      right: 6px;
     }
   }
 }

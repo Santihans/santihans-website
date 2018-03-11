@@ -184,6 +184,7 @@
   background-size: cover;
   border-bottom: 6px solid #cccccc;
   height: 50vw;
+  overflow: hidden;
   position: relative;
 
   @media (min-width: $breakpointSmall) {

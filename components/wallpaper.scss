@@ -18,9 +18,21 @@
 
   .parallax-image {
     background-color: $colorTurquoise;
+    background-image: url('~assets/images/skyline-santihans.svg');
+    background-position: bottom left;
+    background-size: 240%;
     height: 100%;
     position: fixed;
     width: 100%;
+
+    @media (min-width: $breakpointSmall) {
+      background-size: contain;
+    }
+
+    @media (min-width: $breakpointExtraLarge) {
+      background-size: $breakpointExtraLarge;
+      background-position: bottom center;
+    }
   }
 
   .parallax-content {
@@ -36,6 +48,7 @@
       left: 50%;
       opacity: 0.6;
       position: absolute;
+      transform: translateX(-50%);
       z-index: 1;
     }
   }
@@ -128,7 +141,7 @@
     &::after {
       background-image: url('~assets/images/skyline-santihans.svg');
       background-repeat: no-repeat;
-      background-position: bottom center;
+      background-position: bottom left;
       background-size: 200%;
       @media (min-width: $breakpointSmall) {
         background-size: 100%;
