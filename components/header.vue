@@ -9,7 +9,7 @@
         </div>
       </nuxt-link>
       <ul class="header-navigation-menu">
-        <nuxt-link v-for="(item, index) in main" :key="index" v-if="index !== 0" v-ripple tag="li" :to="localePath(`${item.path}`)">
+        <nuxt-link v-for="(item, index) in main" :key="index" v-if="index !== 0 && index !==2" v-ripple tag="li" :to="localePath(`${item.path}`)">
           <a>{{ $t(`${item.label}`) }}</a>
         </nuxt-link>
       </ul>
