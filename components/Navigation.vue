@@ -1,14 +1,16 @@
 <template>
   <aside id="navigation">
     <div class="navigation">
-      <nuxt-link class="emblem" :to="localePath('/')" :title="$t(`${main[0].label}`)">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
-          <rect x="199.62" y="213.56" width="121.69" height="121.69" />
-          <polygon points="127.28 335.25 174.9 335.25 174.9 91.83 127.28 141.22 127.28 335.25" />
-          <polygon points="127.28 17.75 127.28 116.53 174.9 67.14 174.9 17.75 127.28 17.75" />
-          <path d="M65.56,188.48,28.7,213.74V335.25H53.37V300a12.19,12.19,0,0,1,12.19-12.19h0A12.19,12.19,0,0,1,77.75,300v35.28h24.67V213.74Z" />
-        </svg>
-      </nuxt-link>
+      <nav class="home">
+        <nuxt-link class="emblem" :to="localePath('/')" :title="$t(`${main[0].label}`)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
+            <rect x="199.62" y="213.56" width="121.69" height="121.69" />
+            <polygon points="127.28 335.25 174.9 335.25 174.9 91.83 127.28 141.22 127.28 335.25" />
+            <polygon points="127.28 17.75 127.28 116.53 174.9 67.14 174.9 17.75 127.28 17.75" />
+            <path d="M65.56,188.48,28.7,213.74V335.25H53.37V300a12.19,12.19,0,0,1,12.19-12.19h0A12.19,12.19,0,0,1,77.75,300v35.28h24.67V213.74Z" />
+          </svg>
+        </nuxt-link>
+      </nav>
       <nav class="main">
         <ul>
           <li v-for="(item, i) in main.slice(1)" :key="'main-' + i">
@@ -69,9 +71,11 @@ export default {
 <style lang="scss">
 @import '~assets/styles/variables.scss';
 
+$colorViolett: $colorPink;
 #navigation {
   background-color: $colorViolett;
   background-color: $colorTurquoise;
+  background-color: $colorNight;
   color: white;
   display: flex;
   left: 0;
@@ -93,9 +97,9 @@ export default {
     transform: translateX(0);
 
     .emblem,
-    .main a,
-    .social a,
-    .about a,
+    .main li,
+    .social li,
+    .about li,
     .language {
       opacity: 1;
       transform: translateX(0);
@@ -103,39 +107,43 @@ export default {
   }
 
   .emblem,
-  .main a,
-  .social a,
-  .about a,
-  .about a,
+  .main li,
+  .social li,
+  .about li,
+  .about li,
   .language {
     opacity: 0.7;
-    display: inline-block;
+    display: block;
     position: relative;
     transform: translateX(500px);
     transition: 300ms;
   }
 
-  .emblem {
+  .home {
     display: flex;
-    height: 90px;
     justify-content: flex-end;
-    transition-delay: 200ms;
 
-    svg {
-      width: 60px;
-      fill: white;
+    .emblem {
+      height: 90px;
       transition: 200ms ease-out;
-    }
 
-    &.nuxt-link-exact-active {
       svg {
-        fill: $colorViolett;
-      }
-    }
+        fill: white;
+        transition-delay: 200ms;
 
-    @media (any-hover: hover) {
-      &:hover svg {
-        fill: $colorViolett;
+        width: 60px;
+      }
+
+      &.nuxt-link-exact-active {
+        svg {
+          fill: $colorViolett;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover svg {
+          fill: $colorViolett;
+        }
       }
     }
   }
@@ -154,13 +162,13 @@ export default {
     font-weight: bold;
 
     li {
-      &:nth-child(1) a {
+      &:nth-child(1) {
         transition-delay: 220ms;
       }
-      &:nth-child(2) a {
+      &:nth-child(2) {
         transition-delay: 240ms;
       }
-      &:nth-child(3) a {
+      &:nth-child(3) {
         transition-delay: 260ms;
       }
     }
@@ -171,16 +179,16 @@ export default {
     margin-top: 1em;
 
     li {
-      &:nth-child(1) a {
+      &:nth-child(1) {
         transition-delay: 280ms;
       }
-      &:nth-child(2) a {
+      &:nth-child(2) {
         transition-delay: 300ms;
       }
-      &:nth-child(3) a {
+      &:nth-child(3) {
         transition-delay: 320ms;
       }
-      &:nth-child(4) a {
+      &:nth-child(4) {
         transition-delay: 340ms;
       }
     }
@@ -190,6 +198,9 @@ export default {
   .social,
   .about {
     a {
+      display: inline-block;
+      position: relative;
+
       &::after {
         background-color: fade-out($colorViolett, 0.1);
         content: '';
@@ -200,7 +211,7 @@ export default {
         transform: translateY(-10px) scale(0);
         transform-origin: left bottom;
         transition: 200ms ease-out;
-        top: 72%;
+        top: 70%;
         z-index: -1;
       }
 
@@ -231,7 +242,10 @@ export default {
   .about {
     font-size: 1.2em;
     margin-top: 2em;
-    transition-delay: 360ms;
+
+    li {
+      transition-delay: 360ms;
+    }
   }
 
   .language {
