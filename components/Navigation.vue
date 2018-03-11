@@ -80,7 +80,7 @@ export default {
   height: 100%;
   overflow: hidden;
   overflow-y: auto;
-  padding: 8vw 12vw;
+  padding: 8vh 12vw;
   position: fixed;
   top: 0;
   text-align: right;
@@ -125,7 +125,7 @@ export default {
     justify-content: flex-end;
 
     .emblem {
-      height: 90px;
+      margin-bottom: 1em;
       transition: 200ms ease-out;
 
       svg {
@@ -159,8 +159,14 @@ export default {
   }
 
   .main {
-    font-size: 3em;
+    font-size: 2.2em;
     font-weight: bold;
+    line-height: 1.4;
+
+    @media screen and (min-height: 700px) {
+      font-size: 3em;
+      line-height: 1.4;
+    }
 
     li {
       &:nth-child(1) {
@@ -176,8 +182,13 @@ export default {
   }
 
   .social {
-    font-size: 1.5em;
-    margin-top: 1em;
+    font-size: 1.3em;
+    margin-top: 0.7em;
+
+    @media screen and (min-height: 700px) {
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
 
     li {
       &:nth-child(1) {
@@ -242,7 +253,11 @@ export default {
 
   .about {
     font-size: 1.2em;
-    margin-top: 2em;
+    margin-top: 0.7em;
+
+    @media screen and (min-height: 700px) {
+      margin-top: 2em;
+    }
 
     li {
       transition-delay: 360ms;
