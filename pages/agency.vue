@@ -9,18 +9,20 @@
       </div>
     </div>
     <div class="page-content boundaries">
-      <section class="company section--shadow">
-        <h2>{{ $t('company.heading') }}</h2>
-        <p class="abstract">{{ $t('company.abstract') }}</p>
+
+      <section class="mission section--shadow">
+        <h2>{{ $t('mission.heading') }}</h2>
+        <p class="abstract">{{ $t('mission.abstract') }}</p>
       </section>
 
       <section class="team section--shadow">
         <h2>{{ $t('team.heading') }}</h2>
         <p class="abstract">{{ $t('team.abstract') }}</p>
         <v-layout class="members" wrap justify-center>
-          <v-flex xs6 sm3 v-for="(item,i) in team" :key="i">
+          <v-flex xs6 sm4 v-for="(item,i) in team" :key="i">
             <div class="member-thumb">
-              <img :src="'/images/agency/' +item.thumb" alt="Photo">
+              <img v-if="item.thumb" :src="'/images/agency/' +item.thumb" alt="Photo">
+              <img v-else :src="'/images/agency/placeholder.jpg'" alt="Placeholder">
             </div>
             <div class="member-name">
               {{ item.name }}
@@ -29,7 +31,7 @@
               {{ item.position }}
             </div>
             <div class="member-contacts">
-              <div v-for="item in item.contacts">
+              <div v-for="(item, i) in item.contacts" :key="'contact-' + i">
                 <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
               </div>
             </div>
@@ -37,9 +39,9 @@
         </v-layout>
       </section>
 
-      <section class="mission section--shadow">
-        <h2>{{ $t('mission.heading') }}</h2>
-        <p class="abstract">{{ $t('mission.abstract') }}</p>
+      <section class="company section--shadow">
+        <h2>{{ $t('company.heading') }}</h2>
+        <p class="abstract">{{ $t('company.abstract') }}</p>
       </section>
 
       <section class="partner">
@@ -81,11 +83,15 @@ export default {
           contacts: [
             {
               label: 'Email',
-              url: 'mailto:info@santihans.com'
+              url: 'mailto:christophe@santihans.com'
             },
             {
               label: 'Twitter',
               url: 'https://twitter.com/stophecom'
+            },
+            {
+              label: 'Linkedin',
+              url: 'https://www.linkedin.com/in/christophe-schwyzer-19b9193b/'
             }
           ]
         },
@@ -95,18 +101,32 @@ export default {
           name: 'Nicolas',
           contacts: [
             {
+              label: 'Email',
+              url: 'mailto:nicolas@santihans.com'
+            },
+            {
               label: 'Twitter',
               url: 'https://twitter.com/NicolasSchmutz'
+            },
+            {
+              label: 'Linkedin',
+              url: 'https://www.linkedin.com/in/nicolasschmutz/'
             }
           ]
         },
-        // remo: {
-        //   thumb: 'remo.jpg',
-        //   position: this.$t('team.remo.position'),
-        //   name: 'Remo'
-        // },
+        tomasz: {
+          position: this.$t('team.tomasz.position'),
+          name: 'Tomasz',
+          contacts: [
+            {
+              label: 'Linkedin',
+              url: 'https://www.linkedin.com/in/tomaszdurka/'
+            }
+          ]
+
+        },
         david: {
-          thumb: 'david.jpg',
+          // thumb: 'david.jpg',
           position: this.$t('team.david.position'),
           name: 'David'
         },
@@ -147,23 +167,23 @@ export default {
   i18n: {
     messages: {
       en: {
-        company: {
-          heading: 'About us',
+        mission: {
+          heading: 'Mission',
           abstract:
-            'SANTiHANS is a design and communications agency with its main focus on web design, branding and advertising. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
+            "Our mission is to produce appealing, custom-made and thought-through communication solutions for demanding customers. The company's style follows modern design principles, is sometimes out of the ordinary, often minimalistic, but always unique."
         },
         team: {
           heading: 'Team',
           abstract:
-            'Small team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we focus on what matters.',
+            'Small interdisciplinary team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we follow agile product development methodologies and focus on what matters.',
           christophe: {
-            position: 'Founder, Designer'
+            position: 'Dad, Founder, Web designer'
           },
           nicolas: {
-            position: 'Partner, Product manager'
+            position: 'Partner, Product manager, Runner'
           },
-          remo: {
-            position: 'Consultant Strategy'
+          tomasz: {
+            position: 'Consultant (Backend) Web Development'
           },
           david: {
             position: 'Consultant Graphic Design'
@@ -174,37 +194,37 @@ export default {
             contact: 'Apply'
           }
         },
-        mission: {
-          heading: 'Mission',
+        company: {
+          heading: 'About us',
           abstract:
-            "SANTiHANS produces appealing, custom-made and thought-through communication solutions for demanding customers. The company's style follows modern design principles, is sometimes out of the ordinary, often minimalistic, but always unique."
+            'We are a design and communications agency with its main focus on outstanding web experiences.  We attach great importance to user-friendly design and strive for agile, goal-oriented working methods. "Santihans" is an old basel-german expression for "St. Johann", a district in the north of Gross-Basel with a border to France and access to the Rhine.'
         },
         partner: {
           heading: 'Partner',
-          abstract: 'SANTiHANS works together with great companies.'
+          abstract: 'We work together with great companies.'
         },
         buttons: {
           website: 'Website'
         }
       },
       de: {
-        company: {
-          heading: 'Über uns',
+        mission: {
+          heading: 'Mission',
           abstract:
-            'SANTiHANS ist eine Design- und Kommunikationsagentur mit Fokus auf Webdesign, Markengestaltung und Werbung. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  mit Zugang zum Rhein.'
+            'Unsere Mission ist es, ansprechende, massgeschneiderte und durchdachte Kommunikationslösungen für anspruchsvolle Kunden zu entwickeln. Unser Stil folgt modernen Gestaltungsprinzipien, ist manchmal ungewöhnlich, oft minimalistisch, aber immer einzigartig.'
         },
         team: {
           heading: 'Team',
           abstract:
-            'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Dafür konzentrieren wir uns auf das Wesentliche.',
+            'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Stattdessen folgen wir agilen Produktentwicklungsmethoden und konzentrieren uns auf das Wesentliche.',
           christophe: {
-            position: 'Gründer, Designer, Webenthusiast'
+            position: 'Dad, Gründer, Designer, Webenthusiast'
           },
           nicolas: {
-            position: 'Partner, Produktmanager'
+            position: 'Partner, Produktmanager, Läufer'
           },
-          remo: {
-            position: 'Beratung Strategie'
+          tomasz: {
+            position: 'Beratung (Backend-)Webentwicklung'
           },
           david: {
             position: 'Grafikdesign Freelancer'
@@ -215,14 +235,14 @@ export default {
             contact: 'Bewirb dich'
           }
         },
-        mission: {
-          heading: 'Mission',
+        company: {
+          heading: 'Über uns',
           abstract:
-            'SANTiHANS produziert ansprechende, handgemachte und durchdachte Kommunikationslösungen für anspruchsvolle Kunden. SANTiHANS’ Stil folgt modernen Design-Prinzipien, ist manchmal ungewöhnlich, oft minimalistisch, aber immer einzigartig.'
+            'Wir sind eine Design- und Kommunikationsagentur mit Fokus auf aussergewöhnliche Web-Erlebnisse. Wir legen grossen Wert auf benutzerfreundliches Design und streben nach agilen, zielorientierten Arbeitsmethoden. "Santihans" ist ein alter, basel-deutscher Ausdruck für "St. Johann", das nördlichste Quartier in Gross-Basel an der Grenze zu Frankreich  mit Zugang zum Rhein.'
         },
         partner: {
           heading: 'Partner',
-          abstract: 'SANTiHANS arbeitet mit hervorragenden Partnern zusammen.'
+          abstract: 'Wir werden von hervorragenden Partnern unterstützt.'
         },
         buttons: {
           website: 'Webseite'
