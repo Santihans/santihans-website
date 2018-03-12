@@ -39,11 +39,17 @@ export default {
         $self.toggleClass('scrollTop', $(document).scrollTop() < 10)
         $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 8)
       }, 100)()
+    },
+    handleKeyboardShortcuts: function (event) {
+      if (event.key === 'Escape' && this.navigationVisibility) {
+        this.toggleNavigation(false)
+      }
     }
   },
   mounted() {
     this.handleScroll()
     document.addEventListener('scroll', this.handleScroll)
+    document.addEventListener('keyup', this.handleKeyboardShortcuts)
   },
   beforeDestroy: function () {
     document.removeEventListener('scroll', this.handleScroll)
