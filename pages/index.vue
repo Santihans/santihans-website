@@ -81,11 +81,11 @@ export default {
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
-          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We anticipate your customers\'s needs to build better user interfaces.'
+          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We anticipate your customers\' needs to build next-level user interfaces.'
         },
         branding: {
           headline: 'Corporate Identity',
-          abstract: 'We develop corporate idendity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
+          abstract: 'We develop corporate identity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
           headline: 'Snappy Communications',
@@ -97,7 +97,7 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'Wir erstellen anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neuste Technologien und passen uns bestehenden Back-Ends an.'
+          abstract: 'Wir erstellen anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neueste Technologien und passen uns bestehenden Back-Ends an.'
         },
         branding: {
           headline: 'Corporate Identity',

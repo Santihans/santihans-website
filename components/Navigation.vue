@@ -23,9 +23,9 @@
       <nav class="social">
         <ul>
           <li v-for="(item, i) in social" :key="'social-' + i">
-            <nuxt-link v-ripple :to="localePath(`${item.path}`)" :href="item.url" target="_blank" rel="noopener">
+            <a :href="item.url" target="_blank" rel="noopener">
               {{ $t(`${item.label}`) }}
-            </nuxt-link>
+            </a>
           </li>
         </ul>
       </nav>

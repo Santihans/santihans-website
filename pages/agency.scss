@@ -43,7 +43,7 @@
 
         .member-thumb {
           padding: 3vw;
-          @media(min-width: $breakpointSmall) {
+          @media (min-width: $breakpointSmall) {
             padding: 15px;
           }
 
@@ -52,6 +52,7 @@
             border-radius: 50%;
             box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
             padding: 3px;
+            width: 100%;
           }
         }
 
@@ -64,7 +65,8 @@
           font-size: 0.9em;
         }
 
-        .member-contacts {}
+        .member-contacts {
+        }
       }
     }
 
