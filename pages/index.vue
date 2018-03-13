@@ -10,11 +10,8 @@
     <section id="sectionWebDesign" class="service-webdesign boundaries">
       <h2>{{ $t('webdesign.headline') }}</h2>
       <p class="abstract">{{ $t('webdesign.abstract') }}</p>
-      <div>
-        <v-btn large color="primary" :to="localePath('/work')">{{ $t('more') }}</v-btn>
-      </div>
-      <div>
-        <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
+      <div class="service-action">
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
       </div>
     </section>
 
@@ -27,11 +24,8 @@
       </div>
       <h2>{{ $t('branding.headline') }}</h2>
       <p class="abstract">{{ $t('branding.abstract') }}</p>
-      <div>
-        <v-btn large color="primary" :to="localePath('/work')">{{ $t('more') }}</v-btn>
-      </div>
-      <div>
-        <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
+      <div class="service-action">
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
       </div>
     </section>
 
@@ -41,14 +35,14 @@
       <component-zeppelin/>
     </div>
 
-    <section class="advertising boundaries">
+    <section class="service-advertising boundaries">
       <h2>{{ $t('advertising.headline') }}</h2>
       <p class="abstract">{{ $t('advertising.abstract') }}</p>
-      <div>
-        <v-btn large color="primary" :to="localePath('/work')">{{ $t('more') }}</v-btn>
-      </div>
-      <div>
-        <v-btn flat large :to="localePath('/contact')">{{ $t('contact') }}</v-btn>
+      <div class="service-action">
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <div>
+          <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/contact')">{{ $t('contact') }}</nuxt-link>
+        </div>
       </div>
     </section>
   </div>
@@ -77,7 +71,7 @@ export default {
   i18n: {
     messages: {
       en: {
-        more: 'Learn more',
+        more: 'Case Studies',
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
@@ -93,7 +87,7 @@ export default {
         }
       },
       de: {
-        more: 'Mehr Erfahren',
+        more: 'Fallstudien',
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',

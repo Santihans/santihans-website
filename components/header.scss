@@ -93,8 +93,13 @@
   }
 }
 
-.hamburger {
-  .icon {
-    font-size: 30px;
-  }
+.link-menu {
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 2px;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
 }

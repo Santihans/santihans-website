@@ -13,9 +13,9 @@
           <a>{{ $t(`${item.label}`) }}</a>
         </nuxt-link>
       </ul>
-      <v-btn class="hamburger" @click.stop="openNavigation()" fab flat dark role="navigation">
-        <v-icon>menu</v-icon>
-      </v-btn>
+      <a href="javascript:;" class="link-menu" @click.stop="openNavigation()"  role="navigation">
+        Menu
+      </a>
     </div>
   </div>
 </template>

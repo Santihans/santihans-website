@@ -41,9 +41,9 @@
       </ul>
     </nav>
     <language/>
-    <v-btn class="btn-close" fab flat large dark @click="toggleVisibility(false)">
-      <v-icon>close</v-icon>
-    </v-btn>
+    <a href="javascript:;" v-ripple aria-label="Close" class="s-btn-icon btn-close" @click="toggleVisibility(false)">
+      <v-icon dark large>close</v-icon>
+    </a>
   </aside>
 </template>
 
@@ -141,10 +141,8 @@ export default {
         }
       }
 
-      @media (any-hover: hover) {
-        &:hover svg {
-          fill: $navigationColorLink;
-        }
+      &:hover svg {
+        fill: $navigationColorLink;
       }
     }
   }
@@ -233,11 +231,9 @@ export default {
         }
       }
 
-      @media (any-hover: hover) {
-        &:hover {
-          &::after {
-            transform: translateY(0) scale(1);
-          }
+      &:hover {
+        &::after {
+          transform: translateY(0) scale(1);
         }
       }
     }
@@ -281,7 +277,7 @@ export default {
   }
 
   .btn-close {
-    flex-shrink: 0;
+    color: $navigationColorFg;
     position: absolute;
     bottom: 20px;
     left: 50%;
