@@ -19,7 +19,7 @@
         <div class="flex-map">
           <spinner/>
           <iframe src="https://snazzymaps.com/embed/6150"></iframe>
-          <v-btn color="primary" href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</v-btn>
+          <a class="s-btn s-btn-pink" href="https://goo.gl/maps/3CeEYuYSEzR2" target="_blank">Open Google Maps</a>
         </div>
       </div>
     </section>

@@ -243,37 +243,63 @@ section {
   }
 }
 
-.expansion {
-  h4 {
-    margin-top: 1.4em;
-    margin-bottom: 0.4em;
+.s-btn-icon {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  width: 60px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.s-btn {
+  align-items: center;
+  background-color: $colorNight;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: white;
+  display: inline-flex;
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: center;
+  height: 40px;
+  margin: 6px 8px;
+  padding: 2px 26px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateY(0);
+  transition: 200ms;
+
+  &.s-btn-pink {
+    background-color: $colorPink;
   }
 
-  .expansion-custom {
-    background-color: $colorBg;
-    padding-top: 3px;
+  &.s-btn-violett {
+    background-color: $colorViolett;
+  }
 
-    .icon {
-      margin-right: 12px;
+  &.s-btn-turquoise {
+    background-color: $colorTurquoise;
+  }
+
+  &.s-btn-transparent {
+    background-color: transparent;
+    color: $colorFg;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0);
+
+    &:hover {
+      box-shadow: 0 2px 2px rgba(50, 50, 93, 0.2);
     }
+  }
 
-    &.expansion-panel > li {
-      border: 0;
-    }
-
-    .inner {
-      background-color: mix($colorBg, $colorBgSubtle);
-      padding-left: 50px;
-      position: relative;
-
-      &::after {
-        border: 6px solid transparent;
-        border-bottom-color: mix($colorBg, $colorBgSubtle);
-        bottom: 100%;
-        content: '';
-        left: 20px;
-        position: absolute;
-      }
-    }
+  &:hover {
+    box-shadow: 0 2px 2px rgba(50, 50, 93, 0.2),
+      0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
   }
 }

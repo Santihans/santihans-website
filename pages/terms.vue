@@ -38,10 +38,10 @@
       <section>
         <h2>{{ $t('terms') }}</h2>
         <v-dialog class="terms-dialog" v-model="dialog" max-width="600" content-class="dialog-custom terms">
-          <v-btn class="btn-dialog" color="primary" large slot="activator">Allgemeine Geschäftsbedingungen</v-btn>
+          <a href="javascript:;" class="s-btn btn-dialog" slot="activator">Allgemeine Geschäftsbedingungen</a>
           <iframe src="https://docs.google.com/document/d/176JnYi7_ogncO0YzUDNk5IdSM1sGt9xtoSRxu3_uajM/pub"></iframe>
           <div class="dialog-footer">
-            <v-btn color="primary" @click="dialog = false">{{ $t('buttons.close' )}}</v-btn>
+            <a class="s-btn" href="javascript:;" @click="dialog = false">{{ $t('buttons.close' )}}</a>
           </div>
         </v-dialog>
       </section>

@@ -23,15 +23,15 @@
               </nuxt-link>
               <div class="dialog-header" :style="{'background-color': item.details.colorBg}">
                 <div class="boundaries">
-                  <v-btn icon large class="btn-close" @click="[item.dialog=false, $router.push(localePath('/work'))]">
-                    <v-icon>close</v-icon>
-                  </v-btn>
+                  <a href="javascript:;" class="s-btn-icon btn-close" @click="[item.dialog=false, $router.push(localePath('/work'))]">
+                    <v-icon large>close</v-icon>
+                  </a>
                   <h3 :style=" { 'color': item.details.colorFg} ">{{ item.name }}</h3>
                   <p class="abstract " :style="{ 'color': item.details.colorFg} ">
                     {{ $t(`${item.details.abstract}`) }}
                   </p>
                   <div v-if="item.details.hasOwnProperty( 'website') " class="text-xs-center ">
-                    <v-btn flat outline dark :style="{ 'color': item.details.colorFg} " :href="item.details.website " target="_blank ">{{ $t('buttons.visitWebsite') }}</v-btn>
+                    <a class="s-btn" :style="{ 'color': item.details.colorFg} " :href="item.details.website " target="_blank ">{{ $t('buttons.visitWebsite') }}</a>
                   </div>
                 </div>
               </div>
@@ -42,7 +42,7 @@
                     <li v-for="(item, key) in item.details.scope" :key="key">
                       <span v-if="key=='webdesign' ">{{ $t('service.webdesign') }}</span>
                       <span v-if="key=='branding' ">{{ $t('service.branding') }}</span>
-                        <span v-if="key=='advertising' ">{{ $t('service.advertising') }}</span>: {{ $t(`${item}`) }}</li>
+                      <span v-if="key=='advertising' ">{{ $t('service.advertising') }}</span>: {{ $t(`${item}`) }}</li>
                   </ul>
                 </div>
                 <h4>{{ $t('heading.impressions') }}</h4>
@@ -52,7 +52,8 @@
                   <figcaption v-if="$i18n.locale === 'de'" class="image-caption ">{{ image.caption.de }}</figcaption>
                 </figure>
                 <div class="dialog-footer ">
-                  <v-btn color="primary" @click="[item.dialog=false, $router.push(localePath('/work'))]">{{ $t('buttons.close' )}}</v-btn>
+                  <a href="javascript:;" class="s-btn" @click="[item.dialog=false, $router.push(localePath('/work'))]">{{ $t('buttons.close' )}}
+                  </a>
                 </div>
               </div>
             </v-dialog>

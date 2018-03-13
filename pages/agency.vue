@@ -56,7 +56,7 @@
               <div v-if="$i18n.locale === 'en'">{{ item.description.en }}</div>
               <div v-if="$i18n.locale === 'de'">{{ item.description.de }}</div>
             </div>
-            <v-btn flat outline :href="item.web" target="_blank" rel="noopener">{{ $t('buttons.website') }}</v-btn>
+            <a class="s-btn s-btn-transparent" :href="item.web" target="_blank" rel="noopener">{{ $t('buttons.website') }}</a>
           </v-flex>
         </v-layout>
       </section>
