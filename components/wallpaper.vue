@@ -4,7 +4,12 @@
       <div class="parallax-image"></div>
       <div class="parallax-content">
         <div class="wallpaper-content boundaries">
-          <h1>{{ $t('headline') }}</h1>
+          <h1 v-if="$i18n.locale === 'en'">We are a
+            <span>premium</span> communications agency for tomorrow’s digital
+            <span>experiences.</span></h1>
+          <h1 v-if="$i18n.locale === 'de'">Wir sind eine
+            <span>Premium</span>-Kommunikations&shy;agentur für die digitalen
+            <span>Erlebnisse</span> von morgen.</h1>
         </div>
         <div class="more">
           <sroll-indicator />
@@ -26,21 +31,6 @@ export default {
   components: {
     'component-clouds': Clouds,
     srollIndicator
-  },
-  data() {
-    return {
-      calcHeight: '800px'
-    }
-  },
-  i18n: {
-    messages: {
-      en: {
-        headline: 'We are a premium communications agency for tomorrow’s digital experiences.'
-      },
-      de: {
-        headline: 'Wir sind eine Premium-Kommunikationsagentur für die digitalen Erlebnisse von morgen.'
-      }
-    }
   }
 }
 </script>

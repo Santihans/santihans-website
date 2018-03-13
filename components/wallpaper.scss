@@ -17,7 +17,7 @@
   }
 
   .parallax-image {
-    background-color: $colorTurquoise;
+    background-color: $colorNight;
     background-image: url('~assets/images/skyline-santihans.svg');
     background-position: bottom left;
     background-size: 240%;
@@ -44,7 +44,7 @@
     width: 100%;
 
     .more {
-      bottom: 0;
+      bottom: 20px;
       left: 50%;
       opacity: 0.6;
       position: absolute;
@@ -68,16 +68,16 @@
 
     h1 {
       color: #fbfbfb;
-      font-size: 1.4em;
+      font-size: 2em;
       letter-spacing: -0.02em;
       line-height: 1.1;
       text-align: left;
 
       @media (min-width: $breakpointMini) {
-        font-size: 1.8em;
+        font-size: 2.5em;
       }
       @media (min-width: $breakpointSmall) {
-        font-size: 2.5em;
+        font-size: 2.8em;
       }
       @media (min-width: 800px) {
         font-size: 3.1em;
@@ -85,6 +85,25 @@
       }
       @media (min-width: $breakpointMedium) {
         font-size: 3.3em;
+      }
+
+      > span {
+        display: inline-block;
+        position: relative;
+
+        &::after {
+          background-color: $navigationColorLink;
+          content: '';
+          height: 20%;
+          left: 0;
+          width: 100%;
+          position: absolute;
+          transform: translateY(-25%);
+          transform-origin: left bottom;
+          transition: 200ms ease-out;
+          bottom: 0;
+          z-index: -1;
+        }
       }
     }
 
