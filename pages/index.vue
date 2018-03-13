@@ -71,7 +71,7 @@ export default {
   i18n: {
     messages: {
       en: {
-        more: 'Case Studies',
+        more: 'Showcase',
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
@@ -87,7 +87,7 @@ export default {
         }
       },
       de: {
-        more: 'Fallstudien',
+        more: 'Arbeiten',
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
