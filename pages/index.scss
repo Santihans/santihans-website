@@ -140,17 +140,17 @@
       width: 50px;
 
       @media (min-width: $breakpointMini) {
-        top: -60px;
+        top: -70px;
         width: 60px;
       }
 
       @media (min-width: $breakpointSmall) {
-        top: -90px;
-        width: 70px;
+        top: -80px;
+        width: 80px;
       }
 
       @media (min-width: $breakpointMedium) {
-        top: -60px;
+        top: -130px;
       }
     }
   }
