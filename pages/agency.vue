@@ -151,12 +151,24 @@ export default {
             de: 'Digitale Kurse, Web- und Mobile-Software.',
             en: 'Full-service agency focusing on learn apps.'
           }
+        },
+        {
+          logo: 'atticode.svg',
+          name: 'atticode',
+          web: 'http://atticode.com',
+          description: {
+            de: 'Massgeschneiderte Softwarelösungen.',
+            en: 'Tailored software solutions.'
+          }
         }
         // {
         //   logo: 'taktwerk.svg',
         //   name: 'taktwerk',
         //   web: 'http://taktwerk.ch',
-        //   description: 'Digitalisierung für KMU aus Industrie und Bau.'
+        //   description: {
+        //     de: 'Digitalisierung für KMU aus Industrie und Bau.',
+        //     en: 'Digitisation for SMEs'
+        //   }
         // }
       ]
     }
@@ -177,7 +189,7 @@ export default {
           abstract:
             'Small interdisciplinary team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we follow agile product development methodologies and focus on what matters.',
           christophe: {
-            position: 'Dad, Founder, Web designer'
+            position: 'Dad, Founder, Art Director'
           },
           nicolas: {
             position: 'Partner, Product manager, Runner'
@@ -218,7 +230,7 @@ export default {
           abstract:
             'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Stattdessen folgen wir agilen Produktentwicklungsmethoden und konzentrieren uns auf das Wesentliche.',
           christophe: {
-            position: 'Dad, Gründer, Designer, Webenthusiast'
+            position: 'Papa, Gründer, Art Director'
           },
           nicolas: {
             position: 'Partner, Produktmanager, Läufer'
