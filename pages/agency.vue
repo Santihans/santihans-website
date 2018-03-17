@@ -177,7 +177,7 @@ export default {
           abstract:
             'Small interdisciplinary team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we follow agile product development methodologies and focus on what matters.',
           christophe: {
-            position: 'Dad, Founder, Web designer'
+            position: 'Dad, Founder, Art Director'
           },
           nicolas: {
             position: 'Partner, Product manager, Runner'
@@ -218,7 +218,7 @@ export default {
           abstract:
             'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Stattdessen folgen wir agilen Produktentwicklungsmethoden und konzentrieren uns auf das Wesentliche.',
           christophe: {
-            position: 'Dad, Gründer, Designer, Webenthusiast'
+            position: 'Papa, Gründer, Art Director'
           },
           nicolas: {
             position: 'Partner, Produktmanager, Läufer'
