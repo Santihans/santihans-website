@@ -1,0 +1,49 @@
+query Projects {
+  projects: allProjects {
+    headerImage {
+      id
+      name
+      size
+      url
+      mime
+    }
+    abstractEn
+    abstractDe
+    bodyEn
+    bodyDe
+    introEn
+    introDe
+    introImage {
+      id
+      name
+      size
+      url
+      mime
+    }
+    website
+    client
+    title
+    date
+    tags
+    order
+    slideshow_1 {
+      id
+      name
+      size
+      url
+      mime
+    }
+    slideshow_2 {
+      id
+      name
+      size
+      url
+      mime
+    }
+
+    _meta {
+      id
+      name
+    }
+  }
+}
