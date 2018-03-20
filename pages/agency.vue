@@ -151,12 +151,24 @@ export default {
             de: 'Digitale Kurse, Web- und Mobile-Software.',
             en: 'Full-service agency focusing on learn apps.'
           }
+        },
+        {
+          logo: 'atticode.svg',
+          name: 'atticode',
+          web: 'http://atticode.com',
+          description: {
+            de: 'Massgeschneiderte Softwarelösungen.',
+            en: 'Tailored software solutions.'
+          }
         }
         // {
         //   logo: 'taktwerk.svg',
         //   name: 'taktwerk',
         //   web: 'http://taktwerk.ch',
-        //   description: 'Digitalisierung für KMU aus Industrie und Bau.'
+        //   description: {
+        //     de: 'Digitalisierung für KMU aus Industrie und Bau.',
+        //     en: 'Digitisation for SMEs'
+        //   }
         // }
       ]
     }
