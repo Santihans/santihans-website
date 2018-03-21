@@ -49,6 +49,11 @@ export default {
       title: this.$t('pages.work')
     }
   },
+  data() {
+    return {
+      projects: []
+    }
+  },
   apollo: {
     projects: {
       query: projectsQuery,
