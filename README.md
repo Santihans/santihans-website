@@ -1,5 +1,5 @@
 
-# santihans-website [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/santihans/santihans)
+# santihans-website [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/santihans/santihans) [![Build Status](https://travis-ci.org/Santihans/santihans-website.svg?branch=master)](https://travis-ci.org/Santihans/santihans-website)
 
 > Static website for santihans.com
 
