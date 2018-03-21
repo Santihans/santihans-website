@@ -78,14 +78,15 @@ export default {
   },
   computed: {
     project() {
-      const id = this.$route.params.id
-      return this.projects.find(a => a._meta.id === id) || {}
+      const slug = this.$route.params.project
+      return this.projects.find(a => a.urlSlug === slug) || {}
     }
   },
   data() {
     return {
       projects: []
     }
+
   },
   head() {
     return {
@@ -134,5 +135,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '_id.scss';
+@import '_project.scss';
 </style>

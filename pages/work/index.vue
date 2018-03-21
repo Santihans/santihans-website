@@ -26,7 +26,7 @@
             </div>
 
             <tags :tags="item.tags" />
-            <nuxt-link v-ripple class="s-btn s-btn-pink" alt="Preview" :to="{ path: localePath('/work/' + `${item._meta.id}`)}">{{ $t('buttons.more') }} </nuxt-link>
+            <nuxt-link v-ripple class="s-btn s-btn-pink" alt="Preview" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}">{{ $t('buttons.more') }} </nuxt-link>
           </div>
         </section>
       </div>
