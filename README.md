@@ -1,4 +1,5 @@
-# santihans-website
+
+# santihans-website [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/santihans/santihans)
 
 > Static website for santihans.com
 
