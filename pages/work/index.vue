@@ -12,7 +12,7 @@
       </section>
 
       <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item.order">
-        <section class="work" :style="'background-image:url('+ item.headerImage.url +');'">
+        <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
           <div class="work-inner">
 
             <h2>{{ item.title }}</h2>
@@ -69,7 +69,7 @@ export default {
       en: {
         work: {
           heading: 'Less, but better',
-          abstract: '…probably best describes how we work. Not only does it apply to our vision of great design, but it also stands for our company spirit. Our small multidisciplinary team, together with our excellent partners, create fewer, but better results.'
+          abstract: 'Corporate communication is all about sending the right message to the right audience. Your brand has to tell a story. We help you tell your story.'
         },
         heading: {
           scope: 'Project Scope',
