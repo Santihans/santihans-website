@@ -30,7 +30,6 @@
           <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>&nbsp;|&nbsp;
           <tags aria-label="Tags" title="Tags" :tags="project.tags" />
         </div>
-
         <p class="intro">
           <template v-if="$i18n.locale === 'en'">
             {{ project.introEn }}
@@ -44,6 +43,7 @@
         </figure>
         <Markdown class="markdown" :markdown="project.bodyEn" v-if="$i18n.locale === 'en'" />
         <Markdown class="markdown" :markdown="project.bodyDe" v-if="$i18n.locale === 'de'" />
+
       </section>
       <div class="boundaries boundaries--xl">
         <no-ssr>
@@ -56,6 +56,7 @@
           </carousel>
         </no-ssr>
       </div>
+
     </div>
   </div>
 </template>

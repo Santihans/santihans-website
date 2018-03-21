@@ -25,7 +25,6 @@ query Projects {
     title
     date
     tags
-    order
     slideshow_1 {
       id
       name

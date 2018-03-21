@@ -11,7 +11,7 @@
         <p class="abstract">{{ $t('work.abstract') }}</p>
       </section>
 
-      <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item.order">
+      <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
         <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
           <div class="work-inner">
 
@@ -59,7 +59,7 @@ export default {
     sortedProjects: function (items) {
       const sortable = Object.keys(items).map(i => items[i])
       sortable.sort(function (a, b) {
-        return a.order - b.order
+        return b.date - a.date
       })
       return sortable
     }
