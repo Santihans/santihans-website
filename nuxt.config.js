@@ -153,8 +153,7 @@ module.exports = {
         languages: ['en', 'de']
       }
     ],
-    '@nuxtjs/apollo',
-    '@nuxtjs/font-awesome'
+    '@nuxtjs/apollo'
   ],
 
   apollo: {
