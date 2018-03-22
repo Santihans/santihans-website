@@ -1,3 +1,4 @@
+const { createApolloFetch } = require('apollo-fetch')
 const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
 
 if (env === 'development') {
@@ -5,9 +6,6 @@ if (env === 'development') {
 }
 
 module.exports = {
-  /*
-   ** Headers of the page
-   */
   env: {
     TIPE_API_KEY: process.env.TIPE_API_KEY,
     TIPE_ID: process.env.TIPE_ID
@@ -159,22 +157,59 @@ module.exports = {
     '@nuxtjs/apollo',
     '@nuxtjs/font-awesome'
   ],
+
   apollo: {
     clientConfigs: {
       default: '~/apollo/default.js'
     }
   },
+
   router: {
-    routes: [
-      {
-        name: 'work-id',
-        path: '/work/:id?',
-        component: 'pages/work/_id.vue'
-      }
-    ]
+    // extendRoutes(routes, resolve) {
+    //   const uri = 'https://api.tipe.io/graphql'
+    //   const apolloFetch = createApolloFetch({ uri })
+    //   apolloFetch.use(({ request, options }, next) => {
+    //     if (!options.headers) {
+    //       options.headers = {
+    //         'Content-Type': 'application/json',
+    //         Authorization: process.env.TIPE_API_KEY,
+    //         'Tipe-Id': process.env.TIPE_ID
+    //       }
+    //     }
+    //     next()
+    //   })
+    //   const query = `
+    //     query Projects {
+    //       projects: allProjects {
+    //         urlSlug
+    //       }
+    //     }
+    //   `
+    //   apolloFetch({
+    //     query
+    //   }) // all apolloFetch arguments are optional
+    //     .then(result => {
+    //       const { data } = result
+    //       const dynamicRoutes = data.projects.map(project => project.urlSlug)
+    //       dynamicRoutes.forEach(element => {
+    //         routes.push({
+    //           name: `/work-${element}`,
+    //           path: `/work/${element}`,
+    //           component: resolve(__dirname, 'pages/work/_project.vue')
+    //         })
+    //       })
+    //       console.log(routes)
+    //       // return routes
+    //     })
+    //     .catch(error => {
+    //       console.log('got error')
+    //       console.log(error)
+    //     })
+    // }
   },
+
   generate: {
-    routes: ['/work/madeinbasel', '/work/denkmal']
+    fallback: true
   },
   /*
    ** Build configuration
