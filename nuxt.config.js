@@ -1,4 +1,3 @@
-const { createApolloFetch } = require('apollo-fetch')
 const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
 
 if (env === 'development') {
@@ -162,50 +161,6 @@ module.exports = {
     clientConfigs: {
       default: '~/apollo/default.js'
     }
-  },
-
-  router: {
-    // extendRoutes(routes, resolve) {
-    //   const uri = 'https://api.tipe.io/graphql'
-    //   const apolloFetch = createApolloFetch({ uri })
-    //   apolloFetch.use(({ request, options }, next) => {
-    //     if (!options.headers) {
-    //       options.headers = {
-    //         'Content-Type': 'application/json',
-    //         Authorization: process.env.TIPE_API_KEY,
-    //         'Tipe-Id': process.env.TIPE_ID
-    //       }
-    //     }
-    //     next()
-    //   })
-    //   const query = `
-    //     query Projects {
-    //       projects: allProjects {
-    //         urlSlug
-    //       }
-    //     }
-    //   `
-    //   apolloFetch({
-    //     query
-    //   }) // all apolloFetch arguments are optional
-    //     .then(result => {
-    //       const { data } = result
-    //       const dynamicRoutes = data.projects.map(project => project.urlSlug)
-    //       dynamicRoutes.forEach(element => {
-    //         routes.push({
-    //           name: `/work-${element}`,
-    //           path: `/work/${element}`,
-    //           component: resolve(__dirname, 'pages/work/_project.vue')
-    //         })
-    //       })
-    //       console.log(routes)
-    //       // return routes
-    //     })
-    //     .catch(error => {
-    //       console.log('got error')
-    //       console.log(error)
-    //     })
-    // }
   },
 
   generate: {
