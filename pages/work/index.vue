@@ -73,8 +73,8 @@ export default {
     messages: {
       en: {
         work: {
-          heading: 'Less, but better',
-          abstract: 'Corporate communication is all about sending the right message to the right audience. Your brand has to tell a story. We help you tell your story.'
+          heading: 'Recent Highlights',
+          abstract: 'Our cross-functional, agile team creates custom communications solutions for demanding clients in a variety of fields.'
         },
         heading: {
           scope: 'Project Scope',
@@ -83,8 +83,8 @@ export default {
       },
       de: {
         work: {
-          heading: 'Lorem i',
-          abstract: 'sdf'
+          heading: 'Aktuelle Highlights',
+          abstract: 'Unser funktionsübergreifendes, agiles Team entwickelt massgeschneiderte Kommunikationslösungen für anspruchsvolle Kunden aus den unterschiedlichsten Bereichen.'
         },
         heading: {
           scope: 'Projektumfang',
