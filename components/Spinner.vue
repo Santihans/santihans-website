@@ -55,7 +55,7 @@ export default {
         status: {
           slow: 'Ladevorgang läuft.',
           slower: 'Ladevorgang dauert ungewöhnlich lange.',
-          reload: 'Versuche die Seite neu zu laden.'
+          reload: 'Versuche die Seite neu zu laden!'
         }
       }
     }
