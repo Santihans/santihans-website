@@ -47,7 +47,7 @@ export default {
         status: {
           slow: 'Still working on it.',
           slower: 'Something seems off…',
-          reload: 'Try reloading the page.'
+          reload: 'Try reloading the page!'
         }
 
       },
