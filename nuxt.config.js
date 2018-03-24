@@ -1,7 +1,14 @@
+const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
+
+if (env === 'development') {
+  require('dotenv').config()
+}
+
 module.exports = {
-  /*
-   ** Headers of the page
-   */
+  env: {
+    TIPE_API_KEY: process.env.TIPE_API_KEY,
+    TIPE_ID: process.env.TIPE_ID
+  },
   head: {
     title: 'SANTiHANS',
     titleTemplate: '%s - SANTiHANS',
@@ -110,14 +117,13 @@ module.exports = {
   loading: {
     color: '#F96673'
   },
-
   css: [
     {
-      src: '~assets/styles/app.styl',
+      src: '@/assets/styles/app.styl',
       lang: 'styl'
     },
     {
-      src: '~assets/styles/variables.scss',
+      src: '@/assets/styles/variables.scss',
       lang: 'scss'
     }
   ],
@@ -146,22 +152,43 @@ module.exports = {
       {
         languages: ['en', 'de']
       }
-    ]
+    ],
+    '@nuxtjs/apollo'
   ],
 
+  apollo: {
+    clientConfigs: {
+      default: '~/apollo/default.js'
+    }
+  },
+
+  generate: {
+    fallback: true
+  },
   /*
    ** Build configuration
    */
   build: {
     // analyze: true,
-    vendor: ['jquery', 'vuetify', 'underscore', 'vue-smooth-scroll'],
+    vendor: [
+      'jquery',
+      '~/plugins/vuetify.js',
+      'underscore',
+      'vue-smooth-scroll'
+    ],
+    extractCSS: true,
     /*
-     ** Run ESLINT on save
-     */
-    extend(config, { isClient }) {
-      config.devtool = false
-
-      if (isClient) {
+    ** Run ESLint on save
+    */
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          warnings: false
+        }
+      }
+    },
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

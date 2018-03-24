@@ -25,6 +25,25 @@
     position: fixed;
     width: 100%;
 
+    > video {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.8);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
     @media (min-width: $breakpointSmall) {
       background-size: contain;
     }
@@ -110,8 +129,12 @@
     #layout.scrollTop & {
       > * {
         opacity: 1;
-        transform: translateY(-50px);
+        transform: translateY(0);
         transition-delay: 0s;
+
+        @media (min-width: $breakpointSmall) {
+          transform: translateY(30%);
+        }
       }
     }
   }

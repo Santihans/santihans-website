@@ -3,9 +3,7 @@
     <app-header v-on:navigation="toggleNavigation" />
     <navigation v-on:navigation="toggleNavigation" />
     <div id="page">
-      <v-content>
-        <nuxt />
-      </v-content>
+      <nuxt />
     </div>
     <app-footer />
     <div id="overlay"></div>

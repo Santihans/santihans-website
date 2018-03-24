@@ -14,7 +14,6 @@ body {
   color: #333;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  font-smoothing: auto;
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
@@ -39,8 +38,7 @@ svg {
 }
 
 h1,
-h2,
-h3 {
+h2 {
   text-align: center;
 }
 
@@ -87,11 +85,24 @@ h2 {
 
 h3 {
   font-weight: bold;
+  font-size: 1.5em;
+
+  @media (min-width: $breakpointMini) {
+    font-size: 2em;
+  }
+
+  @media (min-width: $breakpointSmall) {
+    font-size: 2.4em;
+  }
 
   + .abstract {
     font-size: 1.1em;
     margin-bottom: 2em;
   }
+}
+
+h4 {
+  font-size: 1.3em;
 }
 
 #layout {
@@ -102,6 +113,8 @@ h3 {
 
 #page {
   flex-grow: 1;
+  min-height: 70vh;
+  position: relative;
 }
 
 section {
@@ -151,6 +164,19 @@ section {
   padding-left: 4vw;
   padding-right: 4vw;
   width: $maxPageSize;
+
+  &.boundaries--l {
+    padding-left: 0;
+    padding-right: 0;
+    width: $breakpointLarge;
+  }
+
+  &.boundaries--xl {
+    padding-left: 0;
+    padding-right: 0;
+    width: $breakpointExtraLarge;
+  }
+
   @media (min-width: $breakpointMedium) {
     padding-left: 12px;
     padding-right: 12px;
@@ -302,4 +328,25 @@ section {
       0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     transform: translateY(-1px);
   }
+}
+
+.markdown {
+  h4 {
+    margin-top: 1.5em;
+  }
+
+  ul {
+    padding-left: 40px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
 }

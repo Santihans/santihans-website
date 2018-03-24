@@ -11,7 +11,6 @@
         <v-text-field name="email" :label="$t('form.email')" v-model="email" required :rules="[rules.required, rules.email]"></v-text-field>
         <v-text-field name="message" :label="$t('form.message')" counter v-model="message" max="400" multi-line required :rules="[rules.required]"></v-text-field>
         <div class="form-action">
-          <slot></slot>
           <button type="submit" class="s-btn">{{ $t('form.submit') }}</button>
         </div>
       </form>

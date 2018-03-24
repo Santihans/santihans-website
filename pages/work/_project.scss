@@ -1,0 +1,232 @@
+@import '~assets/styles/variables.scss';
+
+#showcase {
+  &::after {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    );
+    top: 0;
+    content: '';
+    height: $headerHeight + 70px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .fixed-header {
+    height: 100vh;
+  }
+
+  .showcase-header {
+    align-items: flex-end;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    margin-bottom: 3em;
+
+    &::after {
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0)
+      );
+      bottom: 0;
+      content: '';
+      height: 70%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .more {
+      bottom: 0;
+      left: 50%;
+      opacity: 0.8;
+      position: absolute;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .inner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      opacity: 1;
+      padding: 10vh 12px 100px;
+      position: relative;
+      max-width: $maxPageSize;
+      transform: translateY(0);
+      transition: 500ms ease-out;
+      z-index: 1;
+
+      #layout:not(.scrollTop) & {
+        opacity: 0;
+        transform: translateY(100%);
+      }
+
+      @media (min-width: $breakpointSmall) {
+        width: 80%;
+      }
+
+      .label {
+        background-color: $colorPink;
+        color: white;
+        display: inline-block;
+        font-size: 0.8em;
+        font-weight: bold;
+        padding: 2px 6px;
+        margin-left: 0.2em;
+        text-transform: uppercase;
+
+        @media (min-width: $breakpointSmall) {
+          font-size: 0.9em;
+          margin-left: 0.4em;
+          padding: 4px 8px;
+        }
+      }
+
+      h1 {
+        font-size: 2.8em;
+        text-align: left;
+
+        @media (min-width: $breakpointSmall) {
+          font-size: 4em;
+          line-height: 1.2;
+        }
+
+        @media (min-width: $breakpointMedium) {
+          font-size: 6em;
+        }
+      }
+
+      .abstract {
+        font-size: 1.3em;
+
+        @media (min-width: $breakpointSmall) {
+          font-size: 1.5em;
+        }
+
+        @media (min-width: $breakpointMedium) {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+
+  .page-content {
+    background-color: $colorBg;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  .showcase-details {
+    position: relative;
+    padding-top: 5em;
+
+    h2 {
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    p {
+      font-size: 1em;
+
+      @media screen and (min-width: $breakpointSmall) {
+        font-size: 1.1em;
+      }
+    }
+
+    .actions {
+      display: flex;
+      left: 0;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .s-btn {
+        margin: 0;
+        transition: transform 350ms ease-out;
+        transform-origin: bottom center;
+        transform: translateY(0);
+        will-change: transform;
+
+        #layout:not(.scrollTop) & {
+          transform: translateY(-50%);
+          transition-delay: 200ms;
+        }
+
+        @media screen and (min-width: $breakpointSmall) {
+          height: 60px;
+          padding: 4px 40px;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .meta {
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1em;
+      display: flex;
+      margin-bottom: 2em;
+      padding: 3px;
+
+      @media screen and (min-width: $breakpointSmall) {
+        font-size: 1.2em;
+      }
+    }
+
+    .intro {
+      font-weight: bold;
+      margin-bottom: 1.2em;
+    }
+
+    .intro-image {
+      margin: 2em 0;
+    }
+  }
+
+  .slide {
+    display: flex;
+    max-height: 70vh;
+    justify-content: center;
+    position: relative;
+
+    > img {
+      object-fit: contain;
+    }
+  }
+
+  .VueCarousel-pagination {
+    bottom: 0;
+    position: absolute;
+  }
+
+  .showcase-footer {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .showcase-contact {
+    background-color: $colorPink;
+    color: white;
+    margin-top: 3em;
+
+    .call {
+      font-size: 2em;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 1em;
+    }
+  }
+}
