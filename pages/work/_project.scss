@@ -196,18 +196,36 @@
 
   .slide {
     display: flex;
-    height: 70vh;
+    max-height: 70vh;
     justify-content: center;
     position: relative;
 
     > img {
-      object-fit: cover;
-      object-position: 50% 40%;
+      object-fit: contain;
     }
   }
 
   .VueCarousel-pagination {
     bottom: 0;
     position: absolute;
+  }
+
+  .showcase-footer {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .showcase-contact {
+    background-color: $colorPink;
+    color: white;
+    margin-top: 3em;
+
+    .call {
+      font-size: 2em;
+      font-weight: normal;
+      margin-bottom: 1em;
+    }
   }
 }

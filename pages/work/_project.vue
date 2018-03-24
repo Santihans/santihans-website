@@ -44,7 +44,6 @@
           </figure>
           <Markdown class="markdown" :markdown="project.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="project.bodyDe" v-if="$i18n.locale === 'de'" />
-
         </section>
         <div class="boundaries boundaries--xl">
           <no-ssr>
@@ -57,6 +56,22 @@
             </carousel>
           </no-ssr>
         </div>
+        <section class="showcase-footer boundaries">
+          ©
+          <span :aria-label="$t('year')" :title="$t('year')">{{ getYear(project.date) }}</span>&nbsp;|&nbsp; SANTiHANS +
+          <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>
+        </section>
+        <section class="showcase-contact text-center">
+          <div class="boundaries">
+            <div class="call">{{ $t('teaser') }}</div>
+            <div>
+              <nuxt-link v-ripple class="s-btn s-btn" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
+              <div>
+                <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <spinner v-else />
@@ -127,11 +142,13 @@ export default {
     messages: {
       en: {
         client: 'Client',
-        year: 'Year'
+        year: 'Year',
+        teaser: 'Interested in working with us?'
       },
       de: {
         client: 'Kunde',
-        year: 'Jahr'
+        year: 'Jahr',
+        teaser: 'Interessiert an einer Zusammenarbeit mit uns?'
       }
     }
   }
