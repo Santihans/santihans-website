@@ -63,10 +63,11 @@ export default {
   methods: {
     sortedProjects: function (items) {
       const sortable = Object.keys(items).map(i => items[i])
-      sortable.sort(function (a, b) {
+      const published = sortable.filter(item => item._meta.published === true)
+      published.sort(function (a, b) {
         return b.date - a.date
       })
-      return sortable
+      return published
     }
   },
   i18n: {
