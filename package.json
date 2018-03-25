@@ -44,7 +44,7 @@
     "vue-i18n": "^7.0.5",
     "vue-markdown": "^2.2.4",
     "vue-smooth-scroll": "^1.0.13",
-    "vuetify": "^1.0.5",
+    "vuetify": "^1.0.10",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
@@ -53,6 +53,7 @@
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
+    "babel-plugin-transform-imports": "^1.4.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^3.1.1",
     "eslint-plugin-import": "^2.7.0",
@@ -65,6 +66,6 @@
     "sass-loader": "^6.0.7",
     "scss-loader": "0.0.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "stylus-loader": "^3.0.2"
   }
 }
