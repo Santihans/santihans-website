@@ -14,23 +14,25 @@
         <spinner />
       </section>
       <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
-        <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
-          <div class="work-inner">
+        <nuxt-link class="link-box" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
+          <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
+            <div class="work-inner">
 
-            <h2>{{ item.title }}</h2>
-            <div class="abstract">
-              <template v-if="$i18n.locale === 'en'">
-                {{ item.abstractEn }}
-              </template>
-              <template v-if="$i18n.locale === 'de'">
-                {{ item.abstractDe }}
-              </template>
+              <h2>{{ item.title }}</h2>
+              <div class="abstract">
+                <template v-if="$i18n.locale === 'en'">
+                  {{ item.abstractEn }}
+                </template>
+                <template v-if="$i18n.locale === 'de'">
+                  {{ item.abstractDe }}
+                </template>
+              </div>
+
+              <tags :tags="item.tags" />
+              <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
             </div>
-
-            <tags :tags="item.tags" />
-            <nuxt-link v-ripple class="s-btn s-btn-pink" alt="Preview" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}">{{ $t('buttons.more') }} </nuxt-link>
-          </div>
-        </section>
+          </section>
+        </nuxt-link>
       </div>
 
     </div>
