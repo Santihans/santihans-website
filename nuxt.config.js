@@ -154,7 +154,8 @@ module.exports = {
         languages: ['en', 'de']
       }
     ],
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/axios'
   ],
 
   apollo: {
@@ -194,7 +195,7 @@ module.exports = {
           'transform-imports',
           {
             vuetify: {
-              transform: 'vuetify/es5/components/${member}',
+              transform: 'vuetify/es5/components/${member}', // eslint-disable-line no-template-curly-in-string
               preventFullImport: true
             }
           }
