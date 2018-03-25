@@ -13,97 +13,7 @@ module.exports = {
   head: {
     title: 'SANTiHANS',
     titleTemplate: '%s - SANTiHANS',
-    meta: [
-      {
-        charset: 'utf-8'
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'We are a digital design and communications agency. 😇'
-      },
-      {
-        hid: 'keywords',
-        name: 'keywords',
-        content:
-          'SANTiHANS, Web Design, Digital Design, Design, Branding, Art, Communication, Identity, Advertising, Vision, St. Johann, 4056, Basel, Switzerland, 😇'
-      },
-      {
-        name: 'mobile-web-app-capable',
-        content: 'yes'
-      },
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes'
-      },
-      {
-        name: 'application-name',
-        content: 'SANTiHANS'
-      },
-      {
-        name: 'apple-mobile-web-app-title',
-        content: 'SANTiHANS'
-      },
-      {
-        hid: 'og:type',
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://www.santihans.com'
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'https://www.santihans.com/og-image.png'
-      },
-      {
-        hid: 'og:title',
-        property: 'og:title',
-        content: 'SANTiHANS'
-      },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'We are a digital design and communications agency. 😇'
-      },
-      {
-        hid: 'og:site_name',
-        property: 'og:site_name',
-        content: 'SANTiHANS'
-      },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary'
-      },
-      {
-        hid: 'twitter:site',
-        name: 'twitter:site',
-        content: '@santihans4056'
-      },
-      {
-        hid: 'twitter:creator',
-        name: 'twitter:creator',
-        content: '@stophecom'
-      }
-    ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      {
-        rel: 'apple-touch-icon',
-        href: '/apple-touch-icon.png'
-      },
       {
         rel: 'stylesheet',
         type: 'text/css',
@@ -111,6 +21,21 @@ module.exports = {
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
+  },
+  meta: {
+    name: 'SANTiHANS',
+    description: 'We are a digital design and communications agency. 😇',
+    theme_color: '#f96673',
+    ogHost: 'https://www.santihans.com',
+    ogImage: { path: '/og-image.png' },
+    twitterCard: 'summary',
+    twitterSite: '@santihans4056',
+    twitterCreator: '@stophecom'
+  },
+  manifest: {
+    name: 'SANTiHANS',
+    short_name: 'SANTiHANS',
+    description: 'We are a digital design and communications agency. 😇'
   },
   /*
    ** Customize the progress-bar color
@@ -155,7 +80,8 @@ module.exports = {
       }
     ],
     '@nuxtjs/apollo',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    ['@nuxtjs/pwa']
   ],
 
   apollo: {
@@ -171,7 +97,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    analyze: true,
+    // analyze: true,
     vendor: ['~/plugins/vuetify.js', 'underscore'],
     extractCSS: true,
     /*
