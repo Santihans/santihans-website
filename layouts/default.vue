@@ -15,7 +15,6 @@ import appHeader from '~/components/header.vue'
 import Navigation from '~/components/Navigation.vue'
 import appFooter from '~/components/footer.vue'
 import _ from 'underscore'
-import $ from 'jquery'
 
 export default {
   components: {
@@ -32,10 +31,10 @@ export default {
       this.navigationVisibility = state
     },
     handleScroll: function () {
-      var $self = $(this.$el)
+      var self = this.$el
       _.throttle(function () {
-        $self.toggleClass('scrollTop', $(document).scrollTop() < 10)
-        $self.toggleClass('scrollTopExtendend', $(document).scrollTop() < window.screen.height / 8)
+        self.classList.toggle('scrollTop', window.scrollY < 10)
+        self.classList.toggle('scrollTopExtendend', window.scrollY < window.screen.height / 8)
       }, 100)()
     },
     handleKeyboardShortcuts: function (event) {
@@ -58,16 +57,16 @@ export default {
 
       if (this.navigationVisibility) {
         this.savedScrollTop = window.scrollY
-        $('body').addClass('navigation--visible')
+        document.body.classList.add('navigation--visible')
 
         _.delay(function () {
-          $('body').addClass('noScroll')
+          document.body.classList.add('noScroll')
         }, 300)
 
       } else {
-        $('body').removeClass('noScroll navigation--visible')
+        document.body.classList.remove('noScroll', 'navigation--visible')
         _.defer(function () {
-          $(document).scrollTop(self.savedScrollTop)
+          window.scrollTo(0, self.savedScrollTop)
         })
       }
     },

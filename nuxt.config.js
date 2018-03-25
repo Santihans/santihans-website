@@ -1,4 +1,5 @@
 const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
+const nodeExternals = require('webpack-node-externals')
 
 if (env === 'development') {
   require('dotenv').config()
@@ -153,7 +154,8 @@ module.exports = {
         languages: ['en', 'de']
       }
     ],
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/axios'
   ],
 
   apollo: {
@@ -169,12 +171,10 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    // analyze: true,
+    analyze: true,
     vendor: [
-      'jquery',
       '~/plugins/vuetify.js',
-      'underscore',
-      'vue-smooth-scroll'
+      'underscore'
     ],
     extractCSS: true,
     /*
@@ -187,7 +187,20 @@ module.exports = {
         }
       }
     },
-    extend(config, { isDev, isClient }) {
+    babel: {
+      plugins: [
+        [
+          'transform-imports',
+          {
+            vuetify: {
+              transform: 'vuetify/es5/components/${member}', // eslint-disable-line no-template-curly-in-string
+              preventFullImport: true
+            }
+          }
+        ]
+      ]
+    },
+    extend(config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -195,6 +208,13 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      if (isServer) {
+        config.externals = [
+          nodeExternals({
+            whitelist: [/^vuetify/]
+          })
+        ]
       }
     }
   }
