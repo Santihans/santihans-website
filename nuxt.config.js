@@ -173,10 +173,8 @@ module.exports = {
   build: {
     analyze: true,
     vendor: [
-      'jquery',
       '~/plugins/vuetify.js',
-      'underscore',
-      'vue-smooth-scroll'
+      'underscore'
     ],
     extractCSS: true,
     /*
