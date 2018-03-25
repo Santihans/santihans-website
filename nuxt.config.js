@@ -172,10 +172,7 @@ module.exports = {
    */
   build: {
     analyze: true,
-    vendor: [
-      '~/plugins/vuetify.js',
-      'underscore'
-    ],
+    vendor: ['~/plugins/vuetify.js', 'underscore'],
     extractCSS: true,
     /*
     ** Run ESLint on save
