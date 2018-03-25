@@ -17,6 +17,13 @@ import appFooter from '~/components/footer.vue'
 import _ from 'underscore'
 
 export default {
+  head() {
+    return {
+      htmlAttrs: {
+        lang: this.$store.state.i18n.language
+      }
+    }
+  },
   components: {
     appHeader,
     Navigation,

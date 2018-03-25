@@ -223,10 +223,15 @@
     margin-top: 3em;
 
     .call {
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: normal;
       line-height: 1.2;
-      margin-bottom: 1em;
+      width: 70%;
+      margin: 0 auto 1em;
+
+      @media screen and (min-width: $breakpointSmall) {
+        font-size: 2em;
+      }
     }
   }
 }

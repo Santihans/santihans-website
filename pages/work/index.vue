@@ -10,39 +10,46 @@
         <h2>{{ $t('work.heading') }}</h2>
         <p class="abstract">{{ $t('work.abstract') }}</p>
       </section>
+      <section class="loading" v-if="loading">
+        <spinner />
+      </section>
+      <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
+        <nuxt-link class="link-box" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
+          <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
+            <div class="work-inner">
 
-      <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
-        <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
-          <div class="work-inner">
+              <h2>{{ item.title }}</h2>
+              <div class="abstract">
+                <template v-if="$i18n.locale === 'en'">
+                  {{ item.abstractEn }}
+                </template>
+                <template v-if="$i18n.locale === 'de'">
+                  {{ item.abstractDe }}
+                </template>
+              </div>
 
-            <h2>{{ item.title }}</h2>
-            <div class="abstract">
-              <template v-if="$i18n.locale === 'en'">
-                {{ item.abstractEn }}
-              </template>
-              <template v-if="$i18n.locale === 'de'">
-                {{ item.abstractDe }}
-              </template>
+              <tags :tags="item.tags" />
+              <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
             </div>
-
-            <tags :tags="item.tags" />
-            <nuxt-link v-ripple class="s-btn s-btn-pink" alt="Preview" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}">{{ $t('buttons.more') }} </nuxt-link>
-          </div>
-        </section>
+          </section>
+        </nuxt-link>
       </div>
+
     </div>
   </div>
 </template>
 
 <script>
 import Clouds from '@/components/clouds.vue'
+import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
 
 export default {
   components: {
     Clouds,
-    Tags
+    Tags,
+    Spinner
   },
   head() {
     return {
@@ -51,13 +58,18 @@ export default {
   },
   data() {
     return {
-      projects: []
+      projects: [],
+      loading: true
     }
   },
   apollo: {
     projects: {
       query: projectsQuery,
-      prefetch: true
+      prefetch: true,
+      fetchPolicy: 'cache-and-network',
+      watchLoading(isLoading, countModifier) {
+        this.loading = isLoading
+      }
     }
   },
   methods: {
