@@ -10,8 +10,10 @@
         <h2>{{ $t('work.heading') }}</h2>
         <p class="abstract">{{ $t('work.abstract') }}</p>
       </section>
-
-      <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
+      <section class="loading" v-if="loading">
+        <spinner />
+      </section>
+      <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
         <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
           <div class="work-inner">
 
@@ -30,19 +32,22 @@
           </div>
         </section>
       </div>
+
     </div>
   </div>
 </template>
 
 <script>
 import Clouds from '@/components/clouds.vue'
+import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
 
 export default {
   components: {
     Clouds,
-    Tags
+    Tags,
+    Spinner
   },
   head() {
     return {
@@ -51,13 +56,18 @@ export default {
   },
   data() {
     return {
-      projects: []
+      projects: [],
+      loading: true
     }
   },
   apollo: {
     projects: {
       query: projectsQuery,
-      prefetch: true
+      prefetch: true,
+      fetchPolicy: 'cache-and-network',
+      watchLoading(isLoading, countModifier) {
+        this.loading = isLoading
+      }
     }
   },
   methods: {
