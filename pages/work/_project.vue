@@ -60,15 +60,18 @@
           ©
           <span :aria-label="$t('year')" :title="$t('year')">{{ getYear(project.date) }}</span>&nbsp;|&nbsp; SANTiHANS +
           <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>
+          <div class="actions">
+            <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
+          </div>
         </section>
         <section class="showcase-contact text-center">
           <div class="boundaries">
+            <div class="mood">
+              <v-icon>child_friendly</v-icon>
+            </div>
             <div class="call">{{ $t('teaser') }}</div>
             <div>
-              <nuxt-link v-ripple class="s-btn s-btn" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
-              <div>
-                <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
-              </div>
+              <nuxt-link v-ripple class="s-btn s-btn-large" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
             </div>
           </div>
         </section>
@@ -143,12 +146,12 @@ export default {
       en: {
         client: 'Client',
         year: 'Year',
-        teaser: 'Interested in working with us?'
+        teaser: 'Let\'s build great things together!'
       },
       de: {
         client: 'Kunde',
         year: 'Jahr',
-        teaser: 'Interessiert an einer Zusammenarbeit mit uns?'
+        teaser: 'Lasst uns gemeinsam grosse Dinge bauen!'
       }
     }
   }
