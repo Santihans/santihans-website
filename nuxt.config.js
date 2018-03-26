@@ -25,7 +25,7 @@ module.exports = {
   meta: {
     name: 'SANTiHANS',
     description: 'We are a digital design and communications agency. 😇',
-    theme_color: '#f96673',
+    theme_color: '#212121',
     ogHost: 'https://www.santihans.com',
     ogImage: { path: '/og-image.png' },
     twitterCard: 'summary',
@@ -59,10 +59,6 @@ module.exports = {
       src: '~plugins/vuetify.js'
     },
     {
-      src: '~plugins/ga.js',
-      ssr: false
-    },
-    {
       src: '~plugins/crisp.js',
       ssr: false
     },
@@ -71,7 +67,6 @@ module.exports = {
       ssr: false
     }
   ],
-
   modules: [
     [
       'nuxt-i18n-module',
@@ -81,7 +76,13 @@ module.exports = {
     ],
     '@nuxtjs/apollo',
     '@nuxtjs/axios',
-    ['@nuxtjs/pwa']
+    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-91400477-2'
+      }
+    ]
   ],
 
   apollo: {
