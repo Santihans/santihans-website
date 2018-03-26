@@ -15,12 +15,10 @@ module.exports = {
     titleTemplate: '%s - SANTiHANS',
     link: [
       {
-        rel: 'preload',
+        rel: 'stylesheet',
         type: 'text/css',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
-        onload: 'this.onload=null;this.rel="stylesheet"',
-        as: 'style'
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
     ]
   },
