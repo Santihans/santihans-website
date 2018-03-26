@@ -350,3 +350,13 @@ section {
   display: flex;
   justify-content: center;
 }
+
+// Page transitions
+.page-enter-active {
+  transition: 0.2s ease-out;
+  transform: translateY(0);
+}
+
+.page-enter {
+  transform: translateY(10px);
+}
