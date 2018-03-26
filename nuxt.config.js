@@ -15,10 +15,12 @@ module.exports = {
     titleTemplate: '%s - SANTiHANS',
     link: [
       {
-        rel: 'stylesheet',
+        rel: 'preload',
         type: 'text/css',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons',
+        onload: 'this.onload=null;this.rel="stylesheet"',
+        as: 'style'
       }
     ]
   },
@@ -67,7 +69,6 @@ module.exports = {
       ssr: false
     }
   ],
-
   modules: [
     [
       'nuxt-i18n-module',
