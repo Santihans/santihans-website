@@ -75,7 +75,7 @@ export default {
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
-          abstract: 'We create individual handcrafted communication solutions. Our websites are well designed, fast and accessible. We anticipate your customers\' needs to build next-level user interfaces.'
+          abstract: 'We create individual online communication solutions based on JAMstack development architecture. Our websites are fast, accessible and intuitive, with focus on outstanding design and next-level user interfaces.'
         },
         branding: {
           headline: 'Corporate Identity',
@@ -91,7 +91,7 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'Wir erstellen anspruchsvolle Webanwendungen mit Fokus auf individuellem Design und benutzerfreundlichen User-Interfaces. Dabei setzen wir stets auf neueste Technologien und passen uns bestehenden Back-Ends an.'
+          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Websites sind schnell, zugänglich und intuitiv, mit Schwerpunkt auf herausragendem Design und anspruchsvollen Benutzeroberflächen.'
         },
         branding: {
           headline: 'Corporate Identity',
