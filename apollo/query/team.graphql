@@ -1,0 +1,24 @@
+query Team {
+  team: allTeams {
+    name
+    twitter
+    linkedIn
+    email
+    date
+    missionEn
+    image {
+      id
+      name
+      size
+      url
+      mime
+    }
+    missionDe
+
+    _meta {
+      id
+      name
+      published
+    }
+  }
+}

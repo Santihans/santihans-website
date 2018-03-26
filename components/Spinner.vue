@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :class="{inline: inline}">
       <div class="spinner-inner">
         <div class="wheel"></div>
         <div class="status">
@@ -27,6 +27,12 @@ export default {
   data() {
     return {
       show: 0
+    }
+  },
+  props: {
+    inline: {
+      type: Boolean,
+      default: false
     }
   },
   mounted() {
@@ -75,6 +81,11 @@ export default {
   position: absolute;
   width: 100%;
   top: 0;
+
+  &.inline {
+    position: static;
+    padding: 20px;
+  }
 
   .spinner-inner {
     align-items: center;
