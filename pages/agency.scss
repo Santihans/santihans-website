@@ -41,7 +41,7 @@
           margin-bottom: 1em;
         }
 
-        .member-thumb {
+        .member-image {
           padding: 3vw;
           @media (min-width: $breakpointSmall) {
             padding: 15px;
@@ -61,11 +61,8 @@
           font-weight: bold;
         }
 
-        .member-position {
+        .member-mission {
           font-size: 0.9em;
-        }
-
-        .member-contacts {
         }
       }
     }
@@ -90,6 +87,12 @@
 
       .partner-description {
         padding: 0.5em;
+      }
+
+      a {
+        color: inherit;
+        display: block;
+        text-decoration: none;
       }
     }
   }
