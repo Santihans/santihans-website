@@ -231,11 +231,22 @@
   .zeppelin {
     bottom: 70%;
     position: absolute;
-    right: 30%;
+    left: 0;
     width: 180px;
+    animation: glide 80s infinite linear;
 
     @media (min-width: $breakpointSmall) {
       width: 260px;
     }
+  }
+}
+
+@keyframes glide {
+  from {
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(100vw, 0);
   }
 }
