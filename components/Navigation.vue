@@ -219,6 +219,9 @@ export default {
       &:nth-child(4) {
         transition-delay: 340ms;
       }
+      &:nth-child(5) {
+        transition-delay: 360ms;
+      }
     }
   }
 
@@ -274,7 +277,7 @@ export default {
     }
 
     li {
-      transition-delay: 360ms;
+      transition-delay: 380ms;
     }
   }
 
@@ -283,7 +286,7 @@ export default {
     display: flex;
     flex-shrink: 0;
     justify-content: flex-end;
-    transition-delay: 380ms;
+    transition-delay: 400ms;
 
     a {
       color: inherit;
