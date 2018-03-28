@@ -34,6 +34,7 @@
           </section>
         </nuxt-link>
       </div>
+      <contact-us/>
 
     </div>
   </div>
@@ -44,12 +45,14 @@ import Clouds from '@/components/clouds.vue'
 import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   components: {
     Clouds,
     Tags,
-    Spinner
+    Spinner,
+    ContactUs
   },
   head() {
     return {
