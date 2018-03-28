@@ -89,7 +89,7 @@ export default {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Websites sind schnell, zugänglich und intuitiv, mit Schwerpunkt auf herausragendem Design und anspruchsvollen Benutzeroberflächen.'
+          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Webseiten sind schnell, zugänglich und intuitiv. Der Schwerpunkt liegt auf herausragendem Design und Lösungen für anspruchsvolle Benutzeroberflächen.'
         },
         branding: {
           headline: 'Corporate Identity',
