@@ -51,7 +51,7 @@ import wallpaper from '~/components/wallpaper.vue'
 import watch from '~/components/watch.vue'
 import clouds from '~/components/clouds.vue'
 import zeppelin from '~/components/zeppelin.vue'
-import ContactUs from '~/components/ContactUs.vue'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   name: 'HomePage',

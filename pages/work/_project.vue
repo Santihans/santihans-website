@@ -79,7 +79,7 @@ import Markdown from '~/components/Markdown.vue'
 import ScrollIndicator from '~/components/scrollIndicator.vue'
 import Tags from '~/components/Tags.vue'
 import Spinner from '~/components/Spinner.vue'
-import ContactUs from '~/components/ContactUs.vue'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   components: {
