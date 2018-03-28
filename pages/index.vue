@@ -40,11 +40,9 @@
       <p class="abstract">{{ $t('advertising.abstract') }}</p>
       <div class="service-action">
         <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
-        <div>
-          <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/contact')">{{ $t('contact') }}</nuxt-link>
-        </div>
       </div>
     </section>
+    <contact-us />
   </div>
 </template>
 
@@ -53,6 +51,7 @@ import wallpaper from '~/components/wallpaper.vue'
 import watch from '~/components/watch.vue'
 import clouds from '~/components/clouds.vue'
 import zeppelin from '~/components/zeppelin.vue'
+import ContactUs from '~/components/ContactUs.vue'
 
 export default {
   name: 'HomePage',
@@ -60,7 +59,8 @@ export default {
     'component-wallpaper': wallpaper,
     'component-watch': watch,
     'component-clouds': clouds,
-    'component-zeppelin': zeppelin
+    'component-zeppelin': zeppelin,
+    ContactUs
   },
   scrollToTop: true,
   head() {

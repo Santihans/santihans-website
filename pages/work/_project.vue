@@ -64,17 +64,7 @@
             <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
           </div>
         </section>
-        <section class="showcase-contact text-center">
-          <div class="boundaries">
-            <div class="mood">
-              <v-icon>child_friendly</v-icon>
-            </div>
-            <div class="call">{{ $t('teaser') }}</div>
-            <div>
-              <nuxt-link v-ripple class="s-btn s-btn-large" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
-            </div>
-          </div>
-        </section>
+        <contact-us />
       </div>
     </div>
     <spinner v-else />
@@ -89,6 +79,7 @@ import Markdown from '~/components/Markdown.vue'
 import ScrollIndicator from '~/components/scrollIndicator.vue'
 import Tags from '~/components/Tags.vue'
 import Spinner from '~/components/Spinner.vue'
+import ContactUs from '~/components/ContactUs.vue'
 
 export default {
   components: {
@@ -97,7 +88,8 @@ export default {
     Markdown,
     ScrollIndicator,
     Tags,
-    Spinner
+    Spinner,
+    ContactUs
   },
   computed: {
     project() {
@@ -145,13 +137,11 @@ export default {
     messages: {
       en: {
         client: 'Client',
-        year: 'Year',
-        teaser: 'Let\'s build great things together!'
+        year: 'Year'
       },
       de: {
         client: 'Kunde',
-        year: 'Jahr',
-        teaser: 'Lass uns gemeinsam etwas Grosses kreieren!'
+        year: 'Jahr'
       }
     }
   }
