@@ -151,7 +151,7 @@ export default {
       de: {
         client: 'Kunde',
         year: 'Jahr',
-        teaser: 'Lasst uns gemeinsam grosse Dinge bauen!'
+        teaser: 'Lass uns gemeinsam etwas Grosses kreieren!'
       }
     }
   }
