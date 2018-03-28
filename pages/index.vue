@@ -11,7 +11,7 @@
       <h2>{{ $t('webdesign.headline') }}</h2>
       <p class="abstract">{{ $t('webdesign.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
       </div>
     </section>
 
@@ -25,7 +25,7 @@
       <h2>{{ $t('branding.headline') }}</h2>
       <p class="abstract">{{ $t('branding.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
       </div>
     </section>
 
@@ -39,7 +39,7 @@
       <h2>{{ $t('advertising.headline') }}</h2>
       <p class="abstract">{{ $t('advertising.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
         <div>
           <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/contact')">{{ $t('contact') }}</nuxt-link>
         </div>
@@ -71,7 +71,6 @@ export default {
   i18n: {
     messages: {
       en: {
-        more: 'Showcase',
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
@@ -87,7 +86,6 @@ export default {
         }
       },
       de: {
-        more: 'Arbeiten',
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
