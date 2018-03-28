@@ -45,6 +45,10 @@ const social = [
   {
     url: 'https://github.com/Santihans',
     label: 'Github'
+  },
+  {
+    url: 'https://gitter.im/Santihans/public',
+    label: 'Gitter'
   }
 ]
 

@@ -301,12 +301,6 @@ section {
   transform: translateY(0);
   transition: 200ms;
 
-  &.s-btn-large {
-    height: 60px;
-    padding: 4px 40px;
-    font-size: 1.2em;
-  }
-
   &.s-btn-pink {
     background-color: $colorPink;
   }

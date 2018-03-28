@@ -11,7 +11,7 @@
       <h2>{{ $t('webdesign.headline') }}</h2>
       <p class="abstract">{{ $t('webdesign.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
       </div>
     </section>
 
@@ -25,7 +25,7 @@
       <h2>{{ $t('branding.headline') }}</h2>
       <p class="abstract">{{ $t('branding.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
       </div>
     </section>
 
@@ -39,12 +39,10 @@
       <h2>{{ $t('advertising.headline') }}</h2>
       <p class="abstract">{{ $t('advertising.abstract') }}</p>
       <div class="service-action">
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('more') }}</nuxt-link>
-        <div>
-          <nuxt-link v-ripple class="s-btn s-btn-transparent" :to="localePath('/contact')">{{ $t('contact') }}</nuxt-link>
-        </div>
+        <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.showcase') }}</nuxt-link>
       </div>
     </section>
+    <contact-us />
   </div>
 </template>
 
@@ -53,6 +51,7 @@ import wallpaper from '~/components/wallpaper.vue'
 import watch from '~/components/watch.vue'
 import clouds from '~/components/clouds.vue'
 import zeppelin from '~/components/zeppelin.vue'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   name: 'HomePage',
@@ -60,7 +59,8 @@ export default {
     'component-wallpaper': wallpaper,
     'component-watch': watch,
     'component-clouds': clouds,
-    'component-zeppelin': zeppelin
+    'component-zeppelin': zeppelin,
+    ContactUs
   },
   scrollToTop: true,
   head() {
@@ -71,7 +71,6 @@ export default {
   i18n: {
     messages: {
       en: {
-        more: 'Showcase',
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
@@ -87,11 +86,10 @@ export default {
         }
       },
       de: {
-        more: 'Arbeiten',
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Websites sind schnell, zugänglich und intuitiv, mit Schwerpunkt auf herausragendem Design und anspruchsvollen Benutzeroberflächen.'
+          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Webseiten sind schnell, zugänglich und intuitiv. Der Schwerpunkt liegt auf herausragendem Design und Lösungen für anspruchsvolle Benutzeroberflächen.'
         },
         branding: {
           headline: 'Corporate Identity',

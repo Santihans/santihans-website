@@ -199,7 +199,7 @@ export default {
           abstract:
             'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Stattdessen folgen wir agilen Produktentwicklungsmethoden und konzentrieren uns auf das Wesentliche.',
           et: {
-            position: 'Was ist deine Leidenschaft? Wo liegt dein Talent?',
+            mission: 'Was ist deine Leidenschaft? Wo liegt dein Talent?',
             name: 'Du?',
             contact: 'Bewirb dich'
           }
