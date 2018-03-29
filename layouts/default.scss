@@ -44,7 +44,7 @@ h2 {
 
 h1,
 h2 {
-  font-family: 'Raleway', 'Roboto', 'Helvetica', sans-serif;
+  font-family: $fontFamilyHeading;
 }
 
 h1 {
@@ -113,7 +113,7 @@ h4 {
 
 #page {
   flex-grow: 1;
-  min-height: 70wh;
+  min-height: 70vh;
   position: relative;
 }
 
@@ -290,7 +290,7 @@ section {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   color: white;
   display: inline-flex;
-  font-size: 1em;
+  font-size: 1.1rem;
   font-weight: bold;
   justify-content: center;
   height: 40px;
@@ -331,9 +331,32 @@ section {
 }
 
 .markdown {
+  h4 {
+    margin-top: 1.5em;
+  }
+
   ul {
     padding-left: 40px;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// Page transitions
+.page-enter-active {
+  transition: 0.2s ease-out;
+  transform: translateY(0);
+}
+
+.page-enter {
+  transform: translateY(10px);
 }

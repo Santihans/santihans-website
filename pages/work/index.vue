@@ -10,39 +10,49 @@
         <h2>{{ $t('work.heading') }}</h2>
         <p class="abstract">{{ $t('work.abstract') }}</p>
       </section>
+      <section class="loading" v-if="loading">
+        <spinner />
+      </section>
+      <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
+        <nuxt-link class="link-box" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
+          <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
+            <div class="work-inner">
 
-      <div class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
-        <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
-          <div class="work-inner">
+              <h2>{{ item.title }}</h2>
+              <div class="abstract">
+                <template v-if="$i18n.locale === 'en'">
+                  {{ item.abstractEn }}
+                </template>
+                <template v-if="$i18n.locale === 'de'">
+                  {{ item.abstractDe }}
+                </template>
+              </div>
 
-            <h2>{{ item.title }}</h2>
-            <div class="abstract">
-              <template v-if="$i18n.locale === 'en'">
-                {{ item.abstractEn }}
-              </template>
-              <template v-if="$i18n.locale === 'de'">
-                {{ item.abstractDe }}
-              </template>
+              <tags :tags="item.tags" />
+              <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
             </div>
-
-            <tags :tags="item.tags" />
-            <nuxt-link v-ripple class="s-btn s-btn-pink" alt="Preview" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}">{{ $t('buttons.more') }} </nuxt-link>
-          </div>
-        </section>
+          </section>
+        </nuxt-link>
       </div>
+      <contact-us/>
+
     </div>
   </div>
 </template>
 
 <script>
 import Clouds from '@/components/clouds.vue'
+import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   components: {
     Clouds,
-    Tags
+    Tags,
+    Spinner,
+    ContactUs
   },
   head() {
     return {
@@ -51,30 +61,36 @@ export default {
   },
   data() {
     return {
-      projects: []
+      projects: [],
+      loading: true
     }
   },
   apollo: {
     projects: {
       query: projectsQuery,
-      prefetch: true
+      prefetch: true,
+      fetchPolicy: 'cache-and-network',
+      watchLoading(isLoading, countModifier) {
+        this.loading = isLoading
+      }
     }
   },
   methods: {
     sortedProjects: function (items) {
       const sortable = Object.keys(items).map(i => items[i])
-      sortable.sort(function (a, b) {
+      const published = sortable.filter(item => item._meta.published === true)
+      published.sort(function (a, b) {
         return b.date - a.date
       })
-      return sortable
+      return published
     }
   },
   i18n: {
     messages: {
       en: {
         work: {
-          heading: 'Less, but better',
-          abstract: 'Corporate communication is all about sending the right message to the right audience. Your brand has to tell a story. We help you tell your story.'
+          heading: 'Recent Highlights',
+          abstract: 'Our cross-functional, agile team creates custom communications solutions for demanding clients in a variety of fields.'
         },
         heading: {
           scope: 'Project Scope',
@@ -83,8 +99,8 @@ export default {
       },
       de: {
         work: {
-          heading: 'Lorem i',
-          abstract: 'sdf'
+          heading: 'Aktuelle Highlights',
+          abstract: 'Unser funktionsübergreifendes, agiles Team entwickelt massgeschneiderte Kommunikationslösungen für anspruchsvolle Kunden aus den unterschiedlichsten Bereichen.'
         },
         heading: {
           scope: 'Projektumfang',

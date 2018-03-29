@@ -2,7 +2,7 @@
   <div id="agency">
     <div class="page-header">
       <h1>{{ $t('pages.agency') }}</h1>
-      <component-clouds />
+      <clouds />
       <div class="illustration">
         <img src="~assets/images/header-agency.svg" alt="Illustration">
         <img class="ship" src="~assets/images/header-agency-ship.svg" alt="Illustration">
@@ -18,22 +18,44 @@
       <section class="team section--shadow">
         <h2>{{ $t('team.heading') }}</h2>
         <p class="abstract">{{ $t('team.abstract') }}</p>
-        <v-layout class="members" wrap justify-center>
-          <v-flex xs6 sm4 v-for="(item,i) in team" :key="i">
-            <div class="member-thumb">
-              <img v-if="item.thumb" :src="'/images/agency/' +item.thumb" alt="Photo">
+        <spinner v-if="loading" inline />
+        <v-layout v-else class="members" wrap justify-center>
+          <v-flex xs6 sm4 v-for="(item,i) in sortedTeam(team)" :key="i">
+            <div class="member-image">
+              <img v-if="item.image" :src="item.image.url" :alt="item.name">
               <img v-else :src="'/images/agency/placeholder.jpg'" alt="Placeholder">
             </div>
             <div class="member-name">
               {{ item.name }}
             </div>
-            <div class="member-position">
-              {{ item.position }}
+            <div class="member-mission">
+              <template v-if="$i18n.locale === 'en'">{{ item.missionEn }}</template>
+              <template v-if="$i18n.locale === 'de'">{{ item.missionDe }}</template>
             </div>
             <div class="member-contacts">
-              <div v-for="(item, i) in item.contacts" :key="'contact-' + i">
-                <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
+              <div>
+                <a v-if="item.email" :href="'mailto:' +item.email">Email</a>
               </div>
+              <div>
+                <a v-if="item.twitter" :href="item.twitter" target="_blank" rel="noopener">Twitter</a>
+              </div>
+              <div>
+                <a v-if="item.linkedIn" :href="item.linkedIn" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+          </v-flex>
+          <v-flex xs6 sm4>
+            <div class="member-image">
+              <img src="/images/agency/et.svg" alt="ET">
+            </div>
+            <div class="member-name">
+              {{ $t('team.et.name') }}
+            </div>
+            <div class="member-mission">
+              {{ $t('team.et.mission') }}
+            </div>
+            <div class="member-contacts">
+              <a href="mailto:info@santihans.com">{{ $t('team.et.contact') }}</a>
             </div>
           </v-flex>
         </v-layout>
@@ -49,14 +71,15 @@
         <p class="abstract">{{ $t('partner.abstract') }}</p>
         <v-layout class="partner" wrap justify-center>
           <v-flex xs6 sm3 v-for="(item,i) in partner" :key="i">
-            <div class="partner-logo">
-              <img :src="'/images/agency/' + item.logo" :alt="item.name">
-            </div>
-            <div v-if="item.hasOwnProperty('description')" class="partner-description">
-              <div v-if="$i18n.locale === 'en'">{{ item.description.en }}</div>
-              <div v-if="$i18n.locale === 'de'">{{ item.description.de }}</div>
-            </div>
-            <a class="s-btn s-btn-transparent" :href="item.web" target="_blank" rel="noopener">{{ $t('buttons.website') }}</a>
+            <a :href="item.web" target="_blank" rel="noopener">
+              <div class="partner-logo">
+                <img :src="'/images/agency/' + item.logo" :alt="item.name">
+              </div>
+              <div v-if="item.hasOwnProperty('description')" class="partner-description">
+                <div v-if="$i18n.locale === 'en'">{{ item.description.en }}</div>
+                <div v-if="$i18n.locale === 'de'">{{ item.description.de }}</div>
+              </div>
+            </a>
           </v-flex>
         </v-layout>
       </section>
@@ -66,6 +89,8 @@
 
 <script>
 import Clouds from '~/components/clouds.vue'
+import Spinner from '~/components/Spinner.vue'
+import teamQuery from '@/apollo/query/team.graphql'
 
 export default {
   head() {
@@ -73,75 +98,14 @@ export default {
       title: this.$t('pages.agency')
     }
   },
+  components: {
+    Clouds,
+    Spinner
+  },
   data() {
     return {
-      team: {
-        christophe: {
-          thumb: 'christophe.jpg',
-          position: this.$t('team.christophe.position'),
-          name: 'Christophe',
-          contacts: [
-            {
-              label: 'Email',
-              url: 'mailto:christophe@santihans.com'
-            },
-            {
-              label: 'Twitter',
-              url: 'https://twitter.com/stophecom'
-            },
-            {
-              label: 'Linkedin',
-              url: 'https://www.linkedin.com/in/christophe-schwyzer-19b9193b/'
-            }
-          ]
-        },
-        nicolas: {
-          thumb: 'nicolas.jpg',
-          position: this.$t('team.nicolas.position'),
-          name: 'Nicolas',
-          contacts: [
-            {
-              label: 'Email',
-              url: 'mailto:nicolas@santihans.com'
-            },
-            {
-              label: 'Twitter',
-              url: 'https://twitter.com/NicolasSchmutz'
-            },
-            {
-              label: 'Linkedin',
-              url: 'https://www.linkedin.com/in/nicolasschmutz/'
-            }
-          ]
-        },
-        tomasz: {
-          position: this.$t('team.tomasz.position'),
-          name: 'Tomasz',
-          contacts: [
-            {
-              label: 'Linkedin',
-              url: 'https://www.linkedin.com/in/tomaszdurka/'
-            }
-          ]
-
-        },
-        david: {
-          // thumb: 'david.jpg',
-          position: this.$t('team.david.position'),
-          name: 'David'
-        },
-        et: {
-          thumb: 'et.svg',
-          position: this.$t('team.et.position'),
-          name: this.$t('team.et.name'),
-          contacts: [
-            {
-              label: this.$t('team.et.contact'),
-              url: 'mailto:info@santihans.com'
-            }
-          ]
-        }
-      },
+      team: [],
+      loading: true,
       partner: [
         {
           logo: 'cometas.svg',
@@ -173,8 +137,25 @@ export default {
       ]
     }
   },
-  components: {
-    'component-clouds': Clouds
+  apollo: {
+    team: {
+      query: teamQuery,
+      prefetch: true,
+      fetchPolicy: 'cache-and-network',
+      watchLoading(isLoading, countModifier) {
+        this.loading = isLoading
+      }
+    }
+  },
+  methods: {
+    sortedTeam: function (items) {
+      const sortable = Object.keys(items).map(i => items[i])
+      const published = sortable.filter(item => item._meta.published === true)
+      published.sort(function (a, b) {
+        return a.date - b.date
+      })
+      return published
+    }
   },
   i18n: {
     messages: {
@@ -188,20 +169,8 @@ export default {
           heading: 'Team',
           abstract:
             'Small interdisciplinary team with magical skills and great ambition. We work without fixed structures, without office and without office hours. Instead, we follow agile product development methodologies and focus on what matters.',
-          christophe: {
-            position: 'Dad, Founder, Creative Director'
-          },
-          nicolas: {
-            position: 'Partner, Product manager, Runner'
-          },
-          tomasz: {
-            position: 'Consultant (Backend) Web Development'
-          },
-          david: {
-            position: 'Consultant Graphic Design'
-          },
           et: {
-            position: 'Whatever you do best',
+            mission: 'Whatever you do best',
             name: 'You?',
             contact: 'Apply'
           }
@@ -229,20 +198,8 @@ export default {
           heading: 'Team',
           abstract:
             'Ein kleines Team mit magischen Kräften und grossem Tatendrang. Wir arbeiten ohne starre Strukturen, ohne Büro und ohne feste Arbeitszeiten. Stattdessen folgen wir agilen Produktentwicklungsmethoden und konzentrieren uns auf das Wesentliche.',
-          christophe: {
-            position: 'Papa, Gründer, Creative Director'
-          },
-          nicolas: {
-            position: 'Partner, Produktmanager, Läufer'
-          },
-          tomasz: {
-            position: 'Beratung (Backend-)Webentwicklung'
-          },
-          david: {
-            position: 'Grafikdesign Freelancer'
-          },
           et: {
-            position: 'Was ist deine Leidenschaft? Wo liegt dein Talent?',
+            mission: 'Was ist deine Leidenschaft? Wo liegt dein Talent?',
             name: 'Du?',
             contact: 'Bewirb dich'
           }

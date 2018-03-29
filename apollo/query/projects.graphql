@@ -44,6 +44,7 @@ query Projects {
     _meta {
       id
       name
+      published
     }
   }
 }

@@ -44,7 +44,6 @@
           </figure>
           <Markdown class="markdown" :markdown="project.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="project.bodyDe" v-if="$i18n.locale === 'de'" />
-
         </section>
         <div class="boundaries boundaries--xl">
           <no-ssr>
@@ -57,6 +56,15 @@
             </carousel>
           </no-ssr>
         </div>
+        <section class="showcase-footer boundaries">
+          ©
+          <span :aria-label="$t('year')" :title="$t('year')">{{ getYear(project.date) }}</span>&nbsp;|&nbsp; SANTiHANS +
+          <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>
+          <div class="actions">
+            <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
+          </div>
+        </section>
+        <contact-us />
       </div>
     </div>
     <spinner v-else />
@@ -71,6 +79,7 @@ import Markdown from '~/components/Markdown.vue'
 import ScrollIndicator from '~/components/scrollIndicator.vue'
 import Tags from '~/components/Tags.vue'
 import Spinner from '~/components/Spinner.vue'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   components: {
@@ -79,7 +88,8 @@ export default {
     Markdown,
     ScrollIndicator,
     Tags,
-    Spinner
+    Spinner,
+    ContactUs
   },
   computed: {
     project() {

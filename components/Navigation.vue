@@ -1,6 +1,7 @@
 <template>
   <aside id="navigation">
     <div class="navigation">
+      <watch />
       <nav class="home">
         <nuxt-link class="emblem" :to="localePath('/')" :title="$t(`${main[0].label}`)">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
@@ -50,10 +51,12 @@
 <script>
 import { main, about, social } from '~/assets/menus.js'
 import Language from '~/components/language.vue'
+import Watch from '~/components/watch.vue'
 
 export default {
   components: {
-    Language
+    Language,
+    Watch
   },
   data: () => ({
     main: main,
@@ -94,6 +97,16 @@ export default {
     padding: 80px 120px;
   }
 
+  .watch {
+    width: 80px;
+    position: absolute;
+    top: 8vh;
+    left: 12vw;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 300ms 5000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
   body.navigation--visible & {
     transform: translateX(0);
 
@@ -104,6 +117,11 @@ export default {
     .language {
       opacity: 1;
       transform: translateX(0);
+    }
+
+    .watch {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 
@@ -201,6 +219,9 @@ export default {
       &:nth-child(4) {
         transition-delay: 340ms;
       }
+      &:nth-child(5) {
+        transition-delay: 360ms;
+      }
     }
   }
 
@@ -256,7 +277,7 @@ export default {
     }
 
     li {
-      transition-delay: 360ms;
+      transition-delay: 380ms;
     }
   }
 
@@ -265,7 +286,7 @@ export default {
     display: flex;
     flex-shrink: 0;
     justify-content: flex-end;
-    transition-delay: 380ms;
+    transition-delay: 400ms;
 
     a {
       color: inherit;

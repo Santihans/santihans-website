@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :class="{inline: inline}">
       <div class="spinner-inner">
         <div class="wheel"></div>
         <div class="status">
@@ -29,6 +29,12 @@ export default {
       show: 0
     }
   },
+  props: {
+    inline: {
+      type: Boolean,
+      default: false
+    }
+  },
   mounted() {
     var self = this
     window.setTimeout(function () {
@@ -47,7 +53,7 @@ export default {
         status: {
           slow: 'Still working on it.',
           slower: 'Something seems off…',
-          reload: 'Try reloading the page.'
+          reload: 'Try reloading the page!'
         }
 
       },
@@ -55,7 +61,7 @@ export default {
         status: {
           slow: 'Ladevorgang läuft.',
           slower: 'Ladevorgang dauert ungewöhnlich lange.',
-          reload: 'Versuche die Seite neu zu laden.'
+          reload: 'Versuche die Seite neu zu laden!'
         }
       }
     }
@@ -75,6 +81,11 @@ export default {
   position: absolute;
   width: 100%;
   top: 0;
+
+  &.inline {
+    position: static;
+    padding: 20px;
+  }
 
   .spinner-inner {
     align-items: center;

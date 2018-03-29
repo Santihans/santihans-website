@@ -15,7 +15,10 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^3.0.2",
+    "@nuxtjs/axios": "^5.1.1",
     "@nuxtjs/font-awesome": "^1.0.3",
+    "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/pwa": "^2.0.8",
     "@tipe/nuxt-apollo-module": "^3.0.1",
     "apollo-fetch": "^0.7.0",
     "apollo-link-context": "^1.0.5",
@@ -29,7 +32,7 @@
     "highlight.js": "^9.12.0",
     "i18next": "^8.4.3",
     "jquery": "^3.2.1",
-    "js-beautify": "1.6.14",
+    "js-beautify": "1.7.5",
     "lodash": "^4.17.4",
     "marked": "^0.3.12",
     "node-fetch": "^2.0.0",
@@ -43,12 +46,12 @@
     "vue-carousel": "^0.6.9",
     "vue-i18n": "^7.0.5",
     "vue-markdown": "^2.2.4",
-    "vue-smooth-scroll": "^1.0.13",
-    "vuetify": "^1.0.5",
+    "vuetify": "^1.0.10",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-imports": "^1.4.1",
     "dotenv": "^5.0.0",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
@@ -65,6 +68,6 @@
     "sass-loader": "^6.0.7",
     "scss-loader": "0.0.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1"
+    "stylus-loader": "^3.0.2"
   }
 }

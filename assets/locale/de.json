@@ -6,7 +6,7 @@
   },
   "pages": {
     "home": "Home",
-    "work": "Arbeiten",
+    "work": "Projekte",
     "contact": "Kontakt",
     "agency": "Agentur",
     "terms": "Impressum"
@@ -26,9 +26,11 @@
     "close": "Schliessen",
     "cancel": "Abbrechen",
     "print": "Drucken",
-    "showcase": "Portfolio",
+    "showcase": "Projekte",
     "visitWebsite": "Webseite besuchen",
     "more": "Mehr Erfahren",
-    "reload": "Neu Laden"
+    "moreExamples": "Mehr Beispiele",
+    "reload": "Neu Laden",
+    "contact": "Kontaktiere Uns"
   }
 }
