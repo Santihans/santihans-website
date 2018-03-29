@@ -1,6 +1,6 @@
-import { createApolloFetch } from 'apollo-fetch'
 const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
 const nodeExternals = require('webpack-node-externals')
+const { createApolloFetch } = require('apollo-fetch')
 
 if (env === 'development') {
   require('dotenv').config()
