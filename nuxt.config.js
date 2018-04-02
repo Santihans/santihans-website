@@ -1,5 +1,6 @@
 const env = (process.env.NODE_ENV = process.env.NODE_ENV || 'development')
 const nodeExternals = require('webpack-node-externals')
+const { createApolloFetch } = require('apollo-fetch')
 
 if (env === 'development') {
   require('dotenv').config()
@@ -92,7 +93,45 @@ module.exports = {
   },
 
   generate: {
-    fallback: true
+    fallback: true,
+
+    routes: function() {
+      return new Promise(function(resolve, reject) {
+        const uri = 'https://api.tipe.io/graphql'
+        const apolloFetch = createApolloFetch({ uri })
+        const routes = []
+        apolloFetch.use(({ request, options }, next) => {
+          if (!options.headers) {
+            options.headers = {
+              'Content-Type': 'application/json',
+              Authorization: process.env.TIPE_API_KEY,
+              'Tipe-Id': process.env.TIPE_ID
+            }
+          }
+          next()
+        })
+        const query = `
+        query Projects {
+          projects: allProjects {
+            urlSlug
+          }
+        }
+      `
+        apolloFetch({ query }) // all apolloFetch arguments are optional
+          .then(result => {
+            const { data } = result
+            const dynamicRoutes = data.projects.map(project => project.urlSlug)
+            dynamicRoutes.forEach(element => {
+              routes.push(`/work/${element}`)
+            })
+            resolve(routes)
+          })
+          .catch(error => {
+            console.log('got error')
+            console.log(error)
+          })
+      })
+    }
   },
   /*
    ** Build configuration
