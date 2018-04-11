@@ -8,6 +8,11 @@
       <div>
         <nuxt-link v-ripple class="s-btn" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
       </div>
+      <div class="welcome">
+        {{ $t('welcomeProject') }}
+        <a v-if="$i18n.locale === 'en'" href="/files/SANTiHANS-Welcome.pdf">{{ $t('buttons.more') }}</a>
+        <a v-if="$i18n.locale === 'de'" href="/files/SANTiHANS-Willkommen.pdf">{{ $t('buttons.more') }}</a>
+      </div>
     </div>
   </section>
 </template>
@@ -17,10 +22,12 @@ export default {
   i18n: {
     messages: {
       en: {
-        teaser: 'Let\'s build great things together!'
+        teaser: 'Let\'s build great things together!',
+        welcomeProject: 'Not convinced? How about a Welcome Project.'
       },
       de: {
-        teaser: 'Lass uns gemeinsam etwas Grosses kreieren!'
+        teaser: 'Lass uns gemeinsam etwas Grosses kreieren!',
+        welcomeProject: 'Nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
       }
     }
   }
@@ -41,7 +48,11 @@ export default {
   display: flex;
   margin-top: 3em;
   min-height: 350px;
-  padding-bottom: 6em;
+  padding-bottom: 1em;
+
+  a {
+    color: inherit;
+  }
 
   @media screen and (min-width: $breakpointMedium) {
     background-size: cover;
@@ -74,6 +85,11 @@ export default {
     @media screen and (min-width: $breakpointSmall) {
       font-size: 2em;
     }
+  }
+
+  .welcome {
+    margin: 5em auto 0.5em;
+    width: 70%;
   }
 
   .s-btn {
