@@ -84,6 +84,7 @@
         </v-layout>
       </section>
     </div>
+    <contact-us />
   </div>
 </template>
 
@@ -91,6 +92,7 @@
 import Clouds from '~/components/clouds.vue'
 import Spinner from '~/components/Spinner.vue'
 import teamQuery from '@/apollo/query/team.graphql'
+import ContactUs from '~/components/contactUs.vue'
 
 export default {
   head() {
@@ -100,7 +102,8 @@ export default {
   },
   components: {
     Clouds,
-    Spinner
+    Spinner,
+    ContactUs
   },
   data() {
     return {
