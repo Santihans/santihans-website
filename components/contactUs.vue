@@ -10,8 +10,8 @@
       </div>
       <div class="welcome">
         {{ $t('welcomeProject') }}
-        <a v-if="$i18n.locale === 'en'" href="/files/SANTiHANS-Welcome.pdf">{{ $t('buttons.more') }}</a>
-        <a v-if="$i18n.locale === 'de'" href="/files/SANTiHANS-Willkommen.pdf">{{ $t('buttons.more') }}</a>
+        <a v-if="$i18n.locale === 'en'" href="/files/SANTiHANS-Welcome.pdf" rel="noopener" target="_blank">{{ $t('buttons.more') }}</a>
+        <a v-if="$i18n.locale === 'de'" href="/files/SANTiHANS-Willkommen.pdf" rel="noopener" target="_blank">{{ $t('buttons.more') }}</a>
       </div>
     </div>
   </section>
@@ -23,11 +23,11 @@ export default {
     messages: {
       en: {
         teaser: 'Let\'s build great things together!',
-        welcomeProject: 'Not convinced? How about a Welcome Project.'
+        welcomeProject: 'Not convinced yet? How about a Welcome Project.'
       },
       de: {
         teaser: 'Lass uns gemeinsam etwas Grosses kreieren!',
-        welcomeProject: 'Nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
+        welcomeProject: 'Noch nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
       }
     }
   }
