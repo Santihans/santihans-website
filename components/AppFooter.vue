@@ -4,9 +4,18 @@
       <component-address />
       <div>
         <component-language />
-        <a href="http://eepurl.com/c9nOob" rel="noopener" target="_blank">Newsletter</a>
+        <nav class="menu-about">
+          <ul>
+            <li v-for="(item, i) in about" :key="'about-' + i">
+              <nuxt-link v-if="item.path" v-ripple :to="localePath(`${item.path}`)">
+                {{ $t(`${item.label}`) }}
+              </nuxt-link>
+              <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" :title="item.label">{{ $t(`${item.label}`) }}</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <div class="menu" :title="$t('about')">
+      <div class="menu-social">
         <ul>
           <li v-for="(item, i) in social" :key="i">
             <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
@@ -31,16 +40,6 @@ export default {
     return {
       about: about,
       social: social
-    }
-  },
-  i18n: {
-    messages: {
-      en: {
-        about: 'About'
-      },
-      de: {
-        about: 'Über'
-      }
     }
   }
 }
@@ -93,7 +92,13 @@ export default {
     }
   }
 
-  .menu {
+  .menu-about {
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  .menu-social {
     margin-left: auto;
 
     ul {

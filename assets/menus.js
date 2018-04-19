@@ -23,6 +23,10 @@ const main = [
 
 const about = [
   {
+    url: 'http://eepurl.com/c9nOob',
+    label: 'Newsletter'
+  },
+  {
     path: '/terms',
     label: 'pages.terms',
     icon: 'info'
