@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import appHeader from '~/components/header.vue'
+import AppHeader from '~/components/AppHeader.vue'
 import Navigation from '~/components/Navigation.vue'
-import appFooter from '~/components/footer.vue'
+import AppFooter from '~/components/AppFooter.vue'
 import _ from 'underscore'
 
 export default {
@@ -25,9 +25,9 @@ export default {
     }
   },
   components: {
-    appHeader,
+    AppHeader,
     Navigation,
-    appFooter
+    AppFooter
   },
   data: () => ({
     navigationVisibility: false,

@@ -23,6 +23,10 @@ const main = [
 
 const about = [
   {
+    url: 'http://eepurl.com/c9nOob',
+    label: 'Newsletter'
+  },
+  {
     path: '/terms',
     label: 'pages.terms',
     icon: 'info'
@@ -43,11 +47,11 @@ const social = [
     label: 'Facebook'
   },
   {
-    url: 'https://github.com/Santihans',
-    label: 'Github'
+    url: 'https://gitlab.com/santihans',
+    label: 'GitLab'
   },
   {
-    url: 'https://gitter.im/Santihans/public',
+    url: 'https://gitter.im/santihans/public',
     label: 'Gitter'
   }
 ]
