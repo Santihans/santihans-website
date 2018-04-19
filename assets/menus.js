@@ -43,11 +43,11 @@ const social = [
     label: 'Facebook'
   },
   {
-    url: 'https://github.com/Santihans',
-    label: 'Github'
+    url: 'https://gitlab.com/santihans',
+    label: 'GitLab'
   },
   {
-    url: 'https://gitter.im/Santihans/public',
+    url: 'https://gitter.im/santihans/public',
     label: 'Gitter'
   }
 ]
