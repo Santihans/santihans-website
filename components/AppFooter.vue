@@ -2,7 +2,10 @@
   <footer id="footer">
     <div class="footer-inner boundaries">
       <component-address />
-      <component-language />
+      <div>
+        <component-language />
+        <a href="http://eepurl.com/c9nOob" rel="noopener" target="_blank">Newsletter</a>
+      </div>
       <div class="menu" :title="$t('about')">
         <ul>
           <li v-for="(item, i) in social" :key="i">
@@ -61,7 +64,7 @@ export default {
     color: inherit;
     text-decoration: none;
 
-    &:hover {
+    &:not(.s-btn):hover {
       text-decoration: underline;
     }
   }
