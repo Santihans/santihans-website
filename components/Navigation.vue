@@ -104,7 +104,7 @@ export default {
     left: 12vw;
     opacity: 0;
     transform: scale(0.8);
-    transition: 300ms 5000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 300ms 15000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   body.navigation--visible & {
