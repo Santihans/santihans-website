@@ -1,29 +1,32 @@
 <template>
-<div class="contact" itemscope itemtype="http://schema.org/LocalBusiness">
-  <div class="contact-physical">
-    <v-icon>place</v-icon>
-    <div itemprop="name">SANTiHANS GmbH</div>
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <span itemprop="streetAddress">Mittlere Strasse 60</span>
-      <div>
-        <span itemprop="postalCode">4056</span>&nbsp;<span itemprop="addressLocality">Basel</span>
+  <div class="contact" itemscope itemtype="http://schema.org/LocalBusiness">
+    <div class="contact-physical">
+      <v-icon>place</v-icon>
+      <div itemprop="name">SANTiHANS GmbH</div>
+      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Mittlere Strasse 60</span>
+        <div>
+          <span itemprop="postalCode">4056</span>&nbsp;
+          <span itemprop="addressLocality">Basel</span>
+        </div>
+        <span v-show="showCountry" itemprop="addressCountry">Switzerland</span>
       </div>
-      <span v-show="showCountry" itemprop="addressCountry">Switzerland</span>
+    </div>
+    <div class="contact-virtual">
+      <div v-show="showPhone" class="phone">
+        <v-icon>phone</v-icon>
+        <span itemprop="telephone">
+          <a href="tel:+41225754056">+41 22 575 40 56</a>
+        </span>
+      </div>
+      <div class="email">
+        <v-icon>email</v-icon>
+        <span itemprop="email">
+          <a href="mailto:info@santihans.com">info@santihans.com</a>
+        </span>
+      </div>
     </div>
   </div>
-  <div class="contact-virtual">
-    <div v-show="showPhone" class="phone">
-      <v-icon>phone</v-icon>
-      <span itemprop="telephone">
-              <a href="tel:+41225754056">+41 22 575 40 56</a></span>
-    </div>
-    <div class="email">
-      <v-icon>email</v-icon>
-      <span itemprop="email">
-        <a href="mailto:info@santihans.com">info@santihans.com</a></span>
-    </div>
-  </div>
-</div>
 </template>
 
 <script>

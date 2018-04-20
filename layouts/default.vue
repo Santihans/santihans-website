@@ -41,7 +41,10 @@ export default {
       var self = this.$el
       _.throttle(function () {
         self.classList.toggle('scrollTop', window.scrollY < 10)
-        self.classList.toggle('scrollTopExtendend', window.scrollY < window.screen.height / 8)
+        self.classList.toggle(
+          'scrollTopExtendend',
+          window.scrollY < window.screen.height / 8
+        )
       }, 100)()
     },
     handleKeyboardShortcuts: function (event) {
@@ -69,7 +72,6 @@ export default {
         _.delay(function () {
           document.body.classList.add('noScroll')
         }, 300)
-
       } else {
         document.body.classList.remove('noScroll', 'navigation--visible')
         _.defer(function () {
@@ -78,7 +80,7 @@ export default {
       }
     },
 
-    '$route': function () {
+    $route: function () {
       this.navigationVisibility = false
     }
   }

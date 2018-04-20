@@ -114,18 +114,22 @@ export default {
     }
   },
   methods: {
-    getYear: function (timestamp) {
+    getYear: function(timestamp) {
       let date = new Date(timestamp)
       return date.getFullYear()
     },
-    tagList: function (data) {
+    tagList: function(data) {
       var string = String(data).replace(/,\s+/g, ',')
       return string.split(',')
     },
-    imageList: function () {
-      let images = [this.project.slideshow_1, this.project.slideshow_2, this.project.slideshow_3]
+    imageList: function() {
+      let images = [
+        this.project.slideshow_1,
+        this.project.slideshow_2,
+        this.project.slideshow_3
+      ]
       let imagesList = []
-      images.forEach(function (element) {
+      images.forEach(function(element) {
         if (element) {
           imagesList.push(element)
         }
