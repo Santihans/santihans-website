@@ -95,8 +95,8 @@ module.exports = {
   generate: {
     fallback: true,
 
-    routes: function() {
-      return new Promise(function(resolve, reject) {
+    routes: function () {
+      return new Promise(function (resolve, reject) {
         const uri = 'https://api.tipe.io/graphql'
         const apolloFetch = createApolloFetch({ uri })
         const routes = []
@@ -163,7 +163,7 @@ module.exports = {
         ]
       ]
     },
-    extend(config, { isDev, isClient, isServer }) {
+    extend (config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
