@@ -151,10 +151,10 @@ export default {
     }
   },
   methods: {
-    sortedTeam: function (items) {
+    sortedTeam: function(items) {
       const sortable = Object.keys(items).map(i => items[i])
       const published = sortable.filter(item => item._meta.published === true)
-      published.sort(function (a, b) {
+      published.sort(function(a, b) {
         return a.date - b.date
       })
       return published

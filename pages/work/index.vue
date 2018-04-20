@@ -76,10 +76,10 @@ export default {
     }
   },
   methods: {
-    sortedProjects: function (items) {
+    sortedProjects: function(items) {
       const sortable = Object.keys(items).map(i => items[i])
       const published = sortable.filter(item => item._meta.published === true)
-      published.sort(function (a, b) {
+      published.sort(function(a, b) {
         return b.date - a.date
       })
       return published
@@ -90,7 +90,8 @@ export default {
       en: {
         work: {
           heading: 'Recent Highlights',
-          abstract: 'Our cross-functional, agile team creates custom communications solutions for demanding clients in a variety of fields.'
+          abstract:
+            'Our cross-functional, agile team creates custom communications solutions for demanding clients in a variety of fields.'
         },
         heading: {
           scope: 'Project Scope',
@@ -100,7 +101,8 @@ export default {
       de: {
         work: {
           heading: 'Aktuelle Highlights',
-          abstract: 'Unser funktionsübergreifendes, agiles Team entwickelt massgeschneiderte Kommunikationslösungen für anspruchsvolle Kunden aus den unterschiedlichsten Bereichen.'
+          abstract:
+            'Unser funktionsübergreifendes, agiles Team entwickelt massgeschneiderte Kommunikationslösungen für anspruchsvolle Kunden aus den unterschiedlichsten Bereichen.'
         },
         heading: {
           scope: 'Projektumfang',

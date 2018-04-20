@@ -74,30 +74,36 @@ export default {
         contact: 'Contact us',
         webdesign: {
           headline: 'Web Experiences',
-          abstract: 'We create individual online communication solutions based on JAMstack development architecture. Our websites are fast, accessible and intuitive, with focus on outstanding design and next-level user interfaces.'
+          abstract:
+            'We create individual online communication solutions based on JAMstack development architecture. Our websites are fast, accessible and intuitive, with focus on outstanding design and next-level user interfaces.'
         },
         branding: {
           headline: 'Corporate Identity',
-          abstract: 'We develop corporate identity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
+          abstract:
+            'We develop corporate identity solutions that perfectly represent the values of your organisation. We make sure you leave your customers with a lasting positive impression.'
         },
         advertising: {
           headline: 'Snappy Communications',
-          abstract: 'Spread your message and increase brand awareness! We help you communicate with your target audience by developing new communication assets.'
+          abstract:
+            'Spread your message and increase brand awareness! We help you communicate with your target audience by developing new communication assets.'
         }
       },
       de: {
         contact: 'Kontakt',
         webdesign: {
           headline: 'Premium Webseiten',
-          abstract: 'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Webseiten sind schnell, zugänglich und intuitiv. Der Schwerpunkt liegt auf herausragendem Design und Lösungen für anspruchsvolle Benutzeroberflächen.'
+          abstract:
+            'Wir erstellen individuelle Online-Kommunikationslösungen auf Basis der JAMstack-Entwicklungsarchitektur. Unsere Webseiten sind schnell, zugänglich und intuitiv. Der Schwerpunkt liegt auf herausragendem Design und Lösungen für anspruchsvolle Benutzeroberflächen.'
         },
         branding: {
           headline: 'Corporate Identity',
-          abstract: 'Hinterlasse einen bleibenden Eindruck! Wir entwerfen Marken-Identitäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Designs.'
+          abstract:
+            'Hinterlasse einen bleibenden Eindruck! Wir entwerfen Marken-Identitäten für deine Organisation oder dein Projekt. Schwerpunkt sind schlichte, wiedererkennbare und einzigartige Designs.'
         },
         advertising: {
           headline: 'Bissige Kommunikation',
-          abstract: 'Erreiche deine Kundschaft und steigere die Bekanntheit deiner Marke. Wir erarbeiten individuelle Kommunikationslösungen und Werbekampagnen die bewegen.'
+          abstract:
+            'Erreiche deine Kundschaft und steigere die Bekanntheit deiner Marke. Wir erarbeiten individuelle Kommunikationslösungen und Werbekampagnen die bewegen.'
         }
       }
     }
