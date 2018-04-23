@@ -25,7 +25,7 @@ module.exports = {
   },
   meta: {
     name: 'SANTiHANS',
-    description: 'We are a digital design and communications agency. 😇',
+    description: 'Your next-level communications agency for tomorrow\'s digital experiences. 😇',
     theme_color: '#212121',
     ogHost: 'https://www.santihans.com',
     ogImage: { path: '/og-image.png' },
@@ -36,7 +36,7 @@ module.exports = {
   manifest: {
     name: 'SANTiHANS',
     short_name: 'SANTiHANS',
-    description: 'We are a digital design and communications agency. 😇'
+    description: 'Your next-level communications agency for tomorrow\'s digital experiences. 😇'
   },
   /*
    ** Customize the progress-bar color
