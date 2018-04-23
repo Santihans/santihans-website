@@ -7,10 +7,6 @@ if (env === 'development') {
 }
 
 module.exports = {
-  env: {
-    TIPE_API_KEY: process.env.TIPE_API_KEY,
-    TIPE_ID: process.env.TIPE_ID
-  },
   head: {
     title: 'SANTiHANS',
     titleTemplate: '%s - SANTiHANS',
@@ -25,7 +21,8 @@ module.exports = {
   },
   meta: {
     name: 'SANTiHANS',
-    description: 'We are a digital design and communications agency. 😇',
+    description:
+      "Your next-level communications agency for tomorrow's digital experiences. 😇",
     theme_color: '#212121',
     ogHost: 'https://www.santihans.com',
     ogImage: { path: '/og-image.png' },
@@ -36,7 +33,14 @@ module.exports = {
   manifest: {
     name: 'SANTiHANS',
     short_name: 'SANTiHANS',
-    description: 'We are a digital design and communications agency. 😇'
+    description:
+      "Your next-level communications agency for tomorrow's digital experiences. 😇"
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://santihans.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
   },
   /*
    ** Customize the progress-bar color
@@ -66,6 +70,10 @@ module.exports = {
     {
       src: '~plugins/webFontLoader.js',
       ssr: false
+    },
+    {
+      src: '~plugins/vueProgressiveImage.js',
+      ssr: false
     }
   ],
   modules: [
@@ -75,7 +83,9 @@ module.exports = {
         languages: ['en', 'de']
       }
     ],
+    '@nuxtjs/sitemap',
     '@nuxtjs/apollo',
+    '@nuxtjs/dotenv',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     [

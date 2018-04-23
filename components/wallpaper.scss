@@ -18,7 +18,7 @@
 
   .parallax-image {
     background-color: $colorNight;
-    background-image: url('~assets/images/skyline-santihans.svg');
+    background-image: url('/images/skyline-santihans.svg');
     background-position: bottom left;
     background-size: 240%;
     height: 100%;
@@ -181,7 +181,7 @@
     }
 
     &::after {
-      background-image: url('~assets/images/skyline-santihans.svg');
+      background-image: url('/images/skyline-santihans.svg');
       background-repeat: no-repeat;
       background-position: bottom left;
       background-size: 200%;

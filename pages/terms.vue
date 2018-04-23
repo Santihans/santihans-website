@@ -4,8 +4,8 @@
       <h1>{{ $t('pages.terms') }}</h1>
       <component-clouds />
       <div class="illustration">
-        <img src="~assets/images/header-terms.svg" alt="Illustration">
-        <img class="tumbleweed" src="~assets/images/header-terms-tumbleweed.svg" alt="Illustration">
+        <img src="/images/header-terms.svg" alt="Illustration" />
+        <img class="tumbleweed" src="/images/header-terms-tumbleweed.svg" alt="Illustration" />
       </div>
     </div>
     <div class="page-content boundaries">
@@ -18,7 +18,9 @@
           MwSt: CHE-244.875.499 MWST
         </div>
         <div class="madeinbasel">
-          <a href="https://madeinbasel.org" target="_blank" rel="noopener"><img src="/images/madeinbasel.svg" alt="Made in Basel"></a>
+          <a href="https://madeinbasel.org" target="_blank" rel="noopener">
+            <img src="/images/madeinbasel.svg" alt="Made in Basel" />
+          </a>
         </div>
       </section>
 

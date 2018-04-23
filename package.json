@@ -16,9 +16,11 @@
   "dependencies": {
     "@nuxtjs/apollo": "^3.0.2",
     "@nuxtjs/axios": "^5.1.1",
+    "@nuxtjs/dotenv": "^1.1.1",
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
+    "@nuxtjs/sitemap": "^0.1.1",
     "@tipe/nuxt-apollo-module": "^3.0.1",
     "apollo-fetch": "^0.7.0",
     "apollo-link-context": "^1.0.5",
@@ -46,6 +48,7 @@
     "vue-carousel": "^0.6.9",
     "vue-i18n": "^7.0.5",
     "vue-markdown": "^2.2.4",
+    "vue-progressive-image": "^2.4.4",
     "vuetify": "^1.0.10",
     "webfontloader": "^1.6.28"
   },

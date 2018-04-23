@@ -1,9 +1,9 @@
 <template>
   <div class="watch">
-    <img src="~assets/images/watch.svg" alt="Watch">
-    <img class="watch-hours" :style="hour" src="~assets/images/watch-hours.svg" alt="Hours">
-    <img class="watch-minutes" :style="minute" src="~assets/images/watch-minutes.svg" alt="Miuntes">
-    <img class="watch-seconds" :style="second" src="~assets/images/watch-seconds.svg" alt="Seconds">
+    <img src="/images/watch.svg" alt="Watch" />
+    <img class="watch-hours" :style="hour" src="/images/watch-hours.svg" alt="Hours" />
+    <img class="watch-minutes" :style="minute" src="/images/watch-minutes.svg" alt="Miuntes" />
+    <img class="watch-seconds" :style="second" src="/images/watch-seconds.svg" alt="Seconds" />
   </div>
 </template>
 

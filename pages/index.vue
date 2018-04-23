@@ -3,8 +3,8 @@
     <component-wallpaper></component-wallpaper>
     <div class="illustration-webdesign">
       <div class="illustration">
-        <img src="~assets/images/webdesign.svg" alt="Illustration">
-        <img class="arrow" src="~assets/images/arrow.svg" alt="Illustration">
+        <img src="/images/webdesign.svg" alt="Illustration">
+        <img class="arrow" src="/images/arrow.svg" alt="Illustration">
       </div>
     </div>
     <section id="sectionWebDesign" class="service-webdesign boundaries">
@@ -19,7 +19,9 @@
 
     <section class="service-branding boundaries">
       <div class="illustration">
-        <img src="~assets/images/branding.svg" alt="Illustration">
+        <no-ssr>
+          <progressive-img src="/images/branding.svg" alt="Illustration" />
+        </no-ssr>
         <component-watch/>
       </div>
       <h2>{{ $t('branding.headline') }}</h2>
@@ -31,7 +33,9 @@
 
     <div class="illustration-advertising">
       <component-clouds/>
-      <img class="illustration" src="~assets/images/communications.svg" alt="Illustration">
+      <no-ssr>
+        <progressive-img class="illustration" src="/images/communications.svg" alt="Illustration" />
+      </no-ssr>
       <component-zeppelin/>
     </div>
 

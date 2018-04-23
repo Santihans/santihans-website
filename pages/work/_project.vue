@@ -40,7 +40,9 @@
             </template>
           </p>
           <figure class="intro-image">
-            <img v-if="project.introImage" :src="project.introImage.url" alt="Intro">
+            <no-ssr>
+              <progressive-img v-if="project.introImage" :src="project.introImage.url" alt="Intro" />
+            </no-ssr>
           </figure>
           <Markdown class="markdown" :markdown="project.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="project.bodyDe" v-if="$i18n.locale === 'de'" />
@@ -50,7 +52,7 @@
             <carousel :perPage=1 autoplay :autoplayTimeout=5000>
               <slide v-for="image in imageList()" :key="image.id">
                 <div class="slide">
-                  <img :src="image.url" :alt="image.name">
+                  <img :src="image.url" :alt="image.name" />
                 </div>
               </slide>
             </carousel>
@@ -114,22 +116,22 @@ export default {
     }
   },
   methods: {
-    getYear: function(timestamp) {
+    getYear: function (timestamp) {
       let date = new Date(timestamp)
       return date.getFullYear()
     },
-    tagList: function(data) {
+    tagList: function (data) {
       var string = String(data).replace(/,\s+/g, ',')
       return string.split(',')
     },
-    imageList: function() {
+    imageList: function () {
       let images = [
         this.project.slideshow_1,
         this.project.slideshow_2,
         this.project.slideshow_3
       ]
       let imagesList = []
-      images.forEach(function(element) {
+      images.forEach(function (element) {
         if (element) {
           imagesList.push(element)
         }

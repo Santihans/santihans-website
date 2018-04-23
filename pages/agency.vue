@@ -4,8 +4,8 @@
       <h1>{{ $t('pages.agency') }}</h1>
       <clouds />
       <div class="illustration">
-        <img src="~assets/images/header-agency.svg" alt="Illustration">
-        <img class="ship" src="~assets/images/header-agency-ship.svg" alt="Illustration">
+        <img src="/images/header-agency.svg" alt="Illustration" />
+        <img class="ship" src="/images/header-agency-ship.svg" alt="Illustration" />
       </div>
     </div>
     <div class="page-content boundaries">
@@ -21,10 +21,13 @@
         <spinner v-if="loading" inline />
         <v-layout v-else class="members" wrap justify-center>
           <v-flex xs6 sm4 v-for="(item,i) in sortedTeam(team)" :key="i">
-            <div class="member-image">
-              <img v-if="item.image" :src="item.image.url" :alt="item.name">
-              <img v-else :src="'/images/agency/placeholder.jpg'" alt="Placeholder">
-            </div>
+
+            <no-ssr>
+              <div class="member-image">
+                <progressive-img v-if="item.image" :src="item.image.url" :alt="item.name" />
+                <progressive-img v-else :src="'/images/agency/placeholder.jpg'" alt="Placeholder" />
+              </div>
+            </no-ssr>
             <div class="member-name">
               {{ item.name }}
             </div>
@@ -46,7 +49,9 @@
           </v-flex>
           <v-flex xs6 sm4>
             <div class="member-image">
-              <img src="/images/agency/et.svg" alt="ET">
+              <no-ssr>
+                <progressive-img src="/images/agency/et.svg" alt="ET" />
+              </no-ssr>
             </div>
             <div class="member-name">
               {{ $t('team.et.name') }}
@@ -73,7 +78,7 @@
           <v-flex xs6 sm3 v-for="(item,i) in partner" :key="i">
             <a :href="item.web" target="_blank" rel="noopener">
               <div class="partner-logo">
-                <img :src="'/images/agency/' + item.logo" :alt="item.name">
+                <img :src="'/images/agency/' + item.logo" :alt="item.name" />
               </div>
               <div v-if="item.hasOwnProperty('description')" class="partner-description">
                 <div v-if="$i18n.locale === 'en'">{{ item.description.en }}</div>
@@ -151,10 +156,10 @@ export default {
     }
   },
   methods: {
-    sortedTeam: function(items) {
+    sortedTeam: function (items) {
       const sortable = Object.keys(items).map(i => items[i])
       const published = sortable.filter(item => item._meta.published === true)
-      published.sort(function(a, b) {
+      published.sort(function (a, b) {
         return a.date - b.date
       })
       return published
