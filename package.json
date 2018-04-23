@@ -20,6 +20,7 @@
     "@nuxtjs/font-awesome": "^1.0.3",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
+    "@nuxtjs/sitemap": "^0.1.1",
     "@tipe/nuxt-apollo-module": "^3.0.1",
     "apollo-fetch": "^0.7.0",
     "apollo-link-context": "^1.0.5",

@@ -36,6 +36,12 @@ module.exports = {
     description:
       "Your next-level communications agency for tomorrow's digital experiences. 😇"
   },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://santihans.com',
+    cacheTime: 1000 * 60 * 15,
+    generate: true
+  },
   /*
    ** Customize the progress-bar color
    */
@@ -77,6 +83,7 @@ module.exports = {
         languages: ['en', 'de']
       }
     ],
+    '@nuxtjs/sitemap',
     '@nuxtjs/apollo',
     '@nuxtjs/dotenv',
     '@nuxtjs/axios',
@@ -140,7 +147,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    analyze: true,
+    // analyze: true,
     vendor: ['~/plugins/vuetify.js', 'underscore'],
     extractCSS: true,
     /*
