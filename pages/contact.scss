@@ -3,7 +3,7 @@
 #contact {
   .page-header {
     background-color: $colorNightGreen;
-    background-image: url('~assets/images/contact-bg.svg');
+    background-image: url('/images/contact-bg.svg');
 
     .clouds svg g {
       fill: lighten($colorNightGreen, 8);

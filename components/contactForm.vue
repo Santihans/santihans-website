@@ -4,7 +4,7 @@
       {{ $t('form.successMessage') }}
     </v-alert>
     <div v-show="!formSuccess">
-      <img class="homer" src="~assets/images/homer.svg" alt="Illustration">
+      <img class="homer" src="/images/homer.svg" alt="Illustration" />
       <h4>{{ title }}</h4>
       <form method="POST" v-on:submit.prevent="onSubmit">
         <v-text-field name="name" :label="$t('form.name')" v-model="name" required :rules="[rules.required]"></v-text-field>

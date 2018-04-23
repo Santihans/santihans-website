@@ -39,7 +39,7 @@ export default {
 
 .contactUs {
   align-items: center;
-  background-image: url('~/assets/images/skyline-santihans.svg');
+  background-image: url('/images/skyline-santihans.svg');
   background-position: bottom;
   background-color: $colorPink;
   background-clip: padding-box;

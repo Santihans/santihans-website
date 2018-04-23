@@ -21,7 +21,8 @@ module.exports = {
   },
   meta: {
     name: 'SANTiHANS',
-    description: 'Your next-level communications agency for tomorrow\'s digital experiences. 😇',
+    description:
+      "Your next-level communications agency for tomorrow's digital experiences. 😇",
     theme_color: '#212121',
     ogHost: 'https://www.santihans.com',
     ogImage: { path: '/og-image.png' },
@@ -32,7 +33,8 @@ module.exports = {
   manifest: {
     name: 'SANTiHANS',
     short_name: 'SANTiHANS',
-    description: 'Your next-level communications agency for tomorrow\'s digital experiences. 😇'
+    description:
+      "Your next-level communications agency for tomorrow's digital experiences. 😇"
   },
   /*
    ** Customize the progress-bar color
@@ -61,6 +63,10 @@ module.exports = {
     },
     {
       src: '~plugins/webFontLoader.js',
+      ssr: false
+    },
+    {
+      src: '~plugins/vueProgressiveImage.js',
       ssr: false
     }
   ],
@@ -134,7 +140,7 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    // analyze: true,
+    analyze: true,
     vendor: ['~/plugins/vuetify.js', 'underscore'],
     extractCSS: true,
     /*

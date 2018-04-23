@@ -4,7 +4,7 @@
       <h1>{{ $t('pages.contact') }}</h1>
       <component-clouds />
       <div class="illustration">
-        <img class="" src="~assets/images/header-contact.svg" alt="Illustration">
+        <img src="/images/header-contact.svg" alt="Illustration" />
         <component-ufo />
       </div>
     </div>

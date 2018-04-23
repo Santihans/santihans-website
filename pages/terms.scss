@@ -32,7 +32,7 @@
 #terms {
   .page-header {
     background-color: $colorYellow;
-    background-image: url('~assets/images/terms-bg.svg');
+    background-image: url('/images/terms-bg.svg');
 
     .clouds svg g {
       fill: lighten($colorYellow, 8);

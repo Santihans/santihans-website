@@ -3,7 +3,7 @@
     <div class="page-header">
       <h1>{{ $t('pages.work') }}</h1>
       <clouds />
-      <img class="illustration" src="~assets/images/header-store.svg" alt="Illustration">
+      <img class="illustration" src="/images/header-store.svg" alt="Illustration" />
     </div>
     <div class="page-content">
       <section class="company boundaries">
@@ -76,10 +76,10 @@ export default {
     }
   },
   methods: {
-    sortedProjects: function(items) {
+    sortedProjects: function (items) {
       const sortable = Object.keys(items).map(i => items[i])
       const published = sortable.filter(item => item._meta.published === true)
-      published.sort(function(a, b) {
+      published.sort(function (a, b) {
         return b.date - a.date
       })
       return published
