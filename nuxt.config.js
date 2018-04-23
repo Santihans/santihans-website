@@ -7,10 +7,6 @@ if (env === 'development') {
 }
 
 module.exports = {
-  env: {
-    TIPE_API_KEY: process.env.TIPE_API_KEY,
-    TIPE_ID: process.env.TIPE_ID
-  },
   head: {
     title: 'SANTiHANS',
     titleTemplate: '%s - SANTiHANS',
@@ -76,6 +72,7 @@ module.exports = {
       }
     ],
     '@nuxtjs/apollo',
+    '@nuxtjs/dotenv',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     [
