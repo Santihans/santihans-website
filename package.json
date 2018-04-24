@@ -41,7 +41,8 @@
     "node.extend": "^2.0.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.0",
-    "nuxt-i18n-module": "njam/nuxt-i18n-module",
+    "nuxt-i18n-module":
+      "git://github.com/christopheschwyzer/nuxt-i18n-module.git#set-default-language",
     "subscriptions-transport-ws": "^0.9.6",
     "underscore": "^1.8.3",
     "vue": "~2.5.13",
