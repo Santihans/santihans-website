@@ -132,6 +132,15 @@ export default {
             de: 'Massgeschneiderte Softwarelösungen.',
             en: 'Tailored software solutions.'
           }
+        },
+        {
+          logo: 'rotkopf.svg',
+          name: 'Rotkopf',
+          web: 'https://www.rotkopf.ch',
+          description: {
+            de: 'Reklame, die bewegt.',
+            en: 'Advertising.'
+          }
         }
         // {
         //   logo: 'taktwerk.svg',
