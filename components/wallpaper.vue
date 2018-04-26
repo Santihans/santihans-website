@@ -16,6 +16,7 @@
             <span>Next-Level</span>-Kommunikations&shy;agentur für die digitalen
             <span>Erlebnisse</span> von morgen.</h1>
         </div>
+        <img class="talk-to-us" :class="{'ready': ready}" src="/images/talk-to-us.svg" alt="Talk to us">
         <div class="more">
           <scroll-indicator />
         </div>
@@ -33,9 +34,17 @@ import Clouds from '~/components/clouds.vue'
 import scrollIndicator from '~/components/scrollIndicator.vue'
 
 export default {
+  data() {
+    return {
+      ready: false
+    }
+  },
   components: {
     'component-clouds': Clouds,
     scrollIndicator
+  },
+  mounted() {
+    this.ready = true
   }
 }
 </script>
