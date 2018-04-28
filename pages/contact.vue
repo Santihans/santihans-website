@@ -1,13 +1,9 @@
 <template>
   <div id="contact">
-    <div class="page-header">
-      <h1>{{ $t('pages.contact') }}</h1>
-      <component-clouds />
-      <div class="illustration">
-        <img src="/images/header-contact.svg" alt="Illustration" />
-        <component-ufo />
-      </div>
-    </div>
+    <page-header :title="$t('pages.contact')" backgroundImage="header-contact.svg">
+      <component-ufo />
+    </page-header>
+
     <section class="page-content boundaries">
       <div class="flex">
         <div class="flex-contact">
@@ -29,7 +25,7 @@
 <script>
 import address from '~/components/contactAddress.vue'
 import contactForm from '~/components/contactForm.vue'
-import clouds from '~/components/clouds.vue'
+import PageHeader from '~/components/PageHeader.vue'
 import ufo from '~/components/ufo.vue'
 import Spinner from '~/components/Spinner.vue'
 
@@ -37,8 +33,8 @@ export default {
   components: {
     'component-address': address,
     'component-contact-form': contactForm,
-    'component-clouds': clouds,
     'component-ufo': ufo,
+    PageHeader,
     Spinner
   },
   head() {

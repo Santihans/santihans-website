@@ -39,65 +39,37 @@ svg {
 
 h1,
 h2 {
-  text-align: center;
-}
-
-h1,
-h2 {
   font-family: $fontFamilyHeading;
-}
-
-h1 {
-  font-size: 4em;
-
-  @media (min-width: $breakpointSmall) {
-    font-size: 6em;
-  }
+  line-height: 1.2;
 }
 
 h2 {
-  font-size: 1.9em;
+  font-size: 1.5em;
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  opacity: 0.9;
 
   @media (min-width: $breakpointMini) {
-    font-size: 2.4em;
+    font-size: 1.7em;
   }
 
   @media (min-width: $breakpointSmall) {
-    font-size: 3.4em;
-  }
-
-  + .abstract {
-    font-size: 1.2em;
-
-    @media (min-width: $breakpointSmall) {
-      font-size: 1.3em;
-    }
-
-    @media (min-width: $breakpointMedium) {
-      font-size: 1.4em;
-    }
+    font-size: 1.9em;
   }
 }
 
 h3 {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.1em;
+  opacity: 0.8;
 
   @media (min-width: $breakpointMini) {
-    font-size: 2em;
+    font-size: 1.25em;
   }
 
   @media (min-width: $breakpointSmall) {
-    font-size: 2.4em;
-  }
-
-  + .abstract {
-    font-size: 1.1em;
-    margin-bottom: 2em;
+    font-size: 1.4em;
   }
 }
 
@@ -117,9 +89,42 @@ h4 {
   position: relative;
 }
 
+article {
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+  @media (min-width: $breakpointSmall) {
+    font-size: 1.1em;
+  }
+
+  p {
+    text-align: justify;
+    hyphens: auto;
+
+    &:first-of-type {
+      font-weight: 500;
+    }
+  }
+
+  ul {
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+  }
+
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.3em;
+  }
+}
+
 section {
   padding-top: 4em;
   padding-bottom: 3em;
+
   @media (min-width: $breakpointSmall) {
     padding-top: 6em;
     padding-bottom: 4em;
@@ -130,30 +135,35 @@ section {
     box-shadow: 0 90px 90px -60px rgba(0, 0, 0, 0.03);
     margin-bottom: 2em;
   }
+
+  > h2 {
+    margin-bottom: 16px;
+    text-align: center;
+
+    @media (min-width: $breakpointMini) {
+      font-size: 2.4em;
+    }
+
+    @media (min-width: $breakpointSmall) {
+      font-size: 3.4em;
+    }
+
+    + .abstract {
+      font-size: 1.2em;
+
+      @media (min-width: $breakpointSmall) {
+        font-size: 1.3em;
+      }
+
+      @media (min-width: $breakpointMedium) {
+        font-size: 1.4em;
+      }
+    }
+  }
 }
 
 .flex {
   padding: 0 5px 10px;
-}
-
-.section--dark {
-  background-color: $colorTurquoise;
-  margin-top: 2em;
-  padding: 30px 12px 12px;
-
-  h3,
-  h4,
-  p {
-    color: $colorBg;
-  }
-
-  h3 {
-    margin-bottom: 12px;
-  }
-
-  h4 {
-    margin-top: 0;
-  }
 }
 
 .boundaries {
@@ -195,60 +205,6 @@ section {
   }
   @media (min-width: $breakpointMedium) {
     width: 75%;
-  }
-}
-
-.page-header {
-  background-color: black;
-  background-image: url('/images/skyline-santihans.svg');
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: contain;
-  border-bottom: 4px solid $colorPink;
-  height: 220px;
-  position: relative;
-  @media (min-width: $breakpointMini) {
-    height: 260px;
-  }
-  @media (min-width: 500px) {
-    height: 280px;
-  }
-  @media (min-width: $breakpointSmall) {
-    height: 360px;
-  }
-  @media (min-width: $breakpointMedium) {
-    height: 400px;
-  }
-
-  h1 {
-    color: rgba(0, 0, 0, 0.12);
-    left: 50%;
-    opacity: 0;
-    position: absolute;
-    top: 40%;
-    transform: translate(-50%, -100%) scale(0.5);
-    transition: 200ms;
-
-    #layout.scrollTop & {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-
-  .clouds {
-    position: absolute;
-    top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .illustration {
-    bottom: 0;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 720px;
-    max-width: 100%;
   }
 }
 

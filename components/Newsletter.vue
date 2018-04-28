@@ -1,33 +1,27 @@
 <template>
-  <section class="contactUs text-center">
+  <section class="subscribe text-center">
     <div class="boundaries">
       <div class="mood">
-        <v-icon>child_friendly</v-icon>
+        <v-icon>favorite</v-icon>
       </div>
       <div class="call">{{ $t('teaser') }}</div>
       <div>
-        <nuxt-link v-ripple class="s-btn" :to="localePath('/contact')">{{ $t('buttons.contact') }}</nuxt-link>
-      </div>
-      <div class="welcome">
-        {{ $t('welcomeProject') }}
-        <a v-if="$i18n.locale === 'en'" href="/files/SANTiHANS-Welcome.pdf" rel="noopener" target="_blank">{{ $t('buttons.more') }}</a>
-        <a v-if="$i18n.locale === 'de'" href="/files/SANTiHANS-Willkommen.pdf" rel="noopener" target="_blank">{{ $t('buttons.more') }}</a>
+        <a href="http://eepurl.com/c9nOob" v-ripple class="s-btn" rel="noopener" target="_blank">{{ $t('buttons.newsletter') }}</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+
 export default {
   i18n: {
     messages: {
       en: {
-        teaser: 'Let\'s build great things together!',
-        welcomeProject: 'Not convinced yet? How about a Welcome Project.'
+        teaser: 'Get the latest updates!'
       },
       de: {
-        teaser: 'Lass uns gemeinsam etwas Grosses schaffen!',
-        welcomeProject: 'Noch nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
+        teaser: 'Bleibe auf dem Laufenden!'
       }
     }
   }
@@ -37,18 +31,19 @@ export default {
 <style lang="scss">
 @import '~assets/styles/variables.scss';
 
-.contactUs {
+.subscribe {
   align-items: center;
   background-image: url('/images/skyline-santihans.svg');
   background-position: bottom;
-  background-color: $colorPink;
+  background-color: $colorTurquoise;
   background-clip: padding-box;
-  border-top: 3px dashed $colorPink;
+  border-top: 3px dashed $colorTurquoise;
   color: white;
   display: flex;
   margin-top: 3em;
   min-height: 350px;
   padding-bottom: 1em;
+  padding-top: 2em;
 
   a {
     color: inherit;
@@ -84,19 +79,6 @@ export default {
 
     @media screen and (min-width: $breakpointSmall) {
       font-size: 2em;
-    }
-  }
-
-  .welcome {
-    margin: 5em auto 0.5em;
-    width: 70%;
-  }
-
-  .s-btn {
-    @media screen and (min-width: $breakpointSmall) {
-      height: 60px;
-      padding: 4px 40px;
-      font-size: 1.2em;
     }
   }
 }

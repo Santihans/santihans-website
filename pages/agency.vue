@@ -1,13 +1,8 @@
 <template>
   <div id="agency">
-    <div class="page-header">
-      <h1>{{ $t('pages.agency') }}</h1>
-      <clouds />
-      <div class="illustration">
-        <img src="/images/header-agency.svg" alt="Illustration" />
-        <img class="ship" src="/images/header-agency-ship.svg" alt="Illustration" />
-      </div>
-    </div>
+    <page-header :title="$t('pages.agency')" backgroundImage="header-agency.svg">
+      <img class="ship" src="/images/header/header-agency-ship.svg" alt="Illustration" />
+    </page-header>
     <div class="page-content boundaries">
 
       <section class="mission section--shadow">
@@ -94,7 +89,7 @@
 </template>
 
 <script>
-import Clouds from '~/components/clouds.vue'
+import PageHeader from '~/components/PageHeader.vue'
 import Spinner from '~/components/Spinner.vue'
 import teamQuery from '@/apollo/query/team.graphql'
 import ContactUs from '~/components/contactUs.vue'
@@ -106,7 +101,7 @@ export default {
     }
   },
   components: {
-    Clouds,
+    PageHeader,
     Spinner,
     ContactUs
   },

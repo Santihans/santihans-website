@@ -8,6 +8,7 @@
   "pages": {
     "home": "Home",
     "work": "Work",
+    "blog": "Blog",
     "contact": "Contact",
     "agency": "Agency",
     "terms": "Disclaimer"
@@ -33,6 +34,7 @@
     "moreExamples": "More Examples",
     "reload": "Reload",
     "contact": "Get in Touch",
-    "download": "Download"
+    "download": "Download",
+    "newsletter": "Subscribe to Newsletter"
   }
 }

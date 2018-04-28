@@ -195,6 +195,9 @@ export default {
       &:nth-child(3) {
         transition-delay: 260ms;
       }
+      &:nth-child(4) {
+        transition-delay: 280ms;
+      }
     }
   }
 
@@ -209,19 +212,19 @@ export default {
 
     li {
       &:nth-child(1) {
-        transition-delay: 280ms;
-      }
-      &:nth-child(2) {
         transition-delay: 300ms;
       }
-      &:nth-child(3) {
+      &:nth-child(2) {
         transition-delay: 320ms;
       }
-      &:nth-child(4) {
+      &:nth-child(3) {
         transition-delay: 340ms;
       }
-      &:nth-child(5) {
+      &:nth-child(4) {
         transition-delay: 360ms;
+      }
+      &:nth-child(5) {
+        transition-delay: 380ms;
       }
     }
   }
@@ -278,7 +281,7 @@ export default {
     }
 
     li {
-      transition-delay: 380ms;
+      transition-delay: 400ms;
     }
   }
 
