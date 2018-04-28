@@ -1,0 +1,27 @@
+query Blog {
+  blogEntries: allBlogs {
+    urlSlug
+    headerImage {
+      id
+      name
+      size
+      url
+      mime
+    }
+    abstractEn
+    abstractDe
+    bodyEn
+    bodyDe
+    titleEn
+    titleDe
+    date
+    tags
+    author
+
+    _meta {
+      id
+      name
+      published
+    }
+  }
+}

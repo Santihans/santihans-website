@@ -1,35 +1,34 @@
 const main = [
   {
     path: '/',
-    label: 'pages.home',
-    icon: 'home'
+    label: 'pages.home'
   },
   {
     path: '/work',
-    label: 'pages.work',
-    icon: 'style'
+    label: 'pages.work'
   },
   {
     path: '/agency',
-    label: 'pages.agency',
-    icon: 'face'
+    label: 'pages.agency'
   },
   {
     path: '/contact',
-    label: 'pages.contact',
-    icon: 'mail'
+    label: 'pages.contact'
   }
 ]
 
 const about = [
+  {
+    path: '/blog',
+    label: 'pages.blog'
+  },
   {
     url: 'http://eepurl.com/c9nOob',
     label: 'Newsletter'
   },
   {
     path: '/terms',
-    label: 'pages.terms',
-    icon: 'info'
+    label: 'pages.terms'
   }
 ]
 
