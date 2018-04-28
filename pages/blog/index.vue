@@ -88,7 +88,7 @@ export default {
         news: {
           heading: 'Neuigkeiten',
           abstract:
-            'Einblick in unsere Agentur. Design, Technologie und Agenturleben.'
+            'Einblicke in unsere Agentur. Themen sind Design, Technologie und Agenturleben.'
         }
       }
     }
