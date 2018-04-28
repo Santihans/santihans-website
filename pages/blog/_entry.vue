@@ -8,7 +8,8 @@
               <span class="label">Blog</span>
             </div>
             <div class="head-content">
-              <h1>{{ blog.titleEn }}</h1>
+              <h1 v-if="$i18n.locale === 'en'">{{ blog.titleEn }}</h1>
+              <h1 v-if="$i18n.locale === 'de'">{{ blog.titleDe }}</h1>
             </div>
           </div>
         </div>
