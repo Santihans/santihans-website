@@ -24,13 +24,13 @@
     </div>
 
     <div class="wallpaper-overlay">
-      <component-clouds />
+      <clouds />
     </div>
   </div>
 </template>
 
 <script>
-import Clouds from '~/components/Clouds.vue'
+import Clouds from '~/components/HeaderClouds.vue'
 import scrollIndicator from '~/components/scrollIndicator.vue'
 
 export default {
@@ -40,7 +40,7 @@ export default {
     }
   },
   components: {
-    'component-clouds': Clouds,
+    Clouds,
     scrollIndicator
   },
   mounted() {

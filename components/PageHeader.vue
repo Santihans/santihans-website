@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Clouds from '@/components/Clouds.vue'
+import Clouds from '@/components/HeaderClouds.vue'
 export default {
   components: {
     Clouds
