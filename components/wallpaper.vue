@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Clouds from '~/components/clouds.vue'
+import Clouds from '~/components/Clouds.vue'
 import scrollIndicator from '~/components/scrollIndicator.vue'
 
 export default {

@@ -1,10 +1,7 @@
 <template>
   <div id="work">
-    <div class="page-header">
-      <h1>{{ $t('pages.work') }}</h1>
-      <clouds />
-      <img class="illustration" src="/images/header-store.svg" alt="Illustration" />
-    </div>
+    <page-header :title="$t('pages.work')" backgroundImage="header-store.svg"></page-header>
+
     <div class="page-content">
       <section class="company boundaries">
         <h2>{{ $t('work.heading') }}</h2>
@@ -41,7 +38,7 @@
 </template>
 
 <script>
-import Clouds from '@/components/clouds.vue'
+import PageHeader from '@/components/PageHeader.vue'
 import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
@@ -49,7 +46,7 @@ import ContactUs from '~/components/contactUs.vue'
 
 export default {
   components: {
-    Clouds,
+    PageHeader,
     Tags,
     Spinner,
     ContactUs
