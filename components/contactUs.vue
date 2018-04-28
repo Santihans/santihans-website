@@ -26,7 +26,7 @@ export default {
         welcomeProject: 'Not convinced yet? How about a Welcome Project.'
       },
       de: {
-        teaser: 'Lass uns gemeinsam etwas Grosses kreieren!',
+        teaser: 'Lass uns gemeinsam etwas Grosses schaffen!',
         welcomeProject: 'Noch nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
       }
     }
