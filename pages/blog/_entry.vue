@@ -10,17 +10,19 @@
             <div class="head-content">
               <h1 v-if="$i18n.locale === 'en'">{{ blog.titleEn }}</h1>
               <h1 v-if="$i18n.locale === 'de'">{{ blog.titleDe }}</h1>
+              <blog-meta :blog=blog />
             </div>
           </div>
         </div>
       </div>
       <div class="page-content boundaries">
         <article>
-          <blog-meta :blog=blog />
           <Markdown class="markdown" :markdown="blog.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="blog.bodyDe" v-if="$i18n.locale === 'de'" />
         </article>
-
+        <no-ssr>
+          <disqus shortname="santihans" :identifier="blog._meta.id" :url="'https://santihans.com/blog/' + blog.urlSlug"></disqus>
+        </no-ssr>
       </div>
     </div>
     <section class="loading" v-else>
@@ -37,13 +39,15 @@ import Markdown from '~/components/Markdown.vue'
 import Spinner from '~/components/Spinner.vue'
 import Newsletter from '~/components/Newsletter.vue'
 import BlogMeta from '~/components/BlogMeta.vue'
+import Disqus from 'vue-disqus/dist/vue-disqus.vue'
 
 export default {
   components: {
     Markdown,
     Spinner,
     Newsletter,
-    BlogMeta
+    BlogMeta,
+    Disqus
   },
   computed: {
     blog() {
@@ -65,6 +69,14 @@ export default {
     blogEntries: {
       query: blogQuery,
       prefetch: true
+    }
+  },
+  watch: {
+    '$route.params.entry'(curr, old) {
+      // disqus does not properly reload just based off the
+      // disqusId computed property - we need to manually change it
+      // when we know it should update
+      this.$refs.disqus.init()
     }
   }
 }
@@ -202,7 +214,6 @@ export default {
 
   .blog-meta {
     font-weight: bold;
-    margin-bottom: 2em;
   }
 
   .loading {

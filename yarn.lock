@@ -7598,6 +7598,10 @@ vue-carousel@^0.6.9:
   version "0.6.9"
   resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.6.9.tgz#b5cdd0abefdc8ae99fe48ecde1d765869f91df6d"
 
+vue-disqus@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/vue-disqus/-/vue-disqus-3.0.1.tgz#7a1c3a41db7e1d246755919d4da3291a26f38f0a"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"

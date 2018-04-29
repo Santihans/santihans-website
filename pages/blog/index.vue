@@ -132,7 +132,11 @@ export default {
     display: flex;
 
     .blog-image {
-      flex: 0 0 120px;
+      flex: 0 0 80px;
+
+      @media screen and (min-width: $breakpointSmall) {
+        flex-basis: 120px;
+      }
     }
 
     .blog-content {
