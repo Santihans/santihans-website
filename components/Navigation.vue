@@ -11,25 +11,8 @@
           </svg>
         </nuxt-link>
       </nav>
-      <nav class="main">
-        <ul>
-          <li v-for="(item, i) in main.slice(1)" :key="'main-' + i">
-            <nuxt-link v-ripple :to="localePath(`${item.path}`)">
-              {{ $t(`${item.label}`) }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </nav>
-      <nav class="about">
-        <ul>
-          <li v-for="(item, i) in about" :key="'about-' + i">
-            <nuxt-link v-if="item.path" v-ripple :to="localePath(`${item.path}`)">
-              {{ $t(`${item.label}`) }}
-            </nuxt-link>
-            <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" :title="item.label">{{ $t(`${item.label}`) }}</a>
-          </li>
-        </ul>
-      </nav>
+      <menu-component :menuItems="main.slice(1)" class="main" />
+      <menu-component :menuItems="about" class="about" />
       <language />
     </div>
     <div class="navigation-left">
@@ -47,12 +30,14 @@ import { main, about } from '~/assets/menus.js'
 import Language from '~/components/language.vue'
 import Watch from '~/components/watch.vue'
 import MenuSocial from '~/components/MenuSocial.vue'
+import MenuComponent from '~/components/Menu.vue'
 
 export default {
   components: {
     Language,
     Watch,
-    MenuSocial
+    MenuSocial,
+    MenuComponent
   },
   data: () => ({
     main: main,

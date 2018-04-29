@@ -3,17 +3,11 @@
     <div class="footer-inner boundaries">
       <component-address />
       <div>
+        <menu-component :menuItems="main" class="menu-main" />
+      </div>
+      <div>
         <component-language />
-        <nav class="menu-about">
-          <ul>
-            <li v-for="(item, i) in about" :key="'about-' + i">
-              <nuxt-link v-if="item.path" v-ripple :to="localePath(`${item.path}`)">
-                {{ $t(`${item.label}`) }}
-              </nuxt-link>
-              <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" :title="item.label">{{ $t(`${item.label}`) }}</a>
-            </li>
-          </ul>
-        </nav>
+        <menu-component :menuItems="about" class="menu-about" />
       </div>
       <menu-social />
     </div>
@@ -24,17 +18,20 @@
 import language from '~/components/language.vue'
 import address from '~/components/contactAddress.vue'
 import MenuSocial from '~/components/MenuSocial.vue'
-import { about } from '~/assets/menus.js'
+import MenuComponent from '~/components/Menu.vue'
+import { main, about } from '~/assets/menus.js'
 
 export default {
   components: {
     'component-language': language,
     'component-address': address,
-    MenuSocial
+    MenuSocial,
+    MenuComponent
   },
   data() {
     return {
       about: about,
+      main: main,
       MenuSocial
     }
   }
@@ -70,6 +67,7 @@ export default {
     > div {
       margin-bottom: 30px;
     }
+
     @media (min-width: $breakpointSmall) {
       display: flex;
 
@@ -88,10 +86,9 @@ export default {
     }
   }
 
-  .menu-about {
-    ul {
-      list-style-type: none;
-    }
+  .menu-main {
+    text-transform: uppercase;
+    margin-right: 50px;
   }
 
   .menu-social {
