@@ -15,13 +15,7 @@
           </ul>
         </nav>
       </div>
-      <div class="menu-social">
-        <ul>
-          <li v-for="(item, i) in social" :key="i">
-            <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
-          </li>
-        </ul>
-      </div>
+      <menu-social />
     </div>
   </footer>
 </template>
@@ -29,17 +23,19 @@
 <script>
 import language from '~/components/language.vue'
 import address from '~/components/contactAddress.vue'
-import { about, social } from '~/assets/menus.js'
+import MenuSocial from '~/components/MenuSocial.vue'
+import { about } from '~/assets/menus.js'
 
 export default {
   components: {
     'component-language': language,
-    'component-address': address
+    'component-address': address,
+    MenuSocial
   },
   data() {
     return {
       about: about,
-      social: social
+      MenuSocial
     }
   }
 }
@@ -102,15 +98,9 @@ export default {
     margin-left: auto;
 
     ul {
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      line-height: 1.4;
-      list-style-type: none;
-
       li {
         @media (min-width: $breakpointMedium) {
-          display: inline;
+          display: inline-block;
           margin-right: 10px;
         }
       }

@@ -35,23 +35,28 @@ const about = [
 const social = [
   {
     url: 'https://twitter.com/santihans4056',
-    label: 'Twitter'
+    label: 'Twitter',
+    icon: 'twitter.svg'
   },
   {
     url: 'https://www.instagram.com/santihans4056',
-    label: 'Instagram'
+    label: 'Instagram',
+    icon: 'instagram.svg'
   },
   {
     url: 'https://www.facebook.com/santihans4056/',
-    label: 'Facebook'
+    label: 'Facebook',
+    icon: 'facebook.svg'
   },
   {
     url: 'https://gitlab.com/santihans',
-    label: 'GitLab'
+    label: 'GitLab',
+    icon: 'gitlab.svg'
   },
   {
     url: 'https://gitter.im/santihans/public',
-    label: 'Gitter'
+    label: 'Gitter',
+    icon: 'gitter.svg'
   }
 ]
 
