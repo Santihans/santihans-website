@@ -3,25 +3,13 @@
     <div class="footer-inner boundaries">
       <component-address />
       <div>
+        <menu-component :menuItems="main" class="menu-main" />
+      </div>
+      <div>
         <component-language />
-        <nav class="menu-about">
-          <ul>
-            <li v-for="(item, i) in about" :key="'about-' + i">
-              <nuxt-link v-if="item.path" v-ripple :to="localePath(`${item.path}`)">
-                {{ $t(`${item.label}`) }}
-              </nuxt-link>
-              <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" :title="item.label">{{ $t(`${item.label}`) }}</a>
-            </li>
-          </ul>
-        </nav>
+        <menu-component :menuItems="about" class="menu-about" />
       </div>
-      <div class="menu-social">
-        <ul>
-          <li v-for="(item, i) in social" :key="i">
-            <a :href="item.url" target="_blank" rel="noopener">{{ item.label }}</a>
-          </li>
-        </ul>
-      </div>
+      <menu-social />
     </div>
   </footer>
 </template>
@@ -29,17 +17,22 @@
 <script>
 import language from '~/components/language.vue'
 import address from '~/components/contactAddress.vue'
-import { about, social } from '~/assets/menus.js'
+import MenuSocial from '~/components/MenuSocial.vue'
+import MenuComponent from '~/components/Menu.vue'
+import { main, about } from '~/assets/menus.js'
 
 export default {
   components: {
     'component-language': language,
-    'component-address': address
+    'component-address': address,
+    MenuSocial,
+    MenuComponent
   },
   data() {
     return {
       about: about,
-      social: social
+      main: main,
+      MenuSocial
     }
   }
 }
@@ -74,6 +67,7 @@ export default {
     > div {
       margin-bottom: 30px;
     }
+
     @media (min-width: $breakpointSmall) {
       display: flex;
 
@@ -92,25 +86,18 @@ export default {
     }
   }
 
-  .menu-about {
-    ul {
-      list-style-type: none;
-    }
+  .menu-main {
+    text-transform: uppercase;
+    margin-right: 50px;
   }
 
   .menu-social {
     margin-left: auto;
 
     ul {
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      line-height: 1.4;
-      list-style-type: none;
-
       li {
         @media (min-width: $breakpointMedium) {
-          display: inline;
+          display: inline-block;
           margin-right: 10px;
         }
       }

@@ -1,7 +1,6 @@
 <template>
   <aside id="navigation">
-    <div class="navigation">
-      <watch />
+    <div class="navigation-right">
       <nav class="home">
         <nuxt-link class="emblem" :to="localePath('/')" :title="$t(`${main[0].label}`)">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 353">
@@ -12,37 +11,14 @@
           </svg>
         </nuxt-link>
       </nav>
-      <nav class="main">
-        <ul>
-          <li v-for="(item, i) in main.slice(1)" :key="'main-' + i">
-            <nuxt-link v-ripple :to="localePath(`${item.path}`)">
-              {{ $t(`${item.label}`) }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </nav>
-      <nav class="social">
-        <ul>
-          <li v-for="(item, i) in social" :key="'social-' + i">
-            <a :href="item.url" target="_blank" rel="noopener">
-              {{ $t(`${item.label}`) }}
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <menu-component :menuItems="main.slice(1)" class="main" />
+      <menu-component :menuItems="about" class="about" />
+      <language />
     </div>
-
-    <nav class="about">
-      <ul>
-        <li v-for="(item, i) in about" :key="'about-' + i">
-          <nuxt-link v-if="item.path" v-ripple :to="localePath(`${item.path}`)">
-            {{ $t(`${item.label}`) }}
-          </nuxt-link>
-          <a v-if="item.url" :href="item.url" target="_blank" rel="noopener" :title="item.label">{{ $t(`${item.label}`) }}</a>
-        </li>
-      </ul>
-    </nav>
-    <language/>
+    <div class="navigation-left">
+      <watch />
+      <menu-social showIcon :showLabel=false />
+    </div>
     <a href="javascript:;" v-ripple aria-label="Close" class="s-btn-icon btn-close" @click="toggleVisibility(false)">
       <v-icon dark large>close</v-icon>
     </a>
@@ -50,19 +26,22 @@
 </template>
 
 <script>
-import { main, about, social } from '~/assets/menus.js'
+import { main, about } from '~/assets/menus.js'
 import Language from '~/components/language.vue'
 import Watch from '~/components/watch.vue'
+import MenuSocial from '~/components/MenuSocial.vue'
+import MenuComponent from '~/components/Menu.vue'
 
 export default {
   components: {
     Language,
-    Watch
+    Watch,
+    MenuSocial,
+    MenuComponent
   },
   data: () => ({
     main: main,
-    about: about,
-    social: social
+    about: about
   }),
   methods: {
     toggleVisibility: function (state) {
@@ -98,45 +77,33 @@ export default {
     padding: 80px 120px;
   }
 
-  .watch {
-    width: 80px;
-    position: absolute;
-    top: 8vh;
-    left: 12vw;
-    opacity: 0;
-    transform: scale(0.8);
-    transition: 300ms 15000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
   body.navigation--visible & {
     transform: translateX(0);
 
     .emblem,
     .main li,
-    .social li,
     .about li,
     .language {
       opacity: 1;
       transform: translateX(0);
     }
 
+    .menu-social li,
     .watch {
       opacity: 1;
-      transform: scale(1);
+      transform: translateX(0) scale(1);
     }
   }
 
   .emblem,
   .main li,
-  .social li,
-  .about li,
   .about li,
   .language {
     opacity: 0.7;
     display: block;
     position: relative;
     transform: translateX(500px);
-    transition: 300ms;
+    transition: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.075);
   }
 
   .home {
@@ -150,7 +117,6 @@ export default {
       svg {
         fill: $navigationColorFg;
         transition-delay: 200ms;
-
         width: 60px;
       }
 
@@ -187,50 +153,18 @@ export default {
 
     li {
       &:nth-child(1) {
-        transition-delay: 220ms;
-      }
-      &:nth-child(2) {
         transition-delay: 240ms;
       }
-      &:nth-child(3) {
-        transition-delay: 260ms;
-      }
-      &:nth-child(4) {
+      &:nth-child(2) {
         transition-delay: 280ms;
       }
-    }
-  }
-
-  .social {
-    font-size: 1.3em;
-    margin-top: 0.7em;
-
-    @media screen and (min-height: 700px) {
-      font-size: 1.5em;
-      margin-top: 1em;
-    }
-
-    li {
-      &:nth-child(1) {
-        transition-delay: 300ms;
-      }
-      &:nth-child(2) {
-        transition-delay: 320ms;
-      }
       &:nth-child(3) {
-        transition-delay: 340ms;
-      }
-      &:nth-child(4) {
-        transition-delay: 360ms;
-      }
-      &:nth-child(5) {
-        transition-delay: 380ms;
+        transition-delay: 320ms;
       }
     }
   }
 
   .main,
-  .social,
   .about {
     a {
       display: inline-block;
@@ -264,24 +198,29 @@ export default {
     }
   }
 
-  .social a::after {
-    height: 7px;
-  }
-
-  .about a::after {
-    height: 4px;
-  }
-
   .about {
-    font-size: 1.2em;
-    margin-top: 0.7em;
+    font-size: 1.5em;
+    margin-top: 0.4em;
 
     @media screen and (min-height: 700px) {
+      font-size: 1.8em;
       margin-top: 2em;
     }
 
+    a::after {
+      height: 7px;
+    }
+
     li {
-      transition-delay: 400ms;
+      &:nth-child(1) {
+        transition-delay: 360ms;
+      }
+      &:nth-child(2) {
+        transition-delay: 380ms;
+      }
+      &:nth-child(3) {
+        transition-delay: 400ms;
+      }
     }
   }
 
@@ -289,8 +228,10 @@ export default {
     align-items: center;
     display: flex;
     flex-shrink: 0;
+    font-size: 1.4em;
     justify-content: flex-end;
-    transition-delay: 400ms;
+    margin-top: 0.7em;
+    transition-delay: 420ms;
 
     a {
       color: inherit;
@@ -298,6 +239,50 @@ export default {
 
     > * {
       padding: 0 5px;
+    }
+  }
+
+  .navigation-left {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 8vw;
+    position: absolute;
+    top: 8vh;
+    width: 80px;
+
+    .watch {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: 300ms 25000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 80%;
+    }
+
+    .menu-social {
+      margin-top: 12px;
+
+      li {
+        opacity: 0;
+        transform: translateX(-25px) scale(0);
+        transform-origin: left center;
+        transition: 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:nth-child(1) {
+          transition-delay: 600ms;
+        }
+        &:nth-child(2) {
+          transition-delay: 640ms;
+        }
+        &:nth-child(3) {
+          transition-delay: 680ms;
+        }
+        &:nth-child(4) {
+          transition-delay: 720ms;
+        }
+        &:nth-child(5) {
+          transition-delay: 740ms;
+        }
+      }
     }
   }
 
