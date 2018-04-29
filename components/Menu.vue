@@ -15,7 +15,7 @@
 export default {
   props: {
     menuItems: {
-      type: Object,
+      type: Array,
       default: null
     },
     menuClass: {
