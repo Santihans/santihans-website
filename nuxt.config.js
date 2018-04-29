@@ -44,7 +44,27 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://santihans.com',
     cacheTime: 1000 * 60 * 15,
-    generate: true
+    generate: true,
+    routes: [
+      '/blog',
+      '/work',
+      '/agency',
+      '/contact',
+      '/index',
+      '/terms',
+      '/de/blog',
+      '/de/work',
+      '/de/agency',
+      '/de/contact',
+      '/de/index',
+      '/de/terms',
+      '/en/blog',
+      '/en/work',
+      '/en/agency',
+      '/en/contact',
+      '/en/index',
+      '/en/terms'
+    ]
   },
   /*
    ** Customize the progress-bar color
