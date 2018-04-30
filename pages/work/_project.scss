@@ -130,6 +130,12 @@
     position: relative;
     padding-top: 5em;
 
+    .link-back {
+      color: inherit;
+      display: inline-block;
+      margin-bottom: 1em;
+    }
+
     h2 {
       margin-bottom: 0;
       text-align: left;

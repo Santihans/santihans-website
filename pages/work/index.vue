@@ -136,63 +136,64 @@ export default {
     background-size: cover;
     color: white;
     display: flex;
+    font-size: 1.1em;
     height: 60vmax;
     justify-content: center;
-    padding-bottom: 3vmin;
-    padding-top: 3vmin;
+    padding-bottom: 5vmin;
+    padding-top: 5vmin;
     position: relative;
     margin-bottom: 5vmin;
 
     @media screen and (min-width: $breakpointSmall) {
       height: 60vmin;
+      font-size: 1.2em;
     }
 
     &::after {
       background-image: linear-gradient(
         to top,
-        hsla(0, 0%, 0%, 0.41) 0%,
-        hsla(0, 0%, 0%, 0.405) 7.7%,
-        hsla(0, 0%, 0%, 0.392) 14.8%,
-        hsla(0, 0%, 0%, 0.373) 21%,
-        hsla(0, 0%, 0%, 0.35) 26.5%,
-        hsla(0, 0%, 0%, 0.326) 31.4%,
-        hsla(0, 0%, 0%, 0.3) 35.9%,
-        hsla(0, 0%, 0%, 0.273) 40.1%,
-        hsla(0, 0%, 0%, 0.246) 44.2%,
-        hsla(0, 0%, 0%, 0.218) 48.1%,
-        hsla(0, 0%, 0%, 0.191) 52%,
-        hsla(0, 0%, 0%, 0.163) 56%,
-        hsla(0, 0%, 0%, 0.135) 60.1%,
-        hsla(0, 0%, 0%, 0.109) 64.3%,
-        hsla(0, 0%, 0%, 0.083) 68.8%,
-        hsla(0, 0%, 0%, 0.059) 73.7%,
-        hsla(0, 0%, 0%, 0.036) 79.2%,
-        hsla(0, 0%, 0%, 0.018) 85.4%,
+        hsla(0, 0%, 0%, 0.5) 0%,
+        hsla(0, 0%, 0%, 0.494) 7.7%,
+        hsla(0, 0%, 0%, 0.478) 14.8%,
+        hsla(0, 0%, 0%, 0.455) 21%,
+        hsla(0, 0%, 0%, 0.427) 26.5%,
+        hsla(0, 0%, 0%, 0.397) 31.4%,
+        hsla(0, 0%, 0%, 0.366) 35.9%,
+        hsla(0, 0%, 0%, 0.333) 40.1%,
+        hsla(0, 0%, 0%, 0.3) 44.2%,
+        hsla(0, 0%, 0%, 0.266) 48.1%,
+        hsla(0, 0%, 0%, 0.233) 52%,
+        hsla(0, 0%, 0%, 0.199) 56%,
+        hsla(0, 0%, 0%, 0.165) 60.1%,
+        hsla(0, 0%, 0%, 0.133) 64.3%,
+        hsla(0, 0%, 0%, 0.101) 68.8%,
+        hsla(0, 0%, 0%, 0.072) 73.7%,
+        hsla(0, 0%, 0%, 0.044) 79.2%,
+        hsla(0, 0%, 0%, 0.021) 85.4%,
         hsla(0, 0%, 0%, 0.005) 92.5%,
         hsla(0, 0%, 0%, 0) 100%
       );
       bottom: 0;
       content: '';
-      height: 80%;
+      height: 90%;
       left: 0;
       position: absolute;
       width: 100%;
     }
 
     .work-inner {
-      font-size: 1.2em;
       max-width: 100%;
       position: relative;
       width: 90%;
       z-index: 1;
-    }
 
-    :not(.s-btn) {
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      :not(.s-btn) {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      }
     }
 
     h2 {
-      font-size: 1.6em;
+      font-size: 2.2em;
       line-height: 1;
 
       @media screen and (min-width: $breakpointSmall) {
@@ -211,7 +212,7 @@ export default {
 
   .tags {
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
   }
 }
 </style>

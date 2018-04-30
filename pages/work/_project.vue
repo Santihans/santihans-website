@@ -22,6 +22,7 @@
       </div>
       <div class="page-content">
         <section class="showcase-details boundaries">
+          <nuxt-link class="link-back" :to="{ path: localePath('/work')}" :alt="$t('buttons.back')" v-text="'< ' + $t('buttons.backToOverview')"></nuxt-link>
           <div class="actions boundaries">
             <a v-if="project.website" class="s-btn s-btn-pink" :href="project.website" rel="noopener" target="_blank">{{ $t('buttons.visitWebsite') }}</a>
           </div>
@@ -63,7 +64,7 @@
           <span :aria-label="$t('year')" :title="$t('year')">{{ getYear(project.date) }}</span>&nbsp;|&nbsp; SANTiHANS +
           <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>
           <div class="actions">
-            <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.moreExamples') }}</nuxt-link>
+            <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.backToOverview') }}</nuxt-link>
           </div>
         </section>
         <contact-us />
