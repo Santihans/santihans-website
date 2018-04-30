@@ -11,6 +11,6 @@ npm-debug.log
 dist
 .env
 
+# Nuxt pwa-module
 sw.*
 
-.DS_store
