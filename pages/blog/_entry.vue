@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-entry">
+  <div class="entry">
     <div v-if="blog">
       <div class="blog-header" :style="'background-image:url('+ (blog.headerImage ? blog.headerImage.url : '') +');'">
         <div class="boundaries">
@@ -15,7 +15,8 @@
           </div>
         </div>
       </div>
-      <div class="page-content boundaries">
+      <div class="blog-content boundaries">
+        <nuxt-link class="link-back" :to="{ path: localePath('/blog')}" :alt="$t('buttons.back')" v-text="'< ' + $t('buttons.backToOverview')"></nuxt-link>
         <article>
           <Markdown class="markdown" :markdown="blog.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="blog.bodyDe" v-if="$i18n.locale === 'de'" />
@@ -82,10 +83,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '~assets/styles/variables.scss';
 
-.blog-entry {
+.entry {
   &::after {
     background-image: linear-gradient(
       to bottom,
@@ -191,29 +192,36 @@ export default {
           padding: 4px 8px;
         }
       }
-    }
 
-    .head-content {
-      flex-grow: 1;
+      .head-content {
+        flex-grow: 1;
 
-      h1 {
-        text-shadow: 1px 1px 4px hsla(0, 0%, 0%, 0.19);
-        font-size: 2.6em;
-        line-height: 1.05;
+        h1 {
+          text-shadow: 1px 1px 4px hsla(0, 0%, 0%, 0.19);
+          font-size: 2.6em;
+          line-height: 1.05;
 
-        @media screen and (min-width: $breakpointMini) {
-          font-size: 3.2em;
+          @media screen and (min-width: $breakpointMini) {
+            font-size: 3.2em;
+          }
+
+          @media screen and (min-width: $breakpointSmall) {
+            font-size: 4.2em;
+          }
         }
-
-        @media screen and (min-width: $breakpointSmall) {
-          font-size: 4.2em;
+        .blog-meta {
+          font-weight: bold;
         }
       }
     }
   }
 
-  .blog-meta {
-    font-weight: bold;
+  .blog-content {
+    padding-top: 2em;
+
+    .link-back {
+      color: inherit;
+    }
   }
 
   .loading {
