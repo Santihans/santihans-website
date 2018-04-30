@@ -12,11 +12,11 @@
       </section>
       <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
         <nuxt-link class="link-box" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
-          <section class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
+          <div class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
             <div class="work-inner">
-
+              <tags :tags="item.tags" />
               <h2>{{ item.title }}</h2>
-              <div class="abstract">
+              <div class="description">
                 <template v-if="$i18n.locale === 'en'">
                   {{ item.abstractEn }}
                 </template>
@@ -24,11 +24,9 @@
                   {{ item.abstractDe }}
                 </template>
               </div>
-
-              <tags :tags="item.tags" />
               <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
             </div>
-          </section>
+          </div>
         </nuxt-link>
       </div>
       <contact-us/>
@@ -112,5 +110,109 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'index.scss';
+@import '~assets/styles/variables.scss';
+
+#work {
+  .page-header {
+    background-color: $colorViolett;
+
+    .clouds svg g {
+      fill: lighten($colorViolett, 8);
+    }
+  }
+
+  .loading {
+    position: relative;
+  }
+
+  .link-box {
+    display: block;
+    text-decoration: none;
+  }
+
+  .work {
+    align-items: flex-end;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    font-size: 1.1em;
+    height: 60vmax;
+    justify-content: center;
+    padding-bottom: 5vmin;
+    padding-top: 5vmin;
+    position: relative;
+    margin-bottom: 5vmin;
+
+    @media screen and (min-width: $breakpointSmall) {
+      height: 60vmin;
+      font-size: 1.2em;
+    }
+
+    &::after {
+      background-image: linear-gradient(
+        to top,
+        hsla(0, 0%, 0%, 0.5) 0%,
+        hsla(0, 0%, 0%, 0.494) 7.7%,
+        hsla(0, 0%, 0%, 0.478) 14.8%,
+        hsla(0, 0%, 0%, 0.455) 21%,
+        hsla(0, 0%, 0%, 0.427) 26.5%,
+        hsla(0, 0%, 0%, 0.397) 31.4%,
+        hsla(0, 0%, 0%, 0.366) 35.9%,
+        hsla(0, 0%, 0%, 0.333) 40.1%,
+        hsla(0, 0%, 0%, 0.3) 44.2%,
+        hsla(0, 0%, 0%, 0.266) 48.1%,
+        hsla(0, 0%, 0%, 0.233) 52%,
+        hsla(0, 0%, 0%, 0.199) 56%,
+        hsla(0, 0%, 0%, 0.165) 60.1%,
+        hsla(0, 0%, 0%, 0.133) 64.3%,
+        hsla(0, 0%, 0%, 0.101) 68.8%,
+        hsla(0, 0%, 0%, 0.072) 73.7%,
+        hsla(0, 0%, 0%, 0.044) 79.2%,
+        hsla(0, 0%, 0%, 0.021) 85.4%,
+        hsla(0, 0%, 0%, 0.005) 92.5%,
+        hsla(0, 0%, 0%, 0) 100%
+      );
+      bottom: 0;
+      content: '';
+      height: 90%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    .work-inner {
+      max-width: 100%;
+      position: relative;
+      width: 90%;
+      z-index: 1;
+
+      :not(.s-btn) {
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    h2 {
+      font-size: 2.2em;
+      line-height: 1;
+
+      @media screen and (min-width: $breakpointSmall) {
+        font-size: 3em;
+      }
+    }
+
+    .description {
+      margin-bottom: 1em;
+    }
+
+    .s-btn {
+      margin: 0;
+    }
+  }
+
+  .tags {
+    font-weight: bold;
+    margin-bottom: 0.6em;
+  }
+}
 </style>
