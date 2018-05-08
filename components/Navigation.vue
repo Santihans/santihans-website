@@ -20,7 +20,7 @@
       <menu-social showIcon :showLabel=false />
     </div>
     <a href="javascript:;" v-ripple aria-label="Close" class="s-btn-icon btn-close" @click="toggleVisibility(false)">
-      <v-icon dark large>close</v-icon>
+      <icon name="exit" size="34px" />
     </a>
   </aside>
 </template>
@@ -31,13 +31,15 @@ import Language from '~/components/language.vue'
 import Watch from '~/components/watch.vue'
 import MenuSocial from '~/components/MenuSocial.vue'
 import MenuComponent from '~/components/Menu.vue'
+import Icon from '~/components/Icon.vue'
 
 export default {
   components: {
     Language,
     Watch,
     MenuSocial,
-    MenuComponent
+    MenuComponent,
+    Icon
   },
   data: () => ({
     main: main,
@@ -287,12 +289,15 @@ export default {
   }
 
   .btn-close {
-    color: $navigationColorFg;
     position: absolute;
     bottom: 20px;
     left: 50%;
     margin: 0;
     transform: translateX(-50%);
+
+    .icon {
+      color: $navigationColorFg;
+    }
 
     @media (min-width: $breakpointMedium) {
       left: auto;

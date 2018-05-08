@@ -2,7 +2,7 @@
   <section class="contactUs text-center">
     <div class="boundaries">
       <div class="mood">
-        <v-icon>child_friendly</v-icon>
+        <icon name="hot-air-balloon" size="100px" />
       </div>
       <div class="call">{{ $t('teaser') }}</div>
       <div>
@@ -18,15 +18,20 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon.vue'
+
 export default {
+  components: {
+    Icon
+  },
   i18n: {
     messages: {
       en: {
-        teaser: 'Let\'s build great things together!',
+        teaser: 'Let\'s rise together!',
         welcomeProject: 'Not convinced yet? How about a Welcome Project.'
       },
       de: {
-        teaser: 'Lass uns gemeinsam etwas Grosses schaffen!',
+        teaser: 'Gemeinsam hoch hinaus!',
         welcomeProject: 'Noch nicht überzeugt? Wie wär\'s mit einem Willkommens-Projekt.'
       }
     }
@@ -65,10 +70,9 @@ export default {
   }
 
   .mood {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 
     .icon {
-      font-size: 3.5em;
       color: white;
     }
   }
@@ -88,7 +92,7 @@ export default {
   }
 
   .welcome {
-    margin: 5em auto 0.5em;
+    margin: 1em auto 0.5em;
     width: 70%;
   }
 

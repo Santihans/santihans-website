@@ -81,7 +81,7 @@ export default {
     margin-right: 50px;
     line-height: 1.4;
 
-    i {
+    .icon {
       display: none;
     }
   }

@@ -19,7 +19,7 @@ module.exports = {
         rel: 'stylesheet',
         type: 'text/css',
         href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+          'https://fonts.googleapis.com/css?family=Roboto:400,500,700|Raleway:Extra-Bold'
       }
     ]
   },
@@ -89,10 +89,6 @@ module.exports = {
     },
     {
       src: '~plugins/crisp.js',
-      ssr: false
-    },
-    {
-      src: '~plugins/webFontLoader.js',
       ssr: false
     },
     {

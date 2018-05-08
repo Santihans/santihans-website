@@ -10,12 +10,25 @@
       <section class="loading" v-if="loading">
         <spinner />
       </section>
-      <div v-else class="boundaries" v-for="(item) in sortedProjects(projects)" :key="item._meta.id">
-        <nuxt-link class="link-box" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
-          <div class="work" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
-            <div class="work-inner">
+      <div v-else class="boundaries">
+        <nuxt-link class="link-box selected" v-for="(item) in sortedProjects(projects, true)" :key="item._meta.id" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
+          <div class="selected-inner">
+            <h3 class="ellipsis">{{ item.title }}</h3>
+            <tags :tags="item.tags" />
+            <icon name="arrow-right" size="60px" />
+          </div>
+        </nuxt-link>
+
+        <section class="company boundaries">
+          <h2>{{ $t('more.heading') }}</h2>
+          <p class="abstract">{{ $t('more.abstract') }}</p>
+        </section>
+
+        <div class="grid">
+          <nuxt-link class="link-box more" v-for="(item) in sortedProjects(projects)" :key="item._meta.id" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')">
+            <div class="more-content">
               <tags :tags="item.tags" />
-              <h2>{{ item.title }}</h2>
+              <h3 class="ellipsis">{{ item.title }}</h3>
               <div class="description">
                 <template v-if="$i18n.locale === 'en'">
                   {{ item.abstractEn }}
@@ -24,10 +37,12 @@
                   {{ item.abstractDe }}
                 </template>
               </div>
-              <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
             </div>
-          </div>
-        </nuxt-link>
+            <div class="more-image" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url + '?w=300' : '') +');'">
+              <icon name="arrow-right" size="60px" />
+            </div>
+          </nuxt-link>
+        </div>
       </div>
       <contact-us/>
 
@@ -41,13 +56,15 @@ import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
 import ContactUs from '~/components/contactUs.vue'
+import Icon from '~/components/Icon.vue'
 
 export default {
   components: {
     PageHeader,
     Tags,
     Spinner,
-    ContactUs
+    ContactUs,
+    Icon
   },
   head() {
     return {
@@ -74,22 +91,27 @@ export default {
     }
   },
   methods: {
-    sortedProjects: function (items) {
-      const sortable = Object.keys(items).map(i => items[i])
-      const published = sortable.filter(item => item._meta.published === true)
-      published.sort(function (a, b) {
+    sortedProjects: function (items, selected = null) {
+      let sortable = Object.keys(items).map(i => items[i])
+      sortable = sortable.filter(item => item._meta.published === true)
+      sortable = sortable.filter(item => item.selected === selected)
+      sortable.sort(function (a, b) {
         return b.date - a.date
       })
-      return published
+      return sortable
     }
   },
   i18n: {
     messages: {
       en: {
         work: {
-          heading: 'Recent Highlights',
+          heading: 'Selected Projects',
           abstract:
-            'Our cross-functional, agile team creates custom communications solutions for demanding clients in a variety of fields.'
+            'A selection of nice stuff we\'ve built. Our work combines great design, state of the art technology and the ambition to create next-level online experiences.'
+        },
+        more: {
+          heading: 'There is more',
+          abstract: 'Small projects - lot\'s of ❤.'
         },
         heading: {
           scope: 'Project Scope',
@@ -98,9 +120,13 @@ export default {
       },
       de: {
         work: {
-          heading: 'Aktuelle Highlights',
+          heading: 'Ausgewählte Projekte',
           abstract:
-            'Unser funktionsübergreifendes, agiles Team entwickelt massgeschneiderte Kommunikationslösungen für anspruchsvolle Kunden aus den unterschiedlichsten Bereichen.'
+            'Eine Selektion aus kürzlich entstandenen Arbeiten. Unser Schaffen verbindet grossartiges Design, modernste Technologie und den Ehrgeiz, Online-Erlebnisse der nächsten Generation zu schaffen.'
+        },
+        more: {
+          heading: 'Es gibt noch mehr',
+          abstract: 'Kleine Projekte - viel ❤.'
         },
         heading: {
           scope: 'Projektumfang',
@@ -129,11 +155,18 @@ export default {
   }
 
   .link-box {
-    display: block;
+    color: inherit;
     text-decoration: none;
+    overflow: hidden;
+    transition: 200ms;
+
+    &:hover {
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+      transform: translateY(-1px);
+    }
   }
 
-  .work {
+  .selected {
     align-items: flex-end;
     background-position: center center;
     background-size: cover;
@@ -142,10 +175,10 @@ export default {
     font-size: 1.1em;
     height: 60vmax;
     justify-content: center;
+    margin-bottom: 5vmin;
     padding-bottom: 5vmin;
     padding-top: 5vmin;
     position: relative;
-    margin-bottom: 5vmin;
 
     @media screen and (min-width: $breakpointSmall) {
       height: 60vmin;
@@ -184,7 +217,24 @@ export default {
       width: 100%;
     }
 
-    .work-inner {
+    &:hover {
+      .icon {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .icon {
+      bottom: 0;
+      color: white;
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      transform: translate3d(-20px, 0, 0);
+      transition: 200ms 200ms ease-out;
+    }
+
+    .selected-inner {
       max-width: 100%;
       position: relative;
       width: 90%;
@@ -195,27 +245,105 @@ export default {
       }
     }
 
-    h2 {
-      font-size: 2.2em;
-      line-height: 1;
+    .tags {
+      margin-bottom: 0.6em;
+    }
+
+    h3 {
+      font-size: 2.1em;
+      line-height: 1.2;
 
       @media screen and (min-width: $breakpointSmall) {
-        font-size: 3em;
+        font-size: 2.8em;
       }
     }
 
     .description {
       margin-bottom: 1em;
-    }
-
-    .s-btn {
-      margin: 0;
+      opacity: 0.6;
     }
   }
 
-  .tags {
-    font-weight: bold;
-    margin-bottom: 0.6em;
+  .grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 800px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .more {
+    background-color: white;
+    border: 1px solid rgb(233, 233, 233);
+    display: flex;
+    font-size: 0.9em;
+
+    &:hover {
+      .more-image {
+        &::after {
+          opacity: 1;
+        }
+        .icon {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+
+    .more-content {
+      flex-grow: 1;
+      padding: 8px 12px 0;
+      overflow: hidden;
+
+      @media screen and (min-width: $breakpointMini) {
+      padding: 15px 15px 0;
+      }
+    }
+
+    .more-image {
+      align-items: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-shrink: 0;
+      height: 100px;
+      justify-content: center;
+      position: relative;
+      width: 100px;
+
+      @media screen and (min-width: $breakpointMini) {
+        width: 130px;
+        height: 130px;
+      }
+
+      .icon {
+        color: white;
+        opacity: 0;
+        position: relative;
+        transform: translate3d(-20px, 0, 0);
+        transition: 200ms ease-out;
+        z-index: 1;
+      }
+
+      &::after {
+        background-color: rgba(0, 0, 0, 0.3);
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        opacity: 0.4;
+        position: absolute;
+        transition: 200ms opacity;
+        width: 100%;
+      }
+    }
+
+    .tags {
+      color: $colorSubtle;
+      font-size: 0.9em;
+    }
   }
 }
 </style>

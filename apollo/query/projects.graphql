@@ -1,6 +1,7 @@
 query Projects {
   projects: allProjects {
     urlSlug
+    selected
     headerImage {
       id
       name

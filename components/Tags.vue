@@ -36,6 +36,10 @@ export default {
 
     &::before {
       content: '#';
+      opacity: 0.4;
+      font-size: 0.8em;
+      font-weight: lighter;
+      margin-right: 2px;
     }
   }
 }
