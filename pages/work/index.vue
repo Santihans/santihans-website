@@ -51,7 +51,10 @@ export default {
   },
   head() {
     return {
-      title: this.$t('pages.work')
+      title: this.$t('pages.work'),
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('work.abstract') }
+      ]
     }
   },
   data() {

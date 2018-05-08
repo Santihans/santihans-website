@@ -69,7 +69,8 @@ export default {
   scrollToTop: true,
   head() {
     return {
-      title: this.$t('pages.home')
+      title: this.$t('pages.home'),
+      meta: { hid: 'description', name: 'description', content: 'About our company Nuxt.js ' }
     }
   },
   i18n: {
