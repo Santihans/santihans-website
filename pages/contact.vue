@@ -39,7 +39,26 @@ export default {
   },
   head() {
     return {
-      title: this.$t('pages.contact')
+      title: this.$t('pages.contact'),
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('meta.description') }
+      ]
+    }
+  },
+  i18n: {
+    messages: {
+      en: {
+        meta: {
+          description:
+            'We are friendly. Get in touch and ask for advice, a website checkup, a nonbinding estimate or just to say hi!'
+        }
+      },
+      de: {
+        meta: {
+          description:
+            'Wir sind freundlich. Nehmen Sie Kontakt auf und fragen Sie nach Rat, einem Website-Checkup, einem unverbindlichen Kostenvoranschlag oder einfach nur um Hallo zu sagen!'
+        }
+      }
     }
   }
 }

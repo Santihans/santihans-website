@@ -97,7 +97,10 @@ import ContactUs from '~/components/contactUs.vue'
 export default {
   head() {
     return {
-      title: this.$t('pages.agency')
+      title: this.$t('pages.agency'),
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('company.abstract') }
+      ]
     }
   },
   components: {

@@ -69,7 +69,10 @@ export default {
   scrollToTop: true,
   head() {
     return {
-      title: this.$t('pages.home')
+      title: this.$t('pages.home'),
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('meta.description') }
+      ]
     }
   },
   i18n: {

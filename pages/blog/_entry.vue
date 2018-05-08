@@ -58,7 +58,10 @@ export default {
   },
   head() {
     return {
-      title: this.blog.titleEn
+      title: this.$i18n.locale === 'de' ? this.blog.titleDe : this.blog.titleEn,
+      meta: [
+        { hid: 'description', name: 'description', content: this.$i18n.locale === 'de' ? this.blog.abstractDe : this.blog.abstractEn }
+      ]
     }
   },
   data() {

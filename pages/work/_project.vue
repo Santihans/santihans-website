@@ -102,7 +102,10 @@ export default {
   },
   head() {
     return {
-      title: this.project.title
+      title: this.project.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.$i18n.locale === 'de' ? this.project.introDe : this.project.introEn }
+      ]
     }
   },
   data() {
