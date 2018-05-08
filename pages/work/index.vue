@@ -107,11 +107,11 @@ export default {
         work: {
           heading: 'Selected Projects',
           abstract:
-            'A selection of nice stuff we recently created. Our work combines great design, state of the art technology and the ambition to create next-level online experiences.'
+            'A selection of nice stuff we\'ve built. Our work combines great design, state of the art technology and the ambition to create next-level online experiences.'
         },
         more: {
           heading: 'There is more',
-          abstract: 'Smaller projects - not less ❤.'
+          abstract: 'Small projects - lot\'s of ❤.'
         },
         heading: {
           scope: 'Project Scope',
@@ -126,7 +126,7 @@ export default {
         },
         more: {
           heading: 'Es gibt noch mehr',
-          abstract: 'Kleinere Projekte - nicht weniger ❤.'
+          abstract: 'Kleine Projekte - viel ❤.'
         },
         heading: {
           scope: 'Projektumfang',
@@ -281,16 +281,25 @@ export default {
     font-size: 0.9em;
 
     &:hover {
-      .more-image .icon {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
+      .more-image {
+        &::after {
+          opacity: 1;
+        }
+        .icon {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
       }
     }
 
     .more-content {
       flex-grow: 1;
-      padding: 15px 15px 0;
+      padding: 8px 12px 0;
       overflow: hidden;
+
+      @media screen and (min-width: $breakpointMini) {
+      padding: 15px 15px 0;
+      }
     }
 
     .more-image {
@@ -299,10 +308,15 @@ export default {
       background-repeat: no-repeat;
       display: flex;
       flex-shrink: 0;
-      height: 130px;
+      height: 100px;
       justify-content: center;
       position: relative;
-      width: 130px;
+      width: 100px;
+
+      @media screen and (min-width: $breakpointMini) {
+        width: 130px;
+        height: 130px;
+      }
 
       .icon {
         color: white;
@@ -319,7 +333,9 @@ export default {
         top: 0;
         left: 0;
         height: 100%;
+        opacity: 0.4;
         position: absolute;
+        transition: 200ms opacity;
         width: 100%;
       }
     }
