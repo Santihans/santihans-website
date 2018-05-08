@@ -70,7 +70,9 @@ export default {
   head() {
     return {
       title: this.$t('pages.home'),
-      meta: { hid: 'description', name: 'description', content: 'About our company Nuxt.js ' }
+      meta: [
+        { hid: 'description', name: 'description', content: this.$t('meta.description') }
+      ]
     }
   },
   i18n: {
