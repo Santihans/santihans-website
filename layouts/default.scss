@@ -308,6 +308,13 @@ section {
   justify-content: center;
 }
 
+.ellipsis  {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 // Page transitions
 .page-enter-active {
   transition: 0.2s ease-out;
