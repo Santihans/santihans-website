@@ -2,7 +2,7 @@
   <section class="subscribe text-center">
     <div class="boundaries">
       <div class="mood">
-        <v-icon>favorite</v-icon>
+        <icon name="email-box" size="100px" />
       </div>
       <div class="call">{{ $t('teaser') }}</div>
       <div>
@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon.vue'
 
 export default {
+  components: {
+    Icon
+  },
   i18n: {
     messages: {
       en: {
@@ -60,7 +64,7 @@ export default {
   }
 
   .mood {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
 
     .icon {
       font-size: 3.5em;

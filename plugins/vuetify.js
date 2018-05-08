@@ -2,7 +2,6 @@ import Vue from 'vue'
 import {
   Vuetify,
   VApp,
-  VIcon,
   VAlert,
   VTextField,
   VGrid,
@@ -15,7 +14,6 @@ Vue.use(Vuetify, {
     VApp,
     Vuetify,
     VGrid,
-    VIcon,
     VAlert,
     VTextField
   },

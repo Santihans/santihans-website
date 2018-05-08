@@ -241,11 +241,11 @@ export default {
     }
 
     h3 {
-      font-size: 2.2em;
-      line-height: 1;
+      font-size: 2.1em;
+      line-height: 1.2;
 
       @media screen and (min-width: $breakpointSmall) {
-        font-size: 3em;
+        font-size: 2.8em;
       }
     }
 

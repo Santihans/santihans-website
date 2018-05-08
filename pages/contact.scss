@@ -92,19 +92,20 @@
         .contact-physical,
         .contact-virtual .email,
         .contact-virtual .phone {
-          padding-left: 23px;
+          padding-left: 30px;
           position: relative;
 
           .icon {
-            font-size: 18px;
+            width: 24px;
+            height: 24px;
             left: 0;
             position: absolute;
-            top: 4px;
+            top: 2px;
           }
         }
 
         .contact-virtual .phone {
-          margin-bottom: 0.3em;
+          margin-bottom: 1em;
         }
       }
 
