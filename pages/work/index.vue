@@ -13,17 +13,9 @@
       <div v-else class="boundaries">
         <nuxt-link class="link-box selected" v-for="(item) in sortedProjects(projects, true)" :key="item._meta.id" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
           <div class="selected-inner">
-            <tags :tags="item.tags" />
             <h3 class="ellipsis">{{ item.title }}</h3>
-            <div class="description">
-              <template v-if="$i18n.locale === 'en'">
-                {{ item.abstractEn }}
-              </template>
-              <template v-if="$i18n.locale === 'de'">
-                {{ item.abstractDe }}
-              </template>
-            </div>
-            <span v-ripple class="s-btn s-btn-pink">{{ $t('buttons.more') }} </span>
+            <tags :tags="item.tags" />
+            <icon name="arrow-right" size="60px" />
           </div>
         </nuxt-link>
 
@@ -46,7 +38,9 @@
                 </template>
               </div>
             </div>
-            <div class="more-image" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'"></div>
+            <div class="more-image" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url + '?w=300' : '') +');'">
+              <icon name="arrow-right" size="60px" />
+            </div>
           </nuxt-link>
         </div>
       </div>
@@ -62,13 +56,15 @@ import Spinner from '@/components/Spinner.vue'
 import Tags from '@/components/Tags.vue'
 import projectsQuery from '@/apollo/query/projects.graphql'
 import ContactUs from '~/components/contactUs.vue'
+import Icon from '~/components/Icon.vue'
 
 export default {
   components: {
     PageHeader,
     Tags,
     Spinner,
-    ContactUs
+    ContactUs,
+    Icon
   },
   head() {
     return {
@@ -170,10 +166,6 @@ export default {
     }
   }
 
-  .tags {
-    font-weight: bold;
-  }
-
   .selected {
     align-items: flex-end;
     background-position: center center;
@@ -225,6 +217,23 @@ export default {
       width: 100%;
     }
 
+    &:hover {
+      .icon {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .icon {
+      bottom: 0;
+      color: white;
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      transform: translate3d(-20px, 0, 0);
+      transition: 200ms 200ms ease-out;
+    }
+
     .selected-inner {
       max-width: 100%;
       position: relative;
@@ -251,10 +260,7 @@ export default {
 
     .description {
       margin-bottom: 1em;
-    }
-
-    .s-btn {
-      margin: 0;
+      opacity: 0.6;
     }
   }
 
@@ -274,6 +280,13 @@ export default {
     display: flex;
     font-size: 0.9em;
 
+    &:hover {
+      .more-image .icon {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
     .more-content {
       flex-grow: 1;
       padding: 15px 15px 0;
@@ -281,11 +294,34 @@ export default {
     }
 
     .more-image {
-      flex-shrink: 0;
-      width: 130px;
-      height: 130px;
+      align-items: center;
       background-size: cover;
       background-repeat: no-repeat;
+      display: flex;
+      flex-shrink: 0;
+      height: 130px;
+      justify-content: center;
+      position: relative;
+      width: 130px;
+
+      .icon {
+        color: white;
+        opacity: 0;
+        position: relative;
+        transform: translate3d(-20px, 0, 0);
+        transition: 200ms ease-out;
+        z-index: 1;
+      }
+
+      &::after {
+        background-color: rgba(0, 0, 0, 0.3);
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
     }
 
     .tags {
