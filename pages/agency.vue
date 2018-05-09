@@ -14,8 +14,8 @@
         <h2>{{ $t('team.heading') }}</h2>
         <p class="abstract">{{ $t('team.abstract') }}</p>
         <spinner v-if="loading" inline />
-        <v-layout v-else class="members" wrap justify-center>
-          <v-flex xs6 sm4 v-for="(item,i) in sortedTeam(team)" :key="i">
+        <div v-else class="members grid">
+          <div v-for="(item,i) in sortedTeam(team)" :key="i">
 
             <no-ssr>
               <div class="member-image">
@@ -41,8 +41,8 @@
                 <a v-if="item.linkedIn" :href="item.linkedIn" target="_blank" rel="noopener">LinkedIn</a>
               </div>
             </div>
-          </v-flex>
-          <v-flex xs6 sm4>
+          </div>
+          <div>
             <div class="member-image">
               <no-ssr>
                 <progressive-img src="/images/agency/et.svg" alt="ET" />
@@ -57,8 +57,8 @@
             <div class="member-contacts">
               <a href="mailto:info@santihans.com">{{ $t('team.et.contact') }}</a>
             </div>
-          </v-flex>
-        </v-layout>
+          </div>
+        </div>
       </section>
 
       <section class="company section--shadow">
@@ -69,8 +69,8 @@
       <section class="partner">
         <h2>{{ $t('partner.heading') }}</h2>
         <p class="abstract">{{ $t('partner.abstract') }}</p>
-        <v-layout class="partner" wrap justify-center>
-          <v-flex xs6 sm3 v-for="(item,i) in partner" :key="i">
+        <div class="partner grid">
+          <div v-for="(item,i) in partner" :key="i">
             <a :href="item.web" target="_blank" rel="noopener">
               <div class="partner-logo">
                 <img :src="'/images/agency/' + item.logo" :alt="item.name" />
@@ -80,8 +80,8 @@
                 <div v-if="$i18n.locale === 'de'">{{ item.description.de }}</div>
               </div>
             </a>
-          </v-flex>
-        </v-layout>
+          </div>
+        </div>
       </section>
     </div>
     <contact-us />

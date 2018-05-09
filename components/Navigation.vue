@@ -19,7 +19,7 @@
       <watch />
       <menu-social showIcon :showLabel=false />
     </div>
-    <a href="javascript:;" v-ripple aria-label="Close" class="s-btn-icon btn-close" @click="toggleVisibility(false)">
+    <a href="javascript:;" aria-label="Close" class="s-btn-icon btn-close" @click="toggleVisibility(false)">
       <icon name="exit" size="34px" />
     </a>
   </aside>

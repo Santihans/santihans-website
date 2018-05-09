@@ -33,14 +33,21 @@
   }
 
   .page-content {
+    .grid {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3em;
+      text-align: center;
+
+      @media (min-width: $breakpointSmall) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+      }
+    }
+
     .team {
       .members {
-        text-align: center;
-
-        .flex {
-          margin-bottom: 1em;
-        }
-
         .member-image {
           padding: 3vw;
           @media (min-width: $breakpointSmall) {
@@ -68,12 +75,6 @@
     }
 
     .partner {
-      text-align: center;
-
-      .flex {
-        margin-bottom: 1em;
-      }
-
       .partner-logo {
         align-items: flex-end;
         display: flex;

@@ -5,13 +5,20 @@
 *::before {
   box-sizing: border-box;
 }
+
+* {
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+
 html,
 body {
   height: 100%;
 }
 body {
-  background: #fafafa;
-  color: #333;
+  background: $colorBg;
+  color: $colorFg;
   font-family: $fontFamilyDefault;
   font-size: 16px;
   line-height: 1.6;
@@ -23,6 +30,10 @@ body {
     overflow: auto;
     height: 100%;
   }
+}
+
+a {
+  color: darken($colorPink, 10);
 }
 
 img,
@@ -311,6 +322,10 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.icon {
+  display: inline-flex;
 }
 
 // Page transitions
