@@ -59,11 +59,11 @@
             </carousel>
           </no-ssr>
         </div>
-        <section class="showcase-footer boundaries">
+        <div class="showcase-footer boundaries">
           <div class="actions">
             <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.backToOverview') }}</nuxt-link>
           </div>
-        </section>
+        </div>
         <contact-us />
       </div>
     </div>
