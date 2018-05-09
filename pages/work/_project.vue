@@ -48,7 +48,7 @@
           <Markdown class="markdown" :markdown="project.bodyEn" v-if="$i18n.locale === 'en'" />
           <Markdown class="markdown" :markdown="project.bodyDe" v-if="$i18n.locale === 'de'" />
         </section>
-        <div class="boundaries boundaries--xl">
+        <div class="boundaries boundaries--xl" v-if="imageList().length">
           <no-ssr>
             <carousel :perPage=1 autoplay :autoplayTimeout=5000>
               <slide v-for="image in imageList()" :key="image.id">
@@ -59,14 +59,11 @@
             </carousel>
           </no-ssr>
         </div>
-        <section class="showcase-footer boundaries">
-          ©
-          <span :aria-label="$t('year')" :title="$t('year')">{{ getYear(project.date) }}</span>&nbsp;|&nbsp; SANTiHANS +
-          <span :aria-label="$t('client')" :title="$t('client')">{{ project.client }}</span>
+        <div class="showcase-footer boundaries">
           <div class="actions">
             <nuxt-link v-ripple class="s-btn" :to="localePath('/work')">{{ $t('buttons.backToOverview') }}</nuxt-link>
           </div>
-        </section>
+        </div>
         <contact-us />
       </div>
     </div>

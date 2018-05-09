@@ -287,7 +287,7 @@ export default {
   }
 
   .more {
-    background-color: white;
+    background-color: $colorBgSubtle;
     border: 1px solid rgb(233, 233, 233);
     display: flex;
     font-size: 0.9em;

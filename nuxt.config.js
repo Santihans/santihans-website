@@ -74,10 +74,6 @@ module.exports = {
   },
   css: [
     {
-      src: '@/assets/styles/app.styl',
-      lang: 'styl'
-    },
-    {
       src: '@/assets/styles/variables.scss',
       lang: 'scss'
     }
@@ -85,10 +81,11 @@ module.exports = {
 
   plugins: [
     {
-      src: '~plugins/vuetify.js'
+      src: '~plugins/crisp.js',
+      ssr: false
     },
     {
-      src: '~plugins/crisp.js',
+      src: '~plugins/vueRippleDirective.js',
       ssr: false
     },
     {
@@ -168,31 +165,11 @@ module.exports = {
    */
   build: {
     // analyze: true,
-    vendor: ['~/plugins/vuetify.js', 'underscore'],
+    vendor: ['underscore'],
     extractCSS: true,
     /*
     ** Run ESLint on save
     */
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': {
-          warnings: false
-        }
-      }
-    },
-    babel: {
-      plugins: [
-        [
-          'transform-imports',
-          {
-            vuetify: {
-              transform: 'vuetify/es5/components/${member}', // eslint-disable-line no-template-curly-in-string
-              preventFullImport: true
-            }
-          }
-        ]
-      ]
-    },
     extend (config, { isDev, isClient, isServer }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -201,13 +178,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-      }
-      if (isServer) {
-        config.externals = [
-          nodeExternals({
-            whitelist: [/^vuetify/]
-          })
-        ]
       }
     }
   }

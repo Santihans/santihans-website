@@ -1,5 +1,5 @@
 <template>
-  <v-app id="layout" class="scrollTop scrollTopExtendend">
+  <div id="layout" class="scrollTop scrollTopExtendend">
     <app-header v-on:navigation="toggleNavigation" />
     <navigation v-on:navigation="toggleNavigation" />
     <div id="page">
@@ -7,7 +7,7 @@
     </div>
     <app-footer />
     <div id="overlay"></div>
-  </v-app>
+  </div>
 </template>
 
 <script>
