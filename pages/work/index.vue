@@ -13,9 +13,11 @@
       <div v-else class="boundaries">
         <nuxt-link class="link-box selected" v-for="(item) in sortedProjects(projects, true)" :key="item._meta.id" :to="{ path: localePath('/work/' + `${item.urlSlug}`)}" :alt="$t('buttons.more')" :style="'background-image:url('+ (item.headerImage ? item.headerImage.url : '') +');'">
           <div class="selected-inner">
-            <h3 class="ellipsis">{{ item.title }}</h3>
-            <tags :tags="item.tags" />
-            <icon name="arrow-right" size="60px" />
+            <div class="selected-inner-content">
+              <h3 class="ellipsis">{{ item.title }}</h3>
+              <tags :tags="item.tags" />
+              <icon name="arrow-right" size="60px" />
+            </div>
           </div>
         </nuxt-link>
 
@@ -167,23 +169,13 @@ export default {
   }
 
   .selected {
-    align-items: flex-end;
     background-position: center center;
     background-size: cover;
     color: white;
-    display: flex;
-    font-size: 1.1em;
-    height: 60vmax;
-    justify-content: center;
+    display: block;
     margin-bottom: 5vmin;
-    padding-bottom: 5vmin;
-    padding-top: 5vmin;
+    padding-bottom: 56.25%;
     position: relative;
-
-    @media screen and (min-width: $breakpointSmall) {
-      height: 60vmin;
-      font-size: 1.2em;
-    }
 
     &::after {
       background-image: linear-gradient(
@@ -235,32 +227,52 @@ export default {
     }
 
     .selected-inner {
+      align-items: flex-end;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-bottom: 5%;
+      padding-top: 5%;
+    }
+
+    .selected-inner-content {
       max-width: 100%;
       position: relative;
       width: 90%;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
       z-index: 1;
-
-      :not(.s-btn) {
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-      }
-    }
-
-    .tags {
-      margin-bottom: 0.6em;
     }
 
     h3 {
-      font-size: 2.1em;
+      font-size: 1.5em;
       line-height: 1.2;
+
+      @media screen and (min-width: $breakpointMini) {
+        font-size: 2em;
+      }
 
       @media screen and (min-width: $breakpointSmall) {
         font-size: 2.8em;
       }
+
+      @media screen and (min-width: $breakpointMedium) {
+        font-size: 4em;
+      }
     }
 
-    .description {
-      margin-bottom: 1em;
-      opacity: 0.6;
+    .tags {
+      font-size: 0.8em;
+
+      @media screen and (min-width: $breakpointMini) {
+        font-size: 1em;
+      }
+      @media screen and (min-width: $breakpointSmall) {
+        font-size: 1.2em;
+      }
     }
   }
 
@@ -298,7 +310,7 @@ export default {
       overflow: hidden;
 
       @media screen and (min-width: $breakpointMini) {
-      padding: 15px 15px 0;
+        padding: 15px 15px 0;
       }
     }
 
