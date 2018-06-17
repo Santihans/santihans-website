@@ -93,10 +93,13 @@ export default {
     }
   },
   methods: {
-    sortedProjects: function (items, selected = null) {
+    sortedProjects: function (items, selectedOnly = false) {
       let sortable = Object.keys(items).map(i => items[i])
+      console.log(items)
       sortable = sortable.filter(item => item._meta.published === true)
-      sortable = sortable.filter(item => item.selected === selected)
+      if (selectedOnly) {
+        sortable = sortable.filter(item => item.selected)
+      }
       sortable.sort(function (a, b) {
         return b.date - a.date
       })
