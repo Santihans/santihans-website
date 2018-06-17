@@ -1,26 +1,19 @@
-# santihans-website [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/santihans/santihans) [![Build Status](https://travis-ci.org/Santihans/santihans-website.svg?branch=master)](https://travis-ci.org/Santihans/santihans-website)
+# santihans-website [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/santihans/santihans)
 
-> Website for santihans.com
-
-## Content
-
-CMS via tipe.io.
+Built with [Nuxt](https://github.com/nuxt/nuxt.js) and [Tipe](https://tipe.io).
 
 ## Build Setup
 
 ```bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn
+
+# Environment Variables
+Copy `.env.example` to `.env` and set variables from tipe.io.
 
 # serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
+$ yarn dev
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
